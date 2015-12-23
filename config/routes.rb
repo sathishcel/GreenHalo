@@ -1,8 +1,6 @@
 Myapp::Application.routes.draw do
 
-  get 'sign_up/business_users'
-
-  get 'sign_up/government_users'
+  get 'forms/wizard'
 
   devise_for :users,:controllers => { registrations: 'users/registrations',
                                       confirmations: 'users/confirmations', passwords: 'users/passwords' , sessions: 'users/sessions'}
@@ -15,12 +13,6 @@ Myapp::Application.routes.draw do
   authenticated do
     get "dashboards/dashboard_2", as: :authenticated_root
   end
-
-   resource "sign_up" do
-     get "business_users"
-     get "government_users"
-   end
-
 
   unauthenticated do
     devise_scope :user do
