@@ -1,9 +1,8 @@
 # Created by .ignore support plugin (hsz.mobi)
 ### Rails template
-*.rbc
 capybara-*.html
 .rspec
-/log
+/log/*.log
 /tmp
 /db/*.sqlite3
 /db/*.sqlite3-journal
@@ -11,6 +10,7 @@ capybara-*.html
 /coverage/
 /spec/tmp
 /.idea
+config/database.yml
 
 
 
