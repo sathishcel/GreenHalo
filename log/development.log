@@ -1,0 +1,1723 @@
+
+
+Started GET "/assets/a4.jpg" for 127.0.0.1 at 2015-12-23 10:31:54 +0530
+
+
+Started GET "/assets/a3.jpg" for 127.0.0.1 at 2015-12-23 10:31:54 +0530
+
+
+Started GET "/assets/a1.jpg" for 127.0.0.1 at 2015-12-23 10:31:54 +0530
+
+
+Started GET "/assets/a5.jpg" for 127.0.0.1 at 2015-12-23 10:31:54 +0530
+
+
+Started GET "/assets/a8.jpg" for 127.0.0.1 at 2015-12-23 10:31:54 +0530
+
+
+Started GET "/assets/a2.jpg" for 127.0.0.1 at 2015-12-23 10:31:54 +0530
+
+
+Started GET "/assets/profile.jpg" for 127.0.0.1 at 2015-12-23 10:31:54 +0530
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-23 10:31:55 +0530
+Processing by DashboardsController#dashboard_1 as HTML
+  Rendered dashboards/dashboard_1.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_skinconfig.html.erb (0.6ms)
+  Rendered layouts/_navigation.html.erb (8.5ms)
+  Rendered layouts/_topnavbar.html.erb (1.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+  Rendered layouts/_rightsidebar.html.erb (1.0ms)
+Completed 200 OK in 142ms (Views: 130.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/toastr/toastr.min.css?body=1" for 127.0.0.1 at 2015-12-23 10:31:55 +0530
+
+
+Started GET "/assets/jvectormap/jquery-jvectormap-2.0.2.css?body=1" for 127.0.0.1 at 2015-12-23 10:31:55 +0530
+
+
+Started GET "/assets/dashboards.css?body=1" for 127.0.0.1 at 2015-12-23 10:31:55 +0530
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-12-23 10:31:55 +0530
+
+
+Started GET "/assets/animate/animate.css?body=1" for 127.0.0.1 at 2015-12-23 10:31:55 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-12-23 10:31:55 +0530
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2015-12-23 10:31:55 +0530
+
+
+Started GET "/assets/jquery/jquery-2.1.1.js?body=1" for 127.0.0.1 at 2015-12-23 10:31:55 +0530
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2015-12-23 10:31:55 +0530
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2015-12-23 10:31:55 +0530
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2015-12-23 10:31:55 +0530
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2015-12-23 10:31:55 +0530
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2015-12-23 10:31:55 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2015-12-23 10:31:55 +0530
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2015-12-23 10:31:55 +0530
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2015-12-23 10:31:55 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2015-12-23 10:31:55 +0530
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2015-12-23 10:31:55 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2015-12-23 10:31:55 +0530
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2015-12-23 10:31:55 +0530
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2015-12-23 10:31:55 +0530
+
+
+Started GET "/assets/metisMenu/jquery.metisMenu.js?body=1" for 127.0.0.1 at 2015-12-23 10:31:55 +0530
+
+
+Started GET "/assets/pace/pace.min.js?body=1" for 127.0.0.1 at 2015-12-23 10:31:55 +0530
+
+
+Started GET "/assets/peity/jquery.peity.min.js?body=1" for 127.0.0.1 at 2015-12-23 10:31:55 +0530
+
+
+Started GET "/assets/slimscroll/jquery.slimscroll.min.js?body=1" for 127.0.0.1 at 2015-12-23 10:31:55 +0530
+
+
+Started GET "/assets/inspinia.js?body=1" for 127.0.0.1 at 2015-12-23 10:31:55 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-12-23 10:31:55 +0530
+
+
+Started GET "/assets/flot/jquery.flot.js?body=1" for 127.0.0.1 at 2015-12-23 10:31:55 +0530
+
+
+Started GET "/assets/flot/jquery.flot.tooltip.min.js?body=1" for 127.0.0.1 at 2015-12-23 10:31:55 +0530
+
+
+Started GET "/assets/flot/jquery.flot.resize.js?body=1" for 127.0.0.1 at 2015-12-23 10:31:55 +0530
+
+
+Started GET "/assets/flot/jquery.flot.pie.js?body=1" for 127.0.0.1 at 2015-12-23 10:31:55 +0530
+
+
+Started GET "/assets/flot/jquery.flot.time.js?body=1" for 127.0.0.1 at 2015-12-23 10:31:55 +0530
+
+
+Started GET "/assets/flot/jquery.flot.spline.js?body=1" for 127.0.0.1 at 2015-12-23 10:31:55 +0530
+
+
+Started GET "/assets/sparkline/jquery.sparkline.min.js?body=1" for 127.0.0.1 at 2015-12-23 10:31:55 +0530
+
+
+Started GET "/assets/chartjs/Chart.min.js?body=1" for 127.0.0.1 at 2015-12-23 10:31:55 +0530
+
+
+Started GET "/assets/jvectormap/jquery-jvectormap-2.0.2.min.js?body=1" for 127.0.0.1 at 2015-12-23 10:31:55 +0530
+
+
+Started GET "/assets/jvectormap/jquery-jvectormap-world-mill-en.js?body=1" for 127.0.0.1 at 2015-12-23 10:31:55 +0530
+
+
+Started GET "/assets/toastr/toastr.min.js?body=1" for 127.0.0.1 at 2015-12-23 10:31:55 +0530
+
+
+Started GET "/assets/dashboards.js?body=1" for 127.0.0.1 at 2015-12-23 10:31:55 +0530
+
+
+Started GET "/assets/a7.jpg" for 127.0.0.1 at 2015-12-23 10:34:14 +0530
+
+
+Started GET "/assets/a5.jpg" for 127.0.0.1 at 2015-12-23 10:34:14 +0530
+
+
+Started GET "/assets/a4.jpg" for 127.0.0.1 at 2015-12-23 10:34:14 +0530
+
+
+Started GET "/assets/a3.jpg" for 127.0.0.1 at 2015-12-23 10:34:14 +0530
+
+
+Started GET "/assets/profile_small.jpg" for 127.0.0.1 at 2015-12-23 10:34:14 +0530
+
+
+Started GET "/assets/profile.jpg" for 127.0.0.1 at 2015-12-23 10:34:14 +0530
+
+
+Started GET "/assets/a2.jpg" for 127.0.0.1 at 2015-12-23 10:34:14 +0530
+
+
+Started GET "/assets/a1.jpg" for 127.0.0.1 at 2015-12-23 10:34:14 +0530
+
+
+Started GET "/assets/a8.jpg" for 127.0.0.1 at 2015-12-23 10:34:14 +0530
+
+
+Started GET "/assets/patterns/header-profile-skin-3.png" for 127.0.0.1 at 2015-12-23 10:34:14 +0530
+
+
+Started GET "/assets/patterns/header-profile-skin-1.png" for 127.0.0.1 at 2015-12-23 10:34:14 +0530
+
+
+Started GET "/assets/patterns/header-profile.png" for 127.0.0.1 at 2015-12-23 10:34:14 +0530
+
+
+Started GET "/assets/fontawesome-webfont.woff2?v=4.3.0" for 127.0.0.1 at 2015-12-23 10:34:14 +0530
+
+
+Started GET "/dashboards/dashboard_2" for 127.0.0.1 at 2015-12-23 10:34:33 +0530
+Processing by DashboardsController#dashboard_2 as HTML
+  Rendered dashboards/dashboard_2.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_skinconfig.html.erb (0.1ms)
+  Rendered layouts/_navigation.html.erb (6.8ms)
+  Rendered layouts/_topnavbar.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+  Rendered layouts/_rightsidebar.html.erb (0.4ms)
+Completed 200 OK in 30ms (Views: 29.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/toastr/toastr.min.css?body=1" for 127.0.0.1 at 2015-12-23 10:34:33 +0530
+
+
+Started GET "/assets/jvectormap/jquery-jvectormap-2.0.2.css?body=1" for 127.0.0.1 at 2015-12-23 10:34:33 +0530
+
+
+Started GET "/assets/dashboards.css?body=1" for 127.0.0.1 at 2015-12-23 10:34:33 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-12-23 10:34:33 +0530
+
+
+Started GET "/assets/animate/animate.css?body=1" for 127.0.0.1 at 2015-12-23 10:34:33 +0530
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2015-12-23 10:34:33 +0530
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-12-23 10:34:33 +0530
+
+
+Started GET "/assets/jquery/jquery-2.1.1.js?body=1" for 127.0.0.1 at 2015-12-23 10:34:33 +0530
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2015-12-23 10:34:33 +0530
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2015-12-23 10:34:33 +0530
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2015-12-23 10:34:33 +0530
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2015-12-23 10:34:33 +0530
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2015-12-23 10:34:33 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2015-12-23 10:34:33 +0530
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2015-12-23 10:34:33 +0530
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2015-12-23 10:34:33 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2015-12-23 10:34:33 +0530
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2015-12-23 10:34:33 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2015-12-23 10:34:33 +0530
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2015-12-23 10:34:33 +0530
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2015-12-23 10:34:33 +0530
+
+
+Started GET "/assets/metisMenu/jquery.metisMenu.js?body=1" for 127.0.0.1 at 2015-12-23 10:34:33 +0530
+
+
+Started GET "/assets/pace/pace.min.js?body=1" for 127.0.0.1 at 2015-12-23 10:34:33 +0530
+
+
+Started GET "/assets/peity/jquery.peity.min.js?body=1" for 127.0.0.1 at 2015-12-23 10:34:33 +0530
+
+
+Started GET "/assets/slimscroll/jquery.slimscroll.min.js?body=1" for 127.0.0.1 at 2015-12-23 10:34:33 +0530
+
+
+Started GET "/assets/inspinia.js?body=1" for 127.0.0.1 at 2015-12-23 10:34:33 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-12-23 10:34:33 +0530
+
+
+Started GET "/assets/flot/jquery.flot.js?body=1" for 127.0.0.1 at 2015-12-23 10:34:33 +0530
+
+
+Started GET "/assets/flot/jquery.flot.tooltip.min.js?body=1" for 127.0.0.1 at 2015-12-23 10:34:33 +0530
+
+
+Started GET "/assets/flot/jquery.flot.resize.js?body=1" for 127.0.0.1 at 2015-12-23 10:34:33 +0530
+
+
+Started GET "/assets/flot/jquery.flot.pie.js?body=1" for 127.0.0.1 at 2015-12-23 10:34:33 +0530
+
+
+Started GET "/assets/flot/jquery.flot.time.js?body=1" for 127.0.0.1 at 2015-12-23 10:34:33 +0530
+
+
+Started GET "/assets/flot/jquery.flot.spline.js?body=1" for 127.0.0.1 at 2015-12-23 10:34:33 +0530
+
+
+Started GET "/assets/chartjs/Chart.min.js?body=1" for 127.0.0.1 at 2015-12-23 10:34:33 +0530
+
+
+Started GET "/assets/jvectormap/jquery-jvectormap-2.0.2.min.js?body=1" for 127.0.0.1 at 2015-12-23 10:34:33 +0530
+
+
+Started GET "/assets/sparkline/jquery.sparkline.min.js?body=1" for 127.0.0.1 at 2015-12-23 10:34:33 +0530
+
+
+Started GET "/assets/jvectormap/jquery-jvectormap-world-mill-en.js?body=1" for 127.0.0.1 at 2015-12-23 10:34:33 +0530
+
+
+Started GET "/assets/toastr/toastr.min.js?body=1" for 127.0.0.1 at 2015-12-23 10:34:33 +0530
+
+
+Started GET "/assets/dashboards.js?body=1" for 127.0.0.1 at 2015-12-23 10:34:33 +0530
+
+
+Started GET "/assets/profile_small.jpg" for 127.0.0.1 at 2015-12-23 10:34:33 +0530
+
+
+Started GET "/assets/a7.jpg" for 127.0.0.1 at 2015-12-23 10:34:33 +0530
+
+
+Started GET "/assets/a4.jpg" for 127.0.0.1 at 2015-12-23 10:34:33 +0530
+
+
+Started GET "/assets/a3.jpg" for 127.0.0.1 at 2015-12-23 10:34:33 +0530
+
+
+Started GET "/assets/a1.jpg" for 127.0.0.1 at 2015-12-23 10:34:33 +0530
+
+
+Started GET "/assets/profile.jpg" for 127.0.0.1 at 2015-12-23 10:34:33 +0530
+
+
+Started GET "/assets/a8.jpg" for 127.0.0.1 at 2015-12-23 10:34:33 +0530
+
+
+Started GET "/assets/a2.jpg" for 127.0.0.1 at 2015-12-23 10:34:33 +0530
+
+
+Started GET "/assets/patterns/header-profile-skin-1.png" for 127.0.0.1 at 2015-12-23 10:34:33 +0530
+
+
+Started GET "/assets/patterns/header-profile.png" for 127.0.0.1 at 2015-12-23 10:34:33 +0530
+
+
+Started GET "/assets/patterns/header-profile-skin-3.png" for 127.0.0.1 at 2015-12-23 10:34:33 +0530
+
+
+Started GET "/landing/index" for 127.0.0.1 at 2015-12-23 10:34:40 +0530
+Processing by LandingController#index as HTML
+  Rendered landing/index.html.erb within layouts/empty (21.0ms)
+Completed 200 OK in 39ms (Views: 38.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/animate/animate.css?body=1" for 127.0.0.1 at 2015-12-23 10:34:40 +0530
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2015-12-23 10:34:40 +0530
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-12-23 10:34:40 +0530
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2015-12-23 10:34:40 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-12-23 10:34:40 +0530
+
+
+Started GET "/assets/jquery/jquery-2.1.1.js?body=1" for 127.0.0.1 at 2015-12-23 10:34:40 +0530
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2015-12-23 10:34:40 +0530
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2015-12-23 10:34:40 +0530
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2015-12-23 10:34:40 +0530
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2015-12-23 10:34:40 +0530
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2015-12-23 10:34:40 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2015-12-23 10:34:40 +0530
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2015-12-23 10:34:40 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2015-12-23 10:34:40 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2015-12-23 10:34:40 +0530
+
+
+Started GET "/assets/peity/jquery.peity.min.js?body=1" for 127.0.0.1 at 2015-12-23 10:34:40 +0530
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2015-12-23 10:34:40 +0530
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2015-12-23 10:34:40 +0530
+
+
+Started GET "/assets/metisMenu/jquery.metisMenu.js?body=1" for 127.0.0.1 at 2015-12-23 10:34:40 +0530
+
+
+Started GET "/assets/pace/pace.min.js?body=1" for 127.0.0.1 at 2015-12-23 10:34:40 +0530
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2015-12-23 10:34:40 +0530
+
+
+Started GET "/assets/slimscroll/jquery.slimscroll.min.js?body=1" for 127.0.0.1 at 2015-12-23 10:34:40 +0530
+
+
+Started GET "/assets/inspinia.js?body=1" for 127.0.0.1 at 2015-12-23 10:34:40 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-12-23 10:34:40 +0530
+
+
+Started GET "/assets/landing/perspective.png" for 127.0.0.1 at 2015-12-23 10:34:41 +0530
+
+
+Started GET "/assets/landing/laptop.png" for 127.0.0.1 at 2015-12-23 10:34:41 +0530
+
+
+Started GET "/assets/landing/avatar1.jpg" for 127.0.0.1 at 2015-12-23 10:34:41 +0530
+
+
+Started GET "/assets/landing/avatar3.jpg" for 127.0.0.1 at 2015-12-23 10:34:41 +0530
+
+
+Started GET "/assets/landing/dashboard.png" for 127.0.0.1 at 2015-12-23 10:34:41 +0530
+
+
+Started GET "/assets/landing/iphone.jpg" for 127.0.0.1 at 2015-12-23 10:34:41 +0530
+
+
+Started GET "/assets/landing/avatar2.jpg" for 127.0.0.1 at 2015-12-23 10:34:41 +0530
+
+
+Started GET "/assets/landing/avatar_all.png" for 127.0.0.1 at 2015-12-23 10:34:41 +0530
+
+
+Started GET "/assets/landing/word_map.png" for 127.0.0.1 at 2015-12-23 10:34:41 +0530
+
+
+Started GET "/assets/landing/header_one.jpg" for 127.0.0.1 at 2015-12-23 10:34:41 +0530
+
+
+Started GET "/assets/landing/header_two.jpg" for 127.0.0.1 at 2015-12-23 10:34:47 +0530
+
+
+Started GET "/pages/login" for 127.0.0.1 at 2015-12-23 10:35:57 +0530
+Processing by PagesController#login as HTML
+  Rendered pages/login.html.erb within layouts/empty (0.8ms)
+Completed 200 OK in 23ms (Views: 22.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2015-12-23 10:35:57 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-12-23 10:35:57 +0530
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-12-23 10:35:57 +0530
+
+
+Started GET "/assets/animate/animate.css?body=1" for 127.0.0.1 at 2015-12-23 10:35:57 +0530
+
+
+Started GET "/assets/jquery/jquery-2.1.1.js?body=1" for 127.0.0.1 at 2015-12-23 10:35:57 +0530
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2015-12-23 10:35:57 +0530
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2015-12-23 10:35:57 +0530
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2015-12-23 10:35:57 +0530
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2015-12-23 10:35:57 +0530
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2015-12-23 10:35:57 +0530
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2015-12-23 10:35:57 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2015-12-23 10:35:57 +0530
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2015-12-23 10:35:57 +0530
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2015-12-23 10:35:57 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2015-12-23 10:35:57 +0530
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2015-12-23 10:35:57 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2015-12-23 10:35:57 +0530
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2015-12-23 10:35:57 +0530
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2015-12-23 10:35:57 +0530
+
+
+Started GET "/assets/metisMenu/jquery.metisMenu.js?body=1" for 127.0.0.1 at 2015-12-23 10:35:57 +0530
+
+
+Started GET "/assets/pace/pace.min.js?body=1" for 127.0.0.1 at 2015-12-23 10:35:57 +0530
+
+
+Started GET "/assets/peity/jquery.peity.min.js?body=1" for 127.0.0.1 at 2015-12-23 10:35:57 +0530
+
+
+Started GET "/assets/slimscroll/jquery.slimscroll.min.js?body=1" for 127.0.0.1 at 2015-12-23 10:35:57 +0530
+
+
+Started GET "/assets/inspinia.js?body=1" for 127.0.0.1 at 2015-12-23 10:35:57 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-12-23 10:35:57 +0530
+
+
+Started GET "/assets/iCheck/icheck.min.js?body=1" for 127.0.0.1 at 2015-12-23 10:35:57 +0530
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2015-12-23 10:35:57 +0530
+
+
+Started GET "/pages/login_2" for 127.0.0.1 at 2015-12-23 10:37:37 +0530
+Processing by PagesController#login_2 as HTML
+  Rendered pages/login_2.html.erb within layouts/empty (0.6ms)
+Completed 200 OK in 15ms (Views: 14.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2015-12-23 10:37:37 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-12-23 10:37:37 +0530
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2015-12-23 10:37:37 +0530
+
+
+Started GET "/assets/animate/animate.css?body=1" for 127.0.0.1 at 2015-12-23 10:37:37 +0530
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2015-12-23 10:37:37 +0530
+
+
+Started GET "/assets/jquery/jquery-2.1.1.js?body=1" for 127.0.0.1 at 2015-12-23 10:37:37 +0530
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2015-12-23 10:37:37 +0530
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-12-23 10:37:37 +0530
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2015-12-23 10:37:37 +0530
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2015-12-23 10:37:37 +0530
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2015-12-23 10:37:37 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2015-12-23 10:37:37 +0530
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2015-12-23 10:37:37 +0530
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2015-12-23 10:37:37 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2015-12-23 10:37:37 +0530
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2015-12-23 10:37:37 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2015-12-23 10:37:37 +0530
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2015-12-23 10:37:37 +0530
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2015-12-23 10:37:37 +0530
+
+
+Started GET "/assets/metisMenu/jquery.metisMenu.js?body=1" for 127.0.0.1 at 2015-12-23 10:37:37 +0530
+
+
+Started GET "/assets/pace/pace.min.js?body=1" for 127.0.0.1 at 2015-12-23 10:37:37 +0530
+
+
+Started GET "/assets/peity/jquery.peity.min.js?body=1" for 127.0.0.1 at 2015-12-23 10:37:37 +0530
+
+
+Started GET "/assets/slimscroll/jquery.slimscroll.min.js?body=1" for 127.0.0.1 at 2015-12-23 10:37:37 +0530
+
+
+Started GET "/assets/inspinia.js?body=1" for 127.0.0.1 at 2015-12-23 10:37:37 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-12-23 10:37:37 +0530
+
+
+Started GET "/assets/iCheck/icheck.min.js?body=1" for 127.0.0.1 at 2015-12-23 10:37:37 +0530
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2015-12-23 10:37:37 +0530
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-23 10:44:53 +0530
+Processing by DashboardsController#dashboard_1 as HTML
+  Rendered dashboards/dashboard_1.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_skinconfig.html.erb (0.1ms)
+  Rendered layouts/_navigation.html.erb (5.3ms)
+  Rendered layouts/_topnavbar.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+  Rendered layouts/_rightsidebar.html.erb (0.6ms)
+Completed 200 OK in 31ms (Views: 30.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/toastr/toastr.min.css?body=1" for 127.0.0.1 at 2015-12-23 10:44:53 +0530
+
+
+Started GET "/assets/jvectormap/jquery-jvectormap-2.0.2.css?body=1" for 127.0.0.1 at 2015-12-23 10:44:53 +0530
+
+
+Started GET "/assets/dashboards.css?body=1" for 127.0.0.1 at 2015-12-23 10:44:53 +0530
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2015-12-23 10:44:53 +0530
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-12-23 10:44:53 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-12-23 10:44:53 +0530
+
+
+Started GET "/assets/animate/animate.css?body=1" for 127.0.0.1 at 2015-12-23 10:44:53 +0530
+
+
+Started GET "/assets/jquery/jquery-2.1.1.js?body=1" for 127.0.0.1 at 2015-12-23 10:44:53 +0530
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2015-12-23 10:44:53 +0530
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2015-12-23 10:44:53 +0530
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2015-12-23 10:44:53 +0530
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2015-12-23 10:44:53 +0530
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2015-12-23 10:44:53 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2015-12-23 10:44:53 +0530
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2015-12-23 10:44:53 +0530
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2015-12-23 10:44:53 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2015-12-23 10:44:53 +0530
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2015-12-23 10:44:53 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2015-12-23 10:44:53 +0530
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2015-12-23 10:44:53 +0530
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2015-12-23 10:44:53 +0530
+
+
+Started GET "/assets/metisMenu/jquery.metisMenu.js?body=1" for 127.0.0.1 at 2015-12-23 10:44:53 +0530
+
+
+Started GET "/assets/pace/pace.min.js?body=1" for 127.0.0.1 at 2015-12-23 10:44:53 +0530
+
+
+Started GET "/assets/peity/jquery.peity.min.js?body=1" for 127.0.0.1 at 2015-12-23 10:44:53 +0530
+
+
+Started GET "/assets/slimscroll/jquery.slimscroll.min.js?body=1" for 127.0.0.1 at 2015-12-23 10:44:53 +0530
+
+
+Started GET "/assets/inspinia.js?body=1" for 127.0.0.1 at 2015-12-23 10:44:53 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-12-23 10:44:53 +0530
+
+
+Started GET "/assets/flot/jquery.flot.js?body=1" for 127.0.0.1 at 2015-12-23 10:44:53 +0530
+
+
+Started GET "/assets/flot/jquery.flot.tooltip.min.js?body=1" for 127.0.0.1 at 2015-12-23 10:44:53 +0530
+
+
+Started GET "/assets/flot/jquery.flot.resize.js?body=1" for 127.0.0.1 at 2015-12-23 10:44:53 +0530
+
+
+Started GET "/assets/flot/jquery.flot.pie.js?body=1" for 127.0.0.1 at 2015-12-23 10:44:53 +0530
+
+
+Started GET "/assets/flot/jquery.flot.time.js?body=1" for 127.0.0.1 at 2015-12-23 10:44:53 +0530
+
+
+Started GET "/assets/flot/jquery.flot.spline.js?body=1" for 127.0.0.1 at 2015-12-23 10:44:53 +0530
+
+
+Started GET "/assets/sparkline/jquery.sparkline.min.js?body=1" for 127.0.0.1 at 2015-12-23 10:44:54 +0530
+
+
+Started GET "/assets/chartjs/Chart.min.js?body=1" for 127.0.0.1 at 2015-12-23 10:44:54 +0530
+
+
+Started GET "/assets/jvectormap/jquery-jvectormap-2.0.2.min.js?body=1" for 127.0.0.1 at 2015-12-23 10:44:54 +0530
+
+
+Started GET "/assets/jvectormap/jquery-jvectormap-world-mill-en.js?body=1" for 127.0.0.1 at 2015-12-23 10:44:54 +0530
+
+
+Started GET "/assets/toastr/toastr.min.js?body=1" for 127.0.0.1 at 2015-12-23 10:44:54 +0530
+
+
+Started GET "/assets/dashboards.js?body=1" for 127.0.0.1 at 2015-12-23 10:44:54 +0530
+
+
+Started GET "/assets/profile_small.jpg" for 127.0.0.1 at 2015-12-23 10:45:34 +0530
+
+
+Started GET "/assets/a7.jpg" for 127.0.0.1 at 2015-12-23 10:45:34 +0530
+
+
+Started GET "/assets/profile.jpg" for 127.0.0.1 at 2015-12-23 10:45:34 +0530
+
+
+Started GET "/assets/a4.jpg" for 127.0.0.1 at 2015-12-23 10:45:34 +0530
+
+
+Started GET "/assets/a2.jpg" for 127.0.0.1 at 2015-12-23 10:45:34 +0530
+
+
+Started GET "/assets/a3.jpg" for 127.0.0.1 at 2015-12-23 10:45:34 +0530
+
+
+Started GET "/assets/a5.jpg" for 127.0.0.1 at 2015-12-23 10:45:34 +0530
+
+
+Started GET "/assets/a8.jpg" for 127.0.0.1 at 2015-12-23 10:45:34 +0530
+
+
+Started GET "/assets/a1.jpg" for 127.0.0.1 at 2015-12-23 10:45:34 +0530
+
+
+Started GET "/assets/patterns/header-profile-skin-3.png" for 127.0.0.1 at 2015-12-23 10:45:34 +0530
+
+
+Started GET "/assets/patterns/header-profile-skin-1.png" for 127.0.0.1 at 2015-12-23 10:45:34 +0530
+
+
+Started GET "/assets/patterns/header-profile.png" for 127.0.0.1 at 2015-12-23 10:45:34 +0530
+
+
+Started GET "/dashboards/dashboard_2" for 127.0.0.1 at 2015-12-23 10:46:14 +0530
+Processing by DashboardsController#dashboard_2 as HTML
+  Rendered dashboards/dashboard_2.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_skinconfig.html.erb (0.1ms)
+  Rendered layouts/_navigation.html.erb (6.6ms)
+  Rendered layouts/_topnavbar.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+  Rendered layouts/_rightsidebar.html.erb (0.7ms)
+Completed 200 OK in 41ms (Views: 40.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/toastr/toastr.min.css?body=1" for 127.0.0.1 at 2015-12-23 10:46:15 +0530
+
+
+Started GET "/assets/dashboards.css?body=1" for 127.0.0.1 at 2015-12-23 10:46:15 +0530
+
+
+Started GET "/assets/jvectormap/jquery-jvectormap-2.0.2.css?body=1" for 127.0.0.1 at 2015-12-23 10:46:15 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-12-23 10:46:15 +0530
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2015-12-23 10:46:15 +0530
+
+
+Started GET "/assets/animate/animate.css?body=1" for 127.0.0.1 at 2015-12-23 10:46:15 +0530
+
+
+Started GET "/assets/jquery/jquery-2.1.1.js?body=1" for 127.0.0.1 at 2015-12-23 10:46:15 +0530
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-12-23 10:46:15 +0530
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2015-12-23 10:46:15 +0530
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2015-12-23 10:46:15 +0530
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2015-12-23 10:46:15 +0530
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2015-12-23 10:46:15 +0530
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2015-12-23 10:46:15 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2015-12-23 10:46:15 +0530
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2015-12-23 10:46:15 +0530
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2015-12-23 10:46:15 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2015-12-23 10:46:15 +0530
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2015-12-23 10:46:15 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2015-12-23 10:46:15 +0530
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2015-12-23 10:46:15 +0530
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2015-12-23 10:46:15 +0530
+
+
+Started GET "/assets/metisMenu/jquery.metisMenu.js?body=1" for 127.0.0.1 at 2015-12-23 10:46:15 +0530
+
+
+Started GET "/assets/pace/pace.min.js?body=1" for 127.0.0.1 at 2015-12-23 10:46:15 +0530
+
+
+Started GET "/assets/peity/jquery.peity.min.js?body=1" for 127.0.0.1 at 2015-12-23 10:46:15 +0530
+
+
+Started GET "/assets/slimscroll/jquery.slimscroll.min.js?body=1" for 127.0.0.1 at 2015-12-23 10:46:15 +0530
+
+
+Started GET "/assets/inspinia.js?body=1" for 127.0.0.1 at 2015-12-23 10:46:15 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-12-23 10:46:15 +0530
+
+
+Started GET "/assets/flot/jquery.flot.js?body=1" for 127.0.0.1 at 2015-12-23 10:46:15 +0530
+
+
+Started GET "/assets/flot/jquery.flot.tooltip.min.js?body=1" for 127.0.0.1 at 2015-12-23 10:46:15 +0530
+
+
+Started GET "/assets/flot/jquery.flot.resize.js?body=1" for 127.0.0.1 at 2015-12-23 10:46:15 +0530
+
+
+Started GET "/assets/flot/jquery.flot.pie.js?body=1" for 127.0.0.1 at 2015-12-23 10:46:15 +0530
+
+
+Started GET "/assets/flot/jquery.flot.time.js?body=1" for 127.0.0.1 at 2015-12-23 10:46:15 +0530
+
+
+Started GET "/assets/flot/jquery.flot.spline.js?body=1" for 127.0.0.1 at 2015-12-23 10:46:15 +0530
+
+
+Started GET "/assets/chartjs/Chart.min.js?body=1" for 127.0.0.1 at 2015-12-23 10:46:15 +0530
+
+
+Started GET "/assets/sparkline/jquery.sparkline.min.js?body=1" for 127.0.0.1 at 2015-12-23 10:46:15 +0530
+
+
+Started GET "/assets/jvectormap/jquery-jvectormap-world-mill-en.js?body=1" for 127.0.0.1 at 2015-12-23 10:46:15 +0530
+
+
+Started GET "/assets/jvectormap/jquery-jvectormap-2.0.2.min.js?body=1" for 127.0.0.1 at 2015-12-23 10:46:15 +0530
+
+
+Started GET "/assets/toastr/toastr.min.js?body=1" for 127.0.0.1 at 2015-12-23 10:46:15 +0530
+
+
+Started GET "/assets/dashboards.js?body=1" for 127.0.0.1 at 2015-12-23 10:46:15 +0530
+
+
+Started GET "/assets/a7.jpg" for 127.0.0.1 at 2015-12-23 10:46:15 +0530
+
+
+Started GET "/assets/profile_small.jpg" for 127.0.0.1 at 2015-12-23 10:46:15 +0530
+
+
+Started GET "/assets/a4.jpg" for 127.0.0.1 at 2015-12-23 10:46:15 +0530
+
+
+Started GET "/assets/profile.jpg" for 127.0.0.1 at 2015-12-23 10:46:15 +0530
+
+
+Started GET "/assets/a2.jpg" for 127.0.0.1 at 2015-12-23 10:46:15 +0530
+
+
+Started GET "/assets/a1.jpg" for 127.0.0.1 at 2015-12-23 10:46:15 +0530
+
+
+Started GET "/assets/a3.jpg" for 127.0.0.1 at 2015-12-23 10:46:15 +0530
+
+
+Started GET "/assets/patterns/header-profile-skin-3.png" for 127.0.0.1 at 2015-12-23 10:46:15 +0530
+
+
+Started GET "/assets/patterns/header-profile.png" for 127.0.0.1 at 2015-12-23 10:46:15 +0530
+
+
+Started GET "/assets/patterns/header-profile-skin-1.png" for 127.0.0.1 at 2015-12-23 10:46:15 +0530
+
+
+Started GET "/assets/a8.jpg" for 127.0.0.1 at 2015-12-23 10:46:15 +0530
+
+
+Started GET "/dashboards/dashboard_2" for 127.0.0.1 at 2015-12-23 10:47:20 +0530
+Processing by DashboardsController#dashboard_2 as HTML
+  Rendered dashboards/dashboard_2.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_skinconfig.html.erb (1.0ms)
+  Rendered layouts/_navigation.html.erb (18.6ms)
+  Rendered layouts/_topnavbar.html.erb (5.2ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+  Rendered layouts/_rightsidebar.html.erb (5.4ms)
+Completed 200 OK in 207ms (Views: 196.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/toastr/toastr.min.css?body=1" for 127.0.0.1 at 2015-12-23 10:47:21 +0530
+
+
+Started GET "/assets/dashboards.css?body=1" for 127.0.0.1 at 2015-12-23 10:47:21 +0530
+
+
+Started GET "/assets/jvectormap/jquery-jvectormap-2.0.2.css?body=1" for 127.0.0.1 at 2015-12-23 10:47:21 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-12-23 10:47:21 +0530
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2015-12-23 10:47:21 +0530
+
+
+Started GET "/assets/animate/animate.css?body=1" for 127.0.0.1 at 2015-12-23 10:47:21 +0530
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-12-23 10:47:21 +0530
+
+
+Started GET "/assets/jquery/jquery-2.1.1.js?body=1" for 127.0.0.1 at 2015-12-23 10:47:21 +0530
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2015-12-23 10:47:21 +0530
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2015-12-23 10:47:21 +0530
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2015-12-23 10:47:21 +0530
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2015-12-23 10:47:21 +0530
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2015-12-23 10:47:21 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2015-12-23 10:47:21 +0530
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2015-12-23 10:47:21 +0530
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2015-12-23 10:47:21 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2015-12-23 10:47:21 +0530
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2015-12-23 10:47:21 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2015-12-23 10:47:21 +0530
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2015-12-23 10:47:21 +0530
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2015-12-23 10:47:21 +0530
+
+
+Started GET "/assets/metisMenu/jquery.metisMenu.js?body=1" for 127.0.0.1 at 2015-12-23 10:47:21 +0530
+
+
+Started GET "/assets/pace/pace.min.js?body=1" for 127.0.0.1 at 2015-12-23 10:47:21 +0530
+
+
+Started GET "/assets/peity/jquery.peity.min.js?body=1" for 127.0.0.1 at 2015-12-23 10:47:21 +0530
+
+
+Started GET "/assets/slimscroll/jquery.slimscroll.min.js?body=1" for 127.0.0.1 at 2015-12-23 10:47:21 +0530
+
+
+Started GET "/assets/inspinia.js?body=1" for 127.0.0.1 at 2015-12-23 10:47:21 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-12-23 10:47:21 +0530
+
+
+Started GET "/assets/flot/jquery.flot.js?body=1" for 127.0.0.1 at 2015-12-23 10:47:21 +0530
+
+
+Started GET "/assets/flot/jquery.flot.tooltip.min.js?body=1" for 127.0.0.1 at 2015-12-23 10:47:21 +0530
+
+
+Started GET "/assets/flot/jquery.flot.resize.js?body=1" for 127.0.0.1 at 2015-12-23 10:47:21 +0530
+
+
+Started GET "/assets/flot/jquery.flot.pie.js?body=1" for 127.0.0.1 at 2015-12-23 10:47:21 +0530
+
+
+Started GET "/assets/flot/jquery.flot.time.js?body=1" for 127.0.0.1 at 2015-12-23 10:47:21 +0530
+
+
+Started GET "/assets/flot/jquery.flot.spline.js?body=1" for 127.0.0.1 at 2015-12-23 10:47:21 +0530
+
+
+Started GET "/assets/sparkline/jquery.sparkline.min.js?body=1" for 127.0.0.1 at 2015-12-23 10:47:21 +0530
+
+
+Started GET "/assets/chartjs/Chart.min.js?body=1" for 127.0.0.1 at 2015-12-23 10:47:21 +0530
+
+
+Started GET "/assets/jvectormap/jquery-jvectormap-2.0.2.min.js?body=1" for 127.0.0.1 at 2015-12-23 10:47:21 +0530
+
+
+Started GET "/assets/jvectormap/jquery-jvectormap-world-mill-en.js?body=1" for 127.0.0.1 at 2015-12-23 10:47:21 +0530
+
+
+Started GET "/assets/toastr/toastr.min.js?body=1" for 127.0.0.1 at 2015-12-23 10:47:21 +0530
+
+
+Started GET "/assets/dashboards.js?body=1" for 127.0.0.1 at 2015-12-23 10:47:21 +0530
+
+
+Started GET "/assets/profile_small.jpg" for 127.0.0.1 at 2015-12-23 10:47:21 +0530
+
+
+Started GET "/assets/a4.jpg" for 127.0.0.1 at 2015-12-23 10:47:21 +0530
+
+
+Started GET "/assets/profile.jpg" for 127.0.0.1 at 2015-12-23 10:47:21 +0530
+
+
+Started GET "/assets/a1.jpg" for 127.0.0.1 at 2015-12-23 10:47:21 +0530
+
+
+Started GET "/assets/a2.jpg" for 127.0.0.1 at 2015-12-23 10:47:21 +0530
+
+
+Started GET "/assets/a3.jpg" for 127.0.0.1 at 2015-12-23 10:47:21 +0530
+
+
+Started GET "/assets/a7.jpg" for 127.0.0.1 at 2015-12-23 10:47:21 +0530
+
+
+Started GET "/assets/a8.jpg" for 127.0.0.1 at 2015-12-23 10:47:21 +0530
+
+
+Started GET "/assets/patterns/header-profile-skin-1.png" for 127.0.0.1 at 2015-12-23 10:47:21 +0530
+
+
+Started GET "/assets/patterns/header-profile-skin-3.png" for 127.0.0.1 at 2015-12-23 10:47:21 +0530
+
+
+Started GET "/assets/patterns/header-profile.png" for 127.0.0.1 at 2015-12-23 10:47:21 +0530
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-23 10:47:26 +0530
+Processing by DashboardsController#dashboard_2 as HTML
+  Rendered dashboards/dashboard_2.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_skinconfig.html.erb (0.1ms)
+  Rendered layouts/_navigation.html.erb (5.1ms)
+  Rendered layouts/_topnavbar.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+  Rendered layouts/_rightsidebar.html.erb (0.3ms)
+Completed 200 OK in 26ms (Views: 25.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/toastr/toastr.min.css?body=1" for 127.0.0.1 at 2015-12-23 10:47:26 +0530
+
+
+Started GET "/assets/dashboards.css?body=1" for 127.0.0.1 at 2015-12-23 10:47:26 +0530
+
+
+Started GET "/assets/animate/animate.css?body=1" for 127.0.0.1 at 2015-12-23 10:47:26 +0530
+
+
+Started GET "/assets/jvectormap/jquery-jvectormap-2.0.2.css?body=1" for 127.0.0.1 at 2015-12-23 10:47:26 +0530
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2015-12-23 10:47:26 +0530
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-12-23 10:47:26 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-12-23 10:47:26 +0530
+
+
+Started GET "/assets/jquery/jquery-2.1.1.js?body=1" for 127.0.0.1 at 2015-12-23 10:47:26 +0530
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2015-12-23 10:47:26 +0530
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2015-12-23 10:47:26 +0530
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2015-12-23 10:47:26 +0530
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2015-12-23 10:47:26 +0530
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2015-12-23 10:47:26 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2015-12-23 10:47:26 +0530
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2015-12-23 10:47:26 +0530
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2015-12-23 10:47:26 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2015-12-23 10:47:26 +0530
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2015-12-23 10:47:26 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2015-12-23 10:47:26 +0530
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2015-12-23 10:47:26 +0530
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2015-12-23 10:47:26 +0530
+
+
+Started GET "/assets/metisMenu/jquery.metisMenu.js?body=1" for 127.0.0.1 at 2015-12-23 10:47:26 +0530
+
+
+Started GET "/assets/pace/pace.min.js?body=1" for 127.0.0.1 at 2015-12-23 10:47:26 +0530
+
+
+Started GET "/assets/peity/jquery.peity.min.js?body=1" for 127.0.0.1 at 2015-12-23 10:47:26 +0530
+
+
+Started GET "/assets/slimscroll/jquery.slimscroll.min.js?body=1" for 127.0.0.1 at 2015-12-23 10:47:26 +0530
+
+
+Started GET "/assets/inspinia.js?body=1" for 127.0.0.1 at 2015-12-23 10:47:26 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-12-23 10:47:26 +0530
+
+
+Started GET "/assets/flot/jquery.flot.js?body=1" for 127.0.0.1 at 2015-12-23 10:47:26 +0530
+
+
+Started GET "/assets/flot/jquery.flot.tooltip.min.js?body=1" for 127.0.0.1 at 2015-12-23 10:47:26 +0530
+
+
+Started GET "/assets/flot/jquery.flot.resize.js?body=1" for 127.0.0.1 at 2015-12-23 10:47:26 +0530
+
+
+Started GET "/assets/flot/jquery.flot.pie.js?body=1" for 127.0.0.1 at 2015-12-23 10:47:26 +0530
+
+
+Started GET "/assets/flot/jquery.flot.time.js?body=1" for 127.0.0.1 at 2015-12-23 10:47:26 +0530
+
+
+Started GET "/assets/flot/jquery.flot.spline.js?body=1" for 127.0.0.1 at 2015-12-23 10:47:26 +0530
+
+
+Started GET "/assets/chartjs/Chart.min.js?body=1" for 127.0.0.1 at 2015-12-23 10:47:26 +0530
+
+
+Started GET "/assets/jvectormap/jquery-jvectormap-2.0.2.min.js?body=1" for 127.0.0.1 at 2015-12-23 10:47:26 +0530
+
+
+Started GET "/assets/sparkline/jquery.sparkline.min.js?body=1" for 127.0.0.1 at 2015-12-23 10:47:26 +0530
+
+
+Started GET "/assets/jvectormap/jquery-jvectormap-world-mill-en.js?body=1" for 127.0.0.1 at 2015-12-23 10:47:26 +0530
+
+
+Started GET "/assets/toastr/toastr.min.js?body=1" for 127.0.0.1 at 2015-12-23 10:47:26 +0530
+
+
+Started GET "/assets/dashboards.js?body=1" for 127.0.0.1 at 2015-12-23 10:47:26 +0530
+
+
+Started GET "/assets/a7.jpg" for 127.0.0.1 at 2015-12-23 10:47:27 +0530
+
+
+Started GET "/assets/profile_small.jpg" for 127.0.0.1 at 2015-12-23 10:47:27 +0530
+
+
+Started GET "/assets/a4.jpg" for 127.0.0.1 at 2015-12-23 10:47:27 +0530
+
+
+Started GET "/assets/profile.jpg" for 127.0.0.1 at 2015-12-23 10:47:27 +0530
+
+
+Started GET "/assets/a1.jpg" for 127.0.0.1 at 2015-12-23 10:47:27 +0530
+
+
+Started GET "/assets/a2.jpg" for 127.0.0.1 at 2015-12-23 10:47:27 +0530
+
+
+Started GET "/assets/a3.jpg" for 127.0.0.1 at 2015-12-23 10:47:27 +0530
+
+
+Started GET "/assets/a8.jpg" for 127.0.0.1 at 2015-12-23 10:47:27 +0530
+
+
+Started GET "/assets/patterns/header-profile-skin-1.png" for 127.0.0.1 at 2015-12-23 10:47:27 +0530
+
+
+Started GET "/assets/patterns/header-profile-skin-3.png" for 127.0.0.1 at 2015-12-23 10:47:27 +0530
+
+
+Started GET "/assets/patterns/header-profile.png" for 127.0.0.1 at 2015-12-23 10:47:27 +0530
+
+
+Started GET "/landing/index" for 127.0.0.1 at 2015-12-23 10:47:56 +0530
+Processing by LandingController#index as HTML
+  Rendered landing/index.html.erb within layouts/empty (9.4ms)
+Completed 200 OK in 26ms (Views: 25.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/animate/animate.css?body=1" for 127.0.0.1 at 2015-12-23 10:47:57 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-12-23 10:47:57 +0530
+
+
+Started GET "/assets/jquery/jquery-2.1.1.js?body=1" for 127.0.0.1 at 2015-12-23 10:47:57 +0530
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-12-23 10:47:57 +0530
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2015-12-23 10:47:57 +0530
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2015-12-23 10:47:57 +0530
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2015-12-23 10:47:57 +0530
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2015-12-23 10:47:57 +0530
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2015-12-23 10:47:57 +0530
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2015-12-23 10:47:57 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2015-12-23 10:47:57 +0530
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2015-12-23 10:47:57 +0530
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2015-12-23 10:47:57 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2015-12-23 10:47:57 +0530
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2015-12-23 10:47:57 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2015-12-23 10:47:57 +0530
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2015-12-23 10:47:57 +0530
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2015-12-23 10:47:57 +0530
+
+
+Started GET "/assets/metisMenu/jquery.metisMenu.js?body=1" for 127.0.0.1 at 2015-12-23 10:47:57 +0530
+
+
+Started GET "/assets/pace/pace.min.js?body=1" for 127.0.0.1 at 2015-12-23 10:47:57 +0530
+
+
+Started GET "/assets/peity/jquery.peity.min.js?body=1" for 127.0.0.1 at 2015-12-23 10:47:57 +0530
+
+
+Started GET "/assets/slimscroll/jquery.slimscroll.min.js?body=1" for 127.0.0.1 at 2015-12-23 10:47:57 +0530
+
+
+Started GET "/assets/inspinia.js?body=1" for 127.0.0.1 at 2015-12-23 10:47:57 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-12-23 10:47:57 +0530
+
+
+Started GET "/assets/landing/laptop.png" for 127.0.0.1 at 2015-12-23 10:47:57 +0530
+
+
+Started GET "/assets/landing/dashboard.png" for 127.0.0.1 at 2015-12-23 10:47:57 +0530
+
+
+Started GET "/assets/landing/avatar1.jpg" for 127.0.0.1 at 2015-12-23 10:47:57 +0530
+
+
+Started GET "/assets/landing/avatar3.jpg" for 127.0.0.1 at 2015-12-23 10:47:57 +0530
+
+
+Started GET "/assets/landing/avatar2.jpg" for 127.0.0.1 at 2015-12-23 10:47:57 +0530
+
+
+Started GET "/assets/landing/perspective.png" for 127.0.0.1 at 2015-12-23 10:47:57 +0530
+
+
+Started GET "/assets/landing/iphone.jpg" for 127.0.0.1 at 2015-12-23 10:47:57 +0530
+
+
+Started GET "/assets/landing/avatar_all.png" for 127.0.0.1 at 2015-12-23 10:47:57 +0530
+
+
+Started GET "/assets/landing/header_one.jpg" for 127.0.0.1 at 2015-12-23 10:47:57 +0530
+
+
+Started GET "/assets/landing/word_map.png" for 127.0.0.1 at 2015-12-23 10:47:57 +0530
+
+
+Started GET "/assets/landing/header_two.jpg" for 127.0.0.1 at 2015-12-23 10:48:04 +0530
+DEPRECATION WARNING: Defining a route where `to` is a controller without an action is deprecated. Please change `to: 'landing/index'` to `controller: 'landing/index'`. (called from block in <top (required)> at /home/tsatish/workspace/Green_Halo/config/routes.rb:4)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-23 10:49:36 +0530
+Processing by LandingController#index as HTML
+  Rendered landing/index.html.erb within layouts/empty (8.1ms)
+Completed 200 OK in 105ms (Views: 98.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-12-23 10:49:36 +0530
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2015-12-23 10:49:36 +0530
+
+
+Started GET "/assets/animate/animate.css?body=1" for 127.0.0.1 at 2015-12-23 10:49:36 +0530
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2015-12-23 10:49:36 +0530
+
+
+Started GET "/assets/jquery/jquery-2.1.1.js?body=1" for 127.0.0.1 at 2015-12-23 10:49:36 +0530
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-12-23 10:49:36 +0530
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2015-12-23 10:49:36 +0530
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2015-12-23 10:49:36 +0530
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2015-12-23 10:49:36 +0530
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2015-12-23 10:49:36 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2015-12-23 10:49:36 +0530
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2015-12-23 10:49:36 +0530
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2015-12-23 10:49:36 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2015-12-23 10:49:36 +0530
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2015-12-23 10:49:36 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2015-12-23 10:49:36 +0530
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2015-12-23 10:49:36 +0530
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2015-12-23 10:49:36 +0530
+
+
+Started GET "/assets/metisMenu/jquery.metisMenu.js?body=1" for 127.0.0.1 at 2015-12-23 10:49:36 +0530
+
+
+Started GET "/assets/pace/pace.min.js?body=1" for 127.0.0.1 at 2015-12-23 10:49:36 +0530
+
+
+Started GET "/assets/peity/jquery.peity.min.js?body=1" for 127.0.0.1 at 2015-12-23 10:49:36 +0530
+
+
+Started GET "/assets/slimscroll/jquery.slimscroll.min.js?body=1" for 127.0.0.1 at 2015-12-23 10:49:36 +0530
+
+
+Started GET "/assets/inspinia.js?body=1" for 127.0.0.1 at 2015-12-23 10:49:36 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-12-23 10:49:36 +0530
+
+
+Started GET "/assets/landing/perspective.png" for 127.0.0.1 at 2015-12-23 10:49:38 +0530
+
+
+Started GET "/assets/landing/laptop.png" for 127.0.0.1 at 2015-12-23 10:49:38 +0530
+
+
+Started GET "/assets/landing/dashboard.png" for 127.0.0.1 at 2015-12-23 10:49:38 +0530
+
+
+Started GET "/assets/landing/avatar3.jpg" for 127.0.0.1 at 2015-12-23 10:49:38 +0530
+
+
+Started GET "/assets/landing/avatar1.jpg" for 127.0.0.1 at 2015-12-23 10:49:38 +0530
+
+
+Started GET "/assets/landing/avatar2.jpg" for 127.0.0.1 at 2015-12-23 10:49:38 +0530
+
+
+Started GET "/assets/landing/iphone.jpg" for 127.0.0.1 at 2015-12-23 10:49:38 +0530
+
+
+Started GET "/assets/landing/avatar_all.png" for 127.0.0.1 at 2015-12-23 10:49:38 +0530
+
+
+Started GET "/assets/landing/word_map.png" for 127.0.0.1 at 2015-12-23 10:49:38 +0530
+
+
+Started GET "/assets/landing/header_one.jpg" for 127.0.0.1 at 2015-12-23 10:49:38 +0530
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-23 10:50:02 +0530
+Processing by LandingController#index as HTML
+  Rendered landing/index.html.erb within layouts/empty (10.6ms)
+Completed 200 OK in 161ms (Views: 151.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-12-23 10:50:02 +0530
+
+
+Started GET "/assets/animate/animate.css?body=1" for 127.0.0.1 at 2015-12-23 10:50:02 +0530
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-12-23 10:50:02 +0530
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2015-12-23 10:50:02 +0530
+
+
+Started GET "/assets/jquery/jquery-2.1.1.js?body=1" for 127.0.0.1 at 2015-12-23 10:50:02 +0530
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2015-12-23 10:50:02 +0530
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2015-12-23 10:50:02 +0530
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2015-12-23 10:50:02 +0530
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2015-12-23 10:50:02 +0530
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2015-12-23 10:50:02 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2015-12-23 10:50:02 +0530
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2015-12-23 10:50:02 +0530
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2015-12-23 10:50:02 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2015-12-23 10:50:02 +0530
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2015-12-23 10:50:02 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2015-12-23 10:50:02 +0530
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2015-12-23 10:50:02 +0530
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2015-12-23 10:50:02 +0530
+
+
+Started GET "/assets/metisMenu/jquery.metisMenu.js?body=1" for 127.0.0.1 at 2015-12-23 10:50:02 +0530
+
+
+Started GET "/assets/pace/pace.min.js?body=1" for 127.0.0.1 at 2015-12-23 10:50:02 +0530
+
+
+Started GET "/assets/peity/jquery.peity.min.js?body=1" for 127.0.0.1 at 2015-12-23 10:50:02 +0530
+
+
+Started GET "/assets/slimscroll/jquery.slimscroll.min.js?body=1" for 127.0.0.1 at 2015-12-23 10:50:02 +0530
+
+
+Started GET "/assets/inspinia.js?body=1" for 127.0.0.1 at 2015-12-23 10:50:02 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-12-23 10:50:02 +0530
+
+
+Started GET "/assets/landing/laptop.png" for 127.0.0.1 at 2015-12-23 10:50:02 +0530
+
+
+Started GET "/assets/landing/perspective.png" for 127.0.0.1 at 2015-12-23 10:50:02 +0530
+
+
+Started GET "/assets/landing/dashboard.png" for 127.0.0.1 at 2015-12-23 10:50:02 +0530
+
+
+Started GET "/assets/landing/avatar2.jpg" for 127.0.0.1 at 2015-12-23 10:50:02 +0530
+
+
+Started GET "/assets/landing/avatar3.jpg" for 127.0.0.1 at 2015-12-23 10:50:02 +0530
+
+
+Started GET "/assets/landing/avatar1.jpg" for 127.0.0.1 at 2015-12-23 10:50:02 +0530
+
+
+Started GET "/assets/landing/iphone.jpg" for 127.0.0.1 at 2015-12-23 10:50:02 +0530
+
+
+Started GET "/assets/landing/avatar_all.png" for 127.0.0.1 at 2015-12-23 10:50:03 +0530
+
+
+Started GET "/assets/landing/word_map.png" for 127.0.0.1 at 2015-12-23 10:50:03 +0530
+
+
+Started GET "/assets/landing/header_one.jpg" for 127.0.0.1 at 2015-12-23 10:50:03 +0530
+
+
+Started GET "/assets/landing/header_two.jpg" for 127.0.0.1 at 2015-12-23 10:50:10 +0530
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-23 11:01:47 +0530
+Processing by LandingController#index as HTML
+  Rendered landing/index.html.erb within layouts/empty (1.0ms)
+Completed 200 OK in 19ms (Views: 18.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-12-23 11:01:47 +0530
+
+
+Started GET "/assets/animate/animate.css?body=1" for 127.0.0.1 at 2015-12-23 11:01:47 +0530
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2015-12-23 11:01:47 +0530
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-12-23 11:01:47 +0530
+
+
+Started GET "/assets/jquery/jquery-2.1.1.js?body=1" for 127.0.0.1 at 2015-12-23 11:01:47 +0530
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2015-12-23 11:01:47 +0530
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2015-12-23 11:01:47 +0530
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2015-12-23 11:01:47 +0530
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2015-12-23 11:01:47 +0530
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2015-12-23 11:01:47 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2015-12-23 11:01:47 +0530
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2015-12-23 11:01:47 +0530
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2015-12-23 11:01:47 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2015-12-23 11:01:47 +0530
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2015-12-23 11:01:47 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2015-12-23 11:01:47 +0530
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2015-12-23 11:01:47 +0530
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2015-12-23 11:01:47 +0530
+
+
+Started GET "/assets/metisMenu/jquery.metisMenu.js?body=1" for 127.0.0.1 at 2015-12-23 11:01:47 +0530
+
+
+Started GET "/assets/pace/pace.min.js?body=1" for 127.0.0.1 at 2015-12-23 11:01:47 +0530
+
+
+Started GET "/assets/peity/jquery.peity.min.js?body=1" for 127.0.0.1 at 2015-12-23 11:01:47 +0530
+
+
+Started GET "/assets/slimscroll/jquery.slimscroll.min.js?body=1" for 127.0.0.1 at 2015-12-23 11:01:47 +0530
+
+
+Started GET "/assets/inspinia.js?body=1" for 127.0.0.1 at 2015-12-23 11:01:47 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-12-23 11:01:47 +0530
+
+
+Started GET "/assets/landing/laptop.png" for 127.0.0.1 at 2015-12-23 11:01:47 +0530
+
+
+Started GET "/assets/landing/dashboard.png" for 127.0.0.1 at 2015-12-23 11:01:47 +0530
+
+
+Started GET "/assets/landing/avatar3.jpg" for 127.0.0.1 at 2015-12-23 11:01:47 +0530
+
+
+Started GET "/assets/landing/perspective.png" for 127.0.0.1 at 2015-12-23 11:01:47 +0530
+
+
+Started GET "/assets/landing/avatar2.jpg" for 127.0.0.1 at 2015-12-23 11:01:47 +0530
+
+
+Started GET "/assets/landing/avatar1.jpg" for 127.0.0.1 at 2015-12-23 11:01:47 +0530
+
+
+Started GET "/assets/landing/iphone.jpg" for 127.0.0.1 at 2015-12-23 11:01:47 +0530
+
+
+Started GET "/assets/landing/avatar_all.png" for 127.0.0.1 at 2015-12-23 11:01:47 +0530
+
+
+Started GET "/assets/landing/word_map.png" for 127.0.0.1 at 2015-12-23 11:01:47 +0530
+
+
+Started GET "/assets/landing/header_one.jpg" for 127.0.0.1 at 2015-12-23 11:01:47 +0530
+
+
+Started GET "/assets/landing/header_two.jpg" for 127.0.0.1 at 2015-12-23 11:01:55 +0530
