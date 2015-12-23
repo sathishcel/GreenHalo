@@ -2,14 +2,15 @@
 ### Rails template
 capybara-*.html
 .rspec
-/log/*.log
+log/development.log
 /tmp
-/db/*.sqlite3
+db/*.sqlite3
 /db/*.sqlite3-journal
-/public/system
+public/system
 /coverage/
 /spec/tmp
-/.idea
+.idea
+.idea/workspace.xml
 config/database.yml
 
 
