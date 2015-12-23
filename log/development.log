@@ -76575,3 +76575,844 @@ ActionController::RoutingError (No route matches [GET] "/toastr.js.map"):
   Rendered /usr/share/rvm/gems/ruby-2.2.2@gh/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.0ms)
   Rendered /usr/share/rvm/gems/ruby-2.2.2@gh/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
   Rendered /usr/share/rvm/gems/ruby-2.2.2@gh/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (83.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-23 15:15:28 +0530
+
+Mysql2::Error (Access denied for user 'root'@'localhost' (using password: YES)):
+  mysql2 (0.3.20) lib/mysql2/client.rb:70:in `connect'
+  mysql2 (0.3.20) lib/mysql2/client.rb:70:in `initialize'
+  activerecord (4.2.3) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `new'
+  activerecord (4.2.3) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `mysql2_connection'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:438:in `new_connection'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:448:in `checkout_new_connection'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `acquire_connection'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:349:in `block in checkout'
+  /usr/share/rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:348:in `checkout'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:263:in `block in connection'
+  /usr/share/rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:262:in `connection'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:571:in `retrieve_connection'
+  activerecord (4.2.3) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.2.3) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.2.3) lib/active_record/migration.rb:383:in `connection'
+  activerecord (4.2.3) lib/active_record/migration.rb:370:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:84:in `run_callbacks'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/share/rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /usr/share/rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /usr/share/rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /usr/share/rvm/gems/ruby-2.2.2@gh/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.1ms)
+  Rendered /usr/share/rvm/gems/ruby-2.2.2@gh/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /usr/share/rvm/gems/ruby-2.2.2@gh/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/share/rvm/gems/ruby-2.2.2@gh/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (18.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-23 15:16:17 +0530
+
+Mysql2::Error (Access denied for user 'root'@'localhost' (using password: YES)):
+  mysql2 (0.3.20) lib/mysql2/client.rb:70:in `connect'
+  mysql2 (0.3.20) lib/mysql2/client.rb:70:in `initialize'
+  activerecord (4.2.3) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `new'
+  activerecord (4.2.3) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `mysql2_connection'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:438:in `new_connection'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:448:in `checkout_new_connection'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `acquire_connection'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:349:in `block in checkout'
+  /usr/share/rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:348:in `checkout'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:263:in `block in connection'
+  /usr/share/rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:262:in `connection'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:571:in `retrieve_connection'
+  activerecord (4.2.3) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.2.3) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.2.3) lib/active_record/migration.rb:383:in `connection'
+  activerecord (4.2.3) lib/active_record/migration.rb:370:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:84:in `run_callbacks'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/share/rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /usr/share/rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /usr/share/rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /usr/share/rvm/gems/ruby-2.2.2@gh/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.2ms)
+  Rendered /usr/share/rvm/gems/ruby-2.2.2@gh/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /usr/share/rvm/gems/ruby-2.2.2@gh/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/share/rvm/gems/ruby-2.2.2@gh/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (15.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-23 15:18:20 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /usr/share/rvm/gems/ruby-2.2.2@gh/gems/railties-4.2.3/lib/rails/templates/rails/welcome/index.html.erb (1.3ms)
+Completed 200 OK in 5ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-12-23 15:18:26 +0530
+Processing by Users::SessionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/dashboards/dashboard_2
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 10ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/dashboards/dashboard_2" for 127.0.0.1 at 2015-12-23 15:18:26 +0530
+  [1m[35mUser Load (0.1ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+Processing by DashboardsController#dashboard_2 as HTML
+  Rendered dashboards/dashboard_2.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_skinconfig.html.erb (0.8ms)
+  Rendered layouts/_navigation.html.erb (11.3ms)
+  Rendered layouts/_topnavbar.html.erb (4.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+  Rendered layouts/_rightsidebar.html.erb (4.2ms)
+Completed 200 OK in 200ms (Views: 200.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/toastr/toastr.min.css?body=1" for 127.0.0.1 at 2015-12-23 15:18:26 +0530
+
+
+Started GET "/assets/jvectormap/jquery-jvectormap-2.0.2.css?body=1" for 127.0.0.1 at 2015-12-23 15:18:26 +0530
+
+
+Started GET "/assets/dashboards.css?body=1" for 127.0.0.1 at 2015-12-23 15:18:26 +0530
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2015-12-23 15:18:26 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-12-23 15:18:26 +0530
+
+
+Started GET "/assets/animate/animate.css?body=1" for 127.0.0.1 at 2015-12-23 15:18:26 +0530
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-12-23 15:18:26 +0530
+
+
+Started GET "/assets/jquery/jquery-2.1.1.js?body=1" for 127.0.0.1 at 2015-12-23 15:18:26 +0530
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2015-12-23 15:18:26 +0530
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2015-12-23 15:18:26 +0530
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2015-12-23 15:18:26 +0530
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2015-12-23 15:18:26 +0530
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2015-12-23 15:18:26 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2015-12-23 15:18:26 +0530
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2015-12-23 15:18:26 +0530
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2015-12-23 15:18:26 +0530
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2015-12-23 15:18:26 +0530
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2015-12-23 15:18:26 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2015-12-23 15:18:26 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2015-12-23 15:18:26 +0530
+
+
+Started GET "/assets/metisMenu/jquery.metisMenu.js?body=1" for 127.0.0.1 at 2015-12-23 15:18:26 +0530
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2015-12-23 15:18:26 +0530
+
+
+Started GET "/assets/pace/pace.min.js?body=1" for 127.0.0.1 at 2015-12-23 15:18:26 +0530
+
+
+Started GET "/assets/peity/jquery.peity.min.js?body=1" for 127.0.0.1 at 2015-12-23 15:18:26 +0530
+
+
+Started GET "/assets/slimscroll/jquery.slimscroll.min.js?body=1" for 127.0.0.1 at 2015-12-23 15:18:26 +0530
+
+
+Started GET "/assets/inspinia.js?body=1" for 127.0.0.1 at 2015-12-23 15:18:26 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-12-23 15:18:26 +0530
+
+
+Started GET "/assets/a7.jpg" for 127.0.0.1 at 2015-12-23 15:18:26 +0530
+
+
+Started GET "/assets/profile_small.jpg" for 127.0.0.1 at 2015-12-23 15:18:26 +0530
+
+
+Started GET "/assets/a4.jpg" for 127.0.0.1 at 2015-12-23 15:18:26 +0530
+
+
+Started GET "/assets/profile.jpg" for 127.0.0.1 at 2015-12-23 15:18:26 +0530
+
+
+Started GET "/assets/a1.jpg" for 127.0.0.1 at 2015-12-23 15:18:26 +0530
+
+
+Started GET "/assets/a2.jpg" for 127.0.0.1 at 2015-12-23 15:18:26 +0530
+
+
+Started GET "/assets/a3.jpg" for 127.0.0.1 at 2015-12-23 15:18:26 +0530
+
+
+Started GET "/assets/a8.jpg" for 127.0.0.1 at 2015-12-23 15:18:26 +0530
+
+
+Started GET "/assets/flot/jquery.flot.js?body=1" for 127.0.0.1 at 2015-12-23 15:18:26 +0530
+
+
+Started GET "/assets/flot/jquery.flot.tooltip.min.js?body=1" for 127.0.0.1 at 2015-12-23 15:18:26 +0530
+
+
+Started GET "/assets/flot/jquery.flot.resize.js?body=1" for 127.0.0.1 at 2015-12-23 15:18:26 +0530
+
+
+Started GET "/assets/flot/jquery.flot.pie.js?body=1" for 127.0.0.1 at 2015-12-23 15:18:26 +0530
+
+
+Started GET "/assets/flot/jquery.flot.time.js?body=1" for 127.0.0.1 at 2015-12-23 15:18:27 +0530
+
+
+Started GET "/assets/flot/jquery.flot.spline.js?body=1" for 127.0.0.1 at 2015-12-23 15:18:27 +0530
+
+
+Started GET "/assets/sparkline/jquery.sparkline.min.js?body=1" for 127.0.0.1 at 2015-12-23 15:18:27 +0530
+
+
+Started GET "/assets/chartjs/Chart.min.js?body=1" for 127.0.0.1 at 2015-12-23 15:18:27 +0530
+
+
+Started GET "/assets/jvectormap/jquery-jvectormap-2.0.2.min.js?body=1" for 127.0.0.1 at 2015-12-23 15:18:27 +0530
+
+
+Started GET "/assets/jvectormap/jquery-jvectormap-world-mill-en.js?body=1" for 127.0.0.1 at 2015-12-23 15:18:27 +0530
+
+
+Started GET "/assets/toastr/toastr.min.js?body=1" for 127.0.0.1 at 2015-12-23 15:18:27 +0530
+
+
+Started GET "/assets/dashboards.js?body=1" for 127.0.0.1 at 2015-12-23 15:18:27 +0530
+
+
+Started GET "/assets/fontawesome-webfont.woff2?v=4.3.0" for 127.0.0.1 at 2015-12-23 15:18:27 +0530
+
+
+Started GET "/assets/patterns/header-profile-skin-1.png" for 127.0.0.1 at 2015-12-23 15:18:27 +0530
+
+
+Started GET "/assets/patterns/header-profile-skin-3.png" for 127.0.0.1 at 2015-12-23 15:18:27 +0530
+
+
+Started GET "/assets/patterns/header-profile.png" for 127.0.0.1 at 2015-12-23 15:18:27 +0530
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2015-12-23 15:18:36 +0530
+
+ActionController::RoutingError (No route matches [GET] "/users/sign_out"):
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/share/rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /usr/share/rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /usr/share/rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /usr/share/rvm/gems/ruby-2.2.2@gh/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /usr/share/rvm/gems/ruby-2.2.2@gh/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.1ms)
+  Rendered /usr/share/rvm/gems/ruby-2.2.2@gh/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (7.0ms)
+  Rendered /usr/share/rvm/gems/ruby-2.2.2@gh/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/share/rvm/gems/ruby-2.2.2@gh/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (63.1ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users`
+  [1m[36mSQL (30.0ms)[0m  [1mDELETE FROM `users`[0m
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-23 15:19:17 +0530
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+Processing by LandingController#index as HTML
+  Rendered landing/index.html.erb within layouts/empty (15.2ms)
+Completed 200 OK in 48ms (Views: 47.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-12-23 15:19:17 +0530
+
+
+Started GET "/assets/animate/animate.css?body=1" for 127.0.0.1 at 2015-12-23 15:19:17 +0530
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-12-23 15:19:17 +0530
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2015-12-23 15:19:17 +0530
+
+
+Started GET "/assets/jquery/jquery-2.1.1.js?body=1" for 127.0.0.1 at 2015-12-23 15:19:17 +0530
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2015-12-23 15:19:17 +0530
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2015-12-23 15:19:17 +0530
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2015-12-23 15:19:17 +0530
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2015-12-23 15:19:17 +0530
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2015-12-23 15:19:17 +0530
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2015-12-23 15:19:17 +0530
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2015-12-23 15:19:17 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2015-12-23 15:19:17 +0530
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2015-12-23 15:19:18 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2015-12-23 15:19:18 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2015-12-23 15:19:18 +0530
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2015-12-23 15:19:18 +0530
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2015-12-23 15:19:18 +0530
+
+
+Started GET "/assets/metisMenu/jquery.metisMenu.js?body=1" for 127.0.0.1 at 2015-12-23 15:19:18 +0530
+
+
+Started GET "/assets/pace/pace.min.js?body=1" for 127.0.0.1 at 2015-12-23 15:19:18 +0530
+
+
+Started GET "/assets/peity/jquery.peity.min.js?body=1" for 127.0.0.1 at 2015-12-23 15:19:18 +0530
+
+
+Started GET "/assets/inspinia.js?body=1" for 127.0.0.1 at 2015-12-23 15:19:18 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-12-23 15:19:18 +0530
+
+
+Started GET "/assets/slimscroll/jquery.slimscroll.min.js?body=1" for 127.0.0.1 at 2015-12-23 15:19:18 +0530
+
+
+Started GET "/assets/gh/wastetrackinglogo.png" for 127.0.0.1 at 2015-12-23 15:19:18 +0530
+
+
+Started GET "/assets/landing/laptop.png" for 127.0.0.1 at 2015-12-23 15:19:18 +0530
+
+
+Started GET "/assets/landing/perspective.png" for 127.0.0.1 at 2015-12-23 15:19:18 +0530
+
+
+Started GET "/assets/landing/dashboard.png" for 127.0.0.1 at 2015-12-23 15:19:18 +0530
+
+
+Started GET "/assets/landing/avatar3.jpg" for 127.0.0.1 at 2015-12-23 15:19:18 +0530
+
+
+Started GET "/assets/landing/avatar1.jpg" for 127.0.0.1 at 2015-12-23 15:19:18 +0530
+
+
+Started GET "/assets/landing/iphone.jpg" for 127.0.0.1 at 2015-12-23 15:19:18 +0530
+
+
+Started GET "/assets/landing/avatar2.jpg" for 127.0.0.1 at 2015-12-23 15:19:18 +0530
+
+
+Started GET "/assets/fontawesome-webfont.woff2?v=4.3.0" for 127.0.0.1 at 2015-12-23 15:19:18 +0530
+
+
+Started GET "/assets/landing/word_map.png" for 127.0.0.1 at 2015-12-23 15:19:18 +0530
+
+
+Started GET "/assets/landing/avatar_all.png" for 127.0.0.1 at 2015-12-23 15:19:18 +0530
+
+
+Started GET "/assets/landing/header_one.jpg" for 127.0.0.1 at 2015-12-23 15:19:18 +0530
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-23 15:19:34 +0530
+Processing by LandingController#index as HTML
+  Rendered landing/index.html.erb within layouts/empty (2.8ms)
+Completed 200 OK in 46ms (Views: 45.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-12-23 15:19:34 +0530
+
+
+Started GET "/assets/animate/animate.css?body=1" for 127.0.0.1 at 2015-12-23 15:19:34 +0530
+
+
+Started GET "/assets/jquery/jquery-2.1.1.js?body=1" for 127.0.0.1 at 2015-12-23 15:19:34 +0530
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2015-12-23 15:19:34 +0530
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2015-12-23 15:19:34 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-12-23 15:19:34 +0530
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2015-12-23 15:19:34 +0530
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2015-12-23 15:19:34 +0530
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2015-12-23 15:19:34 +0530
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2015-12-23 15:19:34 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2015-12-23 15:19:34 +0530
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2015-12-23 15:19:34 +0530
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2015-12-23 15:19:34 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2015-12-23 15:19:34 +0530
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2015-12-23 15:19:34 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2015-12-23 15:19:34 +0530
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2015-12-23 15:19:34 +0530
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2015-12-23 15:19:34 +0530
+
+
+Started GET "/assets/metisMenu/jquery.metisMenu.js?body=1" for 127.0.0.1 at 2015-12-23 15:19:34 +0530
+
+
+Started GET "/assets/pace/pace.min.js?body=1" for 127.0.0.1 at 2015-12-23 15:19:34 +0530
+
+
+Started GET "/assets/peity/jquery.peity.min.js?body=1" for 127.0.0.1 at 2015-12-23 15:19:34 +0530
+
+
+Started GET "/assets/slimscroll/jquery.slimscroll.min.js?body=1" for 127.0.0.1 at 2015-12-23 15:19:34 +0530
+
+
+Started GET "/assets/inspinia.js?body=1" for 127.0.0.1 at 2015-12-23 15:19:34 +0530
+
+
+Started GET "/assets/landing/laptop.png" for 127.0.0.1 at 2015-12-23 15:19:34 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-12-23 15:19:34 +0530
+
+
+Started GET "/assets/landing/perspective.png" for 127.0.0.1 at 2015-12-23 15:19:34 +0530
+
+
+Started GET "/assets/landing/dashboard.png" for 127.0.0.1 at 2015-12-23 15:19:34 +0530
+
+
+Started GET "/assets/landing/avatar2.jpg" for 127.0.0.1 at 2015-12-23 15:19:34 +0530
+
+
+Started GET "/assets/landing/avatar3.jpg" for 127.0.0.1 at 2015-12-23 15:19:34 +0530
+
+
+Started GET "/assets/landing/iphone.jpg" for 127.0.0.1 at 2015-12-23 15:19:34 +0530
+
+
+Started GET "/assets/landing/avatar1.jpg" for 127.0.0.1 at 2015-12-23 15:19:34 +0530
+
+
+Started GET "/assets/fontawesome-webfont.woff2?v=4.3.0" for 127.0.0.1 at 2015-12-23 15:19:34 +0530
+
+
+Started GET "/assets/landing/word_map.png" for 127.0.0.1 at 2015-12-23 15:19:34 +0530
+
+
+Started GET "/assets/landing/avatar_all.png" for 127.0.0.1 at 2015-12-23 15:19:34 +0530
+
+
+Started GET "/assets/landing/header_one.jpg" for 127.0.0.1 at 2015-12-23 15:19:34 +0530
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-23 15:21:05 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by LandingController#index as HTML
+  Rendered landing/index.html.erb within layouts/empty (10.7ms)
+Completed 200 OK in 116ms (Views: 115.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-12-23 15:21:05 +0530
+
+
+Started GET "/assets/animate/animate.css?body=1" for 127.0.0.1 at 2015-12-23 15:21:05 +0530
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-12-23 15:21:05 +0530
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2015-12-23 15:21:05 +0530
+
+
+Started GET "/assets/jquery/jquery-2.1.1.js?body=1" for 127.0.0.1 at 2015-12-23 15:21:05 +0530
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2015-12-23 15:21:05 +0530
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2015-12-23 15:21:05 +0530
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2015-12-23 15:21:05 +0530
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2015-12-23 15:21:05 +0530
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2015-12-23 15:21:05 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2015-12-23 15:21:05 +0530
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2015-12-23 15:21:05 +0530
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2015-12-23 15:21:05 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2015-12-23 15:21:05 +0530
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2015-12-23 15:21:05 +0530
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2015-12-23 15:21:05 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2015-12-23 15:21:05 +0530
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2015-12-23 15:21:05 +0530
+
+
+Started GET "/assets/metisMenu/jquery.metisMenu.js?body=1" for 127.0.0.1 at 2015-12-23 15:21:05 +0530
+
+
+Started GET "/assets/pace/pace.min.js?body=1" for 127.0.0.1 at 2015-12-23 15:21:05 +0530
+
+
+Started GET "/assets/peity/jquery.peity.min.js?body=1" for 127.0.0.1 at 2015-12-23 15:21:05 +0530
+
+
+Started GET "/assets/slimscroll/jquery.slimscroll.min.js?body=1" for 127.0.0.1 at 2015-12-23 15:21:05 +0530
+
+
+Started GET "/assets/inspinia.js?body=1" for 127.0.0.1 at 2015-12-23 15:21:05 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-12-23 15:21:05 +0530
+
+
+Started GET "/assets/gh/wastetrackinglogo.png" for 127.0.0.1 at 2015-12-23 15:21:05 +0530
+
+
+Started GET "/assets/landing/laptop.png" for 127.0.0.1 at 2015-12-23 15:21:05 +0530
+
+
+Started GET "/assets/landing/perspective.png" for 127.0.0.1 at 2015-12-23 15:21:05 +0530
+
+
+Started GET "/assets/landing/dashboard.png" for 127.0.0.1 at 2015-12-23 15:21:05 +0530
+
+
+Started GET "/assets/landing/avatar3.jpg" for 127.0.0.1 at 2015-12-23 15:21:05 +0530
+
+
+Started GET "/assets/landing/avatar1.jpg" for 127.0.0.1 at 2015-12-23 15:21:05 +0530
+
+
+Started GET "/assets/landing/avatar2.jpg" for 127.0.0.1 at 2015-12-23 15:21:05 +0530
+
+
+Started GET "/assets/landing/iphone.jpg" for 127.0.0.1 at 2015-12-23 15:21:05 +0530
+
+
+Started GET "/assets/fontawesome-webfont.woff2?v=4.3.0" for 127.0.0.1 at 2015-12-23 15:21:09 +0530
+
+
+Started GET "/assets/landing/word_map.png" for 127.0.0.1 at 2015-12-23 15:21:09 +0530
+
+
+Started GET "/assets/landing/avatar_all.png" for 127.0.0.1 at 2015-12-23 15:21:09 +0530
+
+
+Started GET "/assets/landing/header_one.jpg" for 127.0.0.1 at 2015-12-23 15:21:09 +0530
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-12-23 15:21:11 +0530
+Processing by Users::SessionsController#new as HTML
+  Rendered users/sessions/new.html.erb (7.9ms)
+Completed 200 OK in 37ms (Views: 9.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/style.css" for 127.0.0.1 at 2015-12-23 15:21:12 +0530
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-23 15:21:15 +0530
+Processing by LandingController#index as HTML
+  Rendered landing/index.html.erb within layouts/empty (1.4ms)
+Completed 200 OK in 25ms (Views: 24.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-12-23 15:21:15 +0530
+
+
+Started GET "/assets/animate/animate.css?body=1" for 127.0.0.1 at 2015-12-23 15:21:15 +0530
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2015-12-23 15:21:15 +0530
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-12-23 15:21:15 +0530
+
+
+Started GET "/assets/jquery/jquery-2.1.1.js?body=1" for 127.0.0.1 at 2015-12-23 15:21:15 +0530
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2015-12-23 15:21:15 +0530
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2015-12-23 15:21:15 +0530
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2015-12-23 15:21:15 +0530
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2015-12-23 15:21:15 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2015-12-23 15:21:15 +0530
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2015-12-23 15:21:15 +0530
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2015-12-23 15:21:15 +0530
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2015-12-23 15:21:15 +0530
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2015-12-23 15:21:15 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2015-12-23 15:21:15 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2015-12-23 15:21:15 +0530
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2015-12-23 15:21:15 +0530
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2015-12-23 15:21:15 +0530
+
+
+Started GET "/assets/inspinia.js?body=1" for 127.0.0.1 at 2015-12-23 15:21:15 +0530
+
+
+Started GET "/assets/pace/pace.min.js?body=1" for 127.0.0.1 at 2015-12-23 15:21:15 +0530
+
+
+Started GET "/assets/peity/jquery.peity.min.js?body=1" for 127.0.0.1 at 2015-12-23 15:21:15 +0530
+
+
+Started GET "/assets/slimscroll/jquery.slimscroll.min.js?body=1" for 127.0.0.1 at 2015-12-23 15:21:15 +0530
+
+
+Started GET "/assets/metisMenu/jquery.metisMenu.js?body=1" for 127.0.0.1 at 2015-12-23 15:21:15 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-12-23 15:21:15 +0530
+
+
+Started GET "/assets/gh/wastetrackinglogo.png" for 127.0.0.1 at 2015-12-23 15:21:16 +0530
+
+
+Started GET "/assets/landing/perspective.png" for 127.0.0.1 at 2015-12-23 15:21:16 +0530
+
+
+Started GET "/assets/landing/avatar1.jpg" for 127.0.0.1 at 2015-12-23 15:21:16 +0530
+
+
+Started GET "/assets/landing/laptop.png" for 127.0.0.1 at 2015-12-23 15:21:16 +0530
+
+
+Started GET "/assets/landing/dashboard.png" for 127.0.0.1 at 2015-12-23 15:21:16 +0530
+
+
+Started GET "/assets/landing/avatar3.jpg" for 127.0.0.1 at 2015-12-23 15:21:16 +0530
+
+
+Started GET "/assets/landing/avatar2.jpg" for 127.0.0.1 at 2015-12-23 15:21:16 +0530
+
+
+Started GET "/assets/landing/iphone.jpg" for 127.0.0.1 at 2015-12-23 15:21:16 +0530
+
+
+Started GET "/assets/fontawesome-webfont.woff2?v=4.3.0" for 127.0.0.1 at 2015-12-23 15:21:16 +0530
+
+
+Started GET "/assets/landing/word_map.png" for 127.0.0.1 at 2015-12-23 15:21:16 +0530
+
+
+Started GET "/assets/landing/avatar_all.png" for 127.0.0.1 at 2015-12-23 15:21:16 +0530
+
+
+Started GET "/assets/landing/header_one.jpg" for 127.0.0.1 at 2015-12-23 15:21:16 +0530
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-12-23 15:21:18 +0530
+Processing by Users::SessionsController#new as HTML
+  Rendered users/sessions/new.html.erb (0.8ms)
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/style.css" for 127.0.0.1 at 2015-12-23 15:21:19 +0530
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-12-23 15:23:30 +0530
+Processing by Users::SessionsController#new as HTML
+  Rendered users/sessions/new.html.erb (1.5ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/style.css" for 127.0.0.1 at 2015-12-23 15:23:30 +0530
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-12-23 15:25:23 +0530
+Processing by Users::SessionsController#new as HTML
+  Rendered users/sessions/new.html.erb (2.0ms)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/style.css" for 127.0.0.1 at 2015-12-23 15:25:23 +0530
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-12-23 15:25:58 +0530
+Processing by Users::SessionsController#new as HTML
+  Rendered users/sessions/new.html.erb (1.4ms)
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/style.css" for 127.0.0.1 at 2015-12-23 15:25:58 +0530
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-12-23 15:26:04 +0530
+Processing by Users::SessionsController#new as HTML
+  Rendered users/sessions/new.html.erb (0.8ms)
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/style.css" for 127.0.0.1 at 2015-12-23 15:26:04 +0530
