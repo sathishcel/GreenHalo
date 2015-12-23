@@ -1,5 +1,9 @@
 Myapp::Application.routes.draw do
 
+  get 'sign_up/business_users'
+
+  get 'sign_up/government_users'
+
   devise_for :users,:controllers => { registrations: 'users/registrations',
                                       confirmations: 'users/confirmations', passwords: 'users/passwords' , sessions: 'users/sessions'}
   # You can have the root of your site routed with "root"
@@ -11,6 +15,11 @@ Myapp::Application.routes.draw do
   authenticated do
     get "dashboards/dashboard_2", as: :authenticated_root
   end
+
+   resource "sign_up" do
+     get "business_users"
+     get "government_users"
+   end
 
 
   unauthenticated do
