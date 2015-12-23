@@ -4,10 +4,10 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.3'
 gem 'bootstrap-sass', '~> 3.3.5'
 gem 'font-awesome-rails', '4.3.0.0'
-
+gem 'unicorn'
 # Use sqlite3 as the database for Active Record
-gem 'mysql2', '~> 0.3.13'
-
+gem 'mysql'
+gem 'therubyracer'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.2'
 
