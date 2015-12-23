@@ -1,7 +1,5 @@
 Myapp::Application.routes.draw do
-
-  get 'forms/wizard'
-
+  
   devise_for :users,:controllers => { registrations: 'users/registrations',
                                       confirmations: 'users/confirmations', passwords: 'users/passwords' , sessions: 'users/sessions'}
   # You can have the root of your site routed with "root"
