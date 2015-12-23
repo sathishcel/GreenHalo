@@ -1,6 +1,6 @@
-/log/*
+log/*
 !/log/.keep
-/tmp
+tmp
 /config/database.yml
 /public/system
 /.idea
