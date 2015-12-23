@@ -41,7 +41,9 @@
                     </h1>
                 <p>Completely redesigned with tons of awesome new features</p>
                 <p>
-                    <a class="btn btn-lg btn-primary" href="#" role="button">BUSINESS USERS</a>
+                  <%= link_to "/forms/wizard", class:"btn btn-lg btn-primary" do %>
+                      BUSINESS USERS
+                  <% end %>
                     <a class="btn btn-lg btn-primary" href="#" role="button">GOVERNMENT USERS</a>
                     <a class="btn btn-lg btn-primary" href="#" role="button">VIEW DEMO</a>
                 </p>
@@ -63,7 +65,9 @@
               </h1>
               <p>Completely redesigned with tons of awesome new features</p>
                 <p>
-                  <a class="btn btn-lg btn-primary" href="#" role="button">BUSINESS USERS</a>
+                  <%= link_to "/forms/wizard", class:"btn btn-lg btn-primary" do %>
+                      BUSINESS USERS
+                  <% end %>
                   <a class="btn btn-lg btn-primary" href="#" role="button">GOVERNMENT USERS</a>
                   <a class="btn btn-lg btn-primary" href="#" role="button">VIEW DEMO</a>
                 </p>
@@ -86,26 +90,11 @@
 
 <section id="features" class="container services">
 <div class="row">
-    <div class="col-sm-3">
-        <h2>Full responsive</h2>
-        <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus.</p>
-        <p><a class="navy-link" href="#" role="button">Details &raquo;</a></p>
-    </div>
-    <div class="col-sm-3">
-        <h2>LESS/SASS Files</h2>
-        <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus.</p>
-        <p><a class="navy-link" href="#" role="button">Details &raquo;</a></p>
-    </div>
-    <div class="col-sm-3">
-        <h2>6 Charts Library</h2>
-        <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus.</p>
-        <p><a class="navy-link" href="#" role="button">Details &raquo;</a></p>
-    </div>
-    <div class="col-sm-3">
-        <h2>Advanced Forms</h2>
-        <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus.</p>
-        <p><a class="navy-link" href="#" role="button">Details &raquo;</a></p>
-    </div>
+  <h2>Let's Talk About Waste Tracking 2.x</h2>
+  <p> Hey! We're back with a new look and more interactive features. Faster data queries, beautiful graphics,
+    clean displays, elegant design, simple easy to use interface, enhanced customer and user support.
+    <a data-target="#modalLarge" data-toggle="modal" target="_blank">Schedule  your demo today!</a>
+  </p>
 </div>
 </section>
 
@@ -120,31 +109,44 @@
 <div class="row">
     <div class="col-md-3 text-center wow fadeInLeft">
         <div>
-            <i class="fa fa-mobile features-icon"></i>
-            <h2>Full responsive</h2>
-            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus.</p>
+            <i class="fa fa-eye features-icon"></i>
+            <h2>Monitor Compliance</h2>
+
         </div>
         <div class="m-t-lg">
-            <i class="fa fa-bar-chart features-icon"></i>
-            <h2>6 Charts Library</h2>
-            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus.</p>
+            <i class="fa fa-exclamation-triangle features-icon"></i>
+            <h2>Reduce Liability</h2>
         </div>
+          <div class="m-t-lg">
+            <i class="fa fa-map-marker features-icon"></i>
+            <h2>Any Location</h2>
+          </div>
+          <div class="m-t-lg">
+            <i class="fa fa-bar-chart-o features-icon"></i>
+            <h2>Real Time Data</h2>
+          </div>
     </div>
     <div class="col-md-6 text-center  wow zoomIn">
         <img src="<%= image_path('landing/perspective.png') %>" alt="dashboard" class="img-responsive">
     </div>
     <div class="col-md-3 text-center wow fadeInRight">
         <div>
-            <i class="fa fa-envelope features-icon"></i>
-            <h2>Mail pages</h2>
-            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus.</p>
+            <i class="fa fa-cog fa-spin animated-dur-2 features-icon"></i>
+            <h2>Custom Settings</h2>
         </div>
         <div class="m-t-lg">
-            <i class="fa fa-google features-icon"></i>
-            <h2>AngularJS version</h2>
-            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus.</p>
+            <i class="fa fa-plug features-icon"></i>
+            <h2>API Integration</h2>
         </div>
-    </div>
+          <div class="m-t-lg">
+            <i class="fa fa-cloud features-icon"></i>
+            <h2>Cloud Based</h2>
+          </div>
+          <div class="m-t-lg">
+            <i class="fa fa-ellipsis-h features-icon"></i>
+            <h2>Much More</h2>
+          </div>
+        </div>
 </div>
 <div class="row">
     <div class="col-lg-12 text-center">

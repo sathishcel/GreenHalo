@@ -1,17 +1,15 @@
 # Created by .ignore support plugin (hsz.mobi)
-### Rails template
-capybara-*.html
-.rspec
-log/development.log
+/log/*
+!/log/.keep
 /tmp
-db/*.sqlite3
-/db/*.sqlite3-journal
-public/system
-/coverage/
-/spec/tmp
-.idea
-.idea/workspace.xml
-config/database.yml
+/config/database.yml
+/public/system
+/.idea
+/solr/development/*
+/solr/pids/development/*
+/solr/default/*
+/app/views/templates/*
+
 
 
 
