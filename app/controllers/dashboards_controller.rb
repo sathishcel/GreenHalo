@@ -19,4 +19,16 @@ class DashboardsController < ApplicationController
   def dashboard_5
   end
 
+  def tracking
+
+  end
+
+  def organize
+
+  end
+
+  def tools
+
+  end
+
 end
