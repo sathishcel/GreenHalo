@@ -4,7 +4,7 @@
     <div class="col-lg-12">
         <div class="ibox">
             <div class="ibox-title">
-                <h5>Wizard with Validation</h5>
+                <h5>For <%= @signup_type %> Agencies only</h5>
                 <div class="ibox-tools">
                     <a class="collapse-link">
                         <i class="fa fa-chevron-up"></i>
@@ -27,11 +27,8 @@
             </div>
             <div class="ibox-content">
                 <h2>
-                    Validation Wizard Form
+                  <%= @signup_type %> Form
                 </h2>
-                <p>
-                    This example show how to use Steps with jQuery Validation plugin.
-                </p>
 
                 <form id="form" action="#" class="wizard-big">
                     <h1>Account</h1>
