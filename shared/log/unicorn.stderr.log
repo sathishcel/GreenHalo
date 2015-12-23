@@ -1727,3 +1727,84 @@ D, [2015-12-23T09:50:25.303904 #20359] DEBUG -- : waiting 16.0s after suspend/hi
 14.142.24.5 - - [23/Dec/2015:10:01:04 +0530] "GET /patterns/header-profile-skin-1.png HTTP/1.0" 304 - 0.0033
 14.142.24.5 - - [23/Dec/2015:10:01:04 +0530] "GET /patterns/header-profile.png HTTP/1.0" 304 - 0.0041
 14.142.24.5 - - [23/Dec/2015:10:01:04 +0530] "GET /patterns/header-profile-skin-3.png HTTP/1.0" 304 - 0.0438
+I, [2015-12-23T16:09:14.561157 #17737]  INFO -- : Refreshing Gem list
+/home/sathis/.rvm/gems/ruby-2.2.1/gems/bundler-1.11.2/lib/bundler/runtime.rb:80:in `rescue in block (2 levels) in require': There was an error while trying to load the gem 'uglifier'. (Bundler::GemRequireError)
+	from /home/sathis/.rvm/gems/ruby-2.2.1/gems/bundler-1.11.2/lib/bundler/runtime.rb:76:in `block (2 levels) in require'
+	from /home/sathis/.rvm/gems/ruby-2.2.1/gems/bundler-1.11.2/lib/bundler/runtime.rb:72:in `each'
+	from /home/sathis/.rvm/gems/ruby-2.2.1/gems/bundler-1.11.2/lib/bundler/runtime.rb:72:in `block in require'
+	from /home/sathis/.rvm/gems/ruby-2.2.1/gems/bundler-1.11.2/lib/bundler/runtime.rb:61:in `each'
+	from /home/sathis/.rvm/gems/ruby-2.2.1/gems/bundler-1.11.2/lib/bundler/runtime.rb:61:in `require'
+	from /home/sathis/.rvm/gems/ruby-2.2.1/gems/bundler-1.11.2/lib/bundler.rb:99:in `require'
+	from /home/sathis/green_halo/config/application.rb:7:in `<top (required)>'
+	from /home/sathis/green_halo/config/environment.rb:2:in `require'
+	from /home/sathis/green_halo/config/environment.rb:2:in `<top (required)>'
+	from config.ru:4:in `require'
+	from config.ru:4:in `block in <main>'
+	from /home/sathis/.rvm/gems/ruby-2.2.1/gems/rack-1.6.4/lib/rack/builder.rb:55:in `instance_eval'
+	from /home/sathis/.rvm/gems/ruby-2.2.1/gems/rack-1.6.4/lib/rack/builder.rb:55:in `initialize'
+	from config.ru:1:in `new'
+	from config.ru:1:in `<main>'
+	from /home/sathis/.rvm/gems/ruby-2.2.1/gems/unicorn-5.0.1/lib/unicorn.rb:46:in `eval'
+	from /home/sathis/.rvm/gems/ruby-2.2.1/gems/unicorn-5.0.1/lib/unicorn.rb:46:in `block in builder'
+	from /home/sathis/.rvm/gems/ruby-2.2.1/gems/unicorn-5.0.1/lib/unicorn/http_server.rb:752:in `call'
+	from /home/sathis/.rvm/gems/ruby-2.2.1/gems/unicorn-5.0.1/lib/unicorn/http_server.rb:752:in `build_app!'
+	from /home/sathis/.rvm/gems/ruby-2.2.1/gems/unicorn-5.0.1/lib/unicorn/http_server.rb:129:in `start'
+	from /home/sathis/.rvm/gems/ruby-2.2.1/gems/unicorn-5.0.1/bin/unicorn:126:in `<top (required)>'
+	from /home/sathis/.rvm/gems/ruby-2.2.1/bin/unicorn:23:in `load'
+	from /home/sathis/.rvm/gems/ruby-2.2.1/bin/unicorn:23:in `<main>'
+	from /home/sathis/.rvm/gems/ruby-2.2.1/bin/ruby_executable_hooks:15:in `eval'
+	from /home/sathis/.rvm/gems/ruby-2.2.1/bin/ruby_executable_hooks:15:in `<main>'
+I, [2015-12-23T16:10:32.631426 #17804]  INFO -- : Refreshing Gem list
+I, [2015-12-23T16:10:34.242709 #17804]  INFO -- : unlinking existing socket=/var/tmp/unicorn.todo.sock
+I, [2015-12-23T16:10:34.242948 #17804]  INFO -- : listening on addr=/var/tmp/unicorn.todo.sock fd=11
+I, [2015-12-23T16:10:34.243073 #17804]  INFO -- : worker=0 spawning...
+I, [2015-12-23T16:10:34.245277 #17804]  INFO -- : worker=1 spawning...
+I, [2015-12-23T16:10:34.245966 #17807]  INFO -- : worker=0 spawned pid=17807
+I, [2015-12-23T16:10:34.246381 #17807]  INFO -- : worker=0 ready
+I, [2015-12-23T16:10:34.248790 #17804]  INFO -- : master process ready
+I, [2015-12-23T16:10:34.249435 #17810]  INFO -- : worker=1 spawned pid=17810
+I, [2015-12-23T16:10:34.249688 #17810]  INFO -- : worker=1 ready
+14.142.24.4 - - [23/Dec/2015:16:10:44 +0530] "GET / HTTP/1.0" 500 66276 0.1196
+I, [2015-12-23T16:15:03.518148 #17804]  INFO -- : reaped #<Process::Status: pid 17807 exit 0> worker=0
+I, [2015-12-23T16:15:03.518330 #17804]  INFO -- : reaped #<Process::Status: pid 17810 exit 0> worker=1
+I, [2015-12-23T16:15:03.518522 #17804]  INFO -- : master complete
+I, [2015-12-23T16:15:06.541724 #17982]  INFO -- : Refreshing Gem list
+I, [2015-12-23T16:15:08.083209 #17982]  INFO -- : unlinking existing socket=/var/tmp/unicorn.todo.sock
+I, [2015-12-23T16:15:08.083445 #17982]  INFO -- : listening on addr=/var/tmp/unicorn.todo.sock fd=11
+I, [2015-12-23T16:15:08.083573 #17982]  INFO -- : worker=0 spawning...
+I, [2015-12-23T16:15:08.085738 #17982]  INFO -- : worker=1 spawning...
+I, [2015-12-23T16:15:08.086353 #17985]  INFO -- : worker=0 spawned pid=17985
+I, [2015-12-23T16:15:08.086524 #17985]  INFO -- : worker=0 ready
+I, [2015-12-23T16:15:08.088069 #17982]  INFO -- : master process ready
+I, [2015-12-23T16:15:08.088670 #17988]  INFO -- : worker=1 spawned pid=17988
+I, [2015-12-23T16:15:08.088944 #17988]  INFO -- : worker=1 ready
+14.142.24.4 - - [23/Dec/2015:16:15:19 +0530] "GET / HTTP/1.0" 500 66318 0.1134
+14.142.24.4 - - [23/Dec/2015:16:15:20 +0530] "GET / HTTP/1.0" 500 66318 0.1149
+14.142.24.4 - - [23/Dec/2015:16:15:21 +0530] "GET / HTTP/1.0" 500 66318 0.1008
+I, [2015-12-23T16:16:48.103291 #17982]  INFO -- : reaped #<Process::Status: pid 17985 exit 0> worker=0
+I, [2015-12-23T16:16:48.103448 #17982]  INFO -- : reaped #<Process::Status: pid 17988 exit 0> worker=1
+I, [2015-12-23T16:16:48.103565 #17982]  INFO -- : master complete
+I, [2015-12-23T16:16:53.144905 #18025]  INFO -- : Refreshing Gem list
+I, [2015-12-23T16:16:54.634881 #18025]  INFO -- : unlinking existing socket=/var/tmp/unicorn.todo.sock
+I, [2015-12-23T16:16:54.635136 #18025]  INFO -- : listening on addr=/var/tmp/unicorn.todo.sock fd=11
+I, [2015-12-23T16:16:54.635266 #18025]  INFO -- : worker=0 spawning...
+I, [2015-12-23T16:16:54.637537 #18025]  INFO -- : worker=1 spawning...
+I, [2015-12-23T16:16:54.638206 #18028]  INFO -- : worker=0 spawned pid=18028
+I, [2015-12-23T16:16:54.638569 #18028]  INFO -- : worker=0 ready
+I, [2015-12-23T16:16:54.639881 #18025]  INFO -- : master process ready
+I, [2015-12-23T16:16:54.640824 #18031]  INFO -- : worker=1 spawned pid=18031
+I, [2015-12-23T16:16:54.641099 #18031]  INFO -- : worker=1 ready
+14.142.24.4 - - [23/Dec/2015:16:16:59 +0530] "GET / HTTP/1.0" 500 66317 0.1532
+14.142.24.4 - - [23/Dec/2015:16:17:01 +0530] "GET / HTTP/1.0" 500 66317 0.1565
+14.142.24.4 - - [23/Dec/2015:16:17:02 +0530] "GET / HTTP/1.0" 500 66317 0.1237
+14.142.24.4 - - [23/Dec/2015:16:17:40 +0530] "GET / HTTP/1.0" 500 138469 0.4206
+14.142.24.4 - - [23/Dec/2015:16:17:43 +0530] "GET / HTTP/1.0" 500 138469 0.2377
+14.142.24.4 - - [23/Dec/2015:16:17:44 +0530] "GET / HTTP/1.0" 500 138469 0.3924
+14.142.24.4 - - [23/Dec/2015:16:17:44 +0530] "GET / HTTP/1.0" 500 138469 0.2314
+14.142.24.4 - - [23/Dec/2015:16:17:55 +0530] "GET / HTTP/1.0" 500 138469 0.2379
+14.142.24.4 - - [23/Dec/2015:16:18:15 +0530] "GET / HTTP/1.0" 500 138427 0.2368
+14.142.24.4 - - [23/Dec/2015:16:18:18 +0530] "GET / HTTP/1.0" 500 138427 0.2315
+14.142.24.4 - - [23/Dec/2015:16:18:32 +0530] "GET / HTTP/1.0" 500 138427 0.2265
+14.142.24.4 - - [23/Dec/2015:16:19:02 +0530] "GET / HTTP/1.0" 500 138427 0.2321
+14.142.24.4 - - [23/Dec/2015:16:30:28 +0530] "GET / HTTP/1.0" 500 138469 0.2380
+14.142.24.4 - - [23/Dec/2015:16:30:29 +0530] "GET / HTTP/1.0" 500 138469 0.2393
