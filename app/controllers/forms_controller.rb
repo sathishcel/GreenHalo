@@ -1,4 +1,5 @@
 class FormsController < ApplicationController
+
   def basic_forms
   end
 
