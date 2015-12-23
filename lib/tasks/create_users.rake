@@ -4,7 +4,8 @@ namespace :db do
     begin
 
 
-      government_user = User.new(email: "government@wastetracking.com", password: "12345678", first_name: 'Green', last_name: 'Worx')
+      government_user = User.new(email: "government@wastetracking.com", password: "12345678", first_name: 'Green',
+                                 last_name: 'Worx', role_type: 'Government')
       government_user.save
 
     rescue Exception => exception
