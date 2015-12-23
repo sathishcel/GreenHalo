@@ -4,14 +4,14 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.3'
 gem 'bootstrap-sass', '~> 3.3.5'
 gem 'font-awesome-rails', '4.3.0.0'
-gem 'mysql2', '~> 0.3.13'
-# Use sqlite3 as the database for Active Record
 
+# Use sqlite3 as the database for Active Record
+gem 'mysql2', '~> 0.3.13'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.2'
 
-# Use Uglifier as compressor for JavaScript assets	
+# Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 
 # Use CoffeeScript for .js.coffee assets and views
@@ -25,6 +25,7 @@ gem 'turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
+gem 'devise'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
@@ -35,7 +36,7 @@ end
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
 # Use unicorn as the app server
- gem 'unicorn'
+# gem 'unicorn'
 
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
