@@ -1,7 +1,23 @@
 Myapp::Application.routes.draw do
 
+  devise_for :users,:controllers => { registrations: 'users/registrations',
+                                      confirmations: 'users/confirmations', passwords: 'users/passwords' , sessions: 'users/sessions'}
   # You can have the root of your site routed with "root"
-  root to: 'landing#index'
+
+  devise_scope :user do
+    get "/logout" => "devise/sessions#destroy"
+  end
+
+  authenticated do
+    get "dashboards/dashboard_2", as: :authenticated_root
+  end
+
+
+  unauthenticated do
+    devise_scope :user do
+      root to: 'landing#index'
+    end
+  end
 
   # All routes
   get "dashboards/dashboard_1"
