@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 <div class="navbar-wrapper">
   <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
@@ -40,13 +41,15 @@
           </h1>
           <p>Completely redesigned with tons of awesome new features</p>
           <p>
-            <a class="btn btn-lg btn-primary" href="#" role="button">Government</a>
             <%= link_to "/forms/wizard", class:"btn btn-lg btn-primary" do %>
+                Government
+            <% end %>
+            <%= link_to "/forms/wizard?business=true", class:"btn btn-lg btn-primary" do %>
                 Non-Government
             <% end %>
             <a class="btn btn-lg btn-primary" href="#" role="button">Demo</a>
             <%= link_to "Signin" ,new_user_session_path,:class => "btn btn-w-m btn-success" ,
-                        :style => "height:40px;" %>
+                        :style => "height:40px;font-size:15px;" %>
           </p>
         </div>
         <div class="carousel-image wow zoomIn">
@@ -66,13 +69,15 @@
           </h1>
           <p>Completely redesigned with tons of awesome new features</p>
           <p>
-            <a class="btn btn-lg btn-primary" href="#" role="button">GOVERNMENT</a>
             <%= link_to "/forms/wizard", class:"btn btn-lg btn-primary" do %>
+                Government
+            <% end %>
+            <%= link_to "/forms/wizard?business=true", class:"btn btn-lg btn-primary" do %>
                 Non-Government
             <% end %>
             <a class="btn btn-lg btn-primary" href="#" role="button">DEMO</a>
             <%= link_to "Signin" ,new_user_session_path,:class => "btn btn-w-m btn-success" ,
-                        :style => "height:40px;" %>
+                        :style => "height:40px;font-size:15px;" %>
           </p>
         </div>
       </div>
