@@ -40,8 +40,10 @@
           </h1>
           <p>Completely redesigned with tons of awesome new features</p>
           <p>
-            <a class="btn btn-lg btn-primary" href="#" role="button">Government</a>
             <%= link_to "/forms/wizard", class:"btn btn-lg btn-primary" do %>
+                Government
+            <% end %>
+            <%= link_to "/forms/wizard?business=true", class:"btn btn-lg btn-primary" do %>
                 Non-Government
             <% end %>
             <a class="btn btn-lg btn-primary" href="#" role="button">Demo</a>
@@ -66,8 +68,10 @@
           </h1>
           <p>Completely redesigned with tons of awesome new features</p>
           <p>
-            <a class="btn btn-lg btn-primary" href="#" role="button">GOVERNMENT</a>
             <%= link_to "/forms/wizard", class:"btn btn-lg btn-primary" do %>
+                Government
+            <% end %>
+            <%= link_to "/forms/wizard?business=true", class:"btn btn-lg btn-primary" do %>
                 Non-Government
             <% end %>
             <a class="btn btn-lg btn-primary" href="#" role="button">DEMO</a>
