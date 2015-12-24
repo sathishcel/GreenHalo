@@ -36,7 +36,9 @@
         <div id="page-wrapper" class="gray-bg <%= @extra_class %>">
 
             <!-- Page wrapper -->
-            <%= render 'layouts/topnavbar' %>
+           <% unless params[:action] == "tracking" %>
+              <%= render 'layouts/topnavbar' %>
+              <%end%>
 
             <!-- Main view  -->
             <%= yield %>

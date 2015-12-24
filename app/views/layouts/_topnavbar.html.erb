@@ -12,10 +12,43 @@
             <li>
                 <span class="m-r-sm text-muted welcome-message">Welcome to <%= current_user.try(:full_name) %></span>
             </li>
-            <li class="dropdown">
+
+              <li>
+                <a href="javascript:void(0);" data-remote="true" title="Reports">
+                  <i class="fa fa-bug"></i>
+                </a>
+              </li>
+
+              <li>
+                <a href="javascript:void(0);" data-remote="true" title="Suggestions">
+                  <i class="fa fa-lightbulb-o"></i>
+                </a>
+              </li>
+
+
+              <li>
+                <a href="javascript:void(0);" data-remote="true" title="Portal">
+                  <i class="fa fa-support"></i>
+                </a>
+              </li>
+
+
+
+              <li>
+                <a href="javascript:void(0);" data-remote="true" title="Live Chat">
+                  <i class="fa fa-comment"></i>
+                </a>
+              </li>
+
+
+
+
+          <li class="dropdown">
+
                 <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
                     <i class="fa fa-envelope"></i>  <span class="label label-warning">16</span>
                 </a>
+
                 <ul class="dropdown-menu dropdown-messages">
                     <li>
                         <div class="dropdown-messages-box">
