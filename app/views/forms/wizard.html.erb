@@ -164,13 +164,13 @@
 
                             <div class="population_by_agency">
                               <p>Wgu governed by your agency:
-                                <select name="wgu" form="wgu_form">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                              </select></p>
-                              <button class="btn btn-primary" type="button"">CALCULATE</button>
+                                <select id="wgu_selection" name="wgu_selection">
+                                  <option value="1">1</option>
+                                  <option value="2">2</option>
+                                  <option value="3">3</option>
+                                </select>
+                              </p>
+                              <button class="btn btn-primary" type="button">CALCULATE</button>
                             </div>
 
                             <p style="clear:both;padding-top: 16px;">Based on <span class="default_population">1</span> Wgu for <span class="highlight_text"><%= @user.city if @user %></span> your pricing options are listed below</p>
@@ -206,9 +206,61 @@
                       </div>
                     </fieldset>
 
-                    <h1>Finish</h1>
-                    <fieldset>
-                        <h2>Terms and Conditions</h2>
+                    <h1>Payment</h1>
+                    <fieldset style="position: unset;">
+                        <h2>Pay By Invoice</h2>
+                        <p>Please complete the following information to Generate an Invoice.</p>
+                         <div class="row">
+
+                           <div class="col-md-2" style="width: 33.33%">
+                               <p style="font-size:17px;"><b>Account Information</b></p>
+                                 <p>DSF VJ</p>
+                                 <p>FDS</p>
+                                 <p>ghj</p>
+                                 <p>CA</p>
+                                 <p>Buellton</p>
+                                 <p>93427</p>
+                           </div>
+
+                           <div class="col-md-3" style="width: 33.33%">
+                               <p style="font-size:17px;"><b>Bill to Information:</b></p>
+
+                               <p style="font-size:17px;">
+                                 <input type="checkbox" value="95" id="information" name="information">
+                                 &nbsp;&nbsp;
+                                 <span> Same as account Information</span></p>
+
+                                 <input type="text" class="form-control m-b" placeholder="Full Name" id="po_full_name" name="po_full_name">
+
+                                 <input type="text" class="form-control m-b" placeholder="Company Name" id="po_company_name" name="po_company_name">
+
+                                 <input type="text" class="form-control m-b" placeholder="Address" id="po_address" name="po_address">
+
+                                 <input type="text" class="form-control m-b" placeholder="State" id="po_state" name="po_state">
+
+                                 <input type="text" class="form-control m-b" placeholder="City" id="po_city" name="po_city">
+
+                                 <input type="text" class="form-control m-b" placeholder="Zip Code" id="po_zipcode" name="po_zipcode">
+
+
+                           </div>
+
+                           <div class="col-md-4" style="width: 33.33%">
+                             <div align="right" class="form-information form-information-bussiness">
+                               <span id="invoice_message"></span>
+                               <img width="238" height="58" src="/assets/img/logo-pay.png">
+                               <div class="tracking_address">
+                                 <p>521 Charcot Avenue</p>
+                                 <p> San Jose, CA 95131</p>
+                                 <p>1-888-525-1301</p>
+                               </div>
+                               <div class="invoice-label">
+                                 <p>Invoice # <span id="buss_invoice">79810845</span></p>
+                                 <p>Date: <span>2015-12-24</span></p>
+                               </div>
+                             </div>
+                           </div>
+                         </div>
                         <input id="acceptTerms" name="acceptTerms" type="checkbox" class="required"> <label for="acceptTerms">I agree with the Terms and Conditions.</label>
                     </fieldset>
                 </form>
