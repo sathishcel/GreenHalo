@@ -7,6 +7,11 @@ class FormsController < ApplicationController
   end
 
   def wizard
+    if params[:business] == "true"
+      @signup_type = "Business"
+    else
+      @signup_type = "Government"
+    end
   end
 
   def file_upload
