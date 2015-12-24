@@ -1,8 +1,12 @@
-log/*
+log/development.log
+/log/development.log
 !/log/.keep
-tmp/*
-/tmp/*
+tmp/cache/assets/development/sprockets/*
+/tmp/cache/assets/development/sprockets/*
+/tmp/cache/assets/development/sass/*
+tmp/cache/assets/development/sass/*
 /config/database.yml
+config/database.yml
 /public/system
 /.idea
 /solr/development/*
