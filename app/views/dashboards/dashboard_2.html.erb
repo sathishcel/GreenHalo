@@ -1,299 +1,423 @@
-<div class="wrapper wrapper-content">
-  <div class="row">
-    <div class="col-lg-4">
-      <div class="ibox float-e-margins">
-        <div class="ibox-content">
-          <h5>Usage</h5>
-          <h2>65%</h2>
-          <div class="progress progress-mini">
-            <div style="width: 68%;" class="progress-bar"></div>
-          </div>
-
-          <div class="m-t-sm small">Server down since 4:32 pm.</div>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-4">
-      <div class="ibox float-e-margins">
-        <div class="ibox-content">
-          <h5>Usage</h5>
-          <h2>65%</h2>
-          <div class="progress progress-mini">
-            <div style="width: 68%;" class="progress-bar"></div>
-          </div>
-
-          <div class="m-t-sm small">Server down since 4:32 pm.</div>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-4">
-      <div class="ibox float-e-margins">
-        <div class="ibox-content">
-          <h5>Usage</h5>
-          <h2>65%</h2>
-          <div class="progress progress-mini">
-            <div style="width: 68%;" class="progress-bar"></div>
-          </div>
-
-          <div class="m-t-sm small">Server down since 4:32 pm.</div>
-        </div>
-      </div>
-    </div>
+<div class="row wrapper border-bottom white-bg page-heading">
+  <div class="col-lg-10">
+    <h2>Dashboard</h2>
+    <ol class="breadcrumb">
+      <li>
+        <a href="<%= url_for :controller => 'dashboards', :action => 'dashboard_1' %>">Home</a>
+      </li>
+      <li class="active">
+        <strong>Dashboard</strong>
+      </li>
+    </ol>
   </div>
-  <div class="row">
+  <div class="col-lg-2">
+
+  </div>
+</div>
+<div class="wrapper wrapper-content  animated fadeInRight">
+  <div class="row" id="sortable-view">
+    <div class="col-lg-4">
+      <div class="ibox ">
+        <div class="ibox-title">
+          <h5>Liquid Waste</h5>
+          <div class="ibox-tools">
+            <a class="collapse-link">
+              <i class="fa fa-chevron-up"></i>
+            </a>
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+              <i class="fa fa-wrench"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-user">
+              <li>
+                <a href="#">Config option 1</a>
+              </li>
+              <li>
+                <a href="#">Config option 2</a>
+              </li>
+            </ul>
+            <a class="close-link">
+              <i class="fa fa-times"></i>
+            </a>
+          </div>
+        </div>
+        <div class="ibox-content">
+          <div class="panel-body">
+
+
+
+
+            <ul class="list-percentages row">
+              <li class="col-xs-4">
+                <p class="text-ellipsis">Total</p>
+                <p class="text-lg"><strong>301.0</strong></p>
+              </li>
+              <li class="col-xs-4">
+                <p class="text-ellipsis">Recycled</p>
+                <p class="text-lg"><strong>0.0</strong></p>
+              </li>
+              <li class="col-xs-4">
+                <p class="text-ellipsis">Disposed</p>
+                <p class="text-lg"><strong>0.0</strong></p>
+              </li>
+            </ul><!--/list-percentages-->
+            <p class="helper-block">
+            </p><div class="progress progress-xs progress-flat progress-inverse-inverse">
+            <div style="width: 60%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="60" role="progressbar" class="progress-bar progress-bar">
+              <span class="sr-only">60% Complete (inverse)</span>
+            </div>
+          </div>
+            <p></p><p class="text-ellipsis"><i class="fa fa-caret-up"></i> 0 &nbsp;&nbsp; +0<sup>%</sup> <small>Looks Good!, up from last month</small></p>
+            <!--/help-block-->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-4">
+      <div class="ibox">
+        <div class="ibox-title">
+          <h5>Solid Waste</h5>
+          <div class="ibox-tools">
+            <a class="collapse-link">
+              <i class="fa fa-chevron-up"></i>
+            </a>
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+              <i class="fa fa-wrench"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-user">
+              <li>
+                <a href="#">Config option 1</a>
+              </li>
+              <li>
+                <a href="#">Config option 2</a>
+              </li>
+            </ul>
+            <a class="close-link">
+              <i class="fa fa-times"></i>
+            </a>
+          </div>
+        </div>
+        <div class="ibox-content">
+
+
+
+          <div class="panel-body">
+
+
+
+
+            <ul class="list-percentages row">
+              <li class="col-xs-4">
+                <p class="text-ellipsis">Total</p>
+                <p class="text-lg"><strong>1300.0</strong></p>
+              </li>
+              <li class="col-xs-4">
+                <p class="text-ellipsis">Recycled</p>
+                <p class="text-lg"><strong>1100.0</strong></p>
+              </li>
+              <li class="col-xs-4">
+                <p class="text-ellipsis">Disposed</p>
+                <p class="text-lg"><strong>0.0</strong></p>
+              </li>
+            </ul><!--/list-percentages-->
+            <p class="helper-block">
+            </p><div class="progress progress-xs progress-flat progress-inverse-inverse">
+            <div style="width: 60%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="60" role="progressbar" class="progress-bar progress-bar">
+              <span class="sr-only">60% Complete (inverse)</span>
+            </div>
+          </div>
+            <p></p><p class="text-ellipsis"><i class="fa fa-caret-up"></i> 0 &nbsp;&nbsp; +0<sup>%</sup> <small>Looks Good!, up from last month</small></p>
+            <!--/help-block-->
+          </div>
+
+
+
+        </div>
+      </div></div>
+    <div class="col-lg-4">
+      <div class="ibox">
+        <div class="ibox-title">
+          <h5>Expenses</h5>
+          <div class="ibox-tools">
+            <a class="collapse-link">
+              <i class="fa fa-chevron-up"></i>
+            </a>
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+              <i class="fa fa-wrench"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-user">
+              <li>
+                <a href="#">Config option 1</a>
+              </li>
+              <li>
+                <a href="#">Config option 2</a>
+              </li>
+            </ul>
+            <a class="close-link">
+              <i class="fa fa-times"></i>
+            </a>
+          </div>
+        </div>
+        <div class="ibox-content">
+          <div class="panel-body">
+
+
+
+
+            <ul class="list-percentages row">
+              <li class="col-xs-4">
+                <p class="text-ellipsis">Total</p>
+                <p class="text-lg"><strong>301.0</strong></p>
+              </li>
+              <li class="col-xs-4">
+                <p class="text-ellipsis">Recycled</p>
+                <p class="text-lg"><strong>0.0</strong></p>
+              </li>
+              <li class="col-xs-4">
+                <p class="text-ellipsis">Disposed</p>
+                <p class="text-lg"><strong>0.0</strong></p>
+              </li>
+            </ul><!--/list-percentages-->
+            <p class="helper-block">
+            </p><div class="progress progress-xs progress-flat progress-inverse-inverse">
+            <div style="width: 60%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="60" role="progressbar" class="progress-bar progress-bar">
+              <span class="sr-only">60% Complete (inverse)</span>
+            </div>
+          </div>
+            <p></p><p class="text-ellipsis"><i class="fa fa-caret-up"></i> 0 &nbsp;&nbsp; +0<sup>%</sup> <small>Looks Good!, up from last month</small></p>
+            <!--/help-block-->
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <div class="row" id="sortable-view">
     <div class="col-lg-8">
-      <div class="ibox float-e-margins">
+      <div class="ibox ">
         <div class="ibox-title">
           <h5>Google Maps Basic example</h5>
+          <div class="ibox-tools">
+            <a class="collapse-link">
+              <i class="fa fa-chevron-up"></i>
+            </a>
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+              <i class="fa fa-wrench"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-user">
+              <li>
+                <a href="#">Config option 1</a>
+              </li>
+              <li>
+                <a href="#">Config option 2</a>
+              </li>
+            </ul>
+            <a class="close-link">
+              <i class="fa fa-times"></i>
+            </a>
+          </div>
+
         </div>
         <div class="ibox-content">
+
           <p>
             With google maps <a href="https://developers.google.com/maps/documentation/javascript/reference#MapOptions">API</a> You can easy customize your map.
           </p>
           <div class="google-map" id="map1"></div>
         </div>
-
       </div>
     </div>
+
     <div class="col-lg-4">
-      <div class="ibox float-e-margins">
-        <div class="ibox-content">
-          <h5>Usage</h5>
-          <h2>65%</h2>
-          <div class="progress progress-mini">
-            <div style="width: 68%;" class="progress-bar"></div>
+      <div class="ibox">
+        <div class="ibox-title">
+          <h5>All Materials</h5>
+          <div class="ibox-tools">
+            <a class="collapse-link">
+              <i class="fa fa-chevron-up"></i>
+            </a>
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+              <i class="fa fa-wrench"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-user">
+              <li>
+                <a href="#">Config option 1</a>
+              </li>
+              <li>
+                <a href="#">Config option 2</a>
+              </li>
+            </ul>
+            <a class="close-link">
+              <i class="fa fa-times"></i>
+            </a>
           </div>
-
-          <div class="m-t-sm small">Server down since 4:32 pm.</div>
         </div>
-      </div>
-    </div>
+        <div class="ibox-content">
+          <p>
+
+          <div>
+            <div>
+              <span>Units Tracked</span>
+              <small class="pull-right">56,576</small>
+            </div>
+            <div class="progress progress-small">
+              <div style="width: 60%;" class="progress-bar"></div>
+            </div>
+
+            <div>
+              <span>Reporting</span>
+              <small class="pull-right">20,000</small>
+            </div>
+            <div class="progress progress-small">
+              <div style="width: 22%;" class="progress-bar"></div>
+            </div>
+            <div>
+              <span>Not Reporting</span>
+              <small class="pull-right">36,576</small>
+            </div>
+            <div class="progress progress-small">
+              <div style="width: 38%;" class="progress-bar"></div>
+            </div>
+            <div>
+              <span>Money Back</span>
+              <small class="pull-right">$200</small>
+            </div>
+            <div class="progress progress-small">
+              <div style="width: 15%;" class="progress-bar"></div>
+            </div>
+            <div>
+              <span>Disposal Costs</span>
+              <small class="pull-right">$20</small>
+            </div>
+            <div class="progress progress-small">
+              <div style="width: 5%;" class="progress-bar"></div>
+            </div>
+
+          </div>
+          </p>
+        </div>
+      </div></div>
+
 
   </div>
+</div>
 
 
-  
+<%= javascript_include_tag "jquery-ui/jquery-ui-1.10.4.min.js" %>
 <% content_for :javascript do %>
 
     <script type="text/javascript">
 
+
         $(function() {
 
-            var data2 = [
-                [gd(2012, 1, 1), 7], [gd(2012, 1, 2), 6], [gd(2012, 1, 3), 4], [gd(2012, 1, 4), 8],
-                [gd(2012, 1, 5), 9], [gd(2012, 1, 6), 7], [gd(2012, 1, 7), 5], [gd(2012, 1, 8), 4],
-                [gd(2012, 1, 9), 7], [gd(2012, 1, 10), 8], [gd(2012, 1, 11), 9], [gd(2012, 1, 12), 6],
-                [gd(2012, 1, 13), 4], [gd(2012, 1, 14), 5], [gd(2012, 1, 15), 11], [gd(2012, 1, 16), 8],
-                [gd(2012, 1, 17), 8], [gd(2012, 1, 18), 11], [gd(2012, 1, 19), 11], [gd(2012, 1, 20), 6],
-                [gd(2012, 1, 21), 6], [gd(2012, 1, 22), 8], [gd(2012, 1, 23), 11], [gd(2012, 1, 24), 13],
-                [gd(2012, 1, 25), 7], [gd(2012, 1, 26), 9], [gd(2012, 1, 27), 9], [gd(2012, 1, 28), 8],
-                [gd(2012, 1, 29), 5], [gd(2012, 1, 30), 8], [gd(2012, 1, 31), 25]
-            ];
+            WinMove();
 
-            var data3 = [
-                [gd(2012, 1, 1), 800], [gd(2012, 1, 2), 500], [gd(2012, 1, 3), 600], [gd(2012, 1, 4), 700],
-                [gd(2012, 1, 5), 500], [gd(2012, 1, 6), 456], [gd(2012, 1, 7), 800], [gd(2012, 1, 8), 589],
-                [gd(2012, 1, 9), 467], [gd(2012, 1, 10), 876], [gd(2012, 1, 11), 689], [gd(2012, 1, 12), 700],
-                [gd(2012, 1, 13), 500], [gd(2012, 1, 14), 600], [gd(2012, 1, 15), 700], [gd(2012, 1, 16), 786],
-                [gd(2012, 1, 17), 345], [gd(2012, 1, 18), 888], [gd(2012, 1, 19), 888], [gd(2012, 1, 20), 888],
-                [gd(2012, 1, 21), 987], [gd(2012, 1, 22), 444], [gd(2012, 1, 23), 999], [gd(2012, 1, 24), 567],
-                [gd(2012, 1, 25), 786], [gd(2012, 1, 26), 666], [gd(2012, 1, 27), 888], [gd(2012, 1, 28), 900],
-                [gd(2012, 1, 29), 178], [gd(2012, 1, 30), 555], [gd(2012, 1, 31), 993]
-            ];
-
-
-            var dataset = [
-                {
-                    label: "Number of orders",
-                    data: data3,
-                    color: "#1ab394",
-                    bars: {
-                        show: true,
-                        align: "center",
-                        barWidth: 24 * 60 * 60 * 600,
-                        lineWidth: 0
-                    }
-
-                }, {
-                    label: "Payments",
-                    data: data2,
-                    yaxis: 2,
-                    color: "#1C84C6",
-                    lines: {
-                        lineWidth: 1,
-                        show: true,
-                        fill: true,
-                        fillColor: {
-                            colors: [{
-                                opacity: 0.2
-                            }, {
-                                opacity: 0.2
-                            }]
-                        }
-                    },
-                    splines: {
-                        show: false,
-                        tension: 0.6,
-                        lineWidth: 1,
-                        fill: 0.1
-                    },
-                }
-            ];
-
-
-            var options = {
-                xaxis: {
-                    mode: "time",
-                    tickSize: [3, "day"],
-                    tickLength: 0,
-                    axisLabel: "Date",
-                    axisLabelUseCanvas: true,
-                    axisLabelFontSizePixels: 12,
-                    axisLabelFontFamily: 'Arial',
-                    axisLabelPadding: 10,
-                    color: "#d5d5d5"
-                },
-                yaxes: [{
-                    position: "left",
-                    max: 1070,
-                    color: "#d5d5d5",
-                    axisLabelUseCanvas: true,
-                    axisLabelFontSizePixels: 12,
-                    axisLabelFontFamily: 'Arial',
-                    axisLabelPadding: 3
-                }, {
-                    position: "right",
-                    clolor: "#d5d5d5",
-                    axisLabelUseCanvas: true,
-                    axisLabelFontSizePixels: 12,
-                    axisLabelFontFamily: ' Arial',
-                    axisLabelPadding: 67
-                }
-                ],
-                legend: {
-                    noColumns: 1,
-                    labelBoxBorderColor: "#000000",
-                    position: "nw"
-                },
-                grid: {
-                    hoverable: false,
-                    borderWidth: 0
-                }
+            // Dragable panels
+            function WinMove() {
+                var element = "[class*=col]";
+                var handle = ".ibox-title";
+                var connect = "[class*=col]";
+                $(element).sortable(
+                        {
+                            handle: handle,
+                            connectWith: connect,
+                            tolerance: 'pointer',
+                            forcePlaceholderSize: true,
+                            opacity: 0.8,
+                        })
+                        .disableSelection();
             };
-
-            function gd(year, month, day) {
-                return new Date(year, month - 1, day).getTime();
-            }
-
-            var previousPoint = null, previousLabel = null;
-
-            $.plot($("#flot-dashboard-chart"), dataset, options);
-
-            var mapData = {
-                "US": 298,
-                "SA": 200,
-                "DE": 220,
-                "FR": 540,
-                "CN": 120,
-                "AU": 760,
-                "BR": 550,
-                "IN": 200,
-                "GB": 120,
-            };
-
-            $('#world-map').vectorMap({
-                map: 'world_mill_en',
-                backgroundColor: "transparent",
-                regionStyle: {
-                    initial: {
-                        fill: '#e4e4e4',
-                        "fill-opacity": 0.9,
-                        stroke: 'none',
-                        "stroke-width": 0,
-                        "stroke-opacity": 0
-                    }
-                },
-
-                series: {
-                    regions: [{
-                        values: mapData,
-                        scale: ["#1ab394", "#22d6b1"],
-                        normalizeFunction: 'polynomial'
-                    }]
-                },
-            });
 
         });
 
-
     </script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQTpXj82d8UpCi97wzo_nKXL7nYrd4G70"></script>
 
+    <script type="text/javascript">
+        // When the window has finished loading google map
+        google.maps.event.addDomListener(window, 'load', init);
+
+        function init() {
+            // Options for Google map
+            // More info see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+            var mapOptions1 = {
+                zoom: 11,
+                center: new google.maps.LatLng(40.6700, -73.9400),
+                // Style for Google Maps
+                styles: [{ "featureType": "water", "stylers": [{ "saturation": 43 }, { "lightness": -11 }, { "hue": "#0088ff" }] }, { "featureType": "road", "elementType": "geometry.fill", "stylers": [{ "hue": "#ff0000" }, { "saturation": -100 }, { "lightness": 99 }] }, { "featureType": "road", "elementType": "geometry.stroke", "stylers": [{ "color": "#808080" }, { "lightness": 54 }] }, { "featureType": "landscape.man_made", "elementType": "geometry.fill", "stylers": [{ "color": "#ece2d9" }] }, { "featureType": "poi.park", "elementType": "geometry.fill", "stylers": [{ "color": "#ccdca1" }] }, { "featureType": "road", "elementType": "labels.text.fill", "stylers": [{ "color": "#767676" }] }, { "featureType": "road", "elementType": "labels.text.stroke", "stylers": [{ "color": "#ffffff" }] }, { "featureType": "poi", "stylers": [{ "visibility": "off" }] }, { "featureType": "landscape.natural", "elementType": "geometry.fill", "stylers": [{ "visibility": "on" }, { "color": "#b8cb93" }] }, { "featureType": "poi.park", "stylers": [{ "visibility": "on" }] }, { "featureType": "poi.sports_complex", "stylers": [{ "visibility": "on" }] }, { "featureType": "poi.medical", "stylers": [{ "visibility": "on" }] }, { "featureType": "poi.business", "stylers": [{ "visibility": "simplified" }] }]
+            };
+
+            var mapOptions2 = {
+                zoom: 11,
+                center: new google.maps.LatLng(40.6700, -73.9400),
+                // Style for Google Maps
+                styles: [{ "featureType": "all", "elementType": "all", "stylers": [{ "invert_lightness": true }, { "saturation": 10 }, { "lightness": 30 }, { "gamma": 0.5 }, { "hue": "#435158" }] }]
+            };
+
+            var mapOptions3 = {
+                center: new google.maps.LatLng(36.964645, -122.01523),
+                zoom: 18,
+                mapTypeId: google.maps.MapTypeId.SATELLITE,
+                // Style for Google Maps
+                styles: [{ "featureType": "road", "elementType": "geometry", "stylers": [{ "visibility": "off" }] }, { "featureType": "poi", "elementType": "geometry", "stylers": [{ "visibility": "off" }] }, { "featureType": "landscape", "elementType": "geometry", "stylers": [{ "color": "#fffffa" }] }, { "featureType": "water", "stylers": [{ "lightness": 50 }] }, { "featureType": "road", "elementType": "labels", "stylers": [{ "visibility": "off" }] }, { "featureType": "transit", "stylers": [{ "visibility": "off" }] }, { "featureType": "administrative", "elementType": "geometry", "stylers": [{ "lightness": 40 }] }]
+            };
+
+            var mapOptions4 = {
+                zoom: 11,
+                center: new google.maps.LatLng(40.6700, -73.9400),
+                // Style for Google Maps
+                styles: [{ "stylers": [{ "hue": "#18a689" }, { "visibility": "on" }, { "invert_lightness": true }, { "saturation": 40 }, { "lightness": 10 }] }]
+            };
+
+            var fenway = new google.maps.LatLng(42.345573, -71.098326);
+            var mapOptions5 = {
+                zoom: 14,
+                center: fenway,
+                // Style for Google Maps
+                styles: [{ featureType: "landscape", stylers: [{ saturation: -100 }, { lightness: 65 }, { visibility: "on" }] }, { featureType: "poi", stylers: [{ saturation: -100 }, { lightness: 51 }, { visibility: "simplified" }] }, { featureType: "road.highway", stylers: [{ saturation: -100 }, { visibility: "simplified" }] }, { featureType: "road.arterial", stylers: [{ saturation: -100 }, { lightness: 30 }, { visibility: "on" }] }, { featureType: "road.local", stylers: [{ saturation: -100 }, { lightness: 40 }, { visibility: "on" }] }, { featureType: "transit", stylers: [{ saturation: -100 }, { visibility: "simplified" }] }, { featureType: "administrative.province", stylers: [{ visibility: "off" }]/**/ }, { featureType: "administrative.locality", stylers: [{ visibility: "off" }] }, { featureType: "administrative.neighborhood", stylers: [{ visibility: "on" }]/**/ }, { featureType: "water", elementType: "labels", stylers: [{ visibility: "on" }, { lightness: -25 }, { saturation: -100 }] }, { featureType: "water", elementType: "geometry", stylers: [{ hue: "#ffff00" }, { lightness: -25 }, { saturation: -97 }] }]
+            };
+
+            var panoramaOptions = {
+                position: fenway,
+                pov: {
+                    heading: 10,
+                    pitch: 10
+                }
+            };
+            var panorama = new google.maps.StreetViewPanorama(document.getElementById('pano'), panoramaOptions);
+
+            // Get all html elements for map
+            var mapElement1 = document.getElementById('map1');
+            var mapElement2 = document.getElementById('map2');
+            var mapElement3 = document.getElementById('map3');
+            var mapElement4 = document.getElementById('map4');
+
+            // Create the Google Map using elements
+            var map1 = new google.maps.Map(mapElement1, mapOptions1);
+            var map2 = new google.maps.Map(mapElement2, mapOptions2);
+            var map3 = new google.maps.Map(mapElement3, mapOptions3);
+            var map4 = new google.maps.Map(mapElement4, mapOptions4);
+        }
+    </script>
 <% end %>
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQTpXj82d8UpCi97wzo_nKXL7nYrd4G70"></script>
+<style type="text/css">
 
-<script type="text/javascript">
-    // When the window has finished loading google map
-    google.maps.event.addDomListener(window, 'load', init);
-
-    function init() {
-        // Options for Google map
-        // More info see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
-        var mapOptions1 = {
-            zoom: 11,
-            center: new google.maps.LatLng(40.6700, -73.9400),
-            // Style for Google Maps
-            styles: [{ "featureType": "water", "stylers": [{ "saturation": 43 }, { "lightness": -11 }, { "hue": "#0088ff" }] }, { "featureType": "road", "elementType": "geometry.fill", "stylers": [{ "hue": "#ff0000" }, { "saturation": -100 }, { "lightness": 99 }] }, { "featureType": "road", "elementType": "geometry.stroke", "stylers": [{ "color": "#808080" }, { "lightness": 54 }] }, { "featureType": "landscape.man_made", "elementType": "geometry.fill", "stylers": [{ "color": "#ece2d9" }] }, { "featureType": "poi.park", "elementType": "geometry.fill", "stylers": [{ "color": "#ccdca1" }] }, { "featureType": "road", "elementType": "labels.text.fill", "stylers": [{ "color": "#767676" }] }, { "featureType": "road", "elementType": "labels.text.stroke", "stylers": [{ "color": "#ffffff" }] }, { "featureType": "poi", "stylers": [{ "visibility": "off" }] }, { "featureType": "landscape.natural", "elementType": "geometry.fill", "stylers": [{ "visibility": "on" }, { "color": "#b8cb93" }] }, { "featureType": "poi.park", "stylers": [{ "visibility": "on" }] }, { "featureType": "poi.sports_complex", "stylers": [{ "visibility": "on" }] }, { "featureType": "poi.medical", "stylers": [{ "visibility": "on" }] }, { "featureType": "poi.business", "stylers": [{ "visibility": "simplified" }] }]
-        };
-
-        var mapOptions2 = {
-            zoom: 11,
-            center: new google.maps.LatLng(40.6700, -73.9400),
-            // Style for Google Maps
-            styles: [{ "featureType": "all", "elementType": "all", "stylers": [{ "invert_lightness": true }, { "saturation": 10 }, { "lightness": 30 }, { "gamma": 0.5 }, { "hue": "#435158" }] }]
-        };
-
-        var mapOptions3 = {
-            center: new google.maps.LatLng(36.964645, -122.01523),
-            zoom: 18,
-            mapTypeId: google.maps.MapTypeId.SATELLITE,
-            // Style for Google Maps
-            styles: [{ "featureType": "road", "elementType": "geometry", "stylers": [{ "visibility": "off" }] }, { "featureType": "poi", "elementType": "geometry", "stylers": [{ "visibility": "off" }] }, { "featureType": "landscape", "elementType": "geometry", "stylers": [{ "color": "#fffffa" }] }, { "featureType": "water", "stylers": [{ "lightness": 50 }] }, { "featureType": "road", "elementType": "labels", "stylers": [{ "visibility": "off" }] }, { "featureType": "transit", "stylers": [{ "visibility": "off" }] }, { "featureType": "administrative", "elementType": "geometry", "stylers": [{ "lightness": 40 }] }]
-        };
-
-        var mapOptions4 = {
-            zoom: 11,
-            center: new google.maps.LatLng(40.6700, -73.9400),
-            // Style for Google Maps
-            styles: [{ "stylers": [{ "hue": "#18a689" }, { "visibility": "on" }, { "invert_lightness": true }, { "saturation": 40 }, { "lightness": 10 }] }]
-        };
-
-        var fenway = new google.maps.LatLng(42.345573, -71.098326);
-        var mapOptions5 = {
-            zoom: 14,
-            center: fenway,
-            // Style for Google Maps
-            styles: [{ featureType: "landscape", stylers: [{ saturation: -100 }, { lightness: 65 }, { visibility: "on" }] }, { featureType: "poi", stylers: [{ saturation: -100 }, { lightness: 51 }, { visibility: "simplified" }] }, { featureType: "road.highway", stylers: [{ saturation: -100 }, { visibility: "simplified" }] }, { featureType: "road.arterial", stylers: [{ saturation: -100 }, { lightness: 30 }, { visibility: "on" }] }, { featureType: "road.local", stylers: [{ saturation: -100 }, { lightness: 40 }, { visibility: "on" }] }, { featureType: "transit", stylers: [{ saturation: -100 }, { visibility: "simplified" }] }, { featureType: "administrative.province", stylers: [{ visibility: "off" }]/**/ }, { featureType: "administrative.locality", stylers: [{ visibility: "off" }] }, { featureType: "administrative.neighborhood", stylers: [{ visibility: "on" }]/**/ }, { featureType: "water", elementType: "labels", stylers: [{ visibility: "on" }, { lightness: -25 }, { saturation: -100 }] }, { featureType: "water", elementType: "geometry", stylers: [{ hue: "#ffff00" }, { lightness: -25 }, { saturation: -97 }] }]
-        };
-
-        var panoramaOptions = {
-            position: fenway,
-            pov: {
-                heading: 10,
-                pitch: 10
-            }
-        };
-        var panorama = new google.maps.StreetViewPanorama(document.getElementById('pano'), panoramaOptions);
-
-        // Get all html elements for map
-        var mapElement1 = document.getElementById('map1');
-        var mapElement2 = document.getElementById('map2');
-        var mapElement3 = document.getElementById('map3');
-        var mapElement4 = document.getElementById('map4');
-
-        // Create the Google Map using elements
-        var map1 = new google.maps.Map(mapElement1, mapOptions1);
-        var map2 = new google.maps.Map(mapElement2, mapOptions2);
-        var map3 = new google.maps.Map(mapElement3, mapOptions3);
-        var map4 = new google.maps.Map(mapElement4, mapOptions4);
+    .list-percentages li{
+        border-left: 1px solid rgba(0, 0, 0, 0.1);
+        list-style: outside none none;
+        position: relative;
+        text-align: center;
     }
-</script>
+    .list-percentages li:first-child{
+       border-left: 0 none;
+       margin: 0px 10px 0px -30px;
+    }
+
+    .col-xs-4{
+        min-width: 33.33%;
+        float: left;
+    }
+</style>
