@@ -1,9 +1,11 @@
 class DashboardsController < ApplicationController
+  SUBLEVELCONSTANT = nil
 
   def dashboard_1
   end
 
   def dashboard_2
+    @sub_level = SUBLEVELCONSTANT
   end
 
   def dashboard_3

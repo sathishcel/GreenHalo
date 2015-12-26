@@ -14,13 +14,15 @@
             </li>
 
               <li>
-                <a href="javascript:void(0);" data-remote="true" title="Suggestions">
+                <a href="#"  data-toggle="modal" data-target="#myModal5" title="Suggestions">
                   <i class="fa fa-lightbulb-o"></i>
                 </a>
+
               </li>
 
               <li>
-                <a href="javascript:void(0);" data-remote="true" title="Reports">
+
+                <a href="#"  data-toggle="modal" data-target="#myModal6" title="Reports">
                   <i class="fa fa-bug"></i>
                 </a>
               </li>
@@ -160,5 +162,127 @@
                 </a>
             </li>
     </ul>
+
+
+      <div class="modal inmodal" id="myModal5" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg" style = "width:auto;margin-top: 9px;">
+          <div class="modal-content">
+            <div class="modal-header" style = "background-color: #676a6c;max-height: 30px;">
+             <span>
+                <span style = "margin-top:-10px;">
+                   <i class = "fa fa-repeat" style = "color: white;float:left;margin-top:-21px;margin-left:-6px;"></i>
+                   <span style="top:13px;float:left;margin-top: -25px;margin-left: 9px;border-left: 2px solid #19aa8d;">|</span>
+                   <span style = "color:white;font-weight:bold;float:left;margin-left:27px;margin-top:-25px;">Suggestions - WGU 8766098095</span>
+                 </span>
+                 <span style="top:13px;float:right;  margin-top: -28px;
+                         margin-right: 5px;border-left: 2px solid #19aa8d;">|</span>
+               <i class = "fa fa-times" data-dismiss="modal" style = "float:right;color: white;cursor: pointer;margin-top:-24px;margin-right: -10px;"></i>
+             </span>
+
+
+            </div>
+
+            <div class="modal-body">
+              <%= form_for(User.new, url: { controller: "dashboards" ,action: "tracking" }) do |f| %>
+
+                  <h3 align = "left">Suggestions</h3>
+
+
+                  <div class="form-group">
+                    <label>Username *</label>
+                    <input id="userName" name="userName" type="text" class="form-control required">
+                  </div>
+
+                  <div class="form-group">
+                    <label>email *</label>
+                    <input id="userName" name="userName" type="text" class="form-control required">
+                  </div>
+
+
+                  <div class="form-group">
+                    <label>Url *</label>
+                    <input id="userName" name="userName" type="text" class="form-control required">
+                  </div>
+
+                  <div class = "form-group">
+                    <label>Comment</label>
+                    <textarea  class="form-control"></textarea>
+                  </div>
+
+
+                  <div>
+
+                  </div>
+
+              <%end%>
+            </div>
+
+            <div class="modal-footer">
+              <button type="button" class="btn btn-white" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Update and Save</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="modal inmodal" id="myModal6" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg" style = "width:auto;  margin-top: 9px;">
+          <div class="modal-content">
+
+            <div class="modal-header" style = "background-color: #676a6c;max-height: 30px;">
+             <span>
+                <span style = "margin-top:-10px;">
+                   <i class = "fa fa-repeat" style = "color: white;float:left;margin-top:-21px;margin-left:-6px;"></i>
+                  <span style="top:13px;float:left;margin-top: -25px;margin-left: 9px;border-left: 2px solid #19aa8d;">|</span>
+                  <span style = "color:white;font-weight:bold;float:left;margin-left:27px;margin-top:-25px;">Reports - WGU 8766098095</span>
+                 </span>
+               <span style="top:13px;float:right;  margin-top: -28px;
+                       margin-right: 5px;border-left: 2px solid #19aa8d;">|</span>
+               <i class = "fa fa-times" data-dismiss="modal" style = "float:right;color: white;cursor: pointer;margin-top:-24px;margin-right: -10px;"></i>
+             </span>
+
+
+            </div>
+
+            <div class="modal-body">
+              <%= form_for(User.new, url: { controller: "dashboards" ,action: "tracking" }) do |f| %>
+
+                  <h3 align = "left">Report Bug</h3>
+
+
+                  <div class="form-group">
+                    <label>Username *</label>
+                    <input id="userName" name="userName" type="text" class="form-control required">
+                  </div>
+
+                  <div class="form-group">
+                    <label>email *</label>
+                    <input id="userName" name="userName" type="text" class="form-control required">
+                  </div>
+
+
+                  <div class="form-group">
+                    <label>Url*</label>
+                    <input id="userName" name="userName" type="text" class="form-control required">
+                  </div>
+
+
+                  <div class = "form-group">
+                    <label>Comment</label>
+                    <textarea  class="form-control"></textarea>
+                  </div>
+
+
+              <%end%>
+            </div>
+
+            <div class="modal-footer">
+              <button type="button" class="btn btn-white" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Update and Save</button>
+            </div>
+          </div>
+        </div>
+      </div>
 </nav>
 </div>
