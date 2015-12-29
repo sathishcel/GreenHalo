@@ -19,6 +19,27 @@ ActiveRecord::Schema.define(version: 20151229050938) do
     t.integer  "user_id",    limit: 4
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
+
+
+  create_table "addresses", force: :cascade do |t|
+    t.string "zip",          limit: 255
+    t.string "street",       limit: 255
+    t.string "suit_unit",    limit: 255
+    t.string "city",         limit: 255
+    t.string "state",        limit: 255
+    t.string "country",      limit: 255
+    t.string "phone_number", limit: 255
+    t.string "full_address", limit: 255
+  end
+
+  create_table "schedule_demos", force: :cascade do |t|
+    t.string   "full_name",         limit: 255
+    t.string   "email",             limit: 255
+    t.string   "phone",             limit: 255
+    t.datetime "request_date"
+    t.string   "request_time",      limit: 255
+    t.string   "request_session",   limit: 255
+    t.string   "request_time_zone", limit: 255
   end
 
   create_table "users", force: :cascade do |t|

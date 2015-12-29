@@ -70,11 +70,13 @@
               <li class="<%= is_active_action('email_templates') %>"><%= link_to "Email templates", mailbox_email_templates_path %> </li>
             </ul>
           </li>
+          
+
 
           <li class="<%= is_active_action('chat_view') %>">
-            <a href="" data-remote="true" title="Live Support">
-              <i class="fa fa-comment"></i>Live Support
-            </a>
+            <%= link_to miscellaneous_chat_view_path do %>
+            <i class="fa fa-comment"></i><span class="nav-label">Live Support</span>
+            <% end %>
           </li>
 
         </ul>

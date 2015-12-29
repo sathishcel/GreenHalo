@@ -18,6 +18,18 @@ Myapp::Application.routes.draw do
       root to: 'landing#index'
     end
   end
+
+  resources :business_level_settings, :path => ':domain/:user_type/business_level_settings' do
+    collection do
+    end
+  end
+
+  resources :program_settings, :path => ':domain/:user_type/program_settings' do
+    collection do
+      get :recycling_target
+    end
+  end
+
   # All routes
   get "dashboards/dashboard_1"
   get "/getting_sub_levels/:id"  => 'dashboards#getting_sub_levels'
