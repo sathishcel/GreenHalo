@@ -47,7 +47,9 @@
             <%= link_to "/forms/wizard?business=true", class:"btn btn-lg btn-primary" do %>
                 Non-Government
             <% end %>
-            <a class="btn btn-lg btn-primary" href="#" role="button">Demo</a>
+
+            <a data-target="#myModal" data-toggle="modal" class="btn btn-lg btn-primary" href="#" role="button">Demo</a>
+
             <%= link_to "Signin" ,new_user_session_path,:class => "btn btn-w-m btn-warning" ,
                         :style => "height:40px;font-size:15px;" %>
           </p>
@@ -75,7 +77,9 @@
             <%= link_to "/forms/wizard?business=true", class:"btn btn-lg btn-primary" do %>
                 Non-Government
             <% end %>
-            <a class="btn btn-lg btn-primary" href="#" role="button">DEMO</a>
+
+            <a data-target="#myModal" data-toggle="modal" class="btn btn-lg btn-primary" href="#" role="button">Demo</a>
+
             <%= link_to "Signin" ,new_user_session_path,:class => "btn btn-w-m btn-warning" ,
                         :style => "height:40px;font-size:15px;" %>
           </p>
@@ -173,7 +177,7 @@
       <small>Waste Tracking</small>
       <h2>Perfectly designed with simplicity and ease of use in mind </h2>
       <p>INSPINIA Admin Theme is a premium admin dashboard template with flat design concept. It is fully responsive admin dashboard template built with Bootstrap 3+ Framework, HTML5 and CSS3, Media query. It has a huge collection of reusable UI components and integrated with latest jQuery plugins.</p>
-      <a href="" class="btn btn-primary">View Demo</a>
+      <a data-target="#myModal" data-toggle="modal" class="btn btn-primary" href="#" role="button">View Demo</a>
     </div>
     <div class="col-lg-6 text-right wow fadeInRight">
       <img src="<%= image_path('landing/dashboard.png') %>" alt="dashboard" class="img-responsive pull-right">
@@ -242,7 +246,7 @@
         <small>WASTE TRACKING</small>
         <h2>FOR GOVERNMENT AGENCIES </h2>
         <p>INSPINIA Admin Theme is a premium admin dashboard template with flat design concept. It is fully responsive admin dashboard template built with Bootstrap 3+ Framework, HTML5 and CSS3, Media query. It has a huge collection of reusable UI components and integrated with latest jQuery plugins.</p>
-        <a href="" class="btn btn-primary">VIEW DEMO</a>
+        <a data-target="#myModal" data-toggle="modal" class="btn btn-primary" href="#" role="button">View Demo</a>
       </div>
       <div class="col-lg-6 text-right m-t-n-lg wow zoomIn">
         <img src="<%= image_path('landing/iphone.jpg') %>" class="img-responsive" alt="dashboard">
@@ -251,7 +255,7 @@
         <small>WASTE TRACKING </small>
         <h2>FOR NON-GOVERNMENT USERS </h2>
         <p>INSPINIA Admin Theme is a premium admin dashboard template with flat design concept. It is fully responsive admin dashboard template built with Bootstrap 3+ Framework, HTML5 and CSS3, Media query. It has a huge collection of reusable UI components and integrated with latest jQuery plugins.</p>
-        <a href="" class="btn btn-primary">VIEW DEMO</a>
+        <a data-target="#myModal" data-toggle="modal" class="btn btn-primary" href="#" role="button">View Demo</a>
       </div>
     </div>
   </div>
@@ -280,7 +284,7 @@
               <h2>CONFIGURE </h2>
               <p>Configure your system settings to match your need. Identify waste streams and their locations. Assign vendors and start tracking. Need Help? We'll do all the set up for you and even import your existing data into the system.
               </p>
-              <a href="#" class="btn btn-xs btn-primary"> Schedule A Consultation to Learn More</a>
+              <a href="#" data-target="#myModal" data-toggle="modal" class="btn btn-xs btn-primary"> Schedule A Consultation to Learn More</a>
               <span class="vertical-date"> Step <br/> <small> 1 </small> </span>
             </div>
           </div>
@@ -293,7 +297,7 @@
             <div class="vertical-timeline-content">
               <h2>MONITOR</h2>
               <p>Schedule pick ups, get alerts, and monitor vendor activity as your materials are collected through our real time collection tracking system.</p>
-              <a href="#" class="btn btn-xs btn-primary"> Schedule a Demo To Learn More </a>
+              <a href="#" data-target="#myModal" data-toggle="modal"  class="btn btn-xs btn-primary"> Schedule a Demo To Learn More </a>
               <span class="vertical-date"> Step <br/> <small> 2 </small> </span>
             </div>
           </div>
@@ -306,7 +310,7 @@
             <div class="vertical-timeline-content">
               <h2>VERIFY</h2>
               <p>Verify disposition with our proof of disposal system, that provides you with the verification you need to reduce liability, fines and penalties, and assure your vendors and employees comply with sustainability goals and requirements. </p>
-              <a href="#" class="btn btn-xs btn-primary">  Learn More About Real Time Verification </a>
+              <a href="#" data-target="#myModal" data-toggle="modal"  class="btn btn-xs btn-primary">  Learn More About Real Time Verification </a>
               <span class="vertical-date"> Step <br/> <small> 3 </small> </span>
             </div>
           </div>
@@ -319,7 +323,7 @@
             <div class="vertical-timeline-content">
               <h2>ANALYZE</h2>
               <p>Analyze data and statistics, generate comprehensive reports and monitor your carbon footprint in real time, on your desk top or mobile device. Set alerts and notifications to let you know when goals are achieved or when they're not. Export and share data in a variety of formats, or provide limited viewing access for reports to be viewed on the cloud. </p>
-              <a href="#" class="btn btn-xs btn-primary"> Get Started Today! </a>
+              <a href="#" data-target="#myModal" data-toggle="modal" class="btn btn-xs btn-primary"> Get Started Today! </a>
               <span class="vertical-date"> Step <br/> <small> 4 </small> </span>
             </div>
           </div>
@@ -608,7 +612,7 @@
     </div>
     <div class="row">
       <div class="col-lg-12 text-center">
-        <a href="mailto:test@email.com" class="btn btn-primary">Schedule A Demo</a>
+        <a href="mailto:test@email.com" data-target="#myModal" data-toggle="modal" class="btn btn-primary">Schedule A Demo</a>
         <p class="m-t-sm">
           Or follow us on social platform
         </p>
@@ -627,6 +631,9 @@
     </div>
   </div>
 </section>
+
+<%= render partial: "demo_form" %>
+
 <% content_for :javascript do %>
 
     <script type="text/javascript">
