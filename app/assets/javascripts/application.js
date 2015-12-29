@@ -13,4 +13,5 @@
 //= require slimscroll/jquery.slimscroll.min.js
 //= require inspinia.js
 //= require welcome.js
+//= require vmenuModule.js
 
