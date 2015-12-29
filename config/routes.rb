@@ -20,6 +20,7 @@ Myapp::Application.routes.draw do
   end
   # All routes
   get "dashboards/dashboard_1"
+  get "/getting_sub_levels/:id"  => 'dashboards#getting_sub_levels'
   get "dashboards/dashboard_2"
   get "dashboards/dashboard_3"
   get "dashboards/dashboard_4"

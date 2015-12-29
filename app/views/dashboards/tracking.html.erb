@@ -106,6 +106,7 @@
      </div>
 
 
+
      <div class="wrapper wrapper-content animated fadeInRight">
 
        <div class="row">
@@ -113,12 +114,14 @@
            <div class="scroll-tabs">
 
              <ul>
+             <% @main_levels.each do |level| %>
+
                <li>
 
-                 <div class="parent-1 ibox-title" align="right">
+                 <div class="parent-1 ibox-title" align="right" id = "main_level_<%= level.id %>">
 
 
-                   <h5>MY ENTIRE COMPANY</h5>
+                   <h5><%= level.name %></h5>
 
                    <a class="close-link">
                      <i class="fa fa-info fa-wticn"></i>
@@ -179,14 +182,6 @@
                            </div>
                          </a>
                        </li>
-                       <!--<li role="presentation">
-                         <a role="menuitem" tabindex="-1" href="settings-government.html">
-                             <div>Settings</div>
-                             <div style="color:#999999; font-size:10px;">
-                                 Manage settings for this level and levels below
-                             </div>
-                         </a>
-                       </li>-->
 
                        <li role="presentation" class="divider"></li>
                        <li role="presentation">
@@ -202,19 +197,20 @@
                      </ul>
                    </div>
 
-                   <div class="collapse-link ibox-tools setting expand">
-                     <i class="fa fa-chevron-up  fa-wticn"></i>
-                   </div>
+
+
+
+                   <%= link_to "/getting_sub_levels/#{level.id}" ,remote: true do %>
+                       <i class="fa fa-chevron-up  fa-wticn"></i>
+                   <%end%>
+
 
                    <a class="close-link">
                      <i class="fa fa-times fa-wticn"></i>
                    </a>
 
-
-                   <!--<div class="setting expand">
-                         <i class="fa fa-chevron-up"></i>
-                   </div>-->
                  </div>
+
                  <ul>
                    <li>
                      <div class="parent-2 ibox-title" align="right">
@@ -611,204 +607,7 @@
 
 
                </li>
-
-
-
-               <li>
-
-                 <div class="parent-1 ibox-title" align="right">
-
-                   <h5>MY ENTIRE COMPANY # Level 1</h5>
-
-                   <a class="close-link">
-                     <i class="fa fa-info fa-wticn"></i>
-                   </a>
-
-                   <div class="company-img ibox-tools dropdown">
-                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                       <i class="fa fa-wrench fa-wticn"></i>
-                     </a>
-                     <ul class="dropdown-menu wgu-dropdown" role="menu" aria-labelledby="menu1">
-
-                       <img src="../img/wgu-dropdwn-pointer.png" class="wgu-pointer-dd" alt="" />
-
-                       <li role="presentation">
-                         <a role="menuitem" tabindex="-1" href="reports.html">
-                           <div>View Reports</div>
-                           <div style="color:#999999; font-size:10px;">
-                             View Reports and Statistics for this WGU and the WGUs in this section
-                           </div>
-                         </a>
-                       </li>
-                       <li role="presentation">
-                         <a role="menuitem" tabindex="-1" href="messages.html">
-                           <div>Messages</div>
-                           <div style="color:#999999; font-size:10px;">
-                             View Reports and Statistics for this WGU and the WGUs in this section
-                           </div>
-                         </a>
-                       </li>
-                       <li role="presentation">
-                         <a role="menuitem" tabindex="-1" href="settings-management.html">
-                           <div>Level Settings</div>
-                           <div style="color:#999999; font-size:10px;">
-                             Manage settings for this level and levels below
-                           </div>
-                         </a>
-                       </li>
-                       <li role="presentation">
-                         <a role="menuitem" tabindex="-1" href="manage-portal.html">
-                           <div>Manage Portal</div>
-                           <div style="color:#999999; font-size:10px;">
-                             Create Edit and Delete standalone portal for this WGU
-                           </div>
-                         </a>
-                       </li>
-                       <li role="presentation">
-                         <a role="menuitem" tabindex="-1" href="#">
-                           <div>API</div>
-                           <div style="color:#999999; font-size:10px;">
-                             Manage your connections with other software
-                           </div>
-                         </a>
-                       </li>
-                       <li role="presentation">
-                         <a role="menuitem" tabindex="-1" href="#">
-                           <div>Add Level</div>
-                           <div style="color:#999999; font-size:10px;">
-                           </div>
-                         </a>
-                       </li>
-                       <!--<li role="presentation">
-                         <a role="menuitem" tabindex="-1" href="settings-government.html">
-                             <div>Settings</div>
-                             <div style="color:#999999; font-size:10px;">
-                                 Manage settings for this level and levels below
-                             </div>
-                         </a>
-                       </li>-->
-
-                       <li role="presentation" class="divider"></li>
-                       <li role="presentation">
-                         <a role="menuitem" class="addwgu" tabindex="-1" href="#" style="color:#058F26;">
-                           Add New Waste Generating Unit
-                         </a>
-                       </li>
-                       <li role="presentation">
-                         <a role="menuitem" tabindex="-1" href="#" style="color:#FF0707;">
-                           Delete This WGU
-                         </a>
-                       </li>
-                     </ul>
-                   </div>
-
-                   <div class="collapse-link ibox-tools setting expand">
-                     <i class="fa fa-chevron-up fa-wticn"></i>
-                   </div>
-
-                   <a class="close-link">
-                     <i class="fa fa-times fa-wticn"></i>
-                   </a>
-                 </div>
-                 <ul>
-                   <li>
-                     <div class="parent-2 ibox-title" align="right">
-
-                       <h5>MY ENTIRE COMPANY Level 2 Unit #2</h5>
-
-                       <a class="close-link">
-                         <i class="fa fa-info fa-wticn"></i>
-                       </a>
-
-                       <div class="company-img ibox-tools dropdown">
-                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                           <i class="fa fa-wrench fa-wticn"></i>
-                         </a>
-                         <ul class="dropdown-menu wgu-dropdown" role="menu" aria-labelledby="menu1">
-
-                           <img src="../img/wgu-dropdwn-pointer.png" class="wgu-pointer-dd" alt="" />
-
-                           <li role="presentation">
-                             <a role="menuitem" tabindex="-1" href="reports.html">
-                               <div>View Reports</div>
-                               <div style="color:#999999; font-size:10px;">
-                                 View Reports and Statistics for this WGU and the WGUs in this section
-                               </div>
-                             </a>
-                           </li>
-                           <li role="presentation">
-                             <a role="menuitem" tabindex="-1" href="messages.html">
-                               <div>Messages</div>
-                               <div style="color:#999999; font-size:10px;">
-                                 View Reports and Statistics for this WGU and the WGUs in this section
-                               </div>
-                             </a>
-                           </li>
-                           <li role="presentation">
-                             <a role="menuitem" tabindex="-1" href="settings-management.html">
-                               <div>Level Settings</div>
-                               <div style="color:#999999; font-size:10px;">
-                                 Manage settings for this level and levels below
-                               </div>
-                             </a>
-                           </li>
-                           <li role="presentation">
-                             <a role="menuitem" tabindex="-1" href="manage-portal.html">
-                               <div>Manage Portal</div>
-                               <div style="color:#999999; font-size:10px;">
-                                 Create Edit and Delete standalone portal for this WGU
-                               </div>
-                             </a>
-                           </li>
-                           <li role="presentation">
-                             <a role="menuitem" tabindex="-1" href="#">
-                               <div>API</div>
-                               <div style="color:#999999; font-size:10px;">
-                                 Manage your connections with other software
-                               </div>
-                             </a>
-                           </li>
-                           <li role="presentation">
-                             <a role="menuitem" tabindex="-1" href="#">
-                               <div>Add Level</div>
-                               <div style="color:#999999; font-size:10px;">
-                               </div>
-                             </a>
-                           </li>
-                           <!--<li role="presentation">
-                             <a role="menuitem" tabindex="-1" href="settings-government.html">
-                                 <div>Settings</div>
-                                 <div style="color:#999999; font-size:10px;">
-                                     Manage settings for this level and levels below
-                                 </div>
-                             </a>
-                           </li>-->
-
-                           <li role="presentation" class="divider"></li>
-                           <li role="presentation">
-                             <a role="menuitem" class="addwgu" tabindex="-1" href="#" style="color:#058F26;">
-                               Add New Waste Generating Unit
-                             </a>
-                           </li>
-                           <li role="presentation">
-                             <a role="menuitem" tabindex="-1" href="#" style="color:#FF0707;">
-                               Delete This WGU
-                             </a>
-                           </li>
-                         </ul>
-                       </div>
-
-                       <div class="collapse-link ibox-tools setting expand">
-                         <i class="fa fa-chevron-up fa-wticn"></i>
-                       </div>
-
-                       <a class="close-link">
-                         <i class="fa fa-times fa-wticn"></i>
-                       </a>
-                     </div>
-                   </li>
-                 </ul>
-               </li>
+             <%end%>
 
              </ul>
 
@@ -843,12 +642,27 @@
             autostart: false,
             autohide: true
         });
+
+
     });
 </script>
 
 <!-- Custom and plugin javascript -->
 
-
+<script>
+    $(document).ready(function(){
+        $(".hdhdh").click(function(){
+            var id = $(this).attr('id');
+            var url = "/getting_sub_levels/" + id;
+            $.ajax({
+                url: url,
+                type: 'GET',
+                dataType: 'json',
+                success: 'success'
+            });
+        }) ;
+    });
+</script>
 
 
 

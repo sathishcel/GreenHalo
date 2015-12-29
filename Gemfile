@@ -5,6 +5,7 @@ gem 'rails', '4.2.3'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'font-awesome-rails', '4.3.0.0'
 gem 'unicorn'
+gem 'jquery-rails'
 # Use sqlite3 as the database for Active Record
 gem 'mysql2', '~> 0.3.13'
 
