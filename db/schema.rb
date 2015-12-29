@@ -11,15 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151229050938) do
-
-  create_table "levels", force: :cascade do |t|
-    t.string   "name",       limit: 255
-    t.integer  "level_id",   limit: 4
-    t.integer  "user_id",    limit: 4
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
-
+ActiveRecord::Schema.define(version: 20151229072342) do
 
   create_table "addresses", force: :cascade do |t|
     t.string "zip",          limit: 255
@@ -30,6 +22,14 @@ ActiveRecord::Schema.define(version: 20151229050938) do
     t.string "country",      limit: 255
     t.string "phone_number", limit: 255
     t.string "full_address", limit: 255
+  end
+
+  create_table "levels", force: :cascade do |t|
+    t.string   "name",       limit: 255
+    t.integer  "level_id",   limit: 4
+    t.integer  "user_id",    limit: 4
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
   create_table "schedule_demos", force: :cascade do |t|
