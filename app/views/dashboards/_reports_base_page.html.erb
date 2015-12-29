@@ -21,7 +21,7 @@
 
       </div>
 
-      <div id="displaymenu" class="displaylist">
+      <div id="displaymenu" class="displaylist" style="position: absolute;">
         <%= image_tag "img/pop-img.png", :class=>"pop-pointer-dd" %>
         <ul class="pop-dropdown">
           <li> <%= link_to "Settings Function", "#", onclick:"dynamic_level_settings('#{business_level_settings_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
