@@ -1,0 +1,117 @@
+<div class="modal inmodal" id="myModal15" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-lg" style = "width:auto;margin-top: 9px;">
+    <div class="modal-content">
+      <div class="modal-header" style = "background-color: #676a6c;max-height: 30px;">
+             <span>
+                <span style = "margin-top:-10px;">
+                   <i class = "fa fa-repeat" style = "color: white;float:left;margin-top:-21px;margin-left:-6px;"></i>
+                   <span style="top:13px;float:left;margin-top: -25px;margin-left: 9px;border-left: 2px solid #19aa8d;">|</span>
+                   <span style = "color:white;font-weight:bold;float:left;margin-left:67px;margin-top:-25px;">Settings - WGU 8766098095</span>
+                 </span>
+                 <span style="float:left;margin-top:-24px;margin-left:30px;">
+                   <a href="#" style="color:#FFFFFF">
+                     <i class="fa fa-list" id="menulist"></i>
+                   </a>
+                 </span>
+                 <span style="top:13px;float:right;  margin-top: -28px;
+                         margin-right: 5px;border-left: 2px solid #19aa8d;">|</span>
+               <i class = "fa fa-times" data-dismiss="modal" style = "float:right;color: white;cursor: pointer;margin-top:-24px;margin-right: -10px;"></i>
+             </span>
+
+
+      </div>
+
+      <div id="displaymenu" class="displaylist">
+        <%= image_tag "img/pop-img.png", :class=>"pop-pointer-dd" %>
+        <ul class="pop-dropdown">
+          <li> <%= link_to "Settings Function", "#", onclick:"dynamic_level_settings('#{business_level_settings_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
+          <li> <%= link_to "Recycle Target", "#", onclick:"dynamic_level_settings('#{recycling_target_program_settings_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
+        </ul>
+      </div>
+
+      <div class="modal-body">
+        <%= render partial:"business_level_settings/system_config"%>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-white" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Submit</button>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <script type="text/javascript">
+
+      $(document).ready(function()
+      {
+          $("#menulist").click(function()
+          {
+              $("#displaymenu").toggle();
+          });
+      });
+
+      function dynamic_level_settings(url) {
+
+          var current_url = url;
+          var level_id = level_id;
+          $.ajax({
+              type: "GET",
+              url: current_url,
+          }).success(function (data) {
+              $('.modal-body').html(data);
+              $("#displaymenu").toggle();
+          });
+      }
+  </script>
+
+
+  <style>
+      /* for level setting popup title bar*/
+      .displaylist
+      {
+          background: #d3d3d3 none repeat scroll 0 0;
+          color: #000000;
+          display: none;
+          border: 1px solid #504f4f;
+          margin: 12px 0 0 1%;
+          width: 212px;
+          position: relative;
+          z-index: 11;
+      }
+
+      .pop-dropdown
+      {
+          list-style:none;
+          border-top: 4px solid #504f4f;
+          margin:0;
+          padding:0;
+      }
+      .pop-dropdown > li > a
+      {
+          text-decoration:none;
+          clear: both;
+          color: #333;
+          display: block;
+          font-weight: 400;
+          padding: 3px 14px;
+          white-space: nowrap;
+          text-align: left;
+      }
+      .pop-dropdown > li > a:focus,.pop-dropdown > li > a:hover
+      {
+          background:#BFBFBF;
+          color:#333;
+      }
+
+      .modal-body{min-height:486px;}
+
+      .pop-pointer-dd {
+          margin-left: 31px;
+          position: absolute;
+          top: -11px;
+      }
+
+  </style>
