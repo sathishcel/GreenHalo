@@ -1,13 +1,10 @@
-log/development.log
-/log/development.log
+log/*.log
 !/log/.keep
-tmp/cache/assets/development/sprockets/*
-/tmp/cache/assets/development/sprockets/*
-/tmp/cache/assets/development/sass/*
-tmp/cache/assets/development/sass/*
-/config/database.yml
+tmp
 config/database.yml
+config/unicorn.rb
 /public/system
+shared
 /.idea
 /solr/development/*
 /solr/pids/development/*
