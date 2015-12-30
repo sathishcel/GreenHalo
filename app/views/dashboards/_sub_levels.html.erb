@@ -1,4 +1,4 @@
-
+<% unless sub_level.blank? %>
 <% sub_level.each do |level| %>
     <li>
     <div class="parent-2 ibox-title" align="right" id = "main_level_<%= level.id %>">
@@ -103,4 +103,6 @@
         <ul></ul>
 
 </li>
+<%end%>
+
 <%end%>
