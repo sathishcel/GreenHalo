@@ -1,6 +1,21 @@
 <% unless sub_level.blank? %>
     <% sub_level.each do |level| %>
         <tr class="gradeA" id = "sub_level_<%= level.id %>" value = "<%= level.id %>">
+          <td>
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+              <i class="fa fa-wrench"></i>
+            </a>
+
+            <ul class="dropdown-menu dropdown-user">
+              <li>
+                <a href="#">Config option 1</a>
+              </li>
+              <li>
+                <a href="#">Config option 2</a>
+              </li>
+            </ul>
+          </td>
+
           <td><%= level.name %></td>
           <td>
             Internet
