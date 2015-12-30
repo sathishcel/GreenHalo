@@ -41,14 +41,18 @@
 
   <!-- Include javascript per-controller - vendor plugins -->
 
-  <%= javascript_include_tag  "/iCheck/icheck.min.js",  "staps/jquery.steps.min.js", "validate/jquery.validate.min.js",
-                              "dropzone/dropzone.js", "summernote/summernote.min.js",
-                              "colorpicker/bootstrap-colorpicker.min.js", "cropper/cropper.min.js",
-                              "datapicker/bootstrap-datepicker.js", "ionRangeSlider/ion.rangeSlider.min.js",
-                              "jasny/jasny-bootstrap.min.js", "jsKnob/jquery.knob.js",
-                              "nouslider/jquery.nouislider.min.js", "switchery/switchery.js", "chosen/chosen.jquery.js",
-                              "fullcalendar/moment.min.js", "clockpicker/clockpicker.js",
-                              "daterangepicker/daterangepicker.js", "select2/select2.full.min.js", "forms.js" %>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/0.10.0/lodash.min.js"></script>
+
+  <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+
+  <%= javascript_include_tag  "signup", "iCheck/icheck.min",  "staps/jquery.steps.min", "validate/jquery.validate.min",
+                              "dropzone/dropzone", "summernote/summernote.min",
+                              "colorpicker/bootstrap-colorpicker.min", "cropper/cropper.min",
+                              "datapicker/bootstrap-datepicker", "ionRangeSlider/ion.rangeSlider.min",
+                              "jasny/jasny-bootstrap.min", "jsKnob/jquery.knob",
+                              "nouslider/jquery.nouislider.min", "switchery/switchery", "chosen/chosen.jquery",
+                              "fullcalendar/moment.min", "clockpicker/clockpicker",
+                              "daterangepicker/daterangepicker", "select2/select2.full.min", "markerclusterer_packed", "forms" %>
 
 </head>
 <body class="gray-bg">
@@ -57,8 +61,8 @@
 <%= yield %>
 
 
-<!-- Include javascript per-controller - vendor plugins -->
-<%= javascript_include_tag params[:controller] if ::Rails.application.assets.find_asset("#{params[:controller]}.js") %>
+
+
 
 <!-- Include javascript per-view -->
 <!-- For demo purpose we include javascript in view but you can easily start SeedProject and organize it with Rails asset pipeline as you want -->

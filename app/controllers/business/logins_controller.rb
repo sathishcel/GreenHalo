@@ -12,4 +12,23 @@ class Business::LoginsController < ApplicationController
     render :nothing => false, :status => 422
   end
 
+  def get_city_and_state
+    zip_population = []
+    location = Geokit::Geocoders::GoogleGeocoder.geocode "#{params[:zipcode]}"
+    zip_population.push(location.latitude,location.longitude,location.state,location.city)
+    render :json => zip_population
+  end
+
+  def get_location_from_zipcode
+    zipcode = ZipCode.check_valid_zipcode(params[:business_user_zipcode])
+    if zipcode.present? && zipcode.zip.present?
+      session[:business_user_zipcode] = zipcode
+      #redirect_to new_business_login_path
+      render :json => {success:true}
+    else
+      flash[:alert] = 'Enter Valid ZipCode'
+      redirect_to get_zipcode_business_logins_path
+    end
+  end
+
 end
