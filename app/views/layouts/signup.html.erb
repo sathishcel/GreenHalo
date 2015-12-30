@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <%= favicon_link_tag 'wastetrac-meta-icon.png' %>
+  <title>Wastetracking | wastetracking.com</title>
+
+  <!-- Include style per-controller - vendor plugins -->
+  <%= stylesheet_link_tag params[:controller] if ::Rails.application.assets.find_asset("#{params[:controller]}.css") %>
+
+  <!-- Main css styles -->
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+
+  <!-- Main javascript files -->
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+
+  <!-- Include style per-controller - vendor plugins -->
+  <link rel="stylesheet" media="screen" href="/assets/iCheck/custom.css?body=1" />
+  <link rel="stylesheet" media="screen" href="/assets/steps/jquery.steps.css?body=1" />
+  <link rel="stylesheet" media="screen" href="/assets/summernote/summernote-bs3.css?body=1" />
+  <link rel="stylesheet" media="screen" href="/assets/summernote/summernote.css?body=1" />
+  <link rel="stylesheet" media="screen" href="/assets/dropzone/basic.css?body=1" />
+  <link rel="stylesheet" media="screen" href="/assets/dropzone/dropzone.css?body=1" />
+  <link rel="stylesheet" media="screen" href="/assets/colorpicker/css/bootstrap-colorpicker.min.css?body=1" />
+  <link rel="stylesheet" media="screen" href="/assets/cropper/cropper.min.css?body=1" />
+  <link rel="stylesheet" media="screen" href="/assets/datapicker/datepicker3.css?body=1" />
+  <link rel="stylesheet" media="screen" href="/assets/ionRangeSlider/ion.rangeSlider.css?body=1" />
+  <link rel="stylesheet" media="screen" href="/assets/ionRangeSlider/ion.rangeSlider.skinFlat.css?body=1" />
+  <link rel="stylesheet" media="screen" href="/assets/jasny/jasny-bootstrap.min.css?body=1" />
+  <link rel="stylesheet" media="screen" href="/assets/nouslider/jquery.nouislider.css?body=1" />
+  <link rel="stylesheet" media="screen" href="/assets/switchery/switchery.css?body=1" />
+  <link rel="stylesheet" media="screen" href="/assets/chosen/chosen.css?body=1" />
+  <link rel="stylesheet" media="screen" href="/assets/daterangepicker/daterangepicker-bs3.css?body=1" />
+  <link rel="stylesheet" media="screen" href="/assets/clockpicker/clockpicker.css?body=1" />
+  <link rel="stylesheet" media="screen" href="/assets/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css?body=1" />
+  <link rel="stylesheet" media="screen" href="/assets/select2/select2.min.css?body=1" />
+  <link rel="stylesheet" media="screen" href="/assets/forms.css?body=1" />
+
+
+  <!-- Include javascript per-controller - vendor plugins -->
+
+  <%= javascript_include_tag  "/iCheck/icheck.min.js",  "staps/jquery.steps.min.js", "validate/jquery.validate.min.js",
+                              "dropzone/dropzone.js", "summernote/summernote.min.js",
+                              "colorpicker/bootstrap-colorpicker.min.js", "cropper/cropper.min.js",
+                              "datapicker/bootstrap-datepicker.js", "ionRangeSlider/ion.rangeSlider.min.js",
+                              "jasny/jasny-bootstrap.min.js", "jsKnob/jquery.knob.js",
+                              "nouslider/jquery.nouislider.min.js", "switchery/switchery.js", "chosen/chosen.jquery.js",
+                              "fullcalendar/moment.min.js", "clockpicker/clockpicker.js",
+                              "daterangepicker/daterangepicker.js", "select2/select2.full.min.js", "forms.js" %>
+
+</head>
+<body class="gray-bg">
+
+<!-- Main view  -->
+<%= yield %>
+
+
+<!-- Include javascript per-controller - vendor plugins -->
+<%= javascript_include_tag params[:controller] if ::Rails.application.assets.find_asset("#{params[:controller]}.js") %>
+
+<!-- Include javascript per-view -->
+<!-- For demo purpose we include javascript in view but you can easily start SeedProject and organize it with Rails asset pipeline as you want -->
+<%= yield :javascript %>
+
+</body>
+</html>
