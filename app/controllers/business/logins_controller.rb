@@ -24,7 +24,7 @@ class Business::LoginsController < ApplicationController
     if zipcode.present? && zipcode.zip.present?
       session[:business_user_zipcode] = zipcode
       #redirect_to new_business_login_path
-      render :json => {success:true}
+      render :json => {user:{zipcode:params[:business_user_zipcode], city:params[:city], state:params[:state]}}
     else
       flash[:alert] = 'Enter Valid ZipCode'
       redirect_to get_zipcode_business_logins_path

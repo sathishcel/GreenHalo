@@ -4,7 +4,7 @@
     <div class="col-lg-12">
         <div class="ibox">
             <div class="ibox-title">
-                <h5>For <%= @signup_type %> Agencies only</h5>
+                <h5>For Business Agencies only</h5>
                 <div class="ibox-tools">
                     <a class="collapse-link">
                         <i class="fa fa-chevron-up"></i>
@@ -27,7 +27,7 @@
             </div>
             <div class="ibox-content">
                 <h2>
-                  <%= @signup_type %> Form
+                   Business Form
                 </h2>
 
                 <form id="form" action="#" class="wizard-big">
@@ -127,15 +127,15 @@
                             </div>
                             <div class="form-group">
                               <label>City *</label>
-                              <input id="name" name="name" type="text" class="form-control required">
+                              <input id="city" name="name" type="text" class="form-control required" readonly>
                             </div>
                             <div class="form-group">
                               <label>State *</label>
-                              <input id="surname" name="surname" type="text" class="form-control required">
+                              <input id="state" name="surname" type="text" class="form-control required" readonly>
                             </div>
                             <div class="form-group">
-                              <label>Pincode *</label>
-                              <input id="name" name="name" type="text" class="form-control required">
+                              <label>Zipcode *</label>
+                              <input id="zipcode" name="name" type="text" class="form-control required" readonly>
                             </div>
                             <div class="form-group">
                               <label>Phone *</label>
@@ -411,22 +411,38 @@ $(function() {
                 }
             });
 
-            $('.sactions.clearfix ul li:nth-child(2)').click(function(){
-                var zipcode = $("#business_user_zipcode").val();
-                $.ajax({
-                    url: "/business/logins/get_location_from_zipcode", // Route to the Script Controller method
-                    type: "GET",
-                    dataType: "json",
-                    data: { business_user_zipcode: zipcode },
-                    success: function(data){
-                      $('#form-p-0').css('display','none');
-                      $('#form-p-1').css('display','block');
-                      $('.first.current').next().attr('class', 'current');
-                      $('.first.current').next().attr('attr-selected', 'true')
-                      $('.first.current').attr('aria-selected', 'false');
-                      $('.first.current').attr('class', 'first done');
-                    }
-                })
+            $('.actions.clearfix ul li:nth-child(2)').click(function(){
+
+                if ($('#form-p-1').attr('class') == 'body') {
+
+                }
+
+                else {
+                    
+                    var zipcode = $("#business_user_zipcode").val();
+                    var city = $('#post_location').val().split(',')["0"].replace("Are you in ", "");
+                    var state = $('#post_location').val().split(',')["1"].split('?')[0].trim();
+
+
+                    $.ajax({
+                        url: "/business/logins/get_location_from_zipcode", // Route to the Script Controller method
+                        type: "GET",
+                        dataType: "json",
+                        data: {business_user_zipcode: zipcode, city: city, state: state},
+                        success: function (user) {
+                            $('#form-p-0').css('display', 'none');
+                            $('#form-p-1').css('display', 'block');
+                            $('.first.current').next().attr('class', 'current');
+                            $('.first.current').next().attr('attr-selected', 'true')
+                            $('.first.current').attr('aria-selected', 'false');
+                            $('.first.current').attr('class', 'first done');
+                            $('#city').val(city);
+                            $('#state').val(state);
+                            $('#zipcode').val(zipcode);
+                        }
+                    });
+                }
+
             });
 
 
