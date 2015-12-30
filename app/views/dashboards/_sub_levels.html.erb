@@ -1,0 +1,29 @@
+<% unless sub_level.blank? %>
+    <% sub_level.each do |level| %>
+        <tr class="gradeA" id = "sub_level_<%= level.id %>" value = "<%= level.id %>">
+          <td><%= level.name %></td>
+          <td>
+            Internet
+            Explorer 4.0
+          </td>
+          <td>Win 95+</td>
+          <td class="center">4</td>
+          <td class="center">X</td>
+        </tr>
+    <%end%>
+
+<%end%>
+
+
+<script>
+    $(document).ready(function(){
+        $(".gradeA").one('click',function(){
+            var level_id = $(this).attr('value');
+            var url = "/getting_sub_levels/" + level_id ;
+            $.ajax({
+                type: "GET",
+                url: url
+            });
+        });
+    });
+</script>

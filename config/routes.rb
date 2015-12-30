@@ -32,6 +32,7 @@ Myapp::Application.routes.draw do
 
   # All routes
   get "dashboards/dashboard_1"
+  get "/getting_sub_levels/:id"  => 'dashboards#getting_sub_levels'
   get "dashboards/dashboard_2"
   get "dashboards/dashboard_3"
   get "dashboards/dashboard_4"
@@ -40,6 +41,7 @@ Myapp::Application.routes.draw do
   get "dashboards/tracking"
   get "dashboards/organize"
   get "dashboards/tools"
+  get "dashboards/new_tracking"
 
   get "layoutsoptions/index"
   get "layoutsoptions/off_canvas"
