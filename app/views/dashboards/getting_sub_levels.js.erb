@@ -1,4 +1,2 @@
 var f = '<%= params[:id] %>';
-$("#main_level_"+f).next('ul').html("<%= escape_javascript(render :partial => 'sub_levels' ,
-:locals => { :sub_level => @sub_levels  })%>");
-$("#main_level_"+f).next('ul').slideDown(14);
+$("<%= escape_javascript render(:partial => 'sub_levels',:locals => { :sub_level => @sub_levels  }) %>").insertAfter("#sub_level_"+f);

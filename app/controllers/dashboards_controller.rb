@@ -23,7 +23,7 @@ class DashboardsController < ApplicationController
   end
 
   def tracking
-     @main_levels = Level.where(:level_id => 0)
+     @main_levels = Level.top_levels
   end
 
   def organize
@@ -32,6 +32,10 @@ class DashboardsController < ApplicationController
 
   def tools
 
+  end
+
+  def new_tracking
+   @all_levels = Level.top_levels
   end
 
   def getting_sub_levels

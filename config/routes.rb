@@ -41,6 +41,7 @@ Myapp::Application.routes.draw do
   get "dashboards/tracking"
   get "dashboards/organize"
   get "dashboards/tools"
+  get "dashboards/new_tracking"
 
   get "layoutsoptions/index"
   get "layoutsoptions/off_canvas"
