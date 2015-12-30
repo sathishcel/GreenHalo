@@ -1,0 +1,2 @@
+var f = '<%= params[:id] %>';
+$("<%= escape_javascript render(:partial => 'sub_levels',:locals => { :sub_level => @sub_levels  }) %>").insertAfter("#sub_level_"+f);

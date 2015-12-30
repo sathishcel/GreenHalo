@@ -1,0 +1,52 @@
+<% unless sub_level.blank? %>
+    <% sub_level.each do |level| %>
+        <tr class="gradeA" id = "sub_level_<%= level.id %>" value = "<%= level.id %>">
+          <td>
+            <div class="company-img dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                <i class="fa fa-wrench"></i>
+              </a>
+
+              <ul class="dropdown-menu dropdown-user">
+                <li>
+                  <a href="#">Config option 1</a>
+                </li>
+                <li>
+                  <a href="#">Config option 2</a>
+                </li>
+              </ul>
+            </div>
+
+            <ul class="dropdown-menu wgu-dropdown" role="menu" aria-labelledby="menu1">
+              <li>Hello</li>
+              <li>Hai</li>
+              <li>How</li>
+            </ul>
+          </td>
+
+          <td><%= level.name %></td>
+          <td>
+            Internet
+            Explorer 4.0
+          </td>
+          <td>Win 95+</td>
+          <td class="center">4</td>
+          <td class="center">X</td>
+        </tr>
+    <%end%>
+
+<%end%>
+
+
+<script>
+    $(document).ready(function(){
+        $(".gradeA").one('click',function(){
+            var level_id = $(this).attr('value');
+            var url = "/getting_sub_levels/" + level_id ;
+            $.ajax({
+                type: "GET",
+                url: url
+            });
+        });
+    });
+</script>

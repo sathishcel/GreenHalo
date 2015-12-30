@@ -6,6 +6,7 @@
 //
 //
 //= require jquery/jquery-2.1.1.js
+//= require jquery_ujs
 //= require bootstrap-sprockets
 //= require metisMenu/jquery.metisMenu.js
 //= require pace/pace.min.js
@@ -14,4 +15,7 @@
 //= require inspinia.js
 //= require welcome.js
 //= require vmenuModule.js
+
+//= require_tree ../../../vendor/assets/javascripts/jeditable
+//= require_tree ../../../vendor/assets/javascripts/dataTables
 
