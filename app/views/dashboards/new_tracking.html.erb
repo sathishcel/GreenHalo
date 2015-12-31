@@ -83,7 +83,7 @@
             <tbody class = "table_order">
             <% @all_levels.each do |level| %>
 
-                <tr class="gradeX wt-trho" id = "sub_level_<%= level.id %>" value = "<%= level.id %>" >
+                <tr class="gradeX wt-trho" id = "sub_level_<%= level.id %>" value = "<%= level.id %>" order = "not-open">
                   <td>
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                       <i class="fa fa-list"></i>
