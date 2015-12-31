@@ -41,6 +41,7 @@ class DashboardsController < ApplicationController
   def getting_sub_levels
      level = Level.find(params[:id])
      @sub_levels = level.try(:sub_levels)
+     @level_wgus = level.try(:wgus)
   end
 
 end

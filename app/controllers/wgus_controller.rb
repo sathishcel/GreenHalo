@@ -1,0 +1,2 @@
+class WgusController < ApplicationController
+end

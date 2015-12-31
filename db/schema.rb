@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151229072342) do
+ActiveRecord::Schema.define(version: 20151231052318) do
 
   create_table "addresses", force: :cascade do |t|
     t.string "zip",          limit: 255
@@ -22,6 +22,17 @@ ActiveRecord::Schema.define(version: 20151229072342) do
     t.string "country",      limit: 255
     t.string "phone_number", limit: 255
     t.string "full_address", limit: 255
+  end
+
+  create_table "billing_details", force: :cascade do |t|
+    t.integer "address_id",     limit: 4
+    t.integer "user_id",        limit: 4
+    t.integer "user_details",   limit: 4
+    t.string  "card_no",        limit: 255
+    t.string  "card_type",      limit: 255
+    t.boolean "status"
+    t.string  "paid_amount",    limit: 255
+    t.string  "transaction_no", limit: 255
   end
 
   create_table "levels", force: :cascade do |t|
@@ -40,6 +51,27 @@ ActiveRecord::Schema.define(version: 20151229072342) do
     t.string   "request_time",      limit: 255
     t.string   "request_session",   limit: 255
     t.string   "request_time_zone", limit: 255
+  end
+
+  create_table "shipping_addresses", force: :cascade do |t|
+    t.integer "address_id",   limit: 4
+    t.string  "full_name",    limit: 255
+    t.string  "company_name", limit: 255
+    t.string  "address",      limit: 255
+    t.string  "state",        limit: 255
+    t.string  "city",         limit: 255
+    t.string  "zip",          limit: 255
+  end
+
+  create_table "user_details", force: :cascade do |t|
+    t.string "position",        limit: 255
+    t.string "company_name",    limit: 255
+    t.string "company_website", limit: 255
+    t.string "how_heard",       limit: 255
+    t.string "units",           limit: 255
+    t.string "pricing_option",  limit: 255
+    t.string "payment_option",  limit: 255
+    t.string "amount",          limit: 255
   end
 
   create_table "users", force: :cascade do |t|
@@ -67,5 +99,12 @@ ActiveRecord::Schema.define(version: 20151229072342) do
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
+
+  create_table "wgus", force: :cascade do |t|
+    t.string   "name",       limit: 255
+    t.integer  "level_id",   limit: 4
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
 
 end
