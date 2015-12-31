@@ -83,74 +83,74 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Confirm Email *</label>
-                                    <input id="address" name="address" type="text" class="form-control">
+                                    <input id="email" name="email" type="text" class="form-control">
                                 </div>
                                 <div class="form-group">
                                     <label>Password *</label>
-                                    <input id="address" name="address" type="text" class="form-control">
+                                    <input id="password" name="password" type="text" class="form-control">
                                 </div>
                                 <div class="form-group">
                                     <label>Confirm Password *</label>
-                                    <input id="address" name="address" type="text" class="form-control">
+                                    <input id="password" name="password" type="text" class="form-control">
                                 </div>
 
                               <div class="form-group">
                                 <label>First Name *</label>
-                                <input id="email" name="email" type="text" class="form-control required email">
+                                <input id="first_name" name="first_name" type="text" class="form-control required email">
                               </div>
                               <div class="form-group">
                                 <label>Last Name *</label>
-                                <input id="address" name="address" type="text" class="form-control">
+                                <input id="last_name" name="last_name" type="text" class="form-control">
                               </div>
                               <div class="form-group">
                                 <label>Position *</label>
-                                <input id="address" name="address" type="text" class="form-control">
+                                <input id="position" name="position" type="text" class="form-control">
                               </div>
                               <div class="form-group">
                                 <label>Company Name *</label>
-                                <input id="address" name="address" type="text" class="form-control">
+                                <input id="company_name" name="company_name" type="text" class="form-control">
                               </div>
                               <div class="form-group">
                                 <label>Company Website *</label>
-                                <input id="address" name="address" type="text" class="form-control">
+                                <input id="company_website" name="company_website" type="text" class="form-control">
                               </div>
                             </div>
 
                           <div class="col-lg-6">
                             <div class="form-group">
                               <label>Street Address *</label>
-                              <input id="name" name="name" type="text" class="form-control required">
+                              <input id="street" name="street" type="text" class="form-control required">
                             </div>
                             <div class="form-group">
                               <label>Suite/Unit *</label>
-                              <input id="surname" name="surname" type="text" class="form-control required">
+                              <input id="suit_unit" name="suit_unit" type="text" class="form-control required">
                             </div>
                             <div class="form-group">
                               <label>City *</label>
-                              <input id="city" name="name" type="text" class="form-control required" readonly>
+                              <input id="city" name="city" type="text" class="form-control required" readonly>
                             </div>
                             <div class="form-group">
                               <label>State *</label>
-                              <input id="state" name="surname" type="text" class="form-control required" readonly>
+                              <input id="state" name="state" type="text" class="form-control required" readonly>
                             </div>
                             <div class="form-group">
                               <label>Zipcode *</label>
-                              <input id="zipcode" name="name" type="text" class="form-control required" readonly>
+                              <input id="zip" name="zip" type="text" class="form-control required" readonly>
                             </div>
                             <div class="form-group">
                               <label>Phone *</label>
-                              <input id="surname" name="surname" type="text" class="form-control required">
+                              <input id="phone_number" name="phone_number" type="text" class="form-control required">
                             </div>
                             <div class="form-group">
                               <label>How do you heard about this? *</label>
-                              <input id="name" name="name" type="text" class="form-control required">
+                              <input id="how_heard" name="how_heard" type="text" class="form-control required">
                             </div>
                             <div class="form-group">
                               <label>Domain Name *</label>
-                              <input id="surname" name="surname" type="text" class="form-control required error">
+                              <input id="domain_name" name="domain_name" type="text" class="form-control required error">
                             </div>
                             <div class="form-group">
-                                <button class="btn btn-primary" type="button" style="margin-top: 29px;">Check Availability</button>
+                                <button id="check_avail" class="btn btn-primary" type="button" style="margin-top: 29px;">Check Availability</button>
                                 <span style="float: right;width: 57%;margin-top: 38px;">
                                   WasteTracking.com/XXXXXXXXXXXXX
                                 </span>
@@ -418,7 +418,7 @@ $(function() {
                 }
 
                 else {
-                    
+
                     var zipcode = $("#business_user_zipcode").val();
                     var city = $('#post_location').val().split(',')["0"].replace("Are you in ", "");
                     var state = $('#post_location').val().split(',')["1"].split('?')[0].trim();
@@ -438,7 +438,7 @@ $(function() {
                             $('.first.current').attr('class', 'first done');
                             $('#city').val(city);
                             $('#state').val(state);
-                            $('#zipcode').val(zipcode);
+                            $('#zip').val(zipcode);
                         }
                     });
                 }
@@ -462,6 +462,56 @@ $(function() {
                 $("#business_user_zipcode").val("");
                 return false;
             });
+
+
+
+
+            $("#check_avail").click(function(){
+                var domain_val = $("#domain_name").val();
+                var pattern = /^[a-zA-Z0-9]*$/;
+
+                if (pattern.test(domain_val) == true) {
+                    if(domain_val != ""){
+                        $.ajax({
+                            url: "/business/logins/check_user_domain", // Route to the Script Controller method
+                            type: "GET",
+                            dataType: "json",
+                            data: { domain_name: domain_val }, // This goes to Controller in params hash, i.e. params[:file_name]
+
+                            success: function(data, textStatus, xhr) {
+                               alert(data);
+                                if(data[0] != null){
+
+                                }
+                                else {
+
+                                }
+
+                            },
+                            error: function() {
+                                alert("Ajax error!")
+                            }
+                        });
+                    }
+
+                    else{
+                        alert("Domain name can't be blank");
+                        return false;
+
+                    }
+                }
+                else {
+                    $(".button-account-submit").css('background', '#808080');
+                    $('.button-account-submit').attr('disabled','true');
+                }
+            });
+
+
+
+
+
+
+
 
 
 
