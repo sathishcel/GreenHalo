@@ -5,10 +5,10 @@
 #   gem 'sqlite3'
 development:
   adapter: mysql2
-  database: wastetracking_development
+  database: tracking_developement
   pool: 5
   username: root
-  password: password
+  password: root
   timeout: 5000
 
 # Warning: The database defined as "test" will be erased and
