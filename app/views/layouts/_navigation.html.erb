@@ -43,8 +43,8 @@
 
 
 
-          <li class="<%= is_active_action('tracking') %>">
-            <%= link_to dashboards_tracking_path do %>
+          <li class="<%= is_active_action('new_tracking') %>">
+            <%= link_to dashboards_new_tracking_path do %>
                 <i class="fa fa-eye"></i><span class="nav-label">Tracking</span>
             <% end %>
           </li>
@@ -61,13 +61,7 @@
                 <i class="fa fa-wrench"></i><span class="nav-label">Tools</span>
             <% end %>
           </li>
-
-          <li class="<%= is_active_action('new_tracking') %>">
-            <%= link_to dashboards_new_tracking_path do %>
-                <i class="fa fa-wrench"></i><span class="nav-label">New Tracking</span>
-            <% end %>
-          </li>
-
+          
 
           <li class="<%= is_active_controller('mailbox') %>">
             <a href="#"><i class="fa fa-envelope"></i> <span class="nav-label" data-i18n="nav.mailbox">Messages </span><span class="label label-warning pull-right">16/24</span></a>
