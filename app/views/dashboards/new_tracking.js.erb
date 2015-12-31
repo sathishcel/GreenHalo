@@ -1,0 +1,4 @@
+
+$("#multi_level_loading_div").html("<%= escape_javascript(render :partial => '/dashboards/add_level_form',
+	:locals => { :wgu_count => @wgu_limit ,:levels => @all_levels }) %>");
+

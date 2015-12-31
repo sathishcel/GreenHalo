@@ -1,5 +1,6 @@
 class DashboardsController < ApplicationController
   SUBLEVELCONSTANT = nil
+  DEFAULT_LEVEL = 1
 
   def dashboard_1
   end
@@ -36,6 +37,15 @@ class DashboardsController < ApplicationController
 
   def new_tracking
    @all_levels = Level.top_levels
+   if request.xhr?
+     @level_limit = params[:multi_level_selection].to_i
+     respond_to do |format|
+       format.js { render "/dashboards/new_tracking" }
+     end
+   else
+     @wgu_limit = DEFAULT_LEVEL
+     render :nothing => false, :status => 422
+   end
   end
 
   def getting_sub_levels
