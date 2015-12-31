@@ -91,23 +91,25 @@
 
                     <ul class="dropdown-menu dropdown-user" style="left:auto; top:auto;">
                       <li role="presentation">
-                        <a role="menuitem" tabindex="-1" href="reports.html">
+                        <a href="#"  role="menuitem" tabindex="-1" data-toggle="modal" data-target="#myModal_reports"
+                           title="Reports">
                           <div>View Reports</div>
                         </a>
                       </li>
 
                       <li role="presentation">
-                        <a role="menuitem" tabindex="-1" href="messages.html">
+                        <a role="menuitem" tabindex="-1" href="#">
                           <div>Messages</div>
                         </a>
                       </li>
                       <li role="presentation">
-                        <a href="#"  role="menuitem" tabindex="-1" data-toggle="modal" data-target="#myModal15" title="Settings">
+                        <a href="#"  role="menuitem" tabindex="-1" data-toggle="modal" data-target="#myModal15"
+                           title="Settings">
                           <div>Level Settings</div>
                         </a>
                       </li>
                       <li role="presentation">
-                        <a role="menuitem" tabindex="-1" href="manage-portal.html">
+                        <a role="menuitem" tabindex="-1" href="#">
                           <div>Manage Portal</div>
                         </a>
                       </li>
@@ -161,6 +163,7 @@
 
 
 <%= render partial: "level_setttings_base_page"%>
+<%= render partial: "reports_base_page"%>
 
 <script>
     $(document).ready(function(){

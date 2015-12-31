@@ -1,6 +1,27 @@
-<div class="modal inmodal" id="myModal15" tabindex="-1" role="dialog" aria-hidden="true" style="margin-left: 29px!important;
-        width: 95%;">
-  <div class="modal-dialog modal-lg" style = "width:auto;margin-top: 9px;">
+<script type="text/javascript">
+
+    $("#menulist").click(function()
+    {
+        $("#displaymenu").toggle();
+    });
+
+
+    function dynamic_level_settings(url) {
+
+        var current_url = url;
+        var level_id = level_id;
+        $.ajax({
+            type: "GET",
+            url: current_url,
+        }).success(function (data) {
+            $('#replace_ajax_response').html(data);
+            $("#displaymenu").toggle();
+        });
+    }
+</script>
+
+<div class="modal inmodal" id="myModal15" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-lg" style = "width:95%;margin-top: 9px;">
     <div class="modal-content">
       <div class="modal-header" style = "background-color: #676a6c;max-height: 30px;padding-top:10px;">
              <span>
@@ -12,7 +33,7 @@
                         <i class="fa fa-list" id="menulist"></i>
                       </a>
                    </span>
-                   <span style = "color:white;font-weight:bold;float:left;margin-left:67px;">Settings - WGU 8766098095</span>
+                   <span style = "color:white;font-weight:bold;float:left;margin-left:8px;">Settings - WGU 8766098095</span>
                  </span>
 
                  <span style="top:13px;float:right;margin-right: 5px;border-left: 2px solid #19aa8d;">|</span>
@@ -44,31 +65,6 @@
   </div>
 
 
-
-
-  <script type="text/javascript">
-
-      $(document).ready(function()
-      {
-          $("#menulist").click(function()
-          {
-              $("#displaymenu").toggle();
-          });
-      });
-
-      function dynamic_level_settings(url) {
-
-          var current_url = url;
-          var level_id = level_id;
-          $.ajax({
-              type: "GET",
-              url: current_url,
-          }).success(function (data) {
-              $('#replace_ajax_response').html(data);
-              $("#displaymenu").toggle();
-          });
-      }
-  </script>
 
 
   <style>
