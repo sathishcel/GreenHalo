@@ -24,6 +24,17 @@ ActiveRecord::Schema.define(version: 20151231052318) do
     t.string "full_address", limit: 255
   end
 
+  create_table "billing_details", force: :cascade do |t|
+    t.integer "address_id",     limit: 4
+    t.integer "user_id",        limit: 4
+    t.integer "user_details",   limit: 4
+    t.string  "card_no",        limit: 255
+    t.string  "card_type",      limit: 255
+    t.boolean "status"
+    t.string  "paid_amount",    limit: 255
+    t.string  "transaction_no", limit: 255
+  end
+
   create_table "levels", force: :cascade do |t|
     t.string   "name",       limit: 255
     t.integer  "level_id",   limit: 4
@@ -40,6 +51,27 @@ ActiveRecord::Schema.define(version: 20151231052318) do
     t.string   "request_time",      limit: 255
     t.string   "request_session",   limit: 255
     t.string   "request_time_zone", limit: 255
+  end
+
+  create_table "shipping_addresses", force: :cascade do |t|
+    t.integer "address_id",   limit: 4
+    t.string  "full_name",    limit: 255
+    t.string  "company_name", limit: 255
+    t.string  "address",      limit: 255
+    t.string  "state",        limit: 255
+    t.string  "city",         limit: 255
+    t.string  "zip",          limit: 255
+  end
+
+  create_table "user_details", force: :cascade do |t|
+    t.string "position",        limit: 255
+    t.string "company_name",    limit: 255
+    t.string "company_website", limit: 255
+    t.string "how_heard",       limit: 255
+    t.string "units",           limit: 255
+    t.string "pricing_option",  limit: 255
+    t.string "payment_option",  limit: 255
+    t.string "amount",          limit: 255
   end
 
   create_table "users", force: :cascade do |t|
