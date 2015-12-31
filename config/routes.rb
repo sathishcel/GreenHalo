@@ -53,6 +53,8 @@ Myapp::Application.routes.draw do
     end
   end
 
+  resources :levels
+
   # All routes
   get "dashboards/dashboard_1"
   get "/getting_sub_levels/:id"  => 'dashboards#getting_sub_levels'
@@ -64,7 +66,7 @@ Myapp::Application.routes.draw do
   get "dashboards/tracking"
   get "dashboards/organize"
   get "dashboards/tools"
-  get "dashboards/new_tracking"
+  get "dashboards/new_tracking"  => 'dashboards#new_tracking' ,as: 'new_tracking'
 
   get "layoutsoptions/index"
   get "layoutsoptions/off_canvas"
