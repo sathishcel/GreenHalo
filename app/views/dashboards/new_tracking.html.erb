@@ -66,7 +66,7 @@
 
 
 
-          <table class="table table-bordered table-hover dataTables-example">
+          <table class="table table-striped table-bordered table-hover dataTables-example">
             <thead>
             <tr>
               <th>Menu</th>
@@ -83,7 +83,7 @@
             <tbody class = "table_order">
             <% @all_levels.each do |level| %>
 
-                <tr class="gradeX wt-trho" style="background-color: #ddd;" id = "sub_level_<%= level.id %>" value = "<%= level.id %>" order = "not-open">
+                <tr class="gradeX wt-trho" id = "sub_level_<%= level.id %>" value = "<%= level.id %>" order = "not-open">
                   <td>
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                       <i class="fa fa-list"></i>
@@ -284,7 +284,6 @@
 
 <style>
   .wt-trho:hover{
-      background-color: #999999 !important;
-      color:#ffffff !important;
+      background-color: #cccccc !important;
   }
 </style>
