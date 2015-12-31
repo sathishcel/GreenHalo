@@ -6,7 +6,7 @@ class Level < ActiveRecord::Base
   #Relations
   has_many :sub_levels, class_name: "Level", foreign_key: "level_id"
   belongs_to :level, class_name: "Level"
-
+  has_many :wgus
   belongs_to :user
 
 
