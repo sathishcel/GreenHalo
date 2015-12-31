@@ -65,16 +65,13 @@
                     </ul>
                   </td>
 
-                  <td><%= level.name %></td>
-                  <td>
-                    Internet
-                    Explorer 4.0
-                  </td>
-                  <td>Win 95+</td>
-                  <td class="center">4</td>
-                  <td class="center">X</td>
-                  <td class="center">X</td>
-                  <td class="center">X</td>
+                  <td><%= level.name %>, Street, City, State, Zip, <%= tracking_number(level.id) %></td>
+                  <td>                  </td>
+                  <td><%= "#{level.id}" +'0000'%></td>
+                  <td class="center"><%= "#{level.id}" +'00'%></td>
+                  <td class="center"><%= "#{level.id}" +'0%'%></td>
+                  <td class="center"><%= "#{level.id}" +'000'%></td>
+                  <td class="center"><%= "#{level.id}" +'0'%></td>
                 </tr>
 
 
