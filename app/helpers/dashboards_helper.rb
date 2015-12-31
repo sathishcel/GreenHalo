@@ -11,5 +11,13 @@ module DashboardsHelper
     'GH' + string
   end
 
+  def total_sub_level_count(level_id)
+    sub_levels = Level.find(level_id).try(:sub_levels)
+    sub_levels_array = sub_levels.map do |child|
+      [child] + child.sub_levels
+    end.try(:flatten)
+    sub_levels_array.blank? ? nil : sub_levels_array.count
+  end
+
 end
 
