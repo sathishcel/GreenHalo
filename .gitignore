@@ -1,1 +1,4 @@
-log/development.log
+log/
+tmp/
+config/database.yml
+.idea/
