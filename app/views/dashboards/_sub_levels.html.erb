@@ -1,6 +1,6 @@
 <% unless level_wgus.blank? %>
     <% level_wgus.each do |wgu| %>
-      <tr class="gradeA" id = "sub_wgu_<%= wgu.id %>" value = "<%= wgu.id %>">
+      <tr class="gradeX" id = "sub_wgu_<%= wgu.id %>" value = "<%= wgu.id %>">
 
         <td>
           <div class="company-img dropdown">
@@ -70,7 +70,7 @@
 
 <script>
     $(document).ready(function(){
-        $(".gradeA").one('click',function(){
+        $(".gradeA").click(function(){
             var level_id = $(this).attr('value');
             var url = "/getting_sub_levels/" + level_id ;
             $.ajax({
