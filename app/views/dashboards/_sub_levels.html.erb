@@ -1,6 +1,7 @@
 <% unless level_wgus.blank? %>
     <% level_wgus.each do |wgu| %>
-        <tr class="gradeX" id = "sub_wgu_<%= wgu.id %>" value = "<%= wgu.id %>">
+
+        <tr class="gradeX wt-trho" id = "sub_wgu_<%= wgu.id %>" value = "<%= wgu.id %>">
 
           <td>
             <div class="company-img dropdown">
@@ -19,18 +20,17 @@
             </div>
 
           </td>
-          <td style = "color: #0000cc;"><%= wgu.name %></td>
+          <td><%= wgu.name %>, Street, City, State, Zip, <%= tracking_number(wgu.id) %></td>
           <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-
+          <td><%= "#{wgu.id}" +'0000'%></td>
+          <td class="center"><%= "#{wgu.id}" +'00'%></td>
+          <td class="center"><%= "#{wgu.id}" +'0%'%></td>
+          <td class="center"><%= "#{wgu.id}" +'000'%></td>
+          <td class="center"><%= "#{wgu.id}" +'0'%></td>
 
         </tr>
-
-    <%end%>
-<%end%>
-
+<% end %>
+<% end %>
 
 
 <% unless sub_level.blank? %>
@@ -69,7 +69,7 @@
                 <li role="presentation">
                   <a role="menuitem" tabindex="-1" href="#">
                     <div>API</div>
-                    <div style="color:#999999; font-size:10px;">
+                    <div style="color:#999999; font-size:10px;"></div>
                   </a>
                 </li>
                 <li role="presentation">
@@ -94,7 +94,7 @@
           </td>
 
           <td><%= level.name %>, Street, City, State, Zip, <%= tracking_number(level.id) %></td>
-          <td></td>
+          <td><%= total_sub_level_count(level.id) %></td>
           <td><%= "#{level.id}" +'0000'%></td>
           <td class="center"><%= "#{level.id}" +'00'%></td>
           <td class="center"><%= "#{level.id}" +'0%'%></td>

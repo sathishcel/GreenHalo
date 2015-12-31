@@ -139,7 +139,7 @@
                   </td>
 
                   <td><%= level.name %>, Street, City, State, Zip, <%= tracking_number(level.id) %></td>
-                  <td>                  </td>
+                  <td><%= total_sub_level_count(level.id) %></td>
                   <td><%= "#{level.id}" +'0000'%></td>
                   <td class="center"><%= "#{level.id}" +'00'%></td>
                   <td class="center"><%= "#{level.id}" +'0%'%></td>
