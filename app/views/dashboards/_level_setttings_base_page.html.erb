@@ -45,31 +45,6 @@
 
 
 
-  <script type="text/javascript">
-
-      $(document).ready(function()
-      {
-          $("#menulist").click(function()
-          {
-              $("#displaymenu").toggle();
-          });
-      });
-
-      function dynamic_level_settings(url) {
-
-          var current_url = url;
-          var level_id = level_id;
-          $.ajax({
-              type: "GET",
-              url: current_url,
-          }).success(function (data) {
-              $('#replace_ajax_response').html(data);
-              $("#displaymenu").toggle();
-          });
-      }
-  </script>
-
-
   <style>
       /* for level setting popup title bar*/
       .displaylist
@@ -117,3 +92,26 @@
       }
 
   </style>
+
+
+<script type="text/javascript">
+
+    $("#menulist").click(function()
+    {
+        $("#displaymenu").toggle();
+    });
+
+
+    function dynamic_level_settings(url) {
+
+        var current_url = url;
+        var level_id = level_id;
+        $.ajax({
+            type: "GET",
+            url: current_url,
+        }).success(function (data) {
+            $('#replace_ajax_response').html(data);
+            $("#displaymenu").toggle();
+        });
+    }
+</script>
