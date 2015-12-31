@@ -35,11 +35,11 @@
 
 <% unless sub_level.blank? %>
     <% sub_level.each do |level| %>
-        <tr class="gradeA" id = "sub_level_<%= level.id %>" value = "<%= level.id %>">
+        <tr class="gradeA wt-trho" id = "sub_level_<%= level.id %>" value = "<%= level.id %>">
           <td>
             <div class="company-img dropdown">
               <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                <i class="fa fa-wrench"></i>
+                <i class="fa fa-list"></i>
               </a>
 
               <ul class="dropdown-menu dropdown-user">
@@ -51,12 +51,7 @@
                 </li>
               </ul>
             </div>
-
-            <!--<ul class="dropdown-menu wgu-dropdown" role="menu" aria-labelledby="menu1">
-              <li>Hello</li>
-              <li>Hai</li>
-              <li>How</li>
-            </ul>-->
+            
           </td>
 
           <td><%= level.name %></td>
@@ -85,3 +80,9 @@
         });
     });
 </script>
+
+<style>
+    .wt-trho:hover{
+        background-color: #cccccc !important;
+    }
+</style>

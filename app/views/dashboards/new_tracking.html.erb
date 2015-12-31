@@ -70,29 +70,68 @@
             <thead>
             <tr>
               <th>Menu</th>
-              <th>Name</th>
+              <th>Name, Address, City, State, Zip, Tracking #</th>
               <th>#of Units</th>
               <th>Tons Disposed</th>
               <th>Tons Recycled</th>
               <th>Recycling Rate</th>
+              <th>Disposal Costs</th>
+              <th>Return on Recycling</th>
             </tr>
             </thead>
 
             <tbody class = "table_order">
             <% @all_levels.each do |level| %>
 
-                <tr class="gradeX" id = "sub_level_<%= level.id %>" value = "<%= level.id %>" >
+                <tr class="gradeX wt-trho" id = "sub_level_<%= level.id %>" value = "<%= level.id %>" >
                   <td>
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                      <i class="fa fa-wrench"></i>
+                      <i class="fa fa-list"></i>
                     </a>
 
                     <ul class="dropdown-menu dropdown-user" style="left:auto; top:auto;">
-                      <li>
-                        <a href="#">Config option 1</a>
+                      <li role="presentation">
+                        <a role="menuitem" tabindex="-1" href="reports.html">
+                          <div>View Reports</div>
+                        </a>
                       </li>
-                      <li>
-                        <a href="#">Config option 2</a>
+
+                      <li role="presentation">
+                        <a role="menuitem" tabindex="-1" href="messages.html">
+                          <div>Messages</div>
+                        </a>
+                      </li>
+                      <li role="presentation">
+                        <a href="#"  role="menuitem" tabindex="-1" data-toggle="modal" data-target="#myModal15" title="Settings">
+                          <div>Level Settings</div>
+                        </a>
+                      </li>
+                      <li role="presentation">
+                        <a role="menuitem" tabindex="-1" href="manage-portal.html">
+                          <div>Manage Portal</div>
+                        </a>
+                      </li>
+                      <li role="presentation">
+                        <a role="menuitem" tabindex="-1" href="#">
+                          <div>API</div>
+                          <div style="color:#999999; font-size:10px;">
+                        </a>
+                      </li>
+                      <li role="presentation">
+                        <a role="menuitem" tabindex="-1" href="#">
+                          <div>Add Level</div>
+                        </a>
+                      </li>
+                      <li role="presentation" class="divider"></li>
+                      <li role="presentation">
+                        <a role="menuitem" class="addwgu" tabindex="-1" href="#" style="color:#058F26;">
+                          Add New Waste Generating Unit
+                        </a>
+                      </li>
+                      <li role="presentation">
+                        <a role="menuitem" tabindex="-1" href="#" style="color:#FF0707;">
+                          Delete This WGU
+                        </a>
                       </li>
                     </ul>
                   </td>
@@ -104,6 +143,8 @@
                   </td>
                   <td>Win 95+</td>
                   <td class="center">4</td>
+                  <td class="center">X</td>
+                  <td class="center">X</td>
                   <td class="center">X</td>
                 </tr>
 
@@ -121,6 +162,8 @@
   </div>
 </div>
 
+
+<%= render partial: "level_setttings_base_page"%>
 
 <script>
     $(document).ready(function(){
@@ -244,3 +287,8 @@
   });
 </script>
 
+<style>
+  .wt-trho:hover{
+      background-color: #cccccc !important;
+  }
+</style>
