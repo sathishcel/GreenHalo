@@ -1,3 +1,25 @@
+<script type="text/javascript">
+
+    $("#menulist").click(function()
+    {
+        $("#displaymenu").toggle();
+    });
+
+
+    function dynamic_level_settings(url) {
+
+        var current_url = url;
+        var level_id = level_id;
+        $.ajax({
+            type: "GET",
+            url: current_url,
+        }).success(function (data) {
+            $('#replace_ajax_response').html(data);
+            $("#displaymenu").toggle();
+        });
+    }
+</script>
+
 <div class="modal inmodal" id="myModal15" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog modal-lg" style = "width:95%;margin-top: 9px;">
     <div class="modal-content">
@@ -92,26 +114,3 @@
       }
 
   </style>
-
-
-<script type="text/javascript">
-
-    $("#menulist").click(function()
-    {
-        $("#displaymenu").toggle();
-    });
-
-
-    function dynamic_level_settings(url) {
-
-        var current_url = url;
-        var level_id = level_id;
-        $.ajax({
-            type: "GET",
-            url: current_url,
-        }).success(function (data) {
-            $('#replace_ajax_response').html(data);
-            $("#displaymenu").toggle();
-        });
-    }
-</script>
