@@ -35,7 +35,7 @@
 
 <% unless sub_level.blank? %>
     <% sub_level.each do |level| %>
-        <tr class="gradeA wt-trho" id = "sub_level_<%= level.id %>" value = "<%= level.id %>" order = "not-open">
+        <tr class="gradeA wt-trho" style="background-color: #eee;" id = "sub_level_<%= level.id %>" value = "<%= level.id %>" order = "not-open">
           <td>
             <div class="company-img dropdown">
               <a class="dropdown-toggle" data-toggle="dropdown" href="#">
