@@ -50,11 +50,48 @@
                     </a>
 
                     <ul class="dropdown-menu dropdown-user" style="left:auto; top:auto;">
-                      <li>
-                        <a href="#">Config option 1</a>
+                      <li role="presentation">
+                        <a role="menuitem" tabindex="-1" href="reports.html">
+                          <div>View Reports</div>
+                        </a>
                       </li>
-                      <li>
-                        <a href="#">Config option 2</a>
+
+                      <li role="presentation">
+                        <a role="menuitem" tabindex="-1" href="messages.html">
+                          <div>Messages</div>
+                        </a>
+                      </li>
+                      <li role="presentation">
+                        <a href="#"  role="menuitem" tabindex="-1" data-toggle="modal" data-target="#myModal15" title="Settings">
+                          <div>Level Settings</div>
+                        </a>
+                      </li>
+                      <li role="presentation">
+                        <a role="menuitem" tabindex="-1" href="manage-portal.html">
+                          <div>Manage Portal</div>
+                        </a>
+                      </li>
+                      <li role="presentation">
+                        <a role="menuitem" tabindex="-1" href="#">
+                          <div>API</div>
+                          <div style="color:#999999; font-size:10px;">
+                        </a>
+                      </li>
+                      <li role="presentation">
+                        <a role="menuitem" tabindex="-1" href="#">
+                          <div>Add Level</div>
+                        </a>
+                      </li>
+                      <li role="presentation" class="divider"></li>
+                      <li role="presentation">
+                        <a role="menuitem" class="addwgu" tabindex="-1" href="#" style="color:#058F26;">
+                          Add New Waste Generating Unit
+                        </a>
+                      </li>
+                      <li role="presentation">
+                        <a role="menuitem" tabindex="-1" href="#" style="color:#FF0707;">
+                          Delete This WGU
+                        </a>
                       </li>
                     </ul>
                   </td>
@@ -83,6 +120,8 @@
   </div>
 </div>
 
+
+<%= render partial: "level_setttings_base_page"%>
 
 <script>
     $(document).ready(function(){
