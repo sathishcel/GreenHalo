@@ -6,18 +6,19 @@ Myapp::Application.routes.draw do
 
 
 
-    authenticated do
-      devise_scope :user do
-       get "dashboards/dashboard_2", as: :authenticated_root
-       get '/users/sign_out' => 'devise/sessions#destroy'
-      end
+  authenticated do
+    devise_scope :user do
+     get "dashboards/dashboard_2", as: :authenticated_root
+     get '/users/sign_out' => 'devise/sessions#destroy'
     end
+  end
 
   unauthenticated do
     devise_scope :user do
       root to: 'landing#index'
     end
   end
+
 
   resources :business_level_settings, :path => ':domain/:user_type/business_level_settings' do
     collection do
@@ -27,6 +28,28 @@ Myapp::Application.routes.draw do
   resources :program_settings, :path => ':domain/:user_type/program_settings' do
     collection do
       get :recycling_target
+    end
+    end
+  namespace :business do
+    resources :payments  do
+      collection do
+        get :payment_confirm
+      end
+    end
+    resources :logins do
+      collection do
+        get :get_zipcode
+        get :get_location_from_zipcode
+        get :user_quote
+        get :user_plan_selection
+        get :amount_calculation
+        get :po_and_invoice
+        get :po_and_invoice_email
+        get :get_invoice
+        get :account_confirmation
+        get :get_city_and_state
+        get :invoice_confirm
+      end
     end
   end
 
