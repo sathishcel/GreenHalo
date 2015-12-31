@@ -47,10 +47,10 @@
             <tbody class = "table_order">
             <% @all_levels.each do |level| %>
 
-                <tr class="gradeX" id = "sub_level_<%= level.id %>" value = "<%= level.id %>" >
+                <tr class="gradeX wt-trho" id = "sub_level_<%= level.id %>" value = "<%= level.id %>" >
                   <td>
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                      <i class="fa fa-wrench"></i>
+                      <i class="fa fa-list"></i>
                     </a>
 
                     <ul class="dropdown-menu dropdown-user" style="left:auto; top:auto;">
@@ -164,3 +164,8 @@
   });
 </script>
 
+<style>
+  .wt-trho:hover{
+      background-color: #cccccc !important;
+  }
+</style>
