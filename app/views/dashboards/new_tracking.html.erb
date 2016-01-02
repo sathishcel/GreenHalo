@@ -27,8 +27,7 @@
           <h5>Waste Generating Units</h5>
         </div>
         <div class="ibox-tools">
-          <div align="left" class="" style="background-color: #fff;margin-left: 1%;
-          ">
+          <div align="left" class="" style="background-color: #fff;">
             <a class="btn btn-primary " id = "add_wgu_button" >Add WGU</a>
             <a class="btn btn-primary " id = "add_level_button">Add Level</a>
             <a class="btn btn-primary " href="javascript:void(0);" onclick="">Expand All</a>
@@ -101,14 +100,19 @@
 
 
 
-          <table class="table table-striped table-bordered table-hover dataTables-example">
+          <table class="table table-bordered table-hover dataTables-example">
             <thead>
             <tr>
               <th>Menu</th>
-              <th>Name, Address, City, State, Zip, Tracking #</th>
+              <th>Waste Generating Units</th>
               <th>#of Units</th>
               <th>Tons Disposed</th>
               <th>Tons Recycled</th>
+              <th>Recycling Rate</th>
+              <th>Disposal Costs</th>
+              <th>Return on Recycling</th>
+              <th>Gallons Disposed</th>
+              <th>Gallons Recycled</th>
               <th>Recycling Rate</th>
               <th>Disposal Costs</th>
               <th>Return on Recycling</th>
@@ -118,9 +122,9 @@
             <tbody class = "table_order">
             <% @all_levels.each do |level| %>
 
-                <tr class="gradeX wt-trho" id = "sub_level_<%= level.id %>" value = "<%= level.id %>" order = "not-open">
+                <tr class="gradeX" id = "sub_level_<%= level.id %>" value = "<%= level.id %>" order = "not-open">
                   <td>
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="font-size: 18px;">
                       <i class="fa fa-list"></i>
                     </a>
 
@@ -128,14 +132,14 @@
                       <li role="presentation">
                         <a href="#"  role="menuitem" tabindex="-1" data-toggle="modal" data-target="#myModal_reports"
                            title="Reports">
-                          <div>View Reports</div>
+                          <div>Reports</div>
                         </a>
                       </li>
 
                       <li role="presentation">
                         <a href="#"  role="menuitem" tabindex="-1" data-toggle="modal" data-target="#myModal15"
                            title="Settings">
-                          <div>Level Settings</div>
+                          <div>Program Settings</div>
                         </a>
                       </li>
                       <li role="presentation">
@@ -144,36 +148,35 @@
                         </a>
                       </li>
                       <li role="presentation">
-                        <a role="menuitem" tabindex="-1" href="#">
-                          <div>API</div>
-                          <div style="color:#999999; font-size:10px;"></div>
-                        </a>
-                      </li>
-                      <li role="presentation">
-                        <a role="menuitem" tabindex="-1" href="#">
+                        <a role="menuitem" tabindex="-1" href="#" style="color:#058F26;">
                           <div>Add Level</div>
                         </a>
                       </li>
-                      <li role="presentation" class="divider"></li>
+                      <!--<li role="presentation" class="divider"></li>-->
                       <li role="presentation">
                         <a role="menuitem" class="addwgu" tabindex="-1" href="#" style="color:#058F26;">
-                          Add New Waste Generating Unit
+                          Add WGU
                         </a>
                       </li>
                       <li role="presentation">
-                        <a role="menuitem" tabindex="-1" href="#" style="color:#FF0707;">
-                          Delete This WGU
+                        <a role="menuitem" tabindex="-1" href="#" style="color:#058F26;">
+                          Edit Profile
                         </a>
                       </li>
                     </ul>
                   </td>
 
-                  <td><%= level.name %>, Street, City, State, Zip, <%= tracking_number(level.id) %></td>
+                  <td><%= level.name %> <br /> Street <br /> City<br /> State, Zip<br />ID#: <%= tracking_number(level.id) %></td>
                   <td><%= total_sub_level_count(level.id) %></td>
                   <td><%= "#{level.id}" +'0000'%></td>
                   <td class="center"><%= "#{level.id}" +'00'%></td>
                   <td class="center"><%= "#{level.id}" +'0%'%></td>
                   <td class="center"><%= "#{level.id}" +'000'%></td>
+                  <td class="center"><%= "#{level.id}" +'0'%></td>
+                  <td class="center"><%= "#{level.id}" +'0'%></td>
+                  <td class="center"><%= "#{level.id}" +'0'%></td>
+                  <td class="center"><%= "#{level.id}" +'0'%></td>
+                  <td class="center"><%= "#{level.id}" +'0'%></td>
                   <td class="center"><%= "#{level.id}" +'0'%></td>
                 </tr>
 

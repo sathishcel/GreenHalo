@@ -1,11 +1,11 @@
 <% unless level_wgus.blank? %>
     <% level_wgus.each do |wgu| %>
 
-        <tr class="gradeX wt-trho" id = "sub_wgu_<%= wgu.id %>" value = "<%= wgu.id %>">
+        <tr class="gradeX" id = "sub_wgu_<%= wgu.id %>" value = "<%= wgu.id %>">
 
           <td>
             <div class="company-img dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="font-size: 18px;">
                 <i class="fa fa-wrench"></i>
               </a>
 
@@ -16,23 +16,30 @@
                 </li>
                 <li>
                   <a href="#"  role="menuitem" tabindex="-1" data-toggle="modal" data-target="#myModal_wgu_settings"
-                     title="Settings">Level Settings</a>
+                     title="Settings">Settings</a>
                 </li>
                 <li>
                   <a href="#">Reports</a>
+                </li>
+                <li>
+                  <a href="#">Share and Connect</a>
                 </li>
               </ul>
             </div>
 
           </td>
-          <td><%= wgu.name %>, Street, City, State, Zip, <%= tracking_number(wgu.id) %></td>
+          <td><%= wgu.name %> <br /> Street <br /> City <br /> State, Zip<br />ID#: <%= tracking_number(wgu.id) %></td>
           <td></td>
           <td><%= "#{wgu.id}" +'0000'%></td>
           <td class="center"><%= "#{wgu.id}" +'00'%></td>
           <td class="center"><%= "#{wgu.id}" +'0%'%></td>
           <td class="center"><%= "#{wgu.id}" +'000'%></td>
           <td class="center"><%= "#{wgu.id}" +'0'%></td>
-
+          <td class="center"><%= "#{wgu.id}" +'0'%></td>
+          <td class="center"><%= "#{wgu.id}" +'0'%></td>
+          <td class="center"><%= "#{wgu.id}" +'0'%></td>
+          <td class="center"><%= "#{wgu.id}" +'0'%></td>
+          <td class="center"><%= "#{wgu.id}" +'0'%></td>
         </tr>
 <% end %>
 <% end %>
@@ -40,10 +47,10 @@
 
 <% unless sub_level.blank? %>
     <% sub_level.each do |level| %>
-        <tr class="gradeA wt-trho" id = "sub_level_<%= level.id %>" value = "<%= level.id %>" order = "not-open">
+        <tr class="gradeA" id = "sub_level_<%= level.id %>" value = "<%= level.id %>" order = "not-open">
           <td>
             <div class="company-img dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="font-size: 18px;">
                 <i class="fa fa-list"></i>
               </a>
 
@@ -51,14 +58,14 @@
                 <li role="presentation">
                   <a href="#"  role="menuitem" tabindex="-1" data-toggle="modal" data-target="#myModal_reports"
                      title="Reports">
-                    <div>View Reports</div>
+                    <div>Reports</div>
                   </a>
                 </li>
 
                 <li role="presentation">
                   <a href="#"  role="menuitem" tabindex="-1" data-toggle="modal" data-target="#myModal15"
-                     title="Settings">
-                    <div>Level Settings</div>
+                     title="Program Settings">
+                    <div>Program Settings</div>
                   </a>
                 </li>
                 <li role="presentation">
@@ -67,25 +74,18 @@
                   </a>
                 </li>
                 <li role="presentation">
-                  <a role="menuitem" tabindex="-1" href="#">
-                    <div>API</div>
-                    <div style="color:#999999; font-size:10px;"></div>
-                  </a>
-                </li>
-                <li role="presentation">
-                  <a role="menuitem" tabindex="-1" href="#">
+                  <a role="menuitem" tabindex="-1" href="#" style="color:#058F26;">
                     <div>Add Level</div>
                   </a>
                 </li>
-                <li role="presentation" class="divider"></li>
                 <li role="presentation">
                   <a role="menuitem" class="addwgu" tabindex="-1" href="#" style="color:#058F26;">
-                    Add New Waste Generating Unit
+                    Add WGU
                   </a>
                 </li>
                 <li role="presentation">
-                  <a role="menuitem" tabindex="-1" href="#" style="color:#FF0707;">
-                    Delete This WGU
+                  <a role="menuitem" tabindex="-1" href="#" style="color:#058F26;">
+                    Edit Profile
                   </a>
                 </li>
               </ul>
@@ -93,12 +93,17 @@
 
           </td>
 
-          <td><%= level.name %>, Street, City, State, Zip, <%= tracking_number(level.id) %></td>
+          <td><%= level.name %> <br /> Street <br /> City<br /> State, Zip<br />ID#: <%= tracking_number(level.id) %></td>
           <td><%= total_sub_level_count(level.id) %></td>
           <td><%= "#{level.id}" +'0000'%></td>
           <td class="center"><%= "#{level.id}" +'00'%></td>
           <td class="center"><%= "#{level.id}" +'0%'%></td>
           <td class="center"><%= "#{level.id}" +'000'%></td>
+          <td class="center"><%= "#{level.id}" +'0'%></td>
+          <td class="center"><%= "#{level.id}" +'0'%></td>
+          <td class="center"><%= "#{level.id}" +'0'%></td>
+          <td class="center"><%= "#{level.id}" +'0'%></td>
+          <td class="center"><%= "#{level.id}" +'0'%></td>
           <td class="center"><%= "#{level.id}" +'0'%></td>
         </tr>
     <%end%>
