@@ -1,0 +1,376 @@
+<div class="modal inmodal" id="myModal_wgu_settings" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-lg" style = "width:95%;margin-top: 9px;">
+    <div class="modal-content">
+      <div class="modal-header" style = "background-color: #676a6c;max-height: 30px;padding-top:10px;">
+             <span>
+                <span>
+                   <i class = "fa fa-repeat" style = "color: white;float:left;margin-top:3px;"></i>
+                   <span style="top:13px;float:left;margin-left: 9px;border-left: 2px solid #19aa8d;">|</span>
+
+                   <span style = "color:white;font-weight:bold;float:left;margin-left:8px;">WGU Settings Profile</span>
+                 </span>
+
+                 <span style="top:13px;float:right;margin-right: 5px;border-left: 2px solid #19aa8d;">|</span>
+               <i class = "fa fa-times" data-dismiss="modal" style = "float:right;color: white;cursor: pointer;
+                       margin-right: -20px;margin-top: 4px;"></i>
+             </span>
+
+
+      </div>
+
+
+      <div class="modal-header">
+        <h4 class="modal-title">Profile</h4>
+      </div>
+
+      <div class="modal-body">
+        <div class="row">
+
+          <div class="col-lg-6">
+            <div class="form-group">
+              <b>System Settings</b>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control required" name="wgu[id]" id="wgu_id" aria-required="true" placeholder="Wgu ID">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control required" id="wgu_name" name="wgu[name]" aria-required="true" placeholder="Wgu Name">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control required" id="wgu_address" name="wgu[address]" aria-required="true" placeholder="Address">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control required" id="wgu_city" name="wgu[city]" aria-required="true" placeholder="City">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control required" name="wgu[state]" id="wgu_state" aria-required="true" placeholder="State">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control required" name="wgu[zip]" id="wgu_zip" aria-required="true" placeholder="Zip">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control required" name="wgu[country]" id="wgu_country" aria-required="true" placeholder="Country">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control required" name="wgu[phone]" id="wgu_phone" aria-required="true" placeholder="Phone">
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+
+            <div class="form-group">
+              <b>Company Settings</b>
+            </div>
+            <div class="form-group">
+              <select name="account" class="form-control m-b">
+                <option>District 1</option>
+                <option>District 2</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <select name="account" class="form-control m-b">
+                <option>Business Unit 1</option>
+                <option>Business Unit 2</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <select name="account" class="form-control m-b">
+                <option>Profit Center 1</option>
+                <option>Profit Center 2</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <b>Classifications</b>
+            </div>
+            <div class="form-group">
+              <select name="account" class="form-control m-b">
+                <option>BuildingTYpe 1</option>
+                <option>BuildingTYpe 2</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <select name="account" class="form-control m-b">
+                <option>Project Type 1</option>
+                <option>Project Type 2</option>
+              </select>
+            </div>
+
+
+            <div class="form-group">
+              <b>Specifications</b>
+            </div>
+            <div class="form-group">
+              <select name="account" class="form-control m-b">
+                <option>Square Footage 1</option>
+                <option>Square Footage 2</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <select name="account" class="form-control m-b">
+                <option>Value $</option>
+                <option>Value $$</option>
+              </select>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="row">
+        <div class="col-lg-12">
+        <div class="ibox float-e-margins">
+        <div class="ibox-title"><h5>Assign Company Users</h5></div>
+        <div class="ibox-content">
+        <div class="row">
+          <div class="col-sm-5 m-b-xs">Assign Company Users</div>
+          <div class="col-sm-4 m-b-xs">Information Required</div>
+          <div class="col-sm-3">Number of Users assigned to this WGU</div>
+        </div>
+        <div class="table-responsive">
+          <table class="table table-striped">
+            <thead>
+            <tr>
+              <th></th>
+              <th>UserName </th>
+              <th>Title </th>
+              <th>Email</th>
+              <th>Phone</th>
+              <th>Action</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td><div class="icheckbox_square-green checked" style="position: relative;"><input type="checkbox" name="input[]" class="i-checks" checked="" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;"></ins></div></td>
+              <td>Vijay</td>
+              <td>Mr.</td>
+              <td>vijay@celestials.com</td>
+              <td>0043529892</td>
+              <td><a href="#"><i class="fa fa-check text-navy"></i></a></td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+          <button class="btn btn-primary" type="button">Assign Another User</button>
+        </div>
+        </div>
+        </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="ibox float-e-margins">
+              <div class="ibox-title"><h5>Assign Vendors</h5></div>
+              <div class="ibox-content">
+                <div class="row">
+                  <div class="col-sm-5 m-b-xs">Assign Vendors</div>
+                  <div class="col-sm-4 m-b-xs">Information Required</div>
+                  <div class="col-sm-3">Number of Vendors assigned to this WGU</div>
+                </div>
+                <div class="table-responsive">
+                  <table class="table table-striped">
+                    <thead>
+                    <tr>
+                      <th></th>
+                      <th>Vendor Name </th>
+                      <th>Vendor ID </th>
+                      <th>Contact</th>
+                      <th>Phone</th>
+                      <th>Email</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                      <td><div class="icheckbox_square-green checked" style="position: relative;"><input type="checkbox" name="input[]" class="i-checks" checked="" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;"></ins></div></td>
+                      <td>Vijay</td>
+                      <td>123</td>
+                      <td>Bangalore</td>
+                      <td>0043529892</td>
+                      <td>vijay@celestials.com</td>
+                    </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <button class="btn btn-primary" type="button">Assign Another Vendor</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="ibox float-e-margins">
+              <div class="ibox-title"><h5>Materials</h5></div>
+              <div class="ibox-content">
+                <div class="row">
+                  <div class="col-sm-5 m-b-xs">Recycling and Disposal Facilities</div>
+                  <div class="col-sm-4 m-b-xs">Information Required</div>
+                  <div class="col-sm-3">Number of Materials assigned to this WGU</div>
+                </div>
+                <div class="table-responsive">
+                  <table class="table">
+                    <tbody>
+                    <tr>
+                      <td style="border-top: 0 solid #e7eaec;"><div class="icheckbox_square-green checked" style="position: relative;"><input type="checkbox" name="input[]" class="i-checks" checked="" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;"></ins></div></td>
+                      <td style="border-top: 0 solid #e7eaec;"><select name="account" class="form-control m-b">
+                        <option>Material #1</option>
+                      </td>
+                      <td style="border-top: 0 solid #e7eaec;"><input type="password" class="form-control" placeholder="Estimated Amount"></td>
+                      <td style="border-top: 0 solid #e7eaec;"><input type="password" class="form-control" placeholder="Unit of Measure"></td>
+                      <td style="border-top: 0 solid #e7eaec;"><select name="account" class="form-control m-b">
+                        <option>Disposition</option>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td style="border-top: 0 solid #e7eaec;"><div class="icheckbox_square-green checked" style="position: relative;"><input type="checkbox" name="input[]" class="i-checks" checked="" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;"></ins></div></td>
+                      <td style="border-top: 0 solid #e7eaec;"><select name="account" class="form-control m-b">
+                        <option>Material #2</option>
+                      </td>
+                      <td style="border-top: 0 solid #e7eaec;"><input type="password" class="form-control" placeholder="Estimated Amount"></td>
+                      <td style="border-top: 0 solid #e7eaec;"><input type="password" class="form-control" placeholder="Unit of Measure"></td>
+                      <td style="border-top: 0 solid #e7eaec;"><select name="account" class="form-control m-b">
+                        <option>Disposition</option>
+                      </td>
+                    </tr>
+
+                    </tbody>
+                  </table>
+                </div>
+                <button class="btn btn-primary" type="button">Assign Another Material</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="ibox float-e-margins">
+              <div class="ibox-title"><h5>Recycling and Disposal Facilities</h5></div>
+              <div class="ibox-content">
+                <div class="row">
+                  <div class="col-sm-5 m-b-xs">Recycling and Disposal Facilities</div>
+                  <div class="col-sm-4 m-b-xs">Information Required</div>
+                  <div class="col-sm-3">Number of Facilities assigned to this WGU</div>
+                </div>
+                <div class="table-responsive">
+                  <table class="table table-striped">
+                    <thead>
+                    <tr>
+                      <th></th>
+                      <th>Facility Name </th>
+                      <th>Distance from WGU </th>
+                      <th>Carbon Savings</th>
+                      <th>Diversion Rate</th>
+                      <th>Certified</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                      <td><div class="icheckbox_square-green checked" style="position: relative;"><input type="checkbox" name="input[]" class="i-checks" checked="" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;"></ins></div></td>
+                      <td>Transportation</td>
+                      <td>2.3 Miles</td>
+                      <td>7.63 Tons</td>
+                      <td>67%</td>
+                      <td>Yes</td>
+                    </tr>
+
+                    <tr>
+                    <td><div class="icheckbox_square-green checked" style="position: relative;"><input type="checkbox" name="input[]" class="i-checks" checked="" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;"></ins></div></td>
+                    <td>Parcel Service</td>
+                    <td>2.3 Miles</td>
+                    <td>7.63 Tons</td>
+                    <td>67%</td>
+                    <td>Yes</td>
+                    </tr>
+
+                    </tbody>
+                  </table>
+                </div>
+                <button class="btn btn-primary" type="button">Assign Another Facility</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="background-color: white; padding: 10px;">
+          <label style="color: red;">Government Regulation Detected</label><br>
+          <label><input type="checkbox" value="">  Agree to Terms</label>
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
+            electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release
+            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
+            Aldus PageMaker including versions of Lorem Ipsum.
+          </p></div>
+
+        <div style="background-color: white; padding: 10px;margin-top: 25px;">
+          <label style="color: red;">Government Regulation Detected</label><br>
+          <label><input type="checkbox" value="">  Agree to Terms</label>
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
+            electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release
+            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
+            Aldus PageMaker including versions of Lorem Ipsum.
+          </p></div>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-white" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<style>
+    /* for level setting popup title bar*/
+    .displaylist
+    {
+        background: #d3d3d3 none repeat scroll 0 0;
+        color: #000000;
+        display: none;
+        border: 1px solid #504f4f;
+        margin: 12px 0 0 1%;
+        width: 212px;
+        position: relative;
+        z-index: 11;
+    }
+
+    .pop-dropdown
+    {
+        list-style:none;
+        border-top: 4px solid #504f4f;
+        margin:0;
+        padding:0;
+    }
+    .pop-dropdown > li > a
+    {
+        text-decoration:none;
+        clear: both;
+        color: #333;
+        display: block;
+        font-weight: 400;
+        padding: 3px 14px;
+        white-space: nowrap;
+        text-align: left;
+    }
+    .pop-dropdown > li > a:focus,.pop-dropdown > li > a:hover
+    {
+        background:#BFBFBF;
+        color:#333;
+    }
+
+    .modal-body{min-height:486px;}
+
+    .pop-pointer-dd {
+        margin-left: 31px;
+        position: absolute;
+        top: -11px;
+    }
+
+</style>
