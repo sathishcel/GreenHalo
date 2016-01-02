@@ -13,7 +13,7 @@ class WgusController < ApplicationController
       end
       session[:wgu_id] = nil
     end
-    
+
     redirect_to new_tracking_path
 
   end
