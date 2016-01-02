@@ -71,10 +71,11 @@
             </div>
 
           <div id = "add_level_popup" style = "display:none;">
+            <span style="float:left;padding-left: 31px;" class="">Add and Assign New Level</span>
             <div id="vendor_selection" >
               <%= select_tag "multi_level_selection", options_for_select(1..10, :selected => 1),
                              :'data-remote' => 'true',
-                             :'data-url' => url_for(:controller => 'dashboards', :action => 'new_tracking'),:style => "width:17%;height:10%; margin-right: 25px;" %>
+                             :'data-url' => url_for(:controller => 'dashboards', :action => 'new_tracking'),:style => "width:17%;height:10%; margin-left: 21px;" %>
 
             </div>
             <div id="multi_level_loading_div">
@@ -131,11 +132,6 @@
                       </li>
 
                       <li role="presentation">
-                        <a role="menuitem" tabindex="-1" href="#">
-                          <div>Messages</div>
-                        </a>
-                      </li>
-                      <li role="presentation">
                         <a href="#"  role="menuitem" tabindex="-1" data-toggle="modal" data-target="#myModal15"
                            title="Settings">
                           <div>Level Settings</div>
@@ -149,7 +145,7 @@
                       <li role="presentation">
                         <a role="menuitem" tabindex="-1" href="#">
                           <div>API</div>
-                          <div style="color:#999999; font-size:10px;">
+                          <div style="color:#999999; font-size:10px;"></div>
                         </a>
                       </li>
                       <li role="presentation">
@@ -197,6 +193,8 @@
 
 <%= render partial: "level_setttings_base_page"%>
 <%= render partial: "reports_base_page"%>
+<%= render partial: "wgu_settings_page"%>
+<%= render partial: "wgu_add_data"%>
 
 <script>
     $(document).ready(function(){
@@ -245,15 +243,15 @@
 
     }); */
 
-    function fnClickAddRow() {
-        $('#editable').dataTable().fnAddData( [
-            "Custom row",
-            "New row",
-            "New row",
-            "New row",
-            "New row" ] );
-
-    }
+//    function fnClickAddRow() {
+//        $('#editable').dataTable().fnAddData( [
+//            "Custom row",
+//            "New row",
+//            "New row",
+//            "New row",
+//            "New row" ] );
+//
+//    }
 </script>
 
 <style>
@@ -270,11 +268,12 @@
         background-color: #fff;
         position: absolute;
         z-index: 10;
-        padding: 10px 5px;
+        padding: 15px 5px 12px 3px;
         border: #C9C9C9 1px solid;
         margin-top: -5px;
         border-radius: 8px;
         margin-left: 10%;
+        right: 50%;
     }
 </style>
 
