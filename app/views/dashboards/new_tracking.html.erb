@@ -25,17 +25,50 @@
         <div class="ibox-title">
           <h5>Waste Generating Units</h5>
         </div>
-        <div class="ibox-content">
-          <div class="">
+        <div class="ibox-tools">
+          <div align="left" class="" style="background-color: #fff;margin-left: 1%;
+          ">
             <a class="btn btn-primary " id = "add_wgu_button" >Add WGU</a>
             <a class="btn btn-primary " id = "add_level_button">Add Level</a>
             <a class="btn btn-primary " href="javascript:void(0);" onclick="">Expand All</a>
-            <a class="btn btn-primary " href="javascript:void(0);" onclick="">Collapse All</a>
+            <a class="btn btn-primary  collapse-link " >Collapse All</a>
           </div>
+        </div>
+        <div class="ibox-content">
+
 
           <div id = "add_wgu_popup" style = "display:none;">
-             <p>Hello World</p>
-          </div>
+            <div id="vendor_selection">
+
+
+              <%= select_tag "more_wgu_selection", options_for_select(1..10, :selected => 1), :'data-remote' => 'true',
+                             :'data-url' => url_for(:controller => 'dashboards', :action => 'add_more_wgus'),
+                             :style => "width:17%;height:10%;  margin-right: 25px;" %>
+
+            </div>
+
+            <div class="wgu-input-container" align="left">
+              <div id="load_additional_wgu">
+                <%= form_tag( "/wgus") do %>
+
+                    <ol style="margin:-1px;; padding-left:20px; width:100%;">
+                      <% for i in 1..@wgu_limit %>
+                          <li class="wgu-input-div">
+                            <%= text_field_tag "wgu[#{i}][name]", "", :placeholder => "Enter WGU Name",
+                                               :style => "border-radius: 5px;border: #C9C9C9 1px solid;width: 47%;height:25%;padding: 2px 5px;font-size:13px;" %>
+
+                            <%= select_tag "wgu[#{i}][level_id]", options_for_select(Level.all.map{|i| [i.name,i.id]}), :class => "wgu_vend_select",
+                                           :style => "height:25%;", :prompt => @all_levels.blank? ? "Select Level" : "Assign To Level" %>
+
+                          </li>
+                      <% end %>
+                    </ol>
+                    <%= submit_tag "ADD WGU", :class => "button", :id => "add-wgu", :style => "margin-right: 20px;" %>
+                <% end %>
+              </div>
+
+            </div>
+            </div>
 
           <div id = "add_level_popup" style = "display:none;">
             <span style="float:left;padding-left: 31px;" class="">Add and Assign New Level</span>
@@ -198,6 +231,10 @@
          }
      });
 
+//      $("#collapse_button").click(function(){
+//           $(".dataTables-example").slideUp(150);
+//      });
+
       $(document).on('click', function(e) {
           var elem = $(e.target).closest('#add_wgu_button'),
                   box  = $(e.target).closest('#add_wgu_popup');
@@ -222,6 +259,11 @@
           }
       });
   });
+</script>
+
+<script>
+
+
 </script>
 
 <style>
