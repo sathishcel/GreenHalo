@@ -38,7 +38,7 @@
 
           <div id = "add_wgu_popup" style = "display:none;">
             <div id="vendor_selection">
-
+            Add and Assign WGU
 
               <%= select_tag "more_wgu_selection", options_for_select(1..10, :selected => 1), :'data-remote' => 'true',
                              :'data-url' => url_for(:controller => 'dashboards', :action => 'add_more_wgus'),
@@ -174,7 +174,7 @@
                   <td class="center"><%= "#{level.id}" +'0'%></td>
                   <td class="center"><%= "#{level.id}" +'0'%></td>
                   <td class="center"><%= "#{level.id}" +'0'%></td>
-                  <td class="center"><%= "#{level.id}" +'0'%></td>
+                  <td class="center"><%= "#{level.id}" +'0%'%></td>
                   <td class="center"><%= "#{level.id}" +'0'%></td>
                   <td class="center"><%= "#{level.id}" +'0'%></td>
                 </tr>
@@ -208,8 +208,9 @@
         z-index: 10;
         padding: 10px 5px;
         border: #C9C9C9 1px solid;
-        margin-top: -5px;
+        margin-top: -15px;
         border-radius: 8px;
+        right: 66%;
     }
     #add_level_popup{
         background-color: #fff;
@@ -217,7 +218,7 @@
         z-index: 10;
         padding: 15px 5px 12px 3px;
         border: #C9C9C9 1px solid;
-        margin-top: -5px;
+        margin-top: -15px;
         border-radius: 8px;
         margin-left: 10%;
         right: 50%;
