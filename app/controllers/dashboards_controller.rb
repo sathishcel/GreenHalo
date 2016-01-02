@@ -54,4 +54,9 @@ class DashboardsController < ApplicationController
      @level_wgus = level.try(:wgus)
   end
 
+
+  def add_more_wgus
+
+  end
+
 end
