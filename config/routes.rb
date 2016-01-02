@@ -54,8 +54,11 @@ Myapp::Application.routes.draw do
   end
 
   resources :levels
+  resources :wgus
 
   # All routes
+  post "dashboards/create" => 'dashboards#create'
+  get 'dashboards/add_more_wgus'
   get "dashboards/dashboard_1"
   get "/getting_sub_levels/:id"  => 'dashboards#getting_sub_levels'
   get "dashboards/dashboard_2"

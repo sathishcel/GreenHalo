@@ -1,0 +1,15 @@
+<%= form_tag "/wgus", :method => :post  do %>
+
+    <ol style="margin:0; padding-left:20px; width:100%;">
+      <% for i in 1..params[:more_wgu_selection].to_i %>
+          <li class="wgu-input-div">
+            <%= text_field_tag "wgu[#{i}][name]" ,"",:placeholder => "Enter Level Name" ,
+                               :style => "border-radius: 5px;border: #C9C9C9 1px solid;width: 47%;height:10%;padding: 2px 5px;" %>
+            <%= select_tag "wgu[#{i}][level_id]", options_for_select(Level.all.map{|i| [i.name,i.id]}) ,:class => "wgu_select",
+                           :style =>  "height:25%",:prompt => "Select Level" %>
+          </li>
+      <%end%>
+    </ol>
+
+    <%= submit_tag "ADD WGU" ,:class => "button",:id => "add-wgu"  ,:style => "  margin-right: 18px;" %>
+<%end%>
