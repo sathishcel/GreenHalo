@@ -59,4 +59,8 @@ class DashboardsController < ApplicationController
 
   end
 
+  def add_menu_level
+
+  end
+
 end

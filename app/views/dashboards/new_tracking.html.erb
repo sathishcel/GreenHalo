@@ -78,6 +78,7 @@
                              :'data-url' => url_for(:controller => 'dashboards', :action => 'new_tracking'),:style => "width:17%;height:10%; margin-left: 21px;" %>
 
             </div>
+
             <div id="multi_level_loading_div">
 
             <%= form_tag "/levels", :method => :post do %>
@@ -102,7 +103,7 @@
 
           <table class="table table-bordered table-hover dataTables-example">
             <thead>
-            <tr>
+            <tr id= "tracking_header">
               <th>Menu</th>
               <th>Waste Generating Units</th>
               <th>#of Units</th>
@@ -148,15 +149,13 @@
                         </a>
                       </li>
                       <li role="presentation">
-                        <a role="menuitem" tabindex="-1" href="#" style="color:#058F26;">
-                          <div>Add Level</div>
-                        </a>
+
+                        <%= link_to "Add Level", "wgu/#{level.id}/add_menu_level/#{level.id}", :remote => true,
+                                    :class => "addwgu", :style => "color:#058F26;" %>
                       </li>
-                      <!--<li role="presentation" class="divider"></li>-->
                       <li role="presentation">
-                        <a role="menuitem" class="addwgu" tabindex="-1" href="#" style="color:#058F26;">
-                          Add WGU
-                        </a>
+                        <%= link_to "Add WGU", "wgu/#{level.id}/add_menu_level/#{level.id}", :remote => true,
+                                    :class => "add_level_wgu", :style => "color:#058F26;" %>
                       </li>
                       <li role="presentation">
                         <a role="menuitem" tabindex="-1" href="#" style="color:#058F26;">
@@ -318,6 +317,28 @@
               $('#add_level_popup').hide();
           }
       });
+
+
+      $(".addwgu").click(function(e){
+          var elem1 = $(e.target).closest('.addwgu');
+          if ( elem1.length ) {
+              e.preventDefault();
+              $('#add_level_popup').toggle();
+              $(".dropdown-menu").hide();
+
+          }
+      });
+
+      $(".add_level_wgu").click(function(e){
+          var elem1 = $(e.target).closest('.add_level_wgu');
+          if ( elem1.length ) {
+              e.preventDefault();
+              $('#add_wgu_popup').toggle();
+              $(".dropdown-menu").hide();
+
+          }
+      });
+
   });
 </script>
 
@@ -330,4 +351,12 @@
   .wt-trho:hover{
       background-color: #cccccc !important;
   }
+
+        #tracking_header th {
+            cursor: pointer;
+        }
+
+        .DTTT_container{
+            display:none;
+        }
 </style>
