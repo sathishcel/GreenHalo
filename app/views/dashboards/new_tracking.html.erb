@@ -184,26 +184,26 @@
           <table class="table table-bordered table-hover dataTables-example gh-table-valign-mid">
             <thead>
             <tr id= "tracking_header">
-              <th style="text-align: center; vertical-align: middle">Menu</th>
-              <th style="text-align: center; vertical-align: middle">Waste Generating Units</th>
-              <th style="text-align: center; vertical-align: middle">#of Units</th>
-              <th style="text-align: center; vertical-align: middle"><i class="fa fa-square" style="color:#ff0000;" title="Tons Disposed"></i></th>
-              <th style="text-align: center; vertical-align: middle"><i class="fa fa-square" style="color:#5cd65c;" title="Tons Recycled"></i></th>
-              <th style="text-align: center; vertical-align: middle"><i class="fa fa-recycle" title="Recycling Rate"></i></th>
-              <th style="text-align: center; vertical-align: middle"><i class="fa fa-trash" title="Disposal Costs"></i></th>
-              <th style="text-align: center; vertical-align: middle"><i class="fa fa-usd" title="Return on Recycling"></i></th>
-              <th style="text-align: center; vertical-align: middle"><i class="fa fa-tint" style="color: #3366ff;" title="Gallons Disposed"></i></th>
-              <th style="text-align: center; vertical-align: middle"><i class="fa fa-recycle" style="color:#5cd65c;" title="Gallons Recycled"></i></th>
-              <th style="text-align: center; vertical-align: middle"><i class="fa fa-recycle" title="Recycling Rate"></i></th>
-              <th style="text-align: center; vertical-align: middle"><i class="fa fa-trash" title="Disposal Costs"></i></th>
-              <th style="text-align: center; vertical-align: middle"><i class="fa fa-usd" title="Return on Recycling"></i></th>
+              <th style="text-align: center; vertical-align: middle;background-color: #ededed;">Menu</th>
+              <th style="text-align: center; vertical-align: middle;background-color: #ededed;">Waste Generating Units</th>
+              <th style="text-align: center; vertical-align: middle;background-color: #ededed;">#of Units</th>
+              <th style="text-align: center; vertical-align: middle;background-color: #ededed;"><i class="fa fa-square" style="color:#ff0000;" title="Tons Disposed"></i></th>
+              <th style="text-align: center; vertical-align: middle;background-color: #ededed;"><i class="fa fa-square" style="color:#5cd65c;" title="Tons Recycled"></i></th>
+              <th style="text-align: center; vertical-align: middle;background-color: #ededed;"><i class="fa fa-recycle" title="Recycling Rate"></i></th>
+              <th style="text-align: center; vertical-align: middle;background-color: #ededed;"><i class="fa fa-trash" title="Disposal Costs"></i></th>
+              <th style="text-align: center; vertical-align: middle;background-color: #ededed;"><i class="fa fa-usd" title="Return on Recycling"></i></th>
+              <th style="text-align: center; vertical-align: middle;background-color: #ededed;"><i class="fa fa-tint" style="color: #3366ff;" title="Gallons Disposed"></i></th>
+              <th style="text-align: center; vertical-align: middle;background-color: #ededed;"><i class="fa fa-recycle" style="color:#5cd65c;" title="Gallons Recycled"></i></th>
+              <th style="text-align: center; vertical-align: middle;background-color: #ededed;"><i class="fa fa-recycle" title="Recycling Rate"></i></th>
+              <th style="text-align: center; vertical-align: middle;background-color: #ededed;"><i class="fa fa-trash" title="Disposal Costs"></i></th>
+              <th style="text-align: center; vertical-align: middle;background-color: #ededed;"><i class="fa fa-usd" title="Return on Recycling"></i></th>
             </tr>
             </thead>
 
             <tbody class = "table_order">
             <% @all_levels.each do |level| %>
 
-                <tr style="background-color: #C9C9C9;" class="gradeX" valign="middle"  id = "sub_level_<%= level.id %>" value = "<%= level.id %>" order = "not-open">
+                <tr style="background-color: #f9f9f9;" class="gradeX" valign="middle"  id = "sub_level_<%= level.id %>" value = "<%= level.id %>" order = "not-open">
                   <td  style="text-align: center;vertical-align: middle">
                     <span class="dropdown-toggle" data-toggle="dropdown" href="#" style="font-size: 18px;">
                       <i class="fa fa-bars" style="cursor: pointer; font-size: 24px;"></i>
