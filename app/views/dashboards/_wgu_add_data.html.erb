@@ -1,3 +1,6 @@
+<%= javascript_include_tag "graphs" %>
+<%= stylesheet_link_tag "graphs" %>
+
 <div class="modal inmodal" id="myModal_add_data" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog modal-lg" style = "width:95%;margin-top: 9px;">
     <div class="modal-content">
@@ -24,7 +27,7 @@
       </div>
 
       <div class="modal-body">
-        <div class="col-sm-10" style="width:100%">
+        <div class="col-sm-10" style="width:100%;margin-bottom: 10px;">
           <div class="row">
             <div class="col-md-2" style="width:43.33%;">
               <p>WGU Name: WGU22</p>
@@ -33,7 +36,7 @@
                  <input type="text" class="form-control" placeholder="generate ticket invoice"
                                            name="ticket[generate_ticket_invoice]" id="ticket_generate_ticket_invoice">
               </div>
-              <div class="col-md-4"  style="width:43.33%;">
+              <div class="col-md-4"  style="width:43.33%;margin-left: 38px;">
                 <input type="text" class="form-control" placeholder="ticket date" name="ticket[ticket_date]"
                        id="ticket_ticket_date">
               </div>
@@ -41,7 +44,7 @@
                 <input type="text" class="form-control" placeholder="Total Weight or Volume"
                        name="ticket[weight]" id="ticket_weight">
               </div>
-              <div class="col-md-4"  style="width:43.33%;margin-top:10px;">
+              <div class="col-md-4"  style="width:43.33%;margin-top:10px;margin-left: 38px;">
                 <div class="form-group">
                   <select name="account" class="form-control m-b">
                     <option>CubicYards</option>
@@ -59,7 +62,7 @@
                   </select>
                 </div>
               </div>
-              <div class="col-md-4"  style="width:43.33%;">
+              <div class="col-md-4"  style="width:43.33%;margin-left: 38px;">
                 <div class="form-group">
                   <select name="account" class="form-control m-b">
                     <option>1 cu.yd</option>
@@ -72,11 +75,11 @@
                 <input type="text" class="form-control" placeholder="Enter Disposal Fee $"
                        name="ticket[disposal]" id="ticket_disposal">
               </div>
-              <div class="col-md-4"  style="width:43.33%;">
+              <div class="col-md-4"  style="width:43.33%;margin-left: 38px;">
                 <input type="text" class="form-control" placeholder="Recycling Money Back $"
                        name="ticket[recycling_money_back]" id="ticket_recycling_money_back">
               </div>
-              <div class="col-md-4"  style="width:50.33%;margin-top:10px;">
+              <div class="col-md-4"  style="width:43.33%;margin-top:10px;">
                 <div class="form-group">
                   <select name="account" class="form-control m-b">
                     <option>Demolition</option>
@@ -84,10 +87,10 @@
                   </select>
                 </div>
               </div>
-              <div class="col-md-4"  style="width:40.33%;margin-top:10px;">
+              <div class="col-md-4"  style="width:40.33%;margin-top:10px;margin-left: 37px;">
                 <button class="btn btn-primary" type="button">Add New Vendor</button>
               </div>
-              <div class="col-md-4"  style="width:50.33%;margin-top:10px;">
+              <div class="col-md-4"  style="width:43.33%;margin-top:10px;clear: both;">
                 <div class="form-group">
                   <select name="account" class="form-control m-b">
                     <option>Transportion</option>
@@ -95,7 +98,7 @@
                   </select>
                 </div>
               </div>
-              <div class="col-md-4"  style="width:40.33%;margin-top:10px;">
+              <div class="col-md-4"  style="width:40.33%;margin-top:10px;margin-left: 37px;">
                 <button class="btn btn-primary" type="button">Add New Facility</button>
               </div>
             </div>
@@ -141,6 +144,9 @@
             </div>
             <div class="col-md-4" style="width:28.33%;">
               <p> Entered By: GreenWorx - 09/12/15 </p>
+              <img alt="Add data image" src="/assets/img/add-data-image.jpg" style="margin-top:15px;">
+              <img alt="Add data image" src="/assets/img/add-data-image.jpg" style="margin-top:15px;">
+              <button class="btn btn-primary" type="button" style="margin-top: 10px;">Upload Supporting Documentation</button>
             </div>
           </div>
 
