@@ -138,7 +138,7 @@
                       </li>
 
                       <li role="presentation">
-                        <a href="#"  role="menuitem" tabindex="-1" data-toggle="modal" data-target="#myModal15"
+                        <a href="#"  role="menuitem" tabindex="-1" data-toggle="modal" data-target="#myModal15" id=<%= level.id%>
                            title="Settings">
                           <div>Program Settings</div>
                         </a>
@@ -349,10 +349,45 @@
       });
 
   });
+
 </script>
 
 <script>
+    $("#menulist").click(function()
+    {
+        $("#displaymenu").toggle();
+    });
 
+    $("#menulist_rep").click(function()
+    {
+        $("#displaymenu_rep").toggle();
+    });
+
+    function dynamic_level_settings(url) {
+
+        var current_url = url;
+        var level_id = level_id;
+        $.ajax({
+            type: "GET",
+            url: current_url,
+        }).success(function (data) {
+            $('#replace_ajax_response').html(data);
+            $("#displaymenu").toggle();
+        });
+    }
+
+    function dynamic_reports_settings(url) {
+
+        var current_url = url;
+        var level_id = level_id;
+        $.ajax({
+            type: "GET",
+            url: current_url,
+        }).success(function (data) {
+            $('#replace_ajax_response').html(data);
+            $("#displaymenu_rep").toggle();
+        });
+    }
 
 </script>
 
@@ -369,3 +404,5 @@
             display:none;
         }
 </style>
+
+

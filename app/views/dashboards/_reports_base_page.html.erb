@@ -9,7 +9,7 @@
                    <span style="top:13px;float:left;margin-left: 9px;border-left: 2px solid #19aa8d;">|</span>
                    <span style="float:left">
                       <a href="#" style="color:#FFFFFF">
-                        <i class="fa fa-list" id="menulist"></i>
+                        <i class="fa fa-list" id="menulist_rep"></i>
                       </a>
                    </span>
                    <span style = "color:white;font-weight:bold;float:left;margin-left:67px;">Reports - WGU 8766098095</span>
@@ -23,11 +23,11 @@
 
       </div>
 
-      <div id="displaymenu" class="displaylist" style="position: absolute;">
+      <div id="displaymenu_rep" class="displaylist" style="position: absolute;">
         <%= image_tag "img/pop-img.png", :class=>"pop-pointer-dd" %>
         <ul class="pop-dropdown">
-          <li> <%= link_to "All Wgus", "#", onclick:"dynamic_level_settings('#{business_level_settings_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
-          <li> <%= link_to "All Wgus", "#", onclick:"dynamic_level_settings('#{recycling_target_program_settings_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
+          <li> <%= link_to "All Wgus", "#", onclick:"dynamic_reports_settings('#{business_level_settings_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
+          <li> <%= link_to "All Wgus", "#", onclick:"dynamic_reports_settings('#{recycling_target_program_settings_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
         </ul>
       </div>
 
@@ -42,34 +42,6 @@
     </div>
   </div>
 </div>
-
-
-
-
-<script type="text/javascript">
-
-    $(document).ready(function()
-    {
-        $("#menulist").click(function()
-        {
-            $("#displaymenu").toggle();
-        });
-    });
-
-    function dynamic_level_settings(url) {
-
-        var current_url = url;
-        var level_id = level_id;
-        $.ajax({
-            type: "GET",
-            url: current_url,
-        }).success(function (data) {
-            $('#replace_ajax_response').html(data);
-            $("#displaymenu").toggle();
-        });
-    }
-</script>
-
 
 <style>
     /* for level setting popup title bar*/
