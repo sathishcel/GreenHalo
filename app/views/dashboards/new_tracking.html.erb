@@ -26,7 +26,7 @@
         <div class="ibox-title">
           <h5>Waste Generating Units</h5>
         </div>
-        <div class="ibox-tools">
+        <div class="ibox-content">
           <div align="left" class="" style="background-color: #fff;">
             <a class="btn btn-primary " data-toggle="modal" data-target="#addwgu" >Add WGU</a>
             <a class="btn btn-primary " data-toggle="modal" data-target="#addlevel">Add Level</a>
@@ -34,7 +34,7 @@
             <a class="btn btn-primary  collapse-link " >Collapse All</a>
           </div>
         </div>
-        <div class="ibox-content">
+        <div class="ibox-content" style="border-width:0 !important;">
 
 
           <div class="modal fade" id="addwgu" role="dialog">
@@ -181,33 +181,33 @@
 
 
 
-          <table class="table table-bordered table-hover dataTables-example">
+          <table class="table table-bordered table-hover dataTables-example gh-table-valign-mid">
             <thead>
             <tr id= "tracking_header">
-              <th>Menu</th>
-              <th>Waste Generating Units</th>
-              <th>#of Units</th>
-              <th>Tons Disposed</th>
-              <th>Tons Recycled</th>
-              <th>Recycling Rate</th>
-              <th>Disposal Costs</th>
-              <th>Return on Recycling</th>
-              <th>Gallons Disposed</th>
-              <th>Gallons Recycled</th>
-              <th>Recycling Rate</th>
-              <th>Disposal Costs</th>
-              <th>Return on Recycling</th>
+              <th style="text-align: center; vertical-align: middle">Menu</th>
+              <th style="text-align: center; vertical-align: middle">Waste Generating Units</th>
+              <th style="text-align: center; vertical-align: middle">#of Units</th>
+              <th style="text-align: center; vertical-align: middle"><i class="fa fa-square" style="color:#ff0000;" title="Tons Disposed"></i></th>
+              <th style="text-align: center; vertical-align: middle"><i class="fa fa-square" style="color:#5cd65c;" title="Tons Recycled"></i></th>
+              <th style="text-align: center; vertical-align: middle"><i class="fa fa-recycle" title="Recycling Rate"></i></th>
+              <th style="text-align: center; vertical-align: middle"><i class="fa fa-trash" title="Disposal Costs"></i></th>
+              <th style="text-align: center; vertical-align: middle"><i class="fa fa-usd" title="Return on Recycling"></i></th>
+              <th style="text-align: center; vertical-align: middle"><i class="fa fa-tint" style="color: #3366ff;" title="Gallons Disposed"></i></th>
+              <th style="text-align: center; vertical-align: middle"><i class="fa fa-recycle" style="color:#5cd65c;" title="Gallons Recycled"></i></th>
+              <th style="text-align: center; vertical-align: middle"><i class="fa fa-recycle" title="Recycling Rate"></i></th>
+              <th style="text-align: center; vertical-align: middle"><i class="fa fa-trash" title="Disposal Costs"></i></th>
+              <th style="text-align: center; vertical-align: middle"><i class="fa fa-usd" title="Return on Recycling"></i></th>
             </tr>
             </thead>
 
             <tbody class = "table_order">
             <% @all_levels.each do |level| %>
 
-                <tr class="gradeX" id = "sub_level_<%= level.id %>" value = "<%= level.id %>" order = "not-open">
-                  <td>
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="font-size: 18px;">
-                      <i class="fa fa-list"></i>
-                    </a>
+                <tr class="gradeX" valign="middle"  id = "sub_level_<%= level.id %>" value = "<%= level.id %>" order = "not-open">
+                  <td  style="text-align: center;vertical-align: middle">
+                    <span class="dropdown-toggle" data-toggle="dropdown" href="#" style="font-size: 18px;">
+                      <i class="fa fa-bars" style="cursor: pointer; font-size: 24px;"></i>
+                    </span>
 
                     <ul class="dropdown-menu dropdown-user" style="left:auto; top:auto;">
                       <li role="presentation">
@@ -244,18 +244,18 @@
                     </ul>
                   </td>
 
-                  <td><%= level.name %> <br /> Street <br /> City<br /> State, Zip<br />ID#: <%= tracking_number(level.id) %></td>
-                  <td><%= total_sub_level_count(level.id) %></td>
-                  <td><%= "#{level.id}" +'0000'%></td>
-                  <td class="center"><%= "#{level.id}" +'00'%></td>
-                  <td class="center"><%= "#{level.id}" +'0%'%></td>
-                  <td class="center"><%= "#{level.id}" +'000'%></td>
-                  <td class="center"><%= "#{level.id}" +'0'%></td>
-                  <td class="center"><%= "#{level.id}" +'0'%></td>
-                  <td class="center"><%= "#{level.id}" +'0'%></td>
-                  <td class="center"><%= "#{level.id}" +'0%'%></td>
-                  <td class="center"><%= "#{level.id}" +'0'%></td>
-                  <td class="center"><%= "#{level.id}" +'0'%></td>
+                  <td><b><%= level.name %></b> <br /> Street <br /> City, State, Zip<br />ID#: <%= tracking_number(level.id) %></td>
+                  <td style="text-align: center;vertical-align: middle"><%= total_sub_level_count(level.id) %></td>
+                  <td style="text-align: center;vertical-align: middle"><%= "#{level.id}" +'0000'%></td>
+                  <td style="text-align: center;vertical-align: middle"><%= "#{level.id}" +'00'%></td>
+                  <td style="text-align: center;vertical-align: middle"><%= "#{level.id}" +'0%'%></td>
+                  <td style="text-align: center;vertical-align: middle"><%= "#{level.id}" +'000'%></td>
+                  <td style="text-align: center;vertical-align: middle"><%= "#{level.id}" +'0'%></td>
+                  <td style="text-align: center;vertical-align: middle"><%= "#{level.id}" +'0'%></td>
+                  <td style="text-align: center;vertical-align: middle"><%= "#{level.id}" +'0'%></td>
+                  <td style="text-align: center;vertical-align: middle"><%= "#{level.id}" +'0%'%></td>
+                  <td style="text-align: center;vertical-align: middle"><%= "#{level.id}" +'0'%></td>
+                  <td style="text-align: center;vertical-align: middle"><%= "#{level.id}" +'0'%></td>
                 </tr>
 
 
@@ -319,18 +319,6 @@
 <%= render partial: "reports_base_page"%>
 <%= render partial: "wgu_settings_page"%>
 <%= render partial: "wgu_add_data"%>
-
-
-
-
-
-<% content_for :javascript do %>
-
-
-
-<% end %>
-
-
 
 
 <script>
