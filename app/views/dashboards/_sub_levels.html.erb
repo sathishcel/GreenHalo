@@ -47,7 +47,7 @@
 
 <% unless sub_level.blank? %>
     <% sub_level.each do |level| %>
-        <tr class="gradeA" id = "sub_level_<%= level.id %>" value = "<%= level.id %>" order = "not-open">
+        <tr class="gradeA sequence_<%= level.parent_list_counts(level) %>" id = "sub_level_<%= level.id %>" value = "<%= level.id %>" order = "not-open">
           <td style="text-align: center; vertical-align: middle">
             <div class="company-img dropdown">
               <span class="dropdown-toggle" data-toggle="dropdown" href="#" style="font-size: 18px;">
@@ -133,4 +133,7 @@
     .wt-trho:hover{
         background-color: #cccccc !important;
     }
+    .sequence_2 {background-color: #199d82;}
+    .sequence_3 {background-color: #b3b245;}
+    .sequence_4 {background-color: #9BD1FB;}
 </style>

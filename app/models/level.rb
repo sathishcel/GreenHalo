@@ -22,6 +22,24 @@ class Level < ActiveRecord::Base
     return list.reverse
   end
 
+  def parent_list_counts(level_obj)
+    sequence_number = 1
+    obj = level_obj
+    parent_check = Proc.new {|new_obj| new_obj.try(:level)}
+    parent_level = parent_check.call(obj)
+    if parent_level
+      sequence_number = sequence_number + 1
+      if parent_check.call(obj.level)
+        sequence_number = sequence_number + 1
+        if parent_check.call(obj.level.level)
+          sequence_number = sequence_number + 1
+        end
+      end
+    end
+    return sequence_number
+  end
+
+
 
 
 
