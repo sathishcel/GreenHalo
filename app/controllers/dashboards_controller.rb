@@ -63,4 +63,12 @@ class DashboardsController < ApplicationController
 
   end
 
+  def custom_level_adding
+
+  end
+
+  def custom_wgu_adding
+
+  end
+
 end

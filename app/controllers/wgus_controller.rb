@@ -1,7 +1,6 @@
 class WgusController < ApplicationController
 
   def  create
-    render :text => params.inspect and return false
     if params[:wgu].present?
       params[:wgu].keys.each do |u|
         @wgu = Wgu.new(params[:wgu][u].permit(:name, :level_id))

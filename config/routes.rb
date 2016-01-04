@@ -55,8 +55,10 @@ Myapp::Application.routes.draw do
 
   resources :levels
   resources :wgus
-  get "wgu/:id/add_menu_level/:id"  => 'dashboards#add_menu_level'
+  #get "wgu/:id/add_menu_level/:id"  => 'dashboards#add_menu_level'
 
+  get "custom_level_adding/:id" => 'dashboards#custom_level_adding' ,as: :custom_level
+  get "custom_wgu_adding/:id" => 'dashboards#custom_wgu_adding' ,as: :custom_wgu
 
   # All routes
   post "dashboards/create" => 'dashboards#create'
