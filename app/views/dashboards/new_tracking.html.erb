@@ -229,12 +229,12 @@
                         </a>
                       </li>
                       <li role="presentation">
-                        <%= link_to "Add Level" ,custom_level_path(level.id),remote: true ,:style => "color:#058F26;" %>
+                        <%= link_to "Add Level" ,custom_level_path(level.id),remote: true ,:style => "color:#058F26;" ,:"data-toggle" => "modal", :"data-target" => "#level-modal" ,:value => "#{level.id}" %>
                       </li>
 
 
                       <li role="presentation">
-                        <%= link_to "Add Level" ,custom_wgu_path(level.id), remote: true ,:style => "color:#058F26;" ,"data-toggle" => "modal", "data-target" => "level-modal"  %>
+                        <%= link_to "Add wgu" ,custom_wgu_path(level.id), remote: true ,:style => "color:#058F26;"  ,:"data-toggle" => "modal", :"data-target" => "#wgu-modal" %>
                       </li>
                       <li role="presentation">
                         <a role="menuitem" tabindex="-1" href="#" style="color:#058F26;">
@@ -275,44 +275,11 @@
 
 
 
-<div class="modal fade" id="addlevel" role="dialog">
-  <div class="modal-dialog">
 
 
+<%= render partial: "level_model_content"%>
 
-    <div class="modal-content">
-
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Add Level</h4>
-      </div>
-
-
-      <div class="modal-body" style="min-height:50px !important; padding: 20px 0px 0px 0px;">
-        <!--<p>This is a small modal.</p>-->
-        <div align="right">
-          Add and Assign New Level:
-
-          <%= select_tag "multi_level_selection", options_for_select(1..10, :selected => 1), :'data-remote' => 'true',
-                         :'data-url' => url_for(:controller => 'dashboards', :action => 'new_tracking'),
-                         :style => "width:17%;display:inline-block;  margin-right: 25px;" ,:class => "form-control" %>
-
-
-        </div>
-
-        <div id = "custom_loading_level">
-
-        </div>
-      </div>
-
-    </div>
-
-
-
-  </div>
-</div>
-
-
+<%= render partial: "wgu_model_content"%>
 
 
 <%= render partial: "level_setttings_base_page"%>

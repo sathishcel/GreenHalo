@@ -75,14 +75,15 @@
                 </li>
 
                 <li role="presentation">
+                  <%= link_to "Add Level" ,custom_level_path(level.id),remote: true ,:style => "color:#058F26;" ,:"data-toggle" => "modal", :"data-target" => "#level-modal" ,:value => "#{level.id}" %>
+                </li>
 
-                  <%= link_to "Add Level", "wgu/#{level.id}/add_menu_level/#{level.id}", :remote => true,
-                              :class => "add_next_level", :style => "color:#058F26;" %>
-                </li>
+
                 <li role="presentation">
-                  <%= link_to "Add WGU", "wgu/#{level.id}/add_menu_level/#{level.id}", :remote => true,
-                              :class => "add_level_to_wgu", :style => "color:#058F26;" %>
+                  <%= link_to "Add wgu" ,custom_wgu_path(level.id), remote: true ,:style => "color:#058F26;"  ,:"data-toggle" => "modal", :"data-target" => "#wgu-modal" %>
                 </li>
+
+
 
                 <li role="presentation">
                   <a role="menuitem" tabindex="-1" href="#" style="color:#058F26;">
@@ -110,6 +111,10 @@
     <%end%>
 
 <%end%>
+
+<%= render partial: "level_model_content"%>
+
+<%= render partial: "wgu_model_content"%>
 
 
 <script>

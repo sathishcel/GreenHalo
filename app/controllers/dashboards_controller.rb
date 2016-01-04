@@ -64,11 +64,11 @@ class DashboardsController < ApplicationController
   end
 
   def custom_level_adding
-
+     @level = Level.find(params[:id])
   end
 
   def custom_wgu_adding
-
+    @wgu_level = Level.find(params[:id])
   end
 
 end

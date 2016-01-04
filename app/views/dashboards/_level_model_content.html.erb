@@ -1,0 +1,45 @@
+<div class="modal fade" id="level-modal" role="dialog">
+  <div class="modal-dialog">
+
+
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Add Level</h4>
+      </div>
+
+
+      <div class="modal-body" style="min-height:50px !important; padding: 20px 0px 0px 0px;">
+        <!--<p>This is a small modal.</p>-->
+        <div align="right">
+
+          Add and Assign New Level:
+
+          <%= select_tag "level_selection", options_for_select(1..10, :selected => 1), :'data-remote' => 'true',
+                         :'data-url' => url_for(:controller => 'dashboards', :action => 'custom_level_adding' ,:id => ""),
+                         :style => "width:17%;display:inline-block;  margin-right: 25px;" ,:class => "form-control" %>
+
+
+        </div>
+
+
+        <%= form_tag  "/levels" ,:class => "form-inline" ,:'role' => "form" do %>
+            <div id = "custom_loading_level">
+
+            </div>
+
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <%= submit_tag "ADD LEVEL", :class => "btn btn-success" %>
+            </div>
+
+        <%end%>
+      </div>
+
+    </div>
+
+
+
+  </div>
+</div>

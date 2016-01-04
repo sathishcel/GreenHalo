@@ -1,0 +1,6 @@
+$("#custom_loading_level").html("<%= escape_javascript(render :partial => '/dashboards/add_more_levels',
+:locals => {:level_object => @level }) %>");
+
+var obj_id = "<%= @level.id %>";
+
+$("#level_selection").attr("data-url","/custom_level_adding/"+obj_id);

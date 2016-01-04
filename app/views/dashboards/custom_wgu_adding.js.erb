@@ -1,0 +1,6 @@
+$("#custom_loading_wgu").html("<%= escape_javascript(render :partial => '/dashboards/add_more_wgus',
+:locals => {:level_object => @wgu_level }) %>");
+
+var obj_id = "<%= @wgu_level.id %>";
+
+$("#level_assigning").attr("data-url","/custom_wgu_adding/"+obj_id);
