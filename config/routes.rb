@@ -22,6 +22,8 @@ Myapp::Application.routes.draw do
 
   resources :business_level_settings, :path => ':domain/:user_type/business_level_settings' do
     collection do
+      get :terms_conditions
+      get :franchise_aggrement
     end
   end
 
@@ -53,7 +55,11 @@ Myapp::Application.routes.draw do
     end
   end
 
-  resources :levels
+  resources :levels do
+    collection do
+      get :get_level
+    end
+  end
   resources :wgus
   #get "wgu/:id/add_menu_level/:id"  => 'dashboards#add_menu_level'
 

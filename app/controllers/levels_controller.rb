@@ -25,4 +25,11 @@ class LevelsController < ApplicationController
     end
     redirect_to new_tracking_path
   end
+
+  def get_level
+    #@level = Level.find(params[:id])
+    @wgu = Wgu.first
+
+    render partial: "get_level"
+  end
 end
