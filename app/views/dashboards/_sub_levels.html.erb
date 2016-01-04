@@ -3,10 +3,10 @@
 
         <tr class="gradeX" id = "sub_wgu_<%= wgu.id %>" value = "<%= wgu.id %>">
 
-          <td>
+          <td style="text-align: center; vertical-align: middle">
             <div class="company-img dropdown">
               <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="font-size: 18px;">
-                <i class="fa fa-wrench"></i>
+                <i class="fa fa-wrench" style="font-size: 24px;"></i>
               </a>
 
               <ul class="dropdown-menu dropdown-user">
@@ -28,18 +28,18 @@
             </div>
 
           </td>
-          <td><b><%= wgu.name %></b> <br /> Street <br /> City <br /> State, Zip<br />ID#: <%= tracking_number(wgu.id) %></td>
-          <td></td>
-          <td><%= "#{wgu.id}" +'0000'%></td>
-          <td class="center"><%= "#{wgu.id}" +'00'%></td>
-          <td class="center"><%= "#{wgu.id}" +'0%'%></td>
-          <td class="center"><%= "#{wgu.id}" +'000'%></td>
-          <td class="center"><%= "#{wgu.id}" +'0'%></td>
-          <td class="center"><%= "#{wgu.id}" +'0'%></td>
-          <td class="center"><%= "#{wgu.id}" +'0'%></td>
-          <td class="center"><%= "#{wgu.id}" +'0%'%></td>
-          <td class="center"><%= "#{wgu.id}" +'0'%></td>
-          <td class="center"><%= "#{wgu.id}" +'0'%></td>
+          <td style="color: blue"><b><%= wgu.name %></b> <br /> Street <br /> City, State, Zip<br />ID#: <%= tracking_number(wgu.id) %></td>
+          <td style="text-align: center; vertical-align: middle"></td>
+          <td style="text-align: center; vertical-align: middle"><%= "#{wgu.id}" +'0000'%></td>
+          <td style="text-align: center; vertical-align: middle"><%= "#{wgu.id}" +'00'%></td>
+          <td style="text-align: center; vertical-align: middle"><%= "#{wgu.id}" +'0%'%></td>
+          <td style="text-align: center; vertical-align: middle"><%= "#{wgu.id}" +'000'%></td>
+          <td style="text-align: center; vertical-align: middle"><%= "#{wgu.id}" +'0'%></td>
+          <td style="text-align: center; vertical-align: middle"><%= "#{wgu.id}" +'0'%></td>
+          <td style="text-align: center; vertical-align: middle"><%= "#{wgu.id}" +'0'%></td>
+          <td style="text-align: center; vertical-align: middle"><%= "#{wgu.id}" +'0%'%></td>
+          <td style="text-align: center; vertical-align: middle"><%= "#{wgu.id}" +'0'%></td>
+          <td style="text-align: center; vertical-align: middle"><%= "#{wgu.id}" +'0'%></td>
         </tr>
 <% end %>
 <% end %>
@@ -48,7 +48,7 @@
 <% unless sub_level.blank? %>
     <% sub_level.each do |level| %>
         <tr class="gradeA" id = "sub_level_<%= level.id %>" value = "<%= level.id %>" order = "not-open">
-          <td style="text-align: center;">
+          <td style="text-align: center; vertical-align: middle">
             <div class="company-img dropdown">
               <span class="dropdown-toggle" data-toggle="dropdown" href="#" style="font-size: 18px;">
                 <i class="fa fa-bars" style="cursor: pointer; font-size: 24px;"></i>
@@ -94,18 +94,18 @@
 
           </td>
 
-          <td class = "sorting_1" ><b><%= level.name %></b> <br /> Street <br /> City<br /> State, Zip<br />ID#: <%= tracking_number(level.id) %></td>
-          <td ><%= total_sub_level_count(level.id) %></td>
-          <td ><%= "#{level.id}" +'0000'%></td>
-          <td class="center"><%= "#{level.id}" +'00'%></td>
-          <td class="center"><%= "#{level.id}" +'0%'%></td>
-          <td class="center"><%= "#{level.id}" +'000'%></td>
-          <td class="center"><%= "#{level.id}" +'0'%></td>
-          <td class="center"><%= "#{level.id}" +'0'%></td>
-          <td class="center"><%= "#{level.id}" +'0'%></td>
-          <td class="center"><%= "#{level.id}" +'0%'%></td>
-          <td class="center"><%= "#{level.id}" +'0'%></td>
-          <td class="center"><%= "#{level.id}" +'0'%></td>
+          <td class = "sorting_1" ><b><%= level.name %></b> <br /> Street <br /> City, State, Zip<br />ID#: <%= tracking_number(level.id) %></td>
+          <td style="text-align: center; vertical-align: middle"><%= total_sub_level_count(level.id) %></td>
+          <td style="text-align: center; vertical-align: middle"><%= "#{level.id}" +'0000'%></td>
+          <td style="text-align: center; vertical-align: middle"><%= "#{level.id}" +'00'%></td>
+          <td style="text-align: center; vertical-align: middle"><%= "#{level.id}" +'0%'%></td>
+          <td style="text-align: center; vertical-align: middle"><%= "#{level.id}" +'000'%></td>
+          <td style="text-align: center; vertical-align: middle"><%= "#{level.id}" +'0'%></td>
+          <td style="text-align: center; vertical-align: middle"><%= "#{level.id}" +'0'%></td>
+          <td style="text-align: center; vertical-align: middle"><%= "#{level.id}" +'0'%></td>
+          <td style="text-align: center; vertical-align: middle"><%= "#{level.id}" +'0%'%></td>
+          <td style="text-align: center; vertical-align: middle"><%= "#{level.id}" +'0'%></td>
+          <td style="text-align: center; vertical-align: middle"><%= "#{level.id}" +'0'%></td>
         </tr>
     <%end%>
 
