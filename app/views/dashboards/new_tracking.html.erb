@@ -26,108 +26,188 @@
         <div class="ibox-title">
           <h5>Waste Generating Units</h5>
         </div>
-        <div class="ibox-tools">
+        <div class="ibox-content">
           <div align="left" class="" style="background-color: #fff;">
-            <a class="btn btn-primary " id = "add_wgu_button" >Add WGU</a>
-            <a class="btn btn-primary " id = "add_level_button">Add Level</a>
+            <a class="btn btn-primary " data-toggle="modal" data-target="#addwgu" >Add WGU</a>
+            <a class="btn btn-primary " data-toggle="modal" data-target="#addlevel">Add Level</a>
             <a class="btn btn-primary " href="javascript:void(0);" onclick="">Expand All</a>
             <a class="btn btn-primary  collapse-link " >Collapse All</a>
           </div>
         </div>
-        <div class="ibox-content">
+        <div class="ibox-content" style="border-width:0 !important;">
 
 
-          <div id = "add_wgu_popup" style = "display:none;">
-            <div id="vendor_selection">
-            Add and Assign WGU
+          <div class="modal fade" id="addwgu" role="dialog">
+            <div class="modal-dialog">
 
-              <%= select_tag "more_wgu_selection", options_for_select(1..10, :selected => 1), :'data-remote' => 'true',
-                             :'data-url' => url_for(:controller => 'dashboards', :action => 'add_more_wgus'),
-                             :style => "width:17%;height:10%;  margin-right: 25px;" %>
+
+
+                <div class="modal-content">
+
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Add Wgu</h4>
+                  </div>
+
+
+                  <div class="modal-body" style="min-height:50px !important; padding: 20px 0px 0px 0px;">
+                    <!--<p>This is a small modal.</p>-->
+                    <div align="right">
+                      Add and Assign New Level:
+
+                      <%= select_tag "more_wgu_selection", options_for_select(1..10, :selected => 1), :'data-remote' => 'true',
+                                     :'data-url' => url_for(:controller => 'dashboards', :action => 'add_more_wgus'),
+                                     :style => "width:17%;display:inline-block;  margin-right: 25px;" ,:class => "form-control" %>
+
+
+                    </div>
+
+                    <%= form_tag  "/wgus" ,:class => "form-inline" ,:'role' => "form" do %>
+
+                    <div id = "load_additional_wgu" style="padding: 30px;">
+
+
+
+                      <ol>
+                        <% for i in 1..@wgu_limit %>
+                            <li class="wgu-input-div" >
+
+
+                              <div class="form-group">
+                                <label class="sr-only" for="exampleInputEmail2">Enter Level Name</label>
+                                <%= text_field_tag "wgu[#{i}][name]", "",:class => "form-control", :placeholder => "Enter WGU Name" %>
+                              </div>
+
+                              <div class="form-group">
+                                <label class="sr-only" for="exampleSelect">Select</label>
+                                <%= select_tag "wgu[#{i}][level_id]", options_for_select(Level.all.map{|i| [i.name,i.id]}), :class => "form-control",
+                                               :style => "height:25%;", :prompt => @all_levels.blank? ? "Select Level" : "Assign To Level" %>
+                              </div>
+                            </li>
+                        <%end%>
+                      </ol>
+
+
+
+                    </div>
+
+
+
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                      <%= submit_tag "ADD WGU", :class => "btn btn-success" %>
+                    </div>
+
+                   <%end%>
+
+                  </div>
+
+                </div>
+
+
 
             </div>
+          </div>
 
-            <div class="wgu-input-container" align="left">
-              <div id="load_additional_wgu">
-                <%= form_tag( "/wgus") do %>
 
-                    <ol style="margin:-1px;; padding-left:20px; width:100%;">
-                      <% for i in 1..@wgu_limit %>
-                          <li class="wgu-input-div">
-                            <%= text_field_tag "wgu[#{i}][name]", "", :placeholder => "Enter WGU Name",
-                                               :style => "border-radius: 5px;border: #C9C9C9 1px solid;width: 47%;height:25%;padding: 2px 5px;font-size:13px;" %>
+          <div class="modal fade" id="addlevel" role="dialog">
+            <div class="modal-dialog">
 
-                            <%= select_tag "wgu[#{i}][level_id]", options_for_select(Level.all.map{|i| [i.name,i.id]}), :class => "wgu_vend_select",
-                                           :style => "height:25%;", :prompt => @all_levels.blank? ? "Select Level" : "Assign To Level" %>
 
-                          </li>
-                      <% end %>
-                    </ol>
-                    <%= submit_tag "ADD WGU", :class => "button", :id => "add-wgu", :style => "margin-right: 20px;" %>
-                <% end %>
+
+              <div class="modal-content">
+
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">Add Level</h4>
+                </div>
+
+
+                <div class="modal-body" style="min-height:50px !important; padding: 20px 0px 0px 0px;">
+                  <!--<p>This is a small modal.</p>-->
+                  <div align="right">
+                    Add and Assign New Level:
+
+                    <%= select_tag "multi_level_selection", options_for_select(1..10, :selected => 1), :'data-remote' => 'true',
+                                   :'data-url' => url_for(:controller => 'dashboards', :action => 'new_tracking'),
+                                   :style => "width:17%;display:inline-block;  margin-right: 25px;" ,:class => "form-control" %>
+
+
+                  </div>
+
+                  <%= form_tag  "/levels" ,:class => "form-inline" ,:'role' => "form" do %>
+
+                      <div id = "multi_level_loading_div" style="padding: 30px;">
+
+                        <ol>
+                          <% for i in 1..@wgu_limit %>
+                              <li class="wgu-input-div">
+
+
+                                <div class="form-group">
+                                  <label class="sr-only" for="exampleInputEmail2">Enter Level Name</label>
+                                  <%= text_field_tag "level[#{i}][name]", "",:class => "form-control", :placeholder => "Enter Level Name" %>
+                                </div>
+
+                                <div class="form-group">
+                                  <label class="sr-only" for="exampleSelect">Select</label>
+                                  <%= select_tag "level[#{i}][level_id]", options_for_select(Level.all.map{|i| [i.name,i.id]}), :class => "form-control",
+                                                 :style => "height:25%;", :prompt => @all_levels.blank? ? "Select Level" : "Assign To Level" %>
+                                </div>
+                              </li>
+                          <%end%>
+
+                        </ol>
+
+                      </div>
+
+
+
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <%= submit_tag "ADD LEVEL", :class => "btn btn-success" %>
+                      </div>
+
+                  <%end%>
+
+                </div>
+
               </div>
 
-            </div>
-            </div>
 
-          <div id = "add_level_popup" style = "display:none;">
-            <span style="float:left;padding-left: 31px;" class="">Add and Assign New Level</span>
-            <div id="vendor_selection" >
-              <%= select_tag "multi_level_selection", options_for_select(1..10, :selected => 1),
-                             :'data-remote' => 'true',
-                             :'data-url' => url_for(:controller => 'dashboards', :action => 'new_tracking'),:style => "width:17%;height:10%; margin-left: 21px;" %>
 
             </div>
-
-            <div id="multi_level_loading_div">
-
-            <%= form_tag "/levels", :method => :post do %>
-                <ol >
-                  <% for i in 1 .. @wgu_limit %>
-                      <li>
-                        <%= text_field_tag "level[#{i}][name]", "", :placeholder => "Enter Level Name",
-                                           :style => "border-radius: 5px;border: #C9C9C9 1px solid;width: 47%;height:25%;padding: 2px 5px;font-size: 13px;" %>
-                        <%= select_tag "level[#{i}][level_id]", options_for_select(Level.all.map{|i| [i.name,i.id]}),
-                               :class => "wgu_vend_select", :style => "height:25%", :prompt => @all_levels.blank? ? "Select Level" : "Assign as SubLevel To" %>
-                      </li>
-                  <%end%>
-                  <%= submit_tag "ADD LEVEL", :class => "button", :style => "float:right;margin-right: 20px;" %>
-                </ol>
-            <%end%>
-
-            </div>
-
           </div>
 
 
 
-          <table class="table table-bordered table-hover dataTables-example">
+          <table class="table table-bordered table-hover dataTables-example gh-table-valign-mid">
             <thead>
             <tr id= "tracking_header">
-              <th>Menu</th>
-              <th>Waste Generating Units</th>
-              <th>#of Units</th>
-              <th>Tons Disposed</th>
-              <th>Tons Recycled</th>
-              <th>Recycling Rate</th>
-              <th>Disposal Costs</th>
-              <th>Return on Recycling</th>
-              <th>Gallons Disposed</th>
-              <th>Gallons Recycled</th>
-              <th>Recycling Rate</th>
-              <th>Disposal Costs</th>
-              <th>Return on Recycling</th>
+              <th style="text-align: center; vertical-align: middle">Menu</th>
+              <th style="text-align: center; vertical-align: middle">Waste Generating Units</th>
+              <th style="text-align: center; vertical-align: middle">#of Units</th>
+              <th style="text-align: center; vertical-align: middle"><i class="fa fa-square" style="color:#ff0000;" title="Tons Disposed"></i></th>
+              <th style="text-align: center; vertical-align: middle"><i class="fa fa-square" style="color:#5cd65c;" title="Tons Recycled"></i></th>
+              <th style="text-align: center; vertical-align: middle"><i class="fa fa-recycle" title="Recycling Rate"></i></th>
+              <th style="text-align: center; vertical-align: middle"><i class="fa fa-trash" title="Disposal Costs"></i></th>
+              <th style="text-align: center; vertical-align: middle"><i class="fa fa-usd" title="Return on Recycling"></i></th>
+              <th style="text-align: center; vertical-align: middle"><i class="fa fa-tint" style="color: #3366ff;" title="Gallons Disposed"></i></th>
+              <th style="text-align: center; vertical-align: middle"><i class="fa fa-recycle" style="color:#5cd65c;" title="Gallons Recycled"></i></th>
+              <th style="text-align: center; vertical-align: middle"><i class="fa fa-recycle" title="Recycling Rate"></i></th>
+              <th style="text-align: center; vertical-align: middle"><i class="fa fa-trash" title="Disposal Costs"></i></th>
+              <th style="text-align: center; vertical-align: middle"><i class="fa fa-usd" title="Return on Recycling"></i></th>
             </tr>
             </thead>
 
             <tbody class = "table_order">
             <% @all_levels.each do |level| %>
 
-                <tr class="gradeX" id = "sub_level_<%= level.id %>" value = "<%= level.id %>" order = "not-open">
-                  <td>
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="font-size: 18px;">
-                      <i class="fa fa-list"></i>
-                    </a>
+                <tr style="background-color: #B6B6B4;" class="gradeX" valign="middle"  id = "sub_level_<%= level.id %>" value = "<%= level.id %>" order = "not-open">
+                  <td  style="text-align: center;vertical-align: middle">
+                    <span class="dropdown-toggle" data-toggle="dropdown" href="#" style="font-size: 18px;">
+                      <i class="fa fa-bars" style="cursor: pointer; font-size: 24px;"></i>
+                    </span>
 
                     <ul class="dropdown-menu dropdown-user" style="left:auto; top:auto;">
                       <li role="presentation">
@@ -165,18 +245,18 @@
                     </ul>
                   </td>
 
-                  <td><%= level.name %> <br /> Street <br /> City<br /> State, Zip<br />ID#: <%= tracking_number(level.id) %></td>
-                  <td><%= total_sub_level_count(level.id) %></td>
-                  <td><%= "#{level.id}" +'0000'%></td>
-                  <td class="center"><%= "#{level.id}" +'00'%></td>
-                  <td class="center"><%= "#{level.id}" +'0%'%></td>
-                  <td class="center"><%= "#{level.id}" +'000'%></td>
-                  <td class="center"><%= "#{level.id}" +'0'%></td>
-                  <td class="center"><%= "#{level.id}" +'0'%></td>
-                  <td class="center"><%= "#{level.id}" +'0'%></td>
-                  <td class="center"><%= "#{level.id}" +'0%'%></td>
-                  <td class="center"><%= "#{level.id}" +'0'%></td>
-                  <td class="center"><%= "#{level.id}" +'0'%></td>
+                  <td><b><%= level.name %></b> <br /> Street <br /> City, State, Zip<br />ID#:<%= tracking_number(level.id) %></td>
+                  <td style="text-align: center;vertical-align: middle"><%= total_sub_level_count(level.id) %></td>
+                  <td style="text-align: center;vertical-align: middle"><%= "#{level.id}" +',999,999.99'%></td>
+                  <td style="text-align: center;vertical-align: middle"><%= "#{level.id}" +',000,000.99'%></td>
+                  <td style="text-align: center;vertical-align: middle"><%= "#{level.id}" +'0%'%></td>
+                  <td style="text-align: center;vertical-align: middle"><%= "#{level.id}" +',999,999.99'%></td>
+                  <td style="text-align: center;vertical-align: middle"><%= "#{level.id}" +'000.00'%></td>
+                  <td style="text-align: center;vertical-align: middle"><%= "#{level.id}" +',000,000.99'%></td>
+                  <td style="text-align: center;vertical-align: middle"><%= "#{level.id}" +',999,999.99'%></td>
+                  <td style="text-align: center;vertical-align: middle"><%= "#{level.id}" +'0.05%'%></td>
+                  <td style="text-align: center;vertical-align: middle"><%= "#{level.id}" +',000,000.99'%></td>
+                  <td style="text-align: center;vertical-align: middle"><%= "#{level.id}" +'000.00'%></td>
                 </tr>
 
 
@@ -198,85 +278,6 @@
 <%= render partial: "reports_base_page"%>
 <%= render partial: "wgu_settings_page"%>
 <%= render partial: "wgu_add_data"%>
-
-
-<style>
-    #add_wgu_popup{
-        background-color: #fff;
-        position: absolute;
-        z-index: 10;
-        padding: 10px 5px;
-        border: #C9C9C9 1px solid;
-        margin-top: -15px;
-        border-radius: 8px;
-        right: 66%;
-    }
-    #add_level_popup{
-        background-color: #fff;
-        position: absolute;
-        z-index: 10;
-        padding: 15px 5px 12px 3px;
-        border: #C9C9C9 1px solid;
-        margin-top: -15px;
-        border-radius: 8px;
-        margin-left: 10%;
-        right: 50%;
-    }
-</style>
-
-
-<% content_for :javascript do %>
-
-    <script type="text/javascript">
-
-
-        $(function() {
-
-            $('.dataTables-example').dataTable({
-                "dom": 'T<"clear">lfrtip',
-                "tableTools": {
-                    "sSwfPath": "../assets/dataTables/swf/copy_csv_xls_pdf.swf"
-                }
-            });
-
-            /* Init DataTables */
-            var oTable = $('#editable').dataTable();
-
-            /* Apply the jEditable handlers to the table */
-            oTable.$('td').editable( '../example_ajax.php', {
-                "callback": function( sValue, y ) {
-                    var aPos = oTable.fnGetPosition( this );
-                    oTable.fnUpdate( sValue, aPos[0], aPos[1] );
-                },
-                "submitdata": function ( value, settings ) {
-                    return {
-                        "row_id": this.parentNode.getAttribute('id'),
-                        "column": oTable.fnGetPosition( this )[2]
-                    };
-                },
-
-                "width": "90%",
-                "height": "100%"
-            } );
-
-
-        });
-
-//        function fnClickAddRow() {
-//            $('#editable').dataTable().fnAddData( [
-//                "Custom row",
-//                "New row",
-//                "New row",
-//                "New row",
-//                "New row" ] );
-//
-//        }
-
-    </script>
-
-<% end %>
-
-
 
 
 <script>
@@ -396,9 +397,7 @@
       background-color: #cccccc !important;
   }
 
-        #tracking_header th {
-            cursor: pointer;
-        }
+
 
         .DTTT_container{
             display:none;
