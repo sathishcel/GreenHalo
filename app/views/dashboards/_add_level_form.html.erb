@@ -1,15 +1,20 @@
-<%= form_tag "/levels", :method => :post  do %>
+
 
     <ol style="margin:0; padding-left:20px; width:100%;">
       <% for i in 1..params[:multi_level_selection].to_i %>
           <li class="wgu-input-div">
-            <%= text_field_tag "level[#{i}][name]" ,"",:placeholder => "Enter Level Name" ,
-                               :style => "border-radius: 5px;border: #C9C9C9 1px solid;width: 47%;height:10%;padding: 2px 5px;" %>
-            <%= select_tag "level[#{i}][level_id]", options_for_select(Level.all.map{|i| [i.name,i.id]}) ,:class => "wgu_vend_select",
-                           :style =>  "height:25%",:prompt => "Select Level" %>
+
+
+            <div class="form-group">
+              <label class="sr-only" for="exampleInputEmail2">Enter Level Name</label>
+              <%= text_field_tag "level[#{i}][name]", "",:class => "form-control", :placeholder => "Enter Level Name" %>
+            </div>
+
+            <div class="form-group">
+              <label class="sr-only" for="exampleSelect">Select</label>
+              <%= select_tag "level[#{i}][level_id]", options_for_select(Level.all.map{|i| [i.name,i.id]}), :class => "form-control",
+                             :style => "height:25%;", :prompt => @all_levels.blank? ? "Select Level" : "Assign To Level" %>
+            </div>
           </li>
       <%end%>
     </ol>
-
-    <%= submit_tag "ADD LEVEL" ,:class => "button",:id => "add-level"  ,:style => "  margin-right: 18px;" %>
-<%end%>
