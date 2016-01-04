@@ -151,7 +151,7 @@
                       <li role="presentation">
 
                         <%= link_to "Add Level", "wgu/#{level.id}/add_menu_level/#{level.id}", :remote => true,
-                                    :class => "addwgu", :style => "color:#058F26;" %>
+                                    :class => "add_main_level", :style => "color:#058F26;" %>
                       </li>
                       <li role="presentation">
                         <%= link_to "Add WGU", "wgu/#{level.id}/add_menu_level/#{level.id}", :remote => true,
@@ -320,10 +320,9 @@
       });
 
 
-      $(".addwgu").click(function(e){
-          var elem1 = $(e.target).closest('.addwgu');
+      $(".add_main_level").click(function(e){
+          var elem1 = $(e.target).closest('.add_main_level');
           if ( elem1.length ) {
-              e.preventDefault();
               $('#add_level_popup').toggle();
               $(".dropdown-menu").hide();
 
@@ -336,6 +335,15 @@
               e.preventDefault();
               $('#add_wgu_popup').toggle();
               $(".dropdown-menu").hide();
+
+          }
+      });
+
+      $(".add_next_level").click(function(e){
+          var elem1 = $("#add_level_popup");
+          if ( elem1.length ) {
+              e.preventDefault();
+              $('#add_level_popup').toggle();
 
           }
       });
