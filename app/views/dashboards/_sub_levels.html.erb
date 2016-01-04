@@ -73,16 +73,17 @@
                     <div>Manage Portal</div>
                   </a>
                 </li>
+
                 <li role="presentation">
-                  <a role="menuitem" tabindex="-1" href="#" style="color:#058F26;">
-                    <div>Add Level</div>
-                  </a>
+
+                  <%= link_to "Add Level", "wgu/#{level.id}/add_menu_level/#{level.id}", :remote => true,
+                              :class => "add_next_level", :style => "color:#058F26;" %>
                 </li>
                 <li role="presentation">
-                  <a role="menuitem" class="addwgu" tabindex="-1" href="#" style="color:#058F26;">
-                    Add WGU
-                  </a>
+                  <%= link_to "Add WGU", "wgu/#{level.id}/add_menu_level/#{level.id}", :remote => true,
+                              :class => "add_level_to_wgu", :style => "color:#058F26;" %>
                 </li>
+
                 <li role="presentation">
                   <a role="menuitem" tabindex="-1" href="#" style="color:#058F26;">
                     Edit Profile
@@ -93,9 +94,9 @@
 
           </td>
 
-          <td><%= level.name %> <br /> Street <br /> City<br /> State, Zip<br />ID#: <%= tracking_number(level.id) %></td>
-          <td><%= total_sub_level_count(level.id) %></td>
-          <td><%= "#{level.id}" +'0000'%></td>
+          <td class = "sorting_1" ><%= level.name %> <br /> Street <br /> City<br /> State, Zip<br />ID#: <%= tracking_number(level.id) %></td>
+          <td ><%= total_sub_level_count(level.id) %></td>
+          <td ><%= "#{level.id}" +'0000'%></td>
           <td class="center"><%= "#{level.id}" +'00'%></td>
           <td class="center"><%= "#{level.id}" +'0%'%></td>
           <td class="center"><%= "#{level.id}" +'000'%></td>
@@ -121,8 +122,12 @@
                 url: url
             });
         });
+
+
     });
 </script>
+
+
 
 <style>
     .wt-trho:hover{
