@@ -245,18 +245,18 @@
                     </ul>
                   </td>
 
-                  <td><b><%= level.name %></b> <br /> Street <br /> City, State, Zip<br />ID#: <%= tracking_number(level.id) %></td>
+                  <td><b><%= level.name %></b> <br /> Street <br /> City, State, Zip<br />ID#:<%= tracking_number(level.id) %></td>
                   <td style="text-align: center;vertical-align: middle"><%= total_sub_level_count(level.id) %></td>
-                  <td style="text-align: center;vertical-align: middle"><%= "#{level.id}" +'0000'%></td>
-                  <td style="text-align: center;vertical-align: middle"><%= "#{level.id}" +'00'%></td>
+                  <td style="text-align: center;vertical-align: middle"><%= "#{level.id}" +',999,999.99'%></td>
+                  <td style="text-align: center;vertical-align: middle"><%= "#{level.id}" +',000,000.99'%></td>
                   <td style="text-align: center;vertical-align: middle"><%= "#{level.id}" +'0%'%></td>
-                  <td style="text-align: center;vertical-align: middle"><%= "#{level.id}" +'000'%></td>
-                  <td style="text-align: center;vertical-align: middle"><%= "#{level.id}" +'0'%></td>
-                  <td style="text-align: center;vertical-align: middle"><%= "#{level.id}" +'0'%></td>
-                  <td style="text-align: center;vertical-align: middle"><%= "#{level.id}" +'0'%></td>
-                  <td style="text-align: center;vertical-align: middle"><%= "#{level.id}" +'0%'%></td>
-                  <td style="text-align: center;vertical-align: middle"><%= "#{level.id}" +'0'%></td>
-                  <td style="text-align: center;vertical-align: middle"><%= "#{level.id}" +'0'%></td>
+                  <td style="text-align: center;vertical-align: middle"><%= "#{level.id}" +',999,999.99'%></td>
+                  <td style="text-align: center;vertical-align: middle"><%= "#{level.id}" +'000.00'%></td>
+                  <td style="text-align: center;vertical-align: middle"><%= "#{level.id}" +',000,000.99'%></td>
+                  <td style="text-align: center;vertical-align: middle"><%= "#{level.id}" +',999,999.99'%></td>
+                  <td style="text-align: center;vertical-align: middle"><%= "#{level.id}" +'0.05%'%></td>
+                  <td style="text-align: center;vertical-align: middle"><%= "#{level.id}" +',000,000.99'%></td>
+                  <td style="text-align: center;vertical-align: middle"><%= "#{level.id}" +'000.00'%></td>
                 </tr>
 
 
