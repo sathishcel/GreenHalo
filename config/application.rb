@@ -21,7 +21,14 @@ module Myapp
     # config.i18n.default_locale = :de
 
     config.assets.precompile += [ 'appviews.css', 'cssanimations.css', 'dashboards.css', 'forms.css', 'gallery.css', 'graphs.css', 'mailbox.css', 'miscellaneous.css', 'pages.css', 'tables.css', 'uielements.css', 'widgets.css' ]
-    config.assets.precompile += [ 'appviews.js', 'cssanimations.js', 'dashboards.js', 'forms.js', 'gallery.js', 'graphs.js', 'mailbox.js', 'miscellaneous.js', 'pages.js', 'tables.js', 'uielements.js', 'widgets.js', ]
+    config.assets.precompile += [ 'appviews.js', 'cssanimations.js', 'dashboards.js', 'forms.js', 'gallery.js', 'graphs.js', 'mailbox.js', 'miscellaneous.js', 'pages.js', 'tables.js', 'uielements.js', 'widgets.js', 'iCheck/icheck.min', 'staps/jquery.steps.min', 'validate/jquery.validate.min',
+                                  'dropzone/dropzone', 'summernote/summernote.min',
+                                  'colorpicker/bootstrap-colorpicker.min', 'cropper/cropper.min',
+                                  'datapicker/bootstrap-datepicker', 'ionRangeSlider/ion.rangeSlider.min',
+                                  'jasny/jasny-bootstrap.min', 'jsKnob/jquery.knob',
+                                  'nouslider/jquery.nouislider.min', 'switchery/switchery', 'chosen/chosen.jquery',
+                                  'fullcalendar/moment.min', 'clockpicker/clockpicker',
+                                  'daterangepicker/daterangepicker', 'select2/select2.full.min', "markerclusterer_packed", "signup"]
 
   end
 end

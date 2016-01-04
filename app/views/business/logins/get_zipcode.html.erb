@@ -4,7 +4,7 @@
     <div class="col-lg-12">
         <div class="ibox">
             <div class="ibox-title">
-                <h5>For <%= @signup_type %> Agencies only</h5>
+                <h5>For Business Agencies only</h5>
                 <div class="ibox-tools">
                     <a class="collapse-link">
                         <i class="fa fa-chevron-up"></i>
@@ -27,7 +27,7 @@
             </div>
             <div class="ibox-content">
                 <h2>
-                  <%= @signup_type %> Form
+                   Business Form
                 </h2>
 
                 <form id="form" action="#" class="wizard-big">
@@ -35,27 +35,31 @@
                     <fieldset style="position: unset;">
                         <h2>Pricing Information</h2>
                         <div class="row">
+
                             <div class="col-lg-8">
                               <div class="form-group">
                                 <div class="col-sm-10">
                                   <div class="row">
                                     <div class="col-md-4" style="width: 36.333%;">
-                                      <input id="zipcode" name="userName" type="text" class="form-control required" placeholder="Enter Postal or Zip code">
+                                      <input id="business_user_zipcode" name="userName" type="text"
+                                             class="form-control required" placeholder="Enter Postal or Zip code">
                                     </div>
-                                    <button class="btn btn-w-m btn-default" type="button">Start</button>
+                                    <button id="business_search_img" class="btn btn-w-m btn-default" type="button"
+                                            disabled="true" >Start</button>
                                   </div>
                                 </div>
                               </div>
                                 <div class="form-group">
-                                  <div>
                                     <img width="340" height="200" alt="Map" src="/assets/img/map.jpg" id="unloading_map" style="margin-top: 10px;">
+                                </div>
+                                  <div class="form-group">
                                     <div style="width: 340px; height: 200px; margin-left: 43px; display: none;" id="map"></div>
                                   </div>
+                                <div class="form-group">
+                                    <input id="post_location" name="userName" type="text" class="form-control required" placeholder="Local Verification" style="width: 47.3%;margin-bottom: 10px;">
                                 </div>
                                 <div class="form-group">
-                                    <input id="local_verification" name="userName" type="text" class="form-control required" placeholder="Local Verification" style="width: 47.3%;margin-bottom: 10px;">
-                                  <button class="btn btn-w-m btn-default" type="button" style="width: 19%;">Yes</button>
-                                  <button class="btn btn-w-m btn-default" type="button" style="width: 28%;">No, try again</button>
+                                    <button class="btn btn-w-m btn-default" type="button" style="width: 28%;margin-left: 60px;" id="reset_zipcode">No, try again</button>
                                 </div>
                             </div>
                             <div class="col-lg-4">
@@ -79,74 +83,74 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Confirm Email *</label>
-                                    <input id="address" name="address" type="text" class="form-control">
+                                    <input id="email" name="email" type="text" class="form-control">
                                 </div>
                                 <div class="form-group">
                                     <label>Password *</label>
-                                    <input id="address" name="address" type="text" class="form-control">
+                                    <input id="password" name="password" type="text" class="form-control">
                                 </div>
                                 <div class="form-group">
                                     <label>Confirm Password *</label>
-                                    <input id="address" name="address" type="text" class="form-control">
+                                    <input id="password" name="password" type="text" class="form-control">
                                 </div>
 
                               <div class="form-group">
                                 <label>First Name *</label>
-                                <input id="email" name="email" type="text" class="form-control required email">
+                                <input id="first_name" name="first_name" type="text" class="form-control required email">
                               </div>
                               <div class="form-group">
                                 <label>Last Name *</label>
-                                <input id="address" name="address" type="text" class="form-control">
+                                <input id="last_name" name="last_name" type="text" class="form-control">
                               </div>
                               <div class="form-group">
                                 <label>Position *</label>
-                                <input id="address" name="address" type="text" class="form-control">
+                                <input id="position" name="position" type="text" class="form-control">
                               </div>
                               <div class="form-group">
                                 <label>Company Name *</label>
-                                <input id="address" name="address" type="text" class="form-control">
+                                <input id="company_name" name="company_name" type="text" class="form-control">
                               </div>
                               <div class="form-group">
                                 <label>Company Website *</label>
-                                <input id="address" name="address" type="text" class="form-control">
+                                <input id="company_website" name="company_website" type="text" class="form-control">
                               </div>
                             </div>
 
                           <div class="col-lg-6">
                             <div class="form-group">
                               <label>Street Address *</label>
-                              <input id="name" name="name" type="text" class="form-control required">
+                              <input id="street" name="street" type="text" class="form-control required">
                             </div>
                             <div class="form-group">
                               <label>Suite/Unit *</label>
-                              <input id="surname" name="surname" type="text" class="form-control required">
+                              <input id="suit_unit" name="suit_unit" type="text" class="form-control required">
                             </div>
                             <div class="form-group">
                               <label>City *</label>
-                              <input id="name" name="name" type="text" class="form-control required">
+                              <input id="city" name="city" type="text" class="form-control required" readonly>
                             </div>
                             <div class="form-group">
                               <label>State *</label>
-                              <input id="surname" name="surname" type="text" class="form-control required">
+                              <input id="state" name="state" type="text" class="form-control required" readonly>
                             </div>
                             <div class="form-group">
-                              <label>Pincode *</label>
-                              <input id="name" name="name" type="text" class="form-control required">
+                              <label>Zipcode *</label>
+                              <input id="zip" name="zip" type="text" class="form-control required" readonly>
                             </div>
                             <div class="form-group">
                               <label>Phone *</label>
-                              <input id="surname" name="surname" type="text" class="form-control required">
+                              <input id="phone_number" name="phone_number" type="text" class="form-control required">
                             </div>
                             <div class="form-group">
                               <label>How do you heard about this? *</label>
-                              <input id="name" name="name" type="text" class="form-control required">
+                              <input id="how_heard" name="how_heard" type="text" class="form-control required">
                             </div>
                             <div class="form-group">
                               <label>Domain Name *</label>
-                              <input id="surname" name="surname" type="text" class="form-control required error">
+                              <input id="domain_name" name="domain_name" type="text" class="form-control required error">
                             </div>
                             <div class="form-group">
-                                <button class="btn btn-primary" type="button" style="margin-top: 29px;">Check Availability</button>
+                                <button id="check_avail" class="btn btn-primary" type="button" style="margin-top: 29px;">Check Availability</button>
                                 <span style="float: right;width: 57%;margin-top: 38px;">
                                   WasteTracking.com/XXXXXXXXXXXXX
                                 </span>
@@ -350,4 +354,181 @@ $(function() {
 
 </script>
 
+
+    <script type="text/javascript">
+        //Business - get location for zipcode entered
+        $(document).ready(function(){
+            $("#business_search_img").click(function(){
+                var zipcode = $("#business_user_zipcode").val();
+                if(zipcode != "") {
+                    $.ajax({
+                        type: "GET",
+                        url: "/business/logins/get_city_and_state",
+                        data: {zipcode: zipcode},
+                        dataType: "json"
+                    }).success(function (address_details) {
+                        if (address_details[3] == null || address_details[2] == null ){
+                            $(".form_submit_div :submit").css('background','#585858');
+                            //$(".zipcode_error_message").show();
+                            alert("Please enter valid zip code or postal code to get started. If your zip code or postal code is does not appear " +
+                                    "then please click the Help button or call tech support at 1-888-525-1301");
+                            $("#unloading_map").show();
+                            $("#map").hide();
+                            $("#post_location").val("Location Verification");
+                        }
+
+                        else{
+                            $("#unloading_map").hide();
+                            $("#map").show();
+                            var handler = Gmaps.build('Google', {markers: {clusterer: {maxZoom: 6, gridSize: 10}}});
+                            handler.buildMap({internal: {id: 'map'}}, function () {
+
+
+                                //$(".zipcode_error_message").hide();
+
+                                $("#post_location").val("Are you in " + address_details[3] + "," + " " + address_details[2] + "?").attr('readonly', true);
+                                $(".form_submit_div :submit").css('background','#99cc33')
+                                var markers = handler.addMarkers([
+                                    {lat: address_details[0], lng: address_details[1]}
+
+                                ]);
+                                handler.bounds.extendWith(markers);
+                                handler.fitMapToBounds();
+                                handler.getMap().setZoom(10);
+                            });
+
+                        }
+                    });
+                }
+                else{
+                    $("#map").hide();
+                    $("#unloading_map").show();
+                    //$(".zipcode_error_message").show();
+                    alert("Please enter valid zip code or postal code to get started. If your zip code or postal code is does not appear " +
+                            "then please click the Help button or call tech support at 1-888-525-1301");
+                    $("#post_location").val("Location Verification");
+                    return false;
+                }
+            });
+
+            $('.actions.clearfix ul li:nth-child(2)').click(function(){
+
+                if ($('#form-p-1').attr('class') == 'body') {
+
+                }
+
+                else {
+
+                    var zipcode = $("#business_user_zipcode").val();
+                    var city = $('#post_location').val().split(',')["0"].replace("Are you in ", "");
+                    var state = $('#post_location').val().split(',')["1"].split('?')[0].trim();
+
+
+                    $.ajax({
+                        url: "/business/logins/get_location_from_zipcode", // Route to the Script Controller method
+                        type: "GET",
+                        dataType: "json",
+                        data: {business_user_zipcode: zipcode, city: city, state: state},
+                        success: function (user) {
+                            $('#form-p-0').css('display', 'none');
+                            $('#form-p-1').css('display', 'block');
+                            $('.first.current').next().attr('class', 'current');
+                            $('.first.current').next().attr('attr-selected', 'true')
+                            $('.first.current').attr('aria-selected', 'false');
+                            $('.first.current').attr('class', 'first done');
+                            $('#city').val(city);
+                            $('#state').val(state);
+                            $('#zip').val(zipcode);
+                        }
+                    });
+                }
+
+            });
+
+
+            $('#business_user_zipcode').on('keyup', function() {
+
+                    if($(this).val().length > 4){
+                        $("#business_search_img").attr('class','btn btn-w-m btn-primary');
+                    } else{
+                        $("#business_search_img").attr('class','btn btn-w-m btn-default');
+                        $('#business_search_img').removeAttr('disabled');
+                    }
+
+            });
+
+            $("#reset_zipcode").click(function(){
+                $(".form_submit_div :submit,.verify-search").css('background','#585858');
+                $("#business_user_zipcode").val("");
+                return false;
+            });
+
+
+
+
+            $("#check_avail").click(function(){
+                var domain_val = $("#domain_name").val();
+                var pattern = /^[a-zA-Z0-9]*$/;
+
+                if (pattern.test(domain_val) == true) {
+                    if(domain_val != ""){
+                        $.ajax({
+                            url: "/business/logins/check_user_domain", // Route to the Script Controller method
+                            type: "GET",
+                            dataType: "json",
+                            data: { domain_name: domain_val }, // This goes to Controller in params hash, i.e. params[:file_name]
+
+                            success: function(data, textStatus, xhr) {
+                               alert(data);
+                                if(data[0] != null){
+
+                                }
+                                else {
+
+                                }
+
+                            },
+                            error: function() {
+                                alert("Ajax error!")
+                            }
+                        });
+                    }
+
+                    else{
+                        alert("Domain name can't be blank");
+                        return false;
+
+                    }
+                }
+                else {
+                    $(".button-account-submit").css('background', '#808080');
+                    $('.button-account-submit').attr('disabled','true');
+                }
+            });
+
+
+
+
+
+
+
+
+
+
+        });
+
+
+
+
+
+    </script>
+
 <% end %>
+
+
+<style>
+  #map {overflow: visible;
+    margin-left: 15px!important;
+    margin-top: 40px;
+  }
+</style>
