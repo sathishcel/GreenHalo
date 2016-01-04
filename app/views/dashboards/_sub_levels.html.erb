@@ -28,7 +28,7 @@
             </div>
 
           </td>
-          <td><%= wgu.name %> <br /> Street <br /> City <br /> State, Zip<br />ID#: <%= tracking_number(wgu.id) %></td>
+          <td><b><%= wgu.name %></b> <br /> Street <br /> City <br /> State, Zip<br />ID#: <%= tracking_number(wgu.id) %></td>
           <td></td>
           <td><%= "#{wgu.id}" +'0000'%></td>
           <td class="center"><%= "#{wgu.id}" +'00'%></td>
@@ -48,11 +48,11 @@
 <% unless sub_level.blank? %>
     <% sub_level.each do |level| %>
         <tr class="gradeA" id = "sub_level_<%= level.id %>" value = "<%= level.id %>" order = "not-open">
-          <td>
+          <td style="text-align: center;">
             <div class="company-img dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="font-size: 18px;">
-                <i class="fa fa-list"></i>
-              </a>
+              <span class="dropdown-toggle" data-toggle="dropdown" href="#" style="font-size: 18px;">
+                <i class="fa fa-bars" style="cursor: pointer; font-size: 24px;"></i>
+              </span>
 
               <ul class="dropdown-menu dropdown-user">
                 <li role="presentation">
@@ -94,7 +94,7 @@
 
           </td>
 
-          <td class = "sorting_1" ><%= level.name %> <br /> Street <br /> City<br /> State, Zip<br />ID#: <%= tracking_number(level.id) %></td>
+          <td class = "sorting_1" ><b><%= level.name %></b> <br /> Street <br /> City<br /> State, Zip<br />ID#: <%= tracking_number(level.id) %></td>
           <td ><%= total_sub_level_count(level.id) %></td>
           <td ><%= "#{level.id}" +'0000'%></td>
           <td class="center"><%= "#{level.id}" +'00'%></td>

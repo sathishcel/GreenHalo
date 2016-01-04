@@ -26,7 +26,7 @@
         <div class="ibox-title">
           <h5>Waste Generating Units</h5>
         </div>
-        <div class="ibox-tools">
+        <div class="ibox-content">
           <div align="left" class="" style="background-color: #fff;">
             <a class="btn btn-primary " id = "add_wgu_button" >Add WGU</a>
             <a class="btn btn-primary " id = "add_level_button">Add Level</a>
@@ -34,7 +34,7 @@
             <a class="btn btn-primary  collapse-link " >Collapse All</a>
           </div>
         </div>
-        <div class="ibox-content">
+        <div class="ibox-content" style="border-width:0 !important;">
 
 
           <div id = "add_wgu_popup" style = "display:none;">
@@ -101,33 +101,33 @@
 
 
 
-          <table class="table table-bordered table-hover dataTables-example">
+          <table class="table table-bordered table-hover dataTables-example gh-table-valign-mid">
             <thead>
             <tr id= "tracking_header">
               <th>Menu</th>
               <th>Waste Generating Units</th>
               <th>#of Units</th>
-              <th>Tons Disposed</th>
-              <th>Tons Recycled</th>
-              <th>Recycling Rate</th>
-              <th>Disposal Costs</th>
-              <th>Return on Recycling</th>
-              <th>Gallons Disposed</th>
-              <th>Gallons Recycled</th>
-              <th>Recycling Rate</th>
-              <th>Disposal Costs</th>
-              <th>Return on Recycling</th>
+              <th style="text-align: center; vertical-align: middle"><i class="fa fa-square" style="color:#ff0000;" title="Tons Disposed"></i></th>
+              <th style="text-align: center; vertical-align: middle"><i class="fa fa-square" style="color:#5cd65c;" title="Tons Recycled"></i></th>
+              <th style="text-align: center; vertical-align: middle"><i class="fa fa-recycle" title="Recycling Rate"></i></th>
+              <th style="text-align: center; vertical-align: middle"><i class="fa fa-trash" title="Disposal Costs"></i></th>
+              <th style="text-align: center; vertical-align: middle"><i class="fa fa-usd" title="Return on Recycling"></i></th>
+              <th style="text-align: center; vertical-align: middle"><i class="fa fa-tint" style="color: #3366ff;" title="Gallons Disposed"></i></th>
+              <th style="text-align: center; vertical-align: middle"><i class="fa fa-recycle" style="color:#5cd65c;" title="Gallons Recycled"></i></th>
+              <th style="text-align: center; vertical-align: middle"><i class="fa fa-recycle" title="Recycling Rate"></i></th>
+              <th style="text-align: center; vertical-align: middle"><i class="fa fa-trash" title="Disposal Costs"></i></th>
+              <th style="text-align: center; vertical-align: middle"><i class="fa fa-usd" title="Return on Recycling"></i></th>
             </tr>
             </thead>
 
             <tbody class = "table_order">
             <% @all_levels.each do |level| %>
 
-                <tr class="gradeX" id = "sub_level_<%= level.id %>" value = "<%= level.id %>" order = "not-open">
-                  <td>
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="font-size: 18px;">
-                      <i class="fa fa-list"></i>
-                    </a>
+                <tr class="gradeX" valign="middle"  id = "sub_level_<%= level.id %>" value = "<%= level.id %>" order = "not-open">
+                  <td  style="text-align: center;">
+                    <span class="dropdown-toggle" data-toggle="dropdown" href="#" style="font-size: 18px;">
+                      <i class="fa fa-bars" style="cursor: pointer; font-size: 24px;"></i>
+                    </span>
 
                     <ul class="dropdown-menu dropdown-user" style="left:auto; top:auto;">
                       <li role="presentation">
@@ -165,7 +165,7 @@
                     </ul>
                   </td>
 
-                  <td><%= level.name %> <br /> Street <br /> City<br /> State, Zip<br />ID#: <%= tracking_number(level.id) %></td>
+                  <td><b><%= level.name %></b> <br /> Street <br /> City<br /> State, Zip<br />ID#: <%= tracking_number(level.id) %></td>
                   <td><%= total_sub_level_count(level.id) %></td>
                   <td><%= "#{level.id}" +'0000'%></td>
                   <td class="center"><%= "#{level.id}" +'00'%></td>
@@ -221,6 +221,9 @@
         border-radius: 8px;
         margin-left: 10%;
         right: 50%;
+    }
+    .gh-table-valign-mid tr td{
+        vertical-align: middle !important;
     }
 </style>
 
