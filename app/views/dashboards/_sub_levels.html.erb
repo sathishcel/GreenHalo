@@ -52,9 +52,9 @@
         <tr class="gradeA" id = "sub_level_<%= level.id %>" value = "<%= level.id %>" order = "not-open">
             <td class="sequence_<%= level.get_level_and_wgu(level) %>">
               <% if level.get_sub_levels.blank? && level.wgus.blank? %>
-                <i class="fa fa-caret-up" style="font-size: 24px;margin-top: 24px;"></i>
+                <i class="fa fa-caret-up" style="font-size: 24px;margin-top: 24px;color: #ffffff;"></i>
               <% else %>
-                  <i class="fa fa-caret-down" style="font-size: 24px;margin-top: 24px;"></i>
+                  <i class="fa fa-caret-down" style="font-size: 24px;margin-top: 24px;color: #ffffff;"></i>
               <% end %>
             </td>
 
