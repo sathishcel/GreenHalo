@@ -7,9 +7,9 @@
           </td>
           <td style="text-align: center; vertical-align: middle">
             <div class="company-img dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="font-size: 18px;">
+              <span class="dropdown-toggle" data-toggle="dropdown" href="#" style="font-size: 18px;">
                 <i class="fa fa-wrench" style="font-size: 24px;"></i>
-              </a>
+              </span>
 
               <ul class="dropdown-menu dropdown-user">
                 <li>
@@ -30,7 +30,7 @@
             </div>
 
           </td>
-          <td style="color: blue"><b><%= wgu.name %></b> <br /> Street <br /> City, State, Zip<br />ID#:<%= tracking_number(wgu.id) %></td>
+          <td><b><%= wgu.name %></b> <br /> Street <br /> City, State, Zip<br />ID#:<%= tracking_number(wgu.id) %></td>
           <td style="text-align: center; vertical-align: middle"></td>
           <td style="text-align: center; vertical-align: middle"><%= "#{wgu.id}" +',999,999.99'%></td>
           <td style="text-align: center; vertical-align: middle"><%= "#{wgu.id}" +',000,000.99'%></td>
