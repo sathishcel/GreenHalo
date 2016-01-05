@@ -61,6 +61,13 @@ Myapp::Application.routes.draw do
     end
   end
   resources :wgus
+
+  resources :materials, :path => ':domain/:user_type/materials' do
+    collection do
+      get :material_list
+      get :facility_list
+    end
+  end
   #get "wgu/:id/add_menu_level/:id"  => 'dashboards#add_menu_level'
 
   get "custom_level_adding/:id" => 'dashboards#custom_level_adding' ,as: :custom_level
