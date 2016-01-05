@@ -15,7 +15,11 @@
 //= require inspinia.js
 //= require welcome.js
 //= require vmenuModule.js
+//= require clockpicker.js
+//= require bootstrap-datepicker.js
 
 //= require_tree ../../../vendor/assets/javascripts/jeditable
 //= require_tree ../../../vendor/assets/javascripts/dataTables
+
+
 
