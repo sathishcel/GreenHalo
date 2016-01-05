@@ -66,6 +66,7 @@ Myapp::Application.routes.draw do
     collection do
       get :material_list
       get :facility_list
+      get :check_list
     end
   end
 
