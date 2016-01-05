@@ -184,6 +184,7 @@
           <table class="table table-bordered table-hover dataTables-example gh-table-valign-mid">
             <thead>
             <tr id= "tracking_header">
+              <th></th>
               <th style="text-align: center; vertical-align: middle;background-color: #ededed;">Menu</th>
               <th style="text-align: center; vertical-align: middle;background-color: #ededed;">Waste Generating Units</th>
               <th style="text-align: center; vertical-align: middle;background-color: #ededed;">#of Units</th>
@@ -204,6 +205,13 @@
             <% @all_levels.each do |level| %>
 
                 <tr style="background-color: #f9f9f9;" class="gradeX" valign="middle"  id = "sub_level_<%= level.id %>" value = "<%= level.id %>" order = "not-open">
+                  <td style="background-color: #c2c2c2;">
+                    <% if level.get_sub_levels.blank? && level.wgus.blank?%>
+                        <i class="fa fa-caret-up" style="font-size: 24px;margin-top: 24px;"></i>
+                    <% else %>
+                        <i class="fa fa-caret-down" style="font-size: 24px;margin-top: 24px;"></i>
+                    <% end %>
+                  </td>
                   <td  style="text-align: center;vertical-align: middle">
                     <span class="dropdown-toggle" data-toggle="dropdown" href="#" style="font-size: 18px;">
                       <i class="fa fa-bars" style="cursor: pointer; font-size: 24px;"></i>
