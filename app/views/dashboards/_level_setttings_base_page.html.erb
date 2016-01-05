@@ -33,6 +33,8 @@
           <li> <%= link_to "Facility Listing", "#", onclick:"dynamic_level_settings('#{facility_list_materials_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
           <li> <%= link_to "Classifications", "#", onclick:"dynamic_level_settings('#{project_types_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
           <li> <%= link_to "Checklist", "#", onclick:"dynamic_level_settings('#{check_list_materials_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
+          <li> <%= link_to "Vendors", "#", onclick:"dynamic_level_settings('#{vendors_path}');" %> </li>
+          <li> <%= link_to "Facilities", "#", onclick:"dynamic_level_settings('#{facilities_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
         </ul>
       </div>
 
