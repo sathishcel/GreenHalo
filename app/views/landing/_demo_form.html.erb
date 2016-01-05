@@ -16,29 +16,32 @@
         <h4 class="modal-title">Schedule a Web Demo</h4>
         <small class="font-bold">Schedule a Web Demo to find out more about all of the features, functions and reporting capabilities WasteTracking.com has to offer.Thank you for visiting WasteTracking.com!</small>
       </div>
+
+      <form role="form" id="form">
       <div class="modal-body" style="padding-bottom: 100px">
         <p>
+
         <div class="form-group">
 
-          <!--<input type="text" class="form-control" placeholder="Full Name*"><br>-->
 
           <div class="input-group m-b"><span class="input-group-addon">
             <i class="fa fa-users"></i>
-          </span> <input type="text" style="height:36px !important;"  placeholder="Full Name*" class="form-control"></div>
+          </span> <input type="text"   placeholder="Full Name*" class="form-control" required="" aria-required="true" aria-invalid="true" style="height:36px !important;" >
+          </div>
 
 
           <div class="input-group m-b">
             <span class="input-group-addon">
              <i class="fa fa-envelope-square"></i>
             </span>
-            <input type="text" style="height:36px !important;"  placeholder="Email Address*" class="form-control">
+            <input type="email" placeholder="Email Address*" class="form-control " required="" aria-required="true" aria-invalid="true" style="height:36px !important;">
           </div>
 
           <div class="input-group m-b">
             <span class="input-group-addon">
              <i class="fa fa-phone"></i>
             </span>
-            <input type="text" style="height:36px !important;"  placeholder="Phone (with area code)*" class="form-control">
+            <input type="text" placeholder="Phone (with area code)*" class="form-control " required="" aria-required="true" aria-invalid="true" style="height:36px !important;">
           </div>
 
 
@@ -47,24 +50,17 @@
               <span class="input-group-addon">
                 <i class="fa fa-calendar"></i>
               </span>
-              <input type="text" class="form-control" value="03/04/2014">
+              <input type="text"  class="form-control " value="03/04/2014" required="" aria-required="true" aria-invalid="true" style="height:36px !important;">
 
             </div>
           </div>
 
 
-          <!--<div class="input-group m-b clockpicker" >-->
-            <!--<span class="input-group-addon">-->
-             <!--<i class="fa fa-clock-o"></i>-->
-            <!--</span>-->
-            <!--<input type="text" style="height:36px !important;"  placeholder="Best Time to Call*" class="form-control">-->
-          <!--</div>-->
-
           <div class="input-group clockpicker form-group" data-autoclose="true">
             <span class="input-group-addon">
                                     <span class="fa fa-clock-o"></span>
                                 </span>
-            <input type="text" class="form-control" value="09:30">
+            <input type="text" class="form-control" value="09:30" required="" aria-required="true" aria-invalid="true" style="height:36px !important;">
 
           </div>
 
@@ -81,10 +77,13 @@
         </div>
         </p>
       </div>
+
       <div class="modal-footer">
         <button data-dismiss="modal" class="btn btn-white" type="button">Close</button>
-        <button class="btn btn-primary" type="button">Submit</button>
+        <button class="btn btn-primary" type="submit">Submit</button>
       </div>
+      </form>
+
     </div>
   </div>
 </div>
