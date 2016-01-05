@@ -19,7 +19,7 @@ class Level < ActiveRecord::Base
       end
     end
     list << sub_unit
-    return list.reverse
+    return list.reverse.flatten
   end
 
 
@@ -40,6 +40,15 @@ class Level < ActiveRecord::Base
     end
     return sequence_number
   end
+
+
+
+  def get_level_and_wgu(level)
+    sub_levels = level.get_sub_levels
+    sequence_number = level.parent_list_counts(level)
+    return sequence_number
+  end
+
 
   def self.group_select
     level_list = []

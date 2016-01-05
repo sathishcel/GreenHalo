@@ -2,7 +2,9 @@
     <% level_wgus.each do |wgu| %>
 
         <tr class="gradeX" id = "sub_wgu_<%= wgu.id %>" value = "<%= wgu.id %>">
-
+          <td class="sequence_5">
+            <i class="fa fa-caret-up" style="font-size: 24px;margin-top: 24px;"></i>
+          </td>
           <td style="text-align: center; vertical-align: middle">
             <div class="company-img dropdown">
               <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="font-size: 18px;">
@@ -47,7 +49,15 @@
 
 <% unless sub_level.blank? %>
     <% sub_level.each do |level| %>
-        <tr class="gradeA sequence_<%= level.parent_list_counts(level) %>" id = "sub_level_<%= level.id %>" value = "<%= level.id %>" order = "not-open">
+        <tr class="gradeA" id = "sub_level_<%= level.id %>" value = "<%= level.id %>" order = "not-open">
+            <td class="sequence_<%= level.get_level_and_wgu(level) %>">
+              <% if level.get_sub_levels.blank? && level.wgus.blank? %>
+                <i class="fa fa-caret-up" style="font-size: 24px;margin-top: 24px;"></i>
+              <% else %>
+                  <i class="fa fa-caret-down" style="font-size: 24px;margin-top: 24px;"></i>
+              <% end %>
+            </td>
+
           <td style="text-align: center; vertical-align: middle">
             <div class="company-img dropdown">
               <span class="dropdown-toggle" data-toggle="dropdown" href="#" style="font-size: 18px;">
@@ -141,7 +151,8 @@
     .wt-trho{
         cursor: pointer;
     }
-    .sequence_2 {background-color: #F2F2F2;}
-    .sequence_3 {background-color: #f9f9f9;}
-    .sequence_4 {background-color: #F2F2F2;}
+    .sequence_2 {background-color: #1ab394;}
+    .sequence_3 {background-color: #1c84c6;}
+    .sequence_4 {background-color: #23c6c8;}
+    .sequence_5 {background-color: #f8ac59;}
 </style>
