@@ -204,7 +204,7 @@
             <tbody class = "table_order">
             <% @all_levels.each do |level| %>
 
-                <tr style="background-color: #f9f9f9;" class="gradeX" valign="middle"  id = "sub_level_<%= level.id %>" value = "<%= level.id %>" order = "not-open">
+                <tr class="gradeX" valign="middle"  id = "sub_level_<%= level.id %>" value = "<%= level.id %>" order = "not-open">
                   <td style="background-color: #c2c2c2;">
                     <% if level.get_sub_levels.blank? && level.wgus.blank?%>
                         <i class="fa fa-caret-up" style="font-size: 24px;margin-top: 24px;color: #ffffff;"></i>
