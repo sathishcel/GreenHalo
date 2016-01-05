@@ -70,7 +70,7 @@
 
                       <ol>
                         <% for i in 1..@wgu_limit %>
-                            <li class="wgu-input-div" >
+                            <li class="wgu-input-div" style="margin-bottom: 15px !important;">
 
 
                               <div class="form-group">
@@ -80,8 +80,8 @@
 
                               <div class="form-group">
                                 <label class="sr-only" for="exampleSelect">Select</label>
-                                <%= select_tag "wgu[#{i}][level_id]", options_for_select(Level.all.map{|i| [i.name,i.id]}), :class => "form-control",
-                                               :style => "height:25%;", :prompt => @all_levels.blank? ? "Select Level" : "Assign To Level" %>
+                                <%= select_tag "wgu[#{i}][level_id]", options_for_select(Level.group_select), :class => "form-control",
+                                               :style => "min-width: 200px;", :prompt => @all_levels.blank? ? "Select Level" : "Assign To Level" %>
                               </div>
                             </li>
                         <%end%>
@@ -141,7 +141,7 @@
 
                         <ol>
                           <% for i in 1..@wgu_limit %>
-                              <li class="wgu-input-div">
+                              <li class="wgu-input-div" style="margin-bottom: 15px !important;">
 
 
                                 <div class="form-group">
@@ -151,8 +151,8 @@
 
                                 <div class="form-group">
                                   <label class="sr-only" for="exampleSelect">Select</label>
-                                  <%= select_tag "level[#{i}][level_id]", options_for_select(Level.all.map{|i| [i.name,i.id]}), :class => "form-control",
-                                                 :style => "height:25%;", :prompt => @all_levels.blank? ? "Select Level" : "Assign To Level" %>
+                                  <%= select_tag "level[#{i}][level_id]", options_for_select(Level.group_select), :class => "form-control",
+                                                 :style => "min-width: 200px;", :prompt => @all_levels.blank? ? "Select Level" : "Assign To Level" %>
                                 </div>
                               </li>
                           <%end%>
@@ -301,62 +301,7 @@
 
          }
      });
-
-
-
-      $(document).on('click', function(e) {
-          var elem = $(e.target).closest('#add_wgu_button'),
-                  box  = $(e.target).closest('#add_wgu_popup');
-
-          if ( elem.length ) {
-              e.preventDefault();
-              $('#add_wgu_popup').toggle();
-          }else if (!box.length){
-              $('#add_wgu_popup').hide();
-          }
-      });
-
-      $(document).on('click', function(e) {
-          var elem = $(e.target).closest('#add_level_button'),
-                  box  = $(e.target).closest('#add_level_popup');
-
-          if ( elem.length ) {
-              e.preventDefault();
-              $('#add_level_popup').toggle();
-          }else if (!box.length){
-              $('#add_level_popup').hide();
-          }
-      });
-
-
-      $(".add_main_level").click(function(e){
-          var elem1 = $(e.target).closest('.add_main_level');
-          if ( elem1.length ) {
-              $('#add_level_popup').toggle();
-              $(".dropdown-menu").hide();
-
-          }
-      });
-
-      $(".add_level_wgu").click(function(e){
-          var elem1 = $(e.target).closest('.add_level_wgu');
-          if ( elem1.length ) {
-              e.preventDefault();
-              $('#add_wgu_popup').toggle();
-              $(".dropdown-menu").hide();
-
-          }
-      });
-
-      $(".add_next_level").click(function(e){
-          var elem1 = $("#add_level_popup");
-          if ( elem1.length ) {
-              e.preventDefault();
-              $('#add_level_popup').toggle();
-
-          }
-      });
-
+      
   });
 
 </script>

@@ -1,8 +1,8 @@
 
 
-    <ol style="margin:0; padding-left:20px; width:100%;">
+    <ol>
       <% for i in 1..params[:more_wgu_selection].to_i %>
-          <li class="wgu-input-div" >
+          <li class="wgu-input-div" style="margin-bottom: 15px !important;" >
 
             <div class="form-group">
               <label class="sr-only" for="exampleInputEmail2">Enter Level Name</label>
@@ -12,7 +12,7 @@
             <div class="form-group">
               <label class="sr-only" for="exampleSelect">Select</label>
               <%= select_tag "wgu[#{i}][level_id]", options_for_select(Level.all.map{|i| [i.name,i.id]}), :class => "form-control",
-                             :style => "height:25%;", :prompt => @all_levels.blank? ? "Select Level" : "Assign To Level" %>
+                             :style => "min-width: 200px;", :prompt => @all_levels.blank? ? "Select Level" : "Assign To Level" %>
             </div>
           </li>
       <%end%>

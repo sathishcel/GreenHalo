@@ -22,6 +22,8 @@ class Level < ActiveRecord::Base
     return list.reverse
   end
 
+
+
   def parent_list_counts(level_obj)
     sequence_number = 1
     obj = level_obj
@@ -37,6 +39,24 @@ class Level < ActiveRecord::Base
       end
     end
     return sequence_number
+  end
+
+  def self.group_select
+    level_list = []
+    levels = Level.where(:level_id => 0)
+    levels.try(:each) do |level|
+      level_list.push([level.name,level.id])
+      level.try(:sub_levels).each do |p|
+        level_list.push(["--#{p.name}",p.id])
+        p.try(:sub_levels).each do |sub_level|
+          level_list.push(["----#{sub_level.name}",sub_level.id])
+          sub_level.try(:sub_levels).each do |sub|
+            level_list.push(["------#{sub.name}",sub.id])
+          end
+        end
+      end
+    end
+    return level_list
   end
 
 
