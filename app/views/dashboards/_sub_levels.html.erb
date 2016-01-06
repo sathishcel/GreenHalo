@@ -45,14 +45,17 @@
             </td>
 
           <td style="text-align: center; vertical-align: middle">
-            <div class="">
 
-              <%= link_to 'javascript:void(0)', :class => "sub-popover-history", :rel => "popover",
+
+
+            <!--<div class="company-img dropdown">-->
+
+              <%= link_to 'javascript:void(0)', :class => "sub_level_pop", :rel => "popover",
                           :"data-placement" => "bottom", :"data-content" => "#{list_content(level.id)}" do %>
                   <i class="fa fa-bars" style="cursor: pointer; font-size: 24px;color:#676a6c;"></i>
               <%end%>
 
-            </div>
+            <!--</div>-->
 
           </td>
 
@@ -80,13 +83,16 @@
 
 <script>
     $(document).ready(function(){
-        $(".gradeA").click(function(){
+        $(".gradeA").click(function(e){
+            if ($(e.target).closest('.sub_level_pop').length === 0  ) {
                 var level_id = $(this).attr('value');
                 var url = "/getting_sub_levels/" + level_id;
                 $.ajax({
                     type: "GET",
                     url: url
                 });
+
+            }
         });
 
 
@@ -110,7 +116,7 @@
 
 <script>
     $(function () {
-        $('.sub-popover-history').popover({ html : true });
+        $('.sub_level_pop').popover({ html : true });
         $('.wgu-popover').popover({ html : true });
     });
 </script>
