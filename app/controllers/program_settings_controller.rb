@@ -3,5 +3,12 @@ class ProgramSettingsController < ApplicationController
     if request.xhr?
       render partial: "recycling_target"
     end
-  end
+ end
+
+ def data_entry
+   if request.xhr?
+     render partial:"data_entry"
+   end
+ end
+
 end

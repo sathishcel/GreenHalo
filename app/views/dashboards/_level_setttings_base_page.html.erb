@@ -32,7 +32,10 @@
           <li> <%= link_to "Materials", "#", onclick:"dynamic_level_settings('#{material_list_materials_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
           <li> <%= link_to "Facility Listing", "#", onclick:"dynamic_level_settings('#{facility_list_materials_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
           <li> <%= link_to "Classifications", "#", onclick:"dynamic_level_settings('#{project_types_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
+          <li> <%= link_to "Data Entry", "#", onclick:"dynamic_level_settings('#{data_entry_program_settings_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
+          <li> <%= link_to "Custom Fields", "#", onclick:"dynamic_level_settings('#{tips_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
           <li> <%= link_to "Checklist", "#", onclick:"dynamic_level_settings('#{check_list_materials_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
+          <li> <%= link_to "Tips and Banners", "#", onclick:"dynamic_level_settings('#{tips_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
           <li> <%= link_to "Vendors", "#", onclick:"dynamic_level_settings('#{vendors_path}');" %> </li>
           <li> <%= link_to "Facilities", "#", onclick:"dynamic_level_settings('#{facilities_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
           <li> <%= link_to "Users", "#", onclick:"dynamic_level_settings('#{users_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
