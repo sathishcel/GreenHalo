@@ -7,26 +7,12 @@
           </td>
           <td style="text-align: center; vertical-align: middle">
             <div class="company-img dropdown">
-              <span class="dropdown-toggle" data-toggle="dropdown" href="#" style="font-size: 18px;">
-                <i class="fa fa-wrench" style="font-size: 24px;"></i>
-              </span>
+              
 
-              <ul class="dropdown-menu dropdown-user">
-                <li>
-                  <a href="#"  role="menuitem" tabindex="-1" data-toggle="modal" data-target="#myModal_add_data"
-                     title="Add Data">Add Data</a>
-                </li>
-                <li>
-                  <a href="#"  role="menuitem" tabindex="-1" data-toggle="modal" data-target="#myModal_wgu_settings"
-                     title="Settings">Settings</a>
-                </li>
-                <li>
-                  <a href="#">Reports</a>
-                </li>
-                <li>
-                  <a href="#">Share and Connect</a>
-                </li>
-              </ul>
+              <%= link_to 'javascript:void(0)', :class => "wgu-popover", :rel => "popover", :"data-placement" => "bottom", :"data-content" => "#{wgu_list_content(wgu.id)}" do %>
+                  <i class="fa fa-wrench" style="font-size: 24px;"></i>
+              <%end%>
+
             </div>
 
           </td>
@@ -60,47 +46,12 @@
 
           <td style="text-align: center; vertical-align: middle">
             <div class="company-img dropdown">
-              <span class="dropdown-toggle" data-toggle="dropdown" href="#" style="font-size: 18px;">
-                <i class="fa fa-bars" style="cursor: pointer; font-size: 24px;"></i>
-              </span>
 
-              <ul class="dropdown-menu dropdown-user">
-                <li role="presentation">
-                  <a href="#"  role="menuitem" tabindex="-1" data-toggle="modal" data-target="#myModal_reports"
-                     title="Reports">
-                    <div>Reports</div>
-                  </a>
-                </li>
+              <%= link_to 'javascript:void(0)', :class => "popover-history", :rel => "popover",
+                          :"data-placement" => "bottom", :"data-content" => "#{list_content(level.id)}" do %>
+                  <i class="fa fa-bars" style="cursor: pointer; font-size: 24px;"></i>
+              <%end%>
 
-                <li role="presentation">
-                  <a href="#"  role="menuitem" tabindex="-1" data-toggle="modal" data-target="#myModal15"
-                     title="Program Settings">
-                    <div>Program Settings</div>
-                  </a>
-                </li>
-                <li role="presentation">
-                  <a role="menuitem" tabindex="-1" href="#">
-                    <div>Manage Portal</div>
-                  </a>
-                </li>
-
-                <li role="presentation">
-                  <%= link_to "Add Level" ,custom_level_path(level.id),remote: true ,:style => "color:#058F26;" ,:"data-toggle" => "modal", :"data-target" => "#level-modal" ,:value => "#{level.id}" %>
-                </li>
-
-
-                <li role="presentation">
-                  <%= link_to "Add wgu" ,custom_wgu_path(level.id), remote: true ,:style => "color:#058F26;"  ,:"data-toggle" => "modal", :"data-target" => "#wgu-modal" %>
-                </li>
-
-
-
-                <li role="presentation">
-                  <a role="menuitem" tabindex="-1" href="#" style="color:#058F26;">
-                    Edit Profile
-                  </a>
-                </li>
-              </ul>
             </div>
 
           </td>
@@ -130,12 +81,14 @@
 <script>
     $(document).ready(function(){
         $(".gradeA").click(function(){
-            var level_id = $(this).attr('value');
-            var url = "/getting_sub_levels/" + level_id ;
-            $.ajax({
-                type: "GET",
-                url: url
-            });
+            if ($(e.target).closest('.popover-history').length === 0 && $(e.target).closest('.popover-history').length === 0 ) {
+                var level_id = $(this).attr('value');
+                var url = "/getting_sub_levels/" + level_id;
+                $.ajax({
+                    type: "GET",
+                    url: url
+                });
+            }
         });
 
 
@@ -156,3 +109,10 @@
     .sequence_4 {background-color: #23c6c8;}
     .sequence_5 {background-color: #f8ac59;}
 </style>
+
+<script>
+    $(function () {
+        $('.popover-history').popover({ html : true });
+        $('.wgu-popover').popover({ html : true });
+    });
+</script>

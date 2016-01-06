@@ -25,5 +25,10 @@ module DashboardsHelper
     render :partial => 'dashboards/list_popover', :locals =>{:level => level}
   end
 
+  def wgu_list_content(wgu_id)
+    wgu = Wgu.find(wgu_id)
+    render :partial => 'dashboards/wgu_list_popover', :locals =>{:wgu => wgu}
+  end
+
 end
 
