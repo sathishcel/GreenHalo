@@ -83,8 +83,8 @@
 
 <script>
     $(document).ready(function(){
-        $(".gradeA").click(function(){
-            //if ($(e.target).closest('.sub_level_pop').length === 0  ) {
+        $(".gradeA").click(function(e){
+            if ($(e.target).closest('.sub_level_pop').length === 0  ) {
                 var level_id = $(this).attr('value');
                 var url = "/getting_sub_levels/" + level_id;
                 $.ajax({
@@ -92,7 +92,7 @@
                     url: url
                 });
 
-            //}
+            }
         });
 
 
