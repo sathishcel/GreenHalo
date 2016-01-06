@@ -85,7 +85,7 @@ Myapp::Application.routes.draw do
 
   get "custom_level_adding/:id" => 'dashboards#custom_level_adding' ,as: :custom_level
   get "custom_wgu_adding/:id" => 'dashboards#custom_wgu_adding' ,as: :custom_wgu
-
+  get "bin_types/:id" => 'dashboards#add_bin_type' ,as: :bin_type
   # All routes
   post "dashboards/create" => 'dashboards#create'
   get 'dashboards/add_more_wgus'
