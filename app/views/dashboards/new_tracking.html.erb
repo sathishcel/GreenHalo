@@ -213,11 +213,11 @@
                     <% end %>
                   </td>
                   <td  style="text-align: center;vertical-align: middle">
-
-
-                    <%= link_to 'javascript:void(0)', :class => "popover-history", :rel => "popover", :"data-placement" => "bottom", :"data-content" => "#{render 'dashboards/list_popover'  }" do %>
+                    <%= link_to 'javascript:void(0)', :class => "popover-history", :rel => "popover", :"data-placement" => "bottom", :"data-content" => "#{list_content(level.id)}" do %>
                      <i class="fa fa-bars" style="cursor: pointer; font-size: 24px;"></i>
                     <%end%>
+
+
 
 
 

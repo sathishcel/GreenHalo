@@ -1,5 +1,7 @@
 <ul class="dropdown-menu-new">
 
+
+
   <li role="presentation">
 
     <%= link_to "Reports" ,'#',:'role' => "menuitem",:'tabindex' => "-1",
@@ -20,12 +22,12 @@
     </a>
   </li>
   <li role="presentation">
-    <%#= link_to "Add Level" ,custom_level_path(level.id),remote: true ,:style => "color:#058F26;" ,:"data-toggle" => "modal", :"data-target" => "#level-modal" ,:value => "#{level.id}" %>
+    <%= link_to "Add Level" ,custom_level_path(level.id),remote: true ,:style => "color:#058F26;" ,:"data-toggle" => "modal", :"data-target" => "#level-modal" ,:value => "#{level.id}" %>
   </li>
 
 
   <li role="presentation">
-    <%#= link_to "Add wgu" ,custom_wgu_path(level.id), remote: true ,:style => "color:#058F26;"  ,:"data-toggle" => "modal", :"data-target" => "#wgu-modal" %>
+    <%= link_to "Add wgu" ,custom_wgu_path(level.id), remote: true ,:style => "color:#058F26;"  ,:"data-toggle" => "modal", :"data-target" => "#wgu-modal" %>
   </li>
   <li role="presentation">
     <a role="menuitem" tabindex="-1" href="#" style="color:#058F26;">

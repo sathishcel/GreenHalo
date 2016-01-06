@@ -19,5 +19,11 @@ module DashboardsHelper
     sub_levels_array.blank? ? nil : sub_levels_array.count
   end
 
+
+  def list_content(level_id)
+    level = Level.find(level_id)
+    render :partial => 'dashboards/list_popover', :locals =>{:level => level}
+  end
+
 end
 
