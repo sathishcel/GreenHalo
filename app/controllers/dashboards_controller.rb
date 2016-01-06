@@ -72,7 +72,15 @@ class DashboardsController < ApplicationController
   end
 
 
-  def add_bin_type
+  # def add_bin_type
+  #   puts "hello"
+  #   puts params
+  #
+  # end
+
+  def add_report_type
+    puts "hello"
+    puts params
     @select_level = Level.find(params[:id])
   end
 

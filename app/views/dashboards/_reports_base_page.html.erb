@@ -26,9 +26,22 @@
       <div id="displaymenu_rep" class="displaylist" style="position: absolute;">
         <%= image_tag "img/pop-img.png", :class=>"pop-pointer-dd" %>
         <ul class="pop-dropdown">
-          <li> <%= link_to "All Wgus", "#", onclick:"dynamic_reports_settings('#{business_level_settings_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
+          <!--<li> <%#= link_to "All Wgus", "#", onclick:"dynamic_reports_settings('#{business_level_settings_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>-->
           <li> <%= link_to "All Wgus", "#", onclick:"dynamic_reports_settings('#{recycling_target_program_settings_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
-          <li> <%= link_to "Bin Types" ,'/bin_types/',remote: true ,:id => "bin_type_selection" %>
+
+
+          <li> <%= link_to "Bin Types" ,'/bin_types/bin_value/' ,remote: true ,:class => "bin_type_selection"  %>
+          <li> <%= link_to "All Materials" ,'/bin_types/materials/',remote: true ,:class => "bin_type_selection"   %>
+          <li> <%= link_to "Classification" ,'/bin_types/classification/',remote: true ,:class => "bin_type_selection" %>
+          <li> <%= link_to "Facilities" ,'/bin_types/facilities/',remote: true ,:class => "bin_type_selection" %>
+          <li> <%= link_to "Hauling Method" ,'/bin_types/hauling/',remote: true ,:class => "bin_type_selection" %>
+          <li> <%= link_to "Levels" ,'/bin_types/levels/',remote: true ,:class => "bin_type_selection" %>
+          <li> <%= link_to "Vendors" ,'/bin_types/vendors/',remote: true ,:class => "bin_type_selection" %>
+          <li> <%= link_to "Carbon Footprint" ,'/bin_types/foot_print/',remote: true ,:class => "bin_type_selection" %>
+          <li> <%= link_to "Data Entry Log" ,'/bin_types/data_entry/',remote: true ,:class => "bin_type_selection" %>
+          <li> <%= link_to "Liquid Materials Only" ,'/bin_types/liquids/',remote: true ,:class => "bin_type_selection" %>
+          <li> <%= link_to "Solid Materials Only" ,'/bin_types/solid-materials/',remote: true ,:class => "bin_type_selection" %>
+          <li> <%= link_to "PickUp Report" ,'/bin_types/pick_up_report/',remote: true ,:class => "bin_type_selection" %>
         </ul>
       </div>
 

@@ -5,7 +5,7 @@
   <li role="presentation">
 
     <%= link_to "Reports" ,'#',:'role' => "menuitem",:'tabindex' => "-1",
-                remote: true ,:"data-toggle" => "modal", :"data-target" => "#myModal_reports" ,:value => "" ,:class => "level_reports"%>
+                remote: true ,:"data-toggle" => "modal", :"data-target" => "#myModal_reports" ,:value => "#{level.id}" ,:class => "level_reports"%>
 
   </li>
 
@@ -63,3 +63,14 @@
       padding: 9px 2px;
   }
 </style>
+
+
+<script>
+  $(document).ready(function(){
+      $(".level_reports").click(function(){
+          var level_id = $(this).attr('value');
+           var url = $(".bin_type_selection").attr('href');
+          $(".bin_type_selection").attr('href' ,url + level_id);
+      });
+  })
+</script>
