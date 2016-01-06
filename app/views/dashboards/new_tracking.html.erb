@@ -231,13 +231,13 @@
                   <td style="text-align: center;vertical-align: middle"><%= "#{level.id}" +',999,999.99'%></td>
                   <td style="text-align: center;vertical-align: middle"><%= "#{level.id}" +',000,000.99'%></td>
                   <td style="text-align: center;vertical-align: middle"><%= "#{level.id}" +'0%'%></td>
-                  <td style="text-align: center;vertical-align: middle"><%= "#{level.id}" +',999,999.99'%></td>
-                  <td style="text-align: center;vertical-align: middle"><%= "#{level.id}" +'000.00'%></td>
+                  <td style="text-align: center;vertical-align: middle">$<%= "#{level.id}" +',999,999.99'%></td>
+                  <td style="text-align: center;vertical-align: middle">$<%= "#{level.id}" +'000.00'%></td>
                   <td style="text-align: center;vertical-align: middle"><%= "#{level.id}" +',000,000.99'%></td>
                   <td style="text-align: center;vertical-align: middle"><%= "#{level.id}" +',999,999.99'%></td>
                   <td style="text-align: center;vertical-align: middle"><%= "#{level.id}" +'0.05%'%></td>
-                  <td style="text-align: center;vertical-align: middle"><%= "#{level.id}" +',000,000.99'%></td>
-                  <td style="text-align: center;vertical-align: middle"><%= "#{level.id}" +'000.00'%></td>
+                  <td style="text-align: center;vertical-align: middle">$<%= "#{level.id}" +',000,000.99'%></td>
+                  <td style="text-align: center;vertical-align: middle">$<%= "#{level.id}" +'000.00'%></td>
                 </tr>
 
 
@@ -303,6 +303,10 @@
     $("#menulist_rep").click(function()
     {
         $("#displaymenu_rep").toggle();
+    });
+
+    $('#replace_ajax_response').click(function(){
+        $('#displaymenu').css('display', 'none');
     });
 
     function dynamic_level_settings(url) {
