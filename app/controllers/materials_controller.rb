@@ -11,4 +11,10 @@ class MaterialsController < ApplicationController
     end
   end
 
+  def check_list
+    if request.xhr?
+      render partial: "check_list"
+    end
+  end
+
 end

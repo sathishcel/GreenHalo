@@ -66,12 +66,21 @@ Myapp::Application.routes.draw do
     collection do
       get :material_list
       get :facility_list
+      get :check_list
     end
   end
 
   resources :project_types, :path => ':domain/:user_type/project_types' do
-
   end
+
+  resources :vendors
+
+  resources :facilities, :path => ':domain/:user_type/facilities'do
+    collection do
+      get :facility_listing
+    end
+  end
+
   #get "wgu/:id/add_menu_level/:id"  => 'dashboards#add_menu_level'
 
   get "custom_level_adding/:id" => 'dashboards#custom_level_adding' ,as: :custom_level
