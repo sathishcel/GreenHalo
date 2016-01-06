@@ -35,6 +35,7 @@ Myapp::Application.routes.draw do
   resources :program_settings, :path => ':domain/:user_type/program_settings' do
     collection do
       get :recycling_target
+      get :data_entry
     end
     end
   namespace :business do
@@ -88,6 +89,8 @@ Myapp::Application.routes.draw do
       get :facility_listing
     end
   end
+
+  resources :tips, :path => ':domain/:user_type/tips'
 
   #get "wgu/:id/add_menu_level/:id"  => 'dashboards#add_menu_level'
 
