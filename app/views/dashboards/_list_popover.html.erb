@@ -1,0 +1,63 @@
+<ul class="dropdown-menu-new">
+
+  <li role="presentation">
+
+    <%= link_to "Reports" ,'#',:'role' => "menuitem",:'tabindex' => "-1",
+                remote: true ,:"data-toggle" => "modal", :"data-target" => "#myModal_reports" ,:value => "" ,:class => "level_reports"%>
+
+  </li>
+
+
+  <li role="presentation">
+    <a href="#"  role="menuitem" tabindex="-1" data-toggle="modal" data-target="#myModal15" id=<%#= level.id%>
+            title="Settings">
+      <div>Program Settings</div>
+    </a>
+  </li>
+  <li role="presentation">
+    <a role="menuitem" tabindex="-1" href="#">
+      <div>Manage Portal</div>
+    </a>
+  </li>
+  <li role="presentation">
+    <%#= link_to "Add Level" ,custom_level_path(level.id),remote: true ,:style => "color:#058F26;" ,:"data-toggle" => "modal", :"data-target" => "#level-modal" ,:value => "#{level.id}" %>
+  </li>
+
+
+  <li role="presentation">
+    <%#= link_to "Add wgu" ,custom_wgu_path(level.id), remote: true ,:style => "color:#058F26;"  ,:"data-toggle" => "modal", :"data-target" => "#wgu-modal" %>
+  </li>
+  <li role="presentation">
+    <a role="menuitem" tabindex="-1" href="#" style="color:#058F26;">
+      Edit Profile
+    </a>
+  </li>
+</ul>
+
+
+<style>
+  .dropdown-menu-new{
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+  }
+
+    .dropdown-menu-new > li > a {
+        border-radius: 3px;
+        color: inherit;
+        line-height: 25px;
+        margin: 4px;
+        text-align: left;
+        font-weight: normal;
+        display: block;
+        padding: 3px 20px;
+        clear: both;
+    }
+  .dropdown-menu-new > li > a:hover {
+      color: #000;
+      background-color: #eeeeee;
+  }
+  .popover-content {
+      padding: 9px 2px;
+  }
+</style>

@@ -213,43 +213,15 @@
                     <% end %>
                   </td>
                   <td  style="text-align: center;vertical-align: middle">
-                    <span class="dropdown-toggle" data-toggle="dropdown" href="#" style="font-size: 18px;">
-                      <i class="fa fa-bars" style="cursor: pointer; font-size: 24px;"></i>
-                    </span>
-
-                    <ul class="dropdown-menu dropdown-user" style="left:auto; top:auto;">
-                      <li role="presentation">
-                        <a href="#"  role="menuitem" tabindex="-1" data-toggle="modal" data-target="#myModal_reports"
-                           title="Reports">
-                          <div>Reports</div>
-                        </a>
-                      </li>
-
-                      <li role="presentation">
-                        <a href="#"  role="menuitem" tabindex="-1" data-toggle="modal" data-target="#myModal15" id=<%= level.id%>
-                           title="Settings">
-                          <div>Program Settings</div>
-                        </a>
-                      </li>
-                      <li role="presentation">
-                        <a role="menuitem" tabindex="-1" href="#">
-                          <div>Manage Portal</div>
-                        </a>
-                      </li>
-                      <li role="presentation">
-                        <%= link_to "Add Level" ,custom_level_path(level.id),remote: true ,:style => "color:#058F26;" ,:"data-toggle" => "modal", :"data-target" => "#level-modal" ,:value => "#{level.id}" %>
-                      </li>
 
 
-                      <li role="presentation">
-                        <%= link_to "Add wgu" ,custom_wgu_path(level.id), remote: true ,:style => "color:#058F26;"  ,:"data-toggle" => "modal", :"data-target" => "#wgu-modal" %>
-                      </li>
-                      <li role="presentation">
-                        <a role="menuitem" tabindex="-1" href="#" style="color:#058F26;">
-                          Edit Profile
-                        </a>
-                      </li>
-                    </ul>
+                    <%= link_to 'javascript:void(0)', :class => "popover-history", :rel => "popover", :"data-placement" => "bottom", :"data-content" => "#{render 'dashboards/list_popover'  }" do %>
+                     <i class="fa fa-bars" style="cursor: pointer; font-size: 24px;"></i>
+                    <%end%>
+
+
+
+
                   </td>
 
                   <td><b><%= level.name %></b> <br /> Street <br /> City, State, Zip<br />ID#:<%= tracking_number(level.id) %></td>
@@ -299,7 +271,7 @@
 <script>
   $(document).ready(function(){
      $(".table_order tr").click(function(e){
-         if ($(e.target).closest('.dropdown-toggle').length === 0 && $(e.target).closest('.dropdown-user').length === 0 ) {
+         if ($(e.target).closest('.popover-history').length === 0 && $(e.target).closest('.popover-history').length === 0 ) {
              var level_id = $(this).attr('value');
              var url = "/getting_sub_levels/" + level_id;
              $.ajax({
@@ -309,6 +281,12 @@
 
          }
      });
+
+
+      $(".level_reports").click(function(){
+          var level_id = $(this).attr('value');
+          $("#bin_type_selection").attr('href' ,'/bin_types/'+level_id);
+      });
 
   });
 
@@ -351,8 +329,15 @@
         });
     }
 
+
+
 </script>
 
 
 
 
+<script>
+    $(function () {
+        $('.popover-history').popover({ html : true });
+    });
+</script>

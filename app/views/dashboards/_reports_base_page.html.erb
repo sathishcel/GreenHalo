@@ -28,12 +28,17 @@
         <ul class="pop-dropdown">
           <li> <%= link_to "All Wgus", "#", onclick:"dynamic_reports_settings('#{business_level_settings_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
           <li> <%= link_to "All Wgus", "#", onclick:"dynamic_reports_settings('#{recycling_target_program_settings_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
+          <li> <%= link_to "Bin Types" ,'/bin_types/',remote: true ,:id => "bin_type_selection" %>
         </ul>
       </div>
+
+
 
       <div id="replace_ajax_response">
         <%= render partial:"business_level_settings/all_wgus"%>
       </div>
+
+
 
       <div class="modal-footer">
         <button type="button" class="btn btn-white" data-dismiss="modal">Close</button>

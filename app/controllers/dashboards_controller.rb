@@ -71,4 +71,9 @@ class DashboardsController < ApplicationController
     @wgu_level = Level.find(params[:id])
   end
 
+
+  def add_bin_type
+    @select_level = Level.find(params[:id])
+  end
+
 end
