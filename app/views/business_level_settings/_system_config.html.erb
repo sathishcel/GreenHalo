@@ -1,3 +1,4 @@
+<% if !params[:config] %>
 <div class="modal-body" style="font-size: 12px;">
 
   <div class="container">
@@ -10,7 +11,7 @@
           <a href="#" style="color: #337ab7 !important;" onclick="system_config_tab('/bangalore/government/business_level_settings/overview')">Overview</a>
         </li>
         <li class="active">
-          <a href="#" style="color: #337ab7 !important;" onclick="system_config_tab('/bangalore/government/business_level_settings')">Configuration</a>
+          <a href="#" style="color: #337ab7 !important;" onclick="system_config_tab('/bangalore/government/business_level_settings?config=true')">Configuration</a>
         </li>
         <li class="">
           <a href="#" style="color: #337ab7 !important;" onclick="system_config_tab('/bangalore/government/business_level_settings/bin_types')">Bin Types</a>
@@ -30,10 +31,21 @@
     </div>
   </div>
 
-
-
+<% end %>
+<div id="replace_tab_content">
 
   <form method="post" accept-charset="UTF-8" action="/bangalore/government/business_settings/52" id="edit_wgu_52" class="edit_wgu"><input type="hidden" value="✓" name="utf8"><input type="hidden" value="put" name="_method"><input type="hidden" value="g9DXYHwJ7I243s+UIg3/z0OkFH4MKlSsKOD0FWiqBk3Pt64r7v+SDtmSGAgo8JrASS9PR3EfcClvNuJqzTCXZA==" name="authenticity_token">
+    <div class="row" style="margin-top: 10px;">
+    <div class="col-sm-5 m-b-xs" style="width:12%;margin-left:22px;">
+      <img width="118" height="99" src="/assets/img/map-green.jpg" alt="">
+    </div>
+    <div class="col-sm-4 m-b-xs" style="width:20%;margin-top: 13px;">
+      <label>Greenworx<br>
+      555 Broadway Street, Suite 104 <br>
+      South San Francisco, CA 94080<br>
+      1-555-555-5555</label>
+    </div>
+</div>
     <div class="row" style="margin-top:10px;">
       <div class="col-lg-6" style="padding-left:38px;">
         <div class="form-group">
@@ -72,5 +84,20 @@
 
   </form>
 
+</div>
 
   </div>
+
+
+<script type="text/javascript">
+  function system_config_tab(url) {
+
+    var current_url = url;
+    $.ajax({
+      type: "GET",
+      url: current_url,
+    }).success(function (data) {
+      $('#replace_tab_content').html(data);
+    });
+  }
+</script>

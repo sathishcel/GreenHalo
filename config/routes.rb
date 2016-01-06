@@ -24,6 +24,11 @@ Myapp::Application.routes.draw do
     collection do
       get :terms_conditions
       get :franchise_aggrement
+      get :overview
+      get :bin_types
+      get :bin_locations
+      get :gallery
+      get :contact
     end
   end
 
@@ -71,6 +76,9 @@ Myapp::Application.routes.draw do
   end
 
   resources :project_types, :path => ':domain/:user_type/project_types' do
+  end
+
+  resources :users, :path => ':domain/:user_type/users' do
   end
 
   resources :vendors
