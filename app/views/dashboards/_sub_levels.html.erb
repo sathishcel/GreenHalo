@@ -7,10 +7,10 @@
           </td>
           <td style="text-align: center; vertical-align: middle">
             <div class="company-img dropdown">
-              
+
 
               <%= link_to 'javascript:void(0)', :class => "wgu-popover", :rel => "popover", :"data-placement" => "bottom", :"data-content" => "#{wgu_list_content(wgu.id)}" do %>
-                  <i class="fa fa-wrench" style="font-size: 24px;"></i>
+                  <i class="fa fa-wrench" style="font-size: 24px;color:#676a6c;"></i>
               <%end%>
 
             </div>
@@ -47,9 +47,9 @@
           <td style="text-align: center; vertical-align: middle">
             <div class="company-img dropdown">
 
-              <%= link_to 'javascript:void(0)', :class => "popover-history", :rel => "popover",
+              <%= link_to 'javascript:void(0)', :class => "sub-popover-history", :rel => "popover",
                           :"data-placement" => "bottom", :"data-content" => "#{list_content(level.id)}" do %>
-                  <i class="fa fa-bars" style="cursor: pointer; font-size: 24px;"></i>
+                  <i class="fa fa-bars" style="cursor: pointer; font-size: 24px;color:#676a6c;"></i>
               <%end%>
 
             </div>
@@ -81,14 +81,12 @@
 <script>
     $(document).ready(function(){
         $(".gradeA").click(function(){
-            if ($(e.target).closest('.popover-history').length === 0 && $(e.target).closest('.popover-history').length === 0 ) {
                 var level_id = $(this).attr('value');
                 var url = "/getting_sub_levels/" + level_id;
                 $.ajax({
                     type: "GET",
                     url: url
                 });
-            }
         });
 
 
@@ -112,7 +110,7 @@
 
 <script>
     $(function () {
-        $('.popover-history').popover({ html : true });
+        $('.sub-popover-history').popover({ html : true });
         $('.wgu-popover').popover({ html : true });
     });
 </script>
