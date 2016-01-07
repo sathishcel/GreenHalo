@@ -8,6 +8,8 @@ class Level < ActiveRecord::Base
   belongs_to :level, class_name: "Level"
   has_many :wgus
   belongs_to :user
+  HEADERS = ["S No","Unit Name","Units Count","Tons Disposed","Recycling Rate","Disposal Costs",
+                           "Return on Recycling","Gallons Disposed","Gallons Recycled","Recycling Rate"," Disposal Costs","Return on Recycling"]
 
 
   def get_sub_levels(list=[])
@@ -70,9 +72,8 @@ class Level < ActiveRecord::Base
 
 
   def self.to_csv(options = {})
-    headers = ["S No", "Unit Name","Unit Count"," Tons Disposed"]
     CSV.generate(options) do |csv|
-      csv << column_names
+      csv << Level::HEADERS
       all.each do |level|
         csv << level.attributes.values_at(*column_names)
         level.try(:wgus).each do |wgu|
