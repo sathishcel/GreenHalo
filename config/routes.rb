@@ -99,6 +99,10 @@ Myapp::Application.routes.draw do
   #get "bin_types/:id" => 'dashboards#add_bin_type' ,as: :bin_type
   get "bin_types/:page/:id"  => 'dashboards#add_report_type' ,as: :report_type
   # All routes
+
+  #resources :dashboards
+  get "dashboards/index"
+  get "/get_pdf" => 'dashboards#get_pdf' ,as: :get_pdf
   post "dashboards/create" => 'dashboards#create'
   get 'dashboards/add_more_wgus'
   get "dashboards/dashboard_1"

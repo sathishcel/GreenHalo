@@ -2,8 +2,11 @@
 <html>
 <head>
     <meta charset="utf-8">
+      <%= wicked_pdf_stylesheet_link_tag "pdf" -%>
+      <%= wicked_pdf_javascript_include_tag "number_pages" %>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <%= favicon_link_tag 'wastetrac-meta-icon.png' %>
+
     <title>Wastetracking | wastetracking.com</title>
 
     <!-- Include style per-controller - vendor plugins -->

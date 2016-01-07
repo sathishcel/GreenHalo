@@ -1,0 +1,109 @@
+
+
+<style>
+    .tg  {border-collapse:collapse;border-spacing:0; color:#666666; font-family:Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif}
+    .tg td{font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+    .tg th{font-size:14px;font-weight:bold;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+    .tg tr:nth-child(odd){background-color:#dedede}
+</style>
+
+<div>
+  <h3>All Levels Tracking</h3>
+</div>
+
+<div>
+  <table class="tg">
+    <thead>
+    <tr>
+      <th>Name</th>
+      <th>Sub levels</th>
+      <th>Row3</th>
+      <th>Row4</th>
+      <th>Row5</th>
+      <th>Row6</th>
+      <th>Row7</th>
+      <th>Row8</th>
+      <th>Row9</th>
+      <th>Row10</th>
+      <th>Row11</th>
+      <th>Row12</th>
+
+    </tr>
+    </thead>
+
+    <tbody>
+        <% @levels.each do |level| %>
+           <tr>
+             <td><%= level.name %></td>
+             <td><%= level.get_sub_levels.count %></td>
+             <td>1,999,999.99</td>
+             <td>1,000,000.99</td>
+             <td>10%</td>
+             <td>$1,999,999.99</td>
+             <td>$1000.00</td>
+             <td>1,000,000.99</td>
+             <td>1,999,999.99</td>
+             <td>10.05%</td>
+             <td>$1,000,000.99</td>
+             <td>$1000.00</td>
+           </tr>
+
+           <% level.try(:wgus).each do |wgu| %>
+            <tr>
+              <td><%= wgu.name %></td>
+              <td></td>
+              <td>1,999,999.99</td>
+              <td>1,000,000.99</td>
+              <td>10%</td>
+              <td>$1,999,999.99</td>
+              <td>$1000.00</td>
+              <td>1,000,000.99</td>
+              <td>1,999,999.99</td>
+              <td>10.05%</td>
+              <td>$1,000,000.99</td>
+              <td>$1000.00</td>
+            </tr>
+           <%end%>
+           <% level.try(:get_sub_levels).each do |sub_level| %>
+            <tr>
+              <td><%= sub_level.name %></td>
+              <td><%= sub_level.try(:get_sub_levels).count %></td>
+              <td>1,999,999.99</td>
+              <td>1,000,000.99</td>
+              <td>10%</td>
+              <td>$1,999,999.99</td>
+              <td>$1000.00</td>
+              <td>1,000,000.99</td>
+              <td>1,999,999.99</td>
+              <td>10.05%</td>
+              <td>$1,000,000.99</td>
+              <td>$1000.00</td>
+            </tr>
+
+            <% sub_level.try(:wgus).each do |wgu| %>
+                <tr>
+                  <td><%= wgu.name %></td>
+                  <td></td>
+                  <td>1,999,999.99</td>
+                  <td>1,000,000.99</td>
+                  <td>10%</td>
+                  <td>$1,999,999.99</td>
+                  <td>$1000.00</td>
+                  <td>1,000,000.99</td>
+                  <td>1,999,999.99</td>
+                  <td>10.05%</td>
+                  <td>$1,000,000.99</td>
+                  <td>$1000.00</td>
+                </tr>
+            <%end%>
+
+           <%end%>
+
+        <%end%>
+    </tbody>
+  </table>
+</div>
+
+<p>
+
+</p>

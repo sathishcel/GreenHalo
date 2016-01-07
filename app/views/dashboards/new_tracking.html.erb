@@ -32,6 +32,8 @@
             <a class="btn btn-primary " data-toggle="modal" data-target="#addlevel">Add Level</a>
             <a class="btn btn-primary " href="javascript:void(0);" onclick="">Expand All</a>
             <a class="btn btn-primary  collapse-link " >Collapse All</a>
+            <%= link_to "CSV",dashboards_index_path(:format => "csv"),:class => "btn btn-primary" %>
+            <%= link_to 'PDF', get_pdf_path( :format => :pdf) ,:class => "btn btn-primary" %>
           </div>
         </div>
         <div class="ibox-content" style="border-width:0 !important;">
