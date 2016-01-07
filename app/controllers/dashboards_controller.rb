@@ -2,7 +2,7 @@ class DashboardsController < ApplicationController
   SUBLEVELCONSTANT = nil
   DEFAULT_LEVEL = 1
 
-  
+
 
   def dashboard_1
   end
