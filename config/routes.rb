@@ -102,7 +102,7 @@ Myapp::Application.routes.draw do
 
   #resources :dashboards
   get "dashboards/index"
-  get "/get_pdf" => 'dashboards#get_pdf' ,as: :get_pdf
+  get "/Wastetracking_#{Date.today}_levels" => 'dashboards#get_pdf' ,as: :get_pdf
   post "dashboards/create" => 'dashboards#create'
   get 'dashboards/add_more_wgus'
   get "dashboards/dashboard_1"

@@ -91,7 +91,11 @@ class DashboardsController < ApplicationController
 
   def get_pdf
     @levels   = Level.top_levels
-    render  :pdf => "file.pdf", :template => 'dashboards/get_pdf.html.erb'
+    respond_to do |format|
+      format.html
+      format.pdf do render  :pdf => "wastetracking.pdf", :template => 'dashboards/get_pdf.html.erb'
+      end
+    end
   end
 
 end
