@@ -26,14 +26,39 @@
         <div class="ibox-title">
           <h5>Waste Generating Units</h5>
         </div>
-        <div class="ibox-content" style="padding-bottom:0px !important;">
-          <div align="left" class="" style="background-color: #fff;">
+
+        <div class="" style="background-color:#fff;padding-bottom:0px !important;">
+          <div align="left" class="col-lg-6" style="background-color: #fff;">
             <a class="btn btn-primary " data-toggle="modal" data-target="#addwgu" >Add WGU</a>
             <a class="btn btn-primary " data-toggle="modal" data-target="#addlevel">Add Level</a>
             <a class="btn btn-primary " href="javascript:void(0);" onclick="">Expand All</a>
             <a class="btn btn-primary  collapse-link " >Collapse All</a>
-            <%= link_to "CSV",dashboards_index_path(:format => "csv"),:class => "btn btn-primary" %>
-            <%= link_to 'PDF', get_pdf_path( :format => :pdf) ,:class => "btn btn-primary" %>
+
+
+          </div>
+          <div class="col-lg-6" align="right" style="background-color: #fff">
+
+            <div class="dt-buttons btn-group">
+              <a class="btn btn-default buttons-copy buttons-html5" tabindex="0" aria-controls="DataTables_Table_0"><span>Copy</span></a>
+              <%= link_to "CSV",dashboards_index_path(:format => "csv"),:class => "btn btn-default buttons-excel buttons-html5", :'tabindex' => "0",:'aria-controls' => 'DataTables_Table_0' %>
+              <a class="btn btn-default buttons-excel buttons-html5" tabindex="0" aria-controls="DataTables_Table_0"><span>Excel</span></a>
+              <%= link_to 'PDF', get_pdf_path( :format => :pdf) ,:class => "btn btn-default buttons-excel buttons-html5" ,
+                          :'tabindex' => "0",:'aria-controls' => 'DataTables_Table_0' %>
+              <a class="btn btn-default buttons-print" tabindex="0" aria-controls="DataTables_Table_0"><span>Print</span></a>
+            </div>
+
+
+            <style>
+                .dt-buttons a {
+                    background: #fff none repeat scroll 0 0;
+                    border: 1px solid #e7eaec;
+                    box-shadow: none;
+                    color: #676a6c;
+                    font-size: 12px;
+                    padding: 6px 8px;
+                }
+            </style>
+
           </div>
         </div>
         <div class="ibox-content" style="border-width:0 !important;">
