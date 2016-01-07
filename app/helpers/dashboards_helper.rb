@@ -30,5 +30,17 @@ module DashboardsHelper
     render :partial => 'dashboards/wgu_list_popover', :locals =>{:wgu => wgu}
   end
 
+  def level_wgus_count(level)
+    level.wgus.count
+  end
+
+  def all_wgus_count(level)
+    sub_level_ids = level.get_sub_levels.map(&:id) << level.id
+    Wgu.where(level_id:sub_level_ids).count
+  end
+
+  def sub_level_count(level)
+    level.get_sub_levels.count
+  end
 end
 
