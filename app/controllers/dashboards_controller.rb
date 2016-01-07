@@ -2,6 +2,16 @@ class DashboardsController < ApplicationController
   SUBLEVELCONSTANT = nil
   DEFAULT_LEVEL = 1
 
+
+  def index
+    @levels   = Level.all 
+    respond_to do |format|
+      format.html
+      format.csv { send_data @levels.to_csv }
+      format.xls # { send_data @products.to_csv(col_sep: "\t") }
+    end
+  end
+
   def dashboard_1
   end
 
@@ -72,15 +82,16 @@ class DashboardsController < ApplicationController
   end
 
 
-  # def add_bin_type
-  #   puts "hello"
-  #   puts params
-  #
-  # end
-
   def add_report_type
     @page = params[:page] if params[:page]
     @select_level = Level.find(params[:id])
+  end
+
+
+
+  def get_pdf
+    @levels   = Level.top_levels
+    render  :pdf => "file.pdf", :template => 'dashboards/get_pdf.html.erb'
   end
 
 end
