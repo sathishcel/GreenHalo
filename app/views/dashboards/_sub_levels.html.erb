@@ -3,7 +3,7 @@
 
         <tr class="gradeX" id = "sub_wgu_<%= wgu.id %>" value = "<%= wgu.id %>">
           <td class="sequence_5">
-            <i class="fa fa-caret-up" style="font-size: 24px;margin-top: 24px; color: #fff;"></i>
+            <i class="fa fa-square-o" style="font-size: 17px;margin-top: 31px;color: #ffffff;"></i>
           </td>
           <td style="text-align: center; vertical-align: middle">
             <div class="">
@@ -38,7 +38,7 @@
         <tr class="gradeA" id = "sub_level_<%= level.id %>" value = "<%= level.id %>" order = "not-open">
             <td class="sequence_<%= level.get_level_and_wgu(level) %>">
               <% if level.get_sub_levels.blank? && level.wgus.blank? %>
-                <i class="fa fa-caret-up" style="font-size: 24px;margin-top: 24px;color: #ffffff;"></i>
+                <i class="fa fa-square-o" style="font-size: 17px;margin-top: 31px;color: #ffffff;margin-left: 2px;"></i>
               <% else %>
                   <i class="fa fa-caret-down" style="font-size: 24px;margin-top: 24px;color: #ffffff;"></i>
               <% end %>
@@ -62,7 +62,10 @@
 
 
           <td class = "sorting_1" ><b><%= level.name %></b> <br /> Street <br /> City, State, Zip<br />ID#:<%= tracking_number(level.id) %></td>
-          <td style="text-align: center; vertical-align: middle"><%= total_sub_level_count(level.id) %></td>
+          <td style="text-align: center; vertical-align: middle">
+            L:<%= sub_level_count(level)%>
+            W:<%= level_wgus_count(level) %>
+          </td>
           <td style="text-align: center; vertical-align: middle"><%= "#{level.id}" +',999,999.99'%></td>
           <td style="text-align: center; vertical-align: middle"><%= "#{level.id}" +',000,000.99'%></td>
           <td style="text-align: center; vertical-align: middle"><%= "#{level.id}" +'0%'%></td>
@@ -86,6 +89,7 @@
 <script>
     $(document).ready(function(){
         $(".gradeA").click(function(e){
+            $(this).find('td .fa-caret-down').attr('class','fa fa-caret-up');
             if ($(e.target).closest('.sub_level_pop').length === 0  ) {
                 var level_id = $(this).attr('value');
                 var url = "/getting_sub_levels/" + level_id;
@@ -115,6 +119,12 @@
     .sequence_4 {background-color: #23c6c8;}
     .sequence_5 {background-color: #f8ac59;}
 </style>
+
+<script type="text/javascript">
+    $('.fa-bars,.fa-wrench').click(function(){
+        $('.popover').css('display','none')
+    })
+</script>
 
 <script>
     $(function () {

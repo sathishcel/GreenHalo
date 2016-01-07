@@ -187,7 +187,7 @@
             <thead>
             <tr id= "tracking_header">
 
-              <th style="background-color: #c2c2c2;" width="20px"></th>
+              <th style="padding: 8px 2px; background-color: #c2c2c2;" width="20px"></th>
               <th style="text-align: center; vertical-align: middle;background: transparent none repeat scroll 0 0;"><i class="fa fa-bars" style="font-size: 20px;" title="Menu"></i></th>
               <th style="text-align: center; vertical-align: middle;background: transparent none repeat scroll 0 0;">Waste Generating Units</th>
               <th style="text-align: center; vertical-align: middle;background: transparent none repeat scroll 0 0;"><i class="fa fa-folder" style="color:#676a6c;font-size: 20px;" title="#of Units"></i></th>
@@ -208,28 +208,24 @@
             <% @all_levels.each do |level| %>
 
                 <tr class="gradeX" valign="middle"  id = "sub_level_<%= level.id %>" value = "<%= level.id %>" order = "not-open">
-                  <td style="background-color: #c2c2c2;" align="center">
+                  <td style="padding: 8px 2px; background-color: #c2c2c2;" align="center">
                     <% if level.get_sub_levels.blank? && level.wgus.blank?%>
                         <i class="fa fa-caret-up" style="font-size: 24px;margin-top: 24px;color: #ffffff;"></i>
                     <% else %>
                         <i class="fa fa-caret-down" style="font-size: 24px;margin-top: 24px;color: #ffffff;"></i>
                     <% end %>
                   </td>
-                  <td  style="text-align: center;vertical-align: middle">
 
+                  <td  style="text-align: center;vertical-align: middle">
                     <%= link_to 'javascript:void(0)', :class => "popover-history", :rel => "popover", :"data-placement" => "bottom", :"data-content" => "#{list_content(level.id)}" do %>
                      <i class="fa fa-bars" style="cursor: pointer; font-size: 24px;color:#676a6c;"></i>
                     <%end%>
-
-
-
-
-
-
                   </td>
 
                   <td><b><%= level.name %></b> <br /> Street <br /> City, State, Zip<br />ID#:<%= tracking_number(level.id) %></td>
-                  <td style="text-align: center;vertical-align: middle"><%= total_sub_level_count(level.id) %></td>
+                  <td style="text-align: center;vertical-align: middle">
+                    L:<%= sub_level_count(level)%>
+                    W:<%= all_wgus_count(level) %></td>
                   <td style="text-align: center;vertical-align: middle"><%= "#{level.id}" +',999,999.99'%></td>
                   <td style="text-align: center;vertical-align: middle"><%= "#{level.id}" +',000,000.99'%></td>
                   <td style="text-align: center;vertical-align: middle"><%= "#{level.id}" +'0%'%></td>
@@ -275,6 +271,7 @@
 <script>
   $(document).ready(function(){
      $(".table_order tr").click(function(e){
+         $(this).find('td .fa-caret-down').attr('class','fa fa-caret-up');
          if ($(e.target).closest('.popover-history').length === 0 && $(e.target).closest('.popover-history').length === 0 ) {
              var level_id = $(this).attr('value');
              var url = "/getting_sub_levels/" + level_id;
@@ -337,6 +334,11 @@
 
 </script>
 
+<script type="text/javascript">
+    $('.fa-bars,.fa-wrench').click(function(){
+        $('.popover').css('display','none')
+    })
+</script>
 
 
 
