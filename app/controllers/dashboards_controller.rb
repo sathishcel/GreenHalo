@@ -4,19 +4,7 @@ class DashboardsController < ApplicationController
 
 
   def index
-    @levels   = Level.top_levels
-    # csv_data = []
-    # @levels.each do |level|
-    #   csv_data << level
-    #   csv_data << level.try(:wgus)
-    #   all_sub =  level.get_sub_levels
-    #   all_sub.each do |sub|
-    #     csv_data << sub
-    #     csv_data << sub.try(:wgus)
-    #   end
-    # end
-    #
-    # @all_sub_levels = csv_data
+    @levels   = Level.all 
     respond_to do |format|
       format.html
       format.csv { send_data @levels.to_csv }
@@ -103,18 +91,6 @@ class DashboardsController < ApplicationController
 
   def get_pdf
     @levels   = Level.top_levels
-    # csv_data = []
-    # @levels.each do |level|
-    #   csv_data << level
-    #   csv_data << level.try(:wgus)
-    #   all_sub =  level.get_sub_levels
-    #   all_sub.each do |sub|
-    #     csv_data << sub
-    #     csv_data << sub.try(:wgus)
-    #   end
-    # end
-    #
-    # @all_sub_levels = csv_data
     render  :pdf => "file.pdf", :template => 'dashboards/get_pdf.html.erb'
   end
 

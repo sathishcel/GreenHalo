@@ -74,6 +74,9 @@ class Level < ActiveRecord::Base
       csv << column_names
       all.each do |level|
         csv << level.attributes.values_at(*column_names)
+        level.try(:wgus).each do |wgu|
+          csv << wgu.attributes.values_at(*column_names)
+        end
       end
     end
 
