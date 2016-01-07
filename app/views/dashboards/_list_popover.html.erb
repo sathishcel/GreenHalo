@@ -69,8 +69,11 @@
   $(document).ready(function(){
       $(".level_reports").click(function(){
           var level_id = $(this).attr('value');
-           var url = $(".bin_type_selection").attr('href');
-          $(".bin_type_selection").attr('href' ,url + level_id);
+          $(".pop-dropdown li a").each(function(){
+             var url = $(this).attr('href');
+              url = url + level_id;
+              $(this).attr('href',url);
+          });
       });
   })
 </script>

@@ -1,3 +1,4 @@
-var data = '<%= @select_level.id %>';
-$("#myModal_reports #replace_ajax_response").html("hello world");
+
+$("#myModal_reports #replace_ajax_response").html("<%= escape_javascript(render :partial => "/dashboards/report_pages/#{@page}",
+:locals => {:level_object => @select_level }) %>")
 $('#displaymenu_rep').hide();

@@ -79,8 +79,7 @@ class DashboardsController < ApplicationController
   # end
 
   def add_report_type
-    puts "hello"
-    puts params
+    @page = params[:page] if params[:page]
     @select_level = Level.find(params[:id])
   end
 
