@@ -2,15 +2,7 @@ class DashboardsController < ApplicationController
   SUBLEVELCONSTANT = nil
   DEFAULT_LEVEL = 1
 
-
-  def index
-    @levels   = Level.all
-    respond_to do |format|
-      format.html
-      format.csv { send_data @levels.to_csv }
-      format.xls # { send_data @products.to_csv(col_sep: "\t") }
-    end
-  end
+  
 
   def dashboard_1
   end
@@ -95,6 +87,15 @@ class DashboardsController < ApplicationController
       format.html
       format.pdf do render  :pdf => "wastetracking.pdf", :template => 'dashboards/get_pdf.html.erb'
       end
+    end
+  end
+
+  def get_csv
+    @levels   = Level.all
+    respond_to do |format|
+      format.html
+      format.csv { send_data @levels.to_csv }
+      format.xls # { send_data @products.to_csv(col_sep: "\t") }
     end
   end
 

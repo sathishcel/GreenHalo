@@ -101,7 +101,7 @@ Myapp::Application.routes.draw do
   # All routes
 
   #resources :dashboards
-  get "dashboards/index"
+  get "/Wastetracking_#{Date.today}_levels" => 'dashboards#get_csv' ,as: :get_csv
   get "/Wastetracking_#{Date.today}_levels" => 'dashboards#get_pdf' ,as: :get_pdf
   post "dashboards/create" => 'dashboards#create'
   get 'dashboards/add_more_wgus'

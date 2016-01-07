@@ -40,7 +40,7 @@
 
             <div class="dt-buttons btn-group">
               <a class="btn btn-default buttons-copy buttons-html5" tabindex="0" aria-controls="DataTables_Table_0"><span>Copy</span></a>
-              <%= link_to "CSV",dashboards_index_path(:format => "csv"),:class => "btn btn-default buttons-excel buttons-html5", :'tabindex' => "0",:'aria-controls' => 'DataTables_Table_0' %>
+              <%= link_to "CSV",get_csv_path(:format => "csv"),:class => "btn btn-default buttons-excel buttons-html5", :'tabindex' => "0",:'aria-controls' => 'DataTables_Table_0' %>
               <a class="btn btn-default buttons-excel buttons-html5" tabindex="0" aria-controls="DataTables_Table_0"><span>Excel</span></a>
               <%= link_to 'PDF', get_pdf_path( :format => :pdf) ,:class => "btn btn-default buttons-excel buttons-html5" ,
                           :'tabindex' => "0",:'aria-controls' => 'DataTables_Table_0' , target: '_blank' %>
