@@ -4,7 +4,7 @@ class DashboardsController < ApplicationController
 
 
   def index
-    @levels   = Level.all 
+    @levels   = Level.all
     respond_to do |format|
       format.html
       format.csv { send_data @levels.to_csv }
