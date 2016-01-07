@@ -1,0 +1,43 @@
+<% unless params[:level_selection].present? %>
+    <ol>
+      <% for i in 1..1 %>
+          <li class="wgu-input-div" style="margin-bottom: 15px !important;">
+
+
+            <div class="form-group">
+              <label class="sr-only" for="exampleInputEmail2">Enter Level Name</label>
+              <%= text_field_tag "level[#{i}][name]", "",:class => "form-control", :placeholder => "Enter Level Name" %>
+            </div>
+
+            <div class="form-group">
+              <label class="sr-only" for="exampleSelect">Select</label>
+              <%= select_tag "level[#{i}][level_id]", options_for_select([[level_object.name,level_object.id]]), :class => "form-control",
+                             :style => "min-width: 200px;"  %>
+            </div>
+          </li>
+      <%end%>
+
+    </ol>
+<%else%>
+
+    <ol>
+      <% for i in 1..params[:level_selection].to_i %>
+          <li class="wgu-input-div" style="margin-bottom: 15px !important;">
+
+
+            <div class="form-group">
+              <label class="sr-only" for="exampleInputEmail2">Enter Level Name</label>
+              <%= text_field_tag "level[#{i}][name]", "",:class => "form-control", :placeholder => "Enter Level Name" %>
+            </div>
+
+            <div class="form-group">
+              <label class="sr-only" for="exampleSelect">Select</label>
+              <%= select_tag "level[#{i}][level_id]", options_for_select([[level_object.name,level_object.id]]), :class => "form-control",
+                             :style => "min-width: 200px;" %>
+            </div>
+          </li>
+      <%end%>
+    </ol>
+
+<%end%>
+

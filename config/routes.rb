@@ -22,12 +22,20 @@ Myapp::Application.routes.draw do
 
   resources :business_level_settings, :path => ':domain/:user_type/business_level_settings' do
     collection do
+      get :terms_conditions
+      get :franchise_aggrement
+      get :overview
+      get :bin_types
+      get :bin_locations
+      get :gallery
+      get :contact
     end
   end
 
   resources :program_settings, :path => ':domain/:user_type/program_settings' do
     collection do
       get :recycling_target
+      get :data_entry
     end
     end
   namespace :business do
@@ -53,9 +61,43 @@ Myapp::Application.routes.draw do
     end
   end
 
-  resources :levels
+  resources :levels do
+    collection do
+      get :get_level
+    end
+  end
   resources :wgus
 
+  resources :materials, :path => ':domain/:user_type/materials' do
+    collection do
+      get :material_list
+      get :facility_list
+      get :check_list
+    end
+  end
+
+  resources :project_types, :path => ':domain/:user_type/project_types' do
+  end
+
+  resources :users, :path => ':domain/:user_type/users' do
+  end
+
+  resources :vendors
+
+  resources :facilities, :path => ':domain/:user_type/facilities'do
+    collection do
+      get :facility_listing
+    end
+  end
+
+  resources :tips, :path => ':domain/:user_type/tips'
+
+  #get "wgu/:id/add_menu_level/:id"  => 'dashboards#add_menu_level'
+
+  get "custom_level_adding/:id" => 'dashboards#custom_level_adding' ,as: :custom_level
+  get "custom_wgu_adding/:id" => 'dashboards#custom_wgu_adding' ,as: :custom_wgu
+  #get "bin_types/:id" => 'dashboards#add_bin_type' ,as: :bin_type
+  get "bin_types/:page/:id"  => 'dashboards#add_report_type' ,as: :report_type
   # All routes
   post "dashboards/create" => 'dashboards#create'
   get 'dashboards/add_more_wgus'

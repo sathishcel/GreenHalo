@@ -1,20 +1,72 @@
-<div aria-hidden="true" role="dialog" tabindex="-1" id="myModal" class="modal inmodal" style="display: none;">
+<script type="text/javascript" src="/assets/icheck.min.js"></script>
+<script type="text/javascript" src="/assets/jquery.metisMenu.js"></script>
+<script type="text/javascript" src="/assets/cropper.min.js"></script>
+
+<%= stylesheet_link_tag "datepicker3.css" %>
+<%= stylesheet_link_tag "clockpicker.css" %>
+<%= stylesheet_link_tag "bootstrap-colorpicker.min.css" %>
+
+
+<div aria-hidden="true" role="dialog" tabindex="-1" id="myModal" class="modal inmodal" style="display: none; z-index: 100 !important;">
   <div class="modal-dialog">
     <div class="modal-content animated bounceInRight">
-      <div class="modal-header">
+      <div class="modal-header" style="padding-top:10px ">
         <button data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
         <i class="fa fa-laptop modal-icon"></i>
         <h4 class="modal-title">Schedule a Web Demo</h4>
         <small class="font-bold">Schedule a Web Demo to find out more about all of the features, functions and reporting capabilities WasteTracking.com has to offer.Thank you for visiting WasteTracking.com!</small>
       </div>
-      <div class="modal-body">
+
+      <form role="form" id="form">
+      <div class="modal-body" style="padding-bottom: 100px">
         <p>
+
         <div class="form-group">
-          <input type="text" class="form-control" placeholder="Full Name*"><br>
-          <input type="email" class="form-control" placeholder="Email Address*"><br>
-          <input type="text" class="form-control" placeholder="Phone (with area code)*"><br>
-          <input type="text" class="form-control" placeholder="Request Specific Date*"><br>
-          <input type="text" class="form-control" placeholder="Best Time to Call*"><br>
+
+
+          <div class="input-group m-b"><span class="input-group-addon">
+            <i class="fa fa-users"></i>
+          </span> <input type="text"   placeholder="Full Name*" class="form-control" required="" aria-required="true" aria-invalid="true" style="height:36px !important;" >
+          </div>
+
+
+          <div class="input-group m-b">
+            <span class="input-group-addon">
+             <i class="fa fa-envelope-square"></i>
+            </span>
+            <input type="email" placeholder="Email Address*" class="form-control " required="" aria-required="true" aria-invalid="true" style="height:36px !important;">
+          </div>
+
+          <div class="input-group m-b">
+            <span class="input-group-addon">
+             <i class="fa fa-phone"></i>
+            </span>
+            <input type="text" placeholder="Phone (with area code)*" class="form-control " required="" aria-required="true" aria-invalid="true" style="height:36px !important;">
+          </div>
+
+
+          <div class="form-group" id="data_1">
+            <div class="input-group date">
+              <span class="input-group-addon">
+                <i class="fa fa-calendar"></i>
+              </span>
+              <input type="text"  class="form-control " value="03/04/2014" required="" aria-required="true" aria-invalid="true" style="height:36px !important;">
+
+            </div>
+          </div>
+
+
+          <div class="input-group clockpicker form-group" data-autoclose="true">
+            <span class="input-group-addon">
+                                    <span class="fa fa-clock-o"></span>
+                                </span>
+            <input type="text" class="form-control" value="09:30" required="" aria-required="true" aria-invalid="true" style="height:36px !important;">
+
+          </div>
+
+
+
+
           <select class="form-control m-b" name="account">
             <option value="">Select Time Zone*</option>
             <option value="Pacific Time">Pacific Time</option>
@@ -25,10 +77,39 @@
         </div>
         </p>
       </div>
+
       <div class="modal-footer">
         <button data-dismiss="modal" class="btn btn-white" type="button">Close</button>
-        <button class="btn btn-primary" type="button">Submit</button>
+        <button class="btn btn-primary" type="submit">Submit</button>
       </div>
+      </form>
+
     </div>
   </div>
 </div>
+
+<script>
+  $(document).ready(function(){
+      $('#data_1 .input-group.date').datepicker({
+          todayBtn: "linked",
+          keyboardNavigation: false,
+          forceParse: false,
+          calendarWeeks: true,
+          autoclose: true
+      });
+
+      $('.clockpicker').clockpicker();
+
+
+  })
+</script>
+
+<style>
+    .modal-backdrop{
+        z-index: 99 !important;
+    }
+
+</style>
+
+
+

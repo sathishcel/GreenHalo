@@ -2,44 +2,32 @@
     <% level_wgus.each do |wgu| %>
 
         <tr class="gradeX" id = "sub_wgu_<%= wgu.id %>" value = "<%= wgu.id %>">
+          <td class="sequence_5">
+            <i class="fa fa-caret-up" style="font-size: 24px;margin-top: 24px; color: #fff;"></i>
+          </td>
+          <td style="text-align: center; vertical-align: middle">
+            <div class="">
 
-          <td>
-            <div class="company-img dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="font-size: 18px;">
-                <i class="fa fa-wrench"></i>
-              </a>
 
-              <ul class="dropdown-menu dropdown-user">
-                <li>
-                  <a href="#"  role="menuitem" tabindex="-1" data-toggle="modal" data-target="#myModal_add_data"
-                     title="Add Data">Add Data</a>
-                </li>
-                <li>
-                  <a href="#"  role="menuitem" tabindex="-1" data-toggle="modal" data-target="#myModal_wgu_settings"
-                     title="Settings">Settings</a>
-                </li>
-                <li>
-                  <a href="#">Reports</a>
-                </li>
-                <li>
-                  <a href="#">Share and Connect</a>
-                </li>
-              </ul>
+              <%= link_to 'javascript:void(0)', :class => "wgu-popover", :rel => "popover", :"data-placement" => "bottom", :"data-content" => "#{wgu_list_content(wgu.id)}" do %>
+                  <i class="fa fa-wrench" style="font-size: 24px;color:#676a6c;"></i>
+              <%end%>
+
             </div>
 
           </td>
-          <td><%= wgu.name %> <br /> Street <br /> City <br /> State, Zip<br />ID#: <%= tracking_number(wgu.id) %></td>
-          <td></td>
-          <td><%= "#{wgu.id}" +'0000'%></td>
-          <td class="center"><%= "#{wgu.id}" +'00'%></td>
-          <td class="center"><%= "#{wgu.id}" +'0%'%></td>
-          <td class="center"><%= "#{wgu.id}" +'000'%></td>
-          <td class="center"><%= "#{wgu.id}" +'0'%></td>
-          <td class="center"><%= "#{wgu.id}" +'0'%></td>
-          <td class="center"><%= "#{wgu.id}" +'0'%></td>
-          <td class="center"><%= "#{wgu.id}" +'0%'%></td>
-          <td class="center"><%= "#{wgu.id}" +'0'%></td>
-          <td class="center"><%= "#{wgu.id}" +'0'%></td>
+          <td><b><%= wgu.name %></b> <br /> Street <br /> City, State, Zip<br />ID#:<%= tracking_number(wgu.id) %></td>
+          <td style="text-align: center; vertical-align: middle"></td>
+          <td style="text-align: center; vertical-align: middle"><%= "#{wgu.id}" +',999,999.99'%></td>
+          <td style="text-align: center; vertical-align: middle"><%= "#{wgu.id}" +',000,000.99'%></td>
+          <td style="text-align: center; vertical-align: middle"><%= "#{wgu.id}" +'0%'%></td>
+          <td style="text-align: center; vertical-align: middle">$<%= "#{wgu.id}" +',999,999.99'%></td>
+          <td style="text-align: center; vertical-align: middle">$<%= "#{wgu.id}" +'000.00'%></td>
+          <td style="text-align: center; vertical-align: middle"><%= "#{wgu.id}" +',000,000.99'%></td>
+          <td style="text-align: center; vertical-align: middle"><%= "#{wgu.id}" +',999,999.99'%></td>
+          <td style="text-align: center; vertical-align: middle"><%= "#{wgu.id}" +'50.05%'%></td>
+          <td style="text-align: center; vertical-align: middle">$<%= "#{wgu.id}" +',000,000.99'%></td>
+          <td style="text-align: center; vertical-align: middle">$<%= "#{wgu.id}" +'000.00'%></td>
         </tr>
 <% end %>
 <% end %>
@@ -48,84 +36,89 @@
 <% unless sub_level.blank? %>
     <% sub_level.each do |level| %>
         <tr class="gradeA" id = "sub_level_<%= level.id %>" value = "<%= level.id %>" order = "not-open">
-          <td>
-            <div class="company-img dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="font-size: 18px;">
-                <i class="fa fa-list"></i>
-              </a>
+            <td class="sequence_<%= level.get_level_and_wgu(level) %>">
+              <% if level.get_sub_levels.blank? && level.wgus.blank? %>
+                <i class="fa fa-caret-up" style="font-size: 24px;margin-top: 24px;color: #ffffff;"></i>
+              <% else %>
+                  <i class="fa fa-caret-down" style="font-size: 24px;margin-top: 24px;color: #ffffff;"></i>
+              <% end %>
+            </td>
 
-              <ul class="dropdown-menu dropdown-user">
-                <li role="presentation">
-                  <a href="#"  role="menuitem" tabindex="-1" data-toggle="modal" data-target="#myModal_reports"
-                     title="Reports">
-                    <div>Reports</div>
-                  </a>
-                </li>
+          <td style="text-align: center; vertical-align: middle">
 
-                <li role="presentation">
-                  <a href="#"  role="menuitem" tabindex="-1" data-toggle="modal" data-target="#myModal15"
-                     title="Program Settings">
-                    <div>Program Settings</div>
-                  </a>
-                </li>
-                <li role="presentation">
-                  <a role="menuitem" tabindex="-1" href="#">
-                    <div>Manage Portal</div>
-                  </a>
-                </li>
-                <li role="presentation">
-                  <a role="menuitem" tabindex="-1" href="#" style="color:#058F26;">
-                    <div>Add Level</div>
-                  </a>
-                </li>
-                <li role="presentation">
-                  <a role="menuitem" class="addwgu" tabindex="-1" href="#" style="color:#058F26;">
-                    Add WGU
-                  </a>
-                </li>
-                <li role="presentation">
-                  <a role="menuitem" tabindex="-1" href="#" style="color:#058F26;">
-                    Edit Profile
-                  </a>
-                </li>
-              </ul>
-            </div>
+
+
+            <!--<div class="company-img dropdown">-->
+
+              <%= link_to 'javascript:void(0)', :class => "sub_level_pop", :rel => "popover",
+                          :"data-placement" => "bottom", :"data-content" => "#{list_content(level.id)}" do %>
+                  <i class="fa fa-bars" style="cursor: pointer; font-size: 24px;color:#676a6c;"></i>
+              <%end%>
+
+            <!--</div>-->
 
           </td>
 
-          <td><%= level.name %> <br /> Street <br /> City<br /> State, Zip<br />ID#: <%= tracking_number(level.id) %></td>
-          <td><%= total_sub_level_count(level.id) %></td>
-          <td><%= "#{level.id}" +'0000'%></td>
-          <td class="center"><%= "#{level.id}" +'00'%></td>
-          <td class="center"><%= "#{level.id}" +'0%'%></td>
-          <td class="center"><%= "#{level.id}" +'000'%></td>
-          <td class="center"><%= "#{level.id}" +'0'%></td>
-          <td class="center"><%= "#{level.id}" +'0'%></td>
-          <td class="center"><%= "#{level.id}" +'0'%></td>
-          <td class="center"><%= "#{level.id}" +'0%'%></td>
-          <td class="center"><%= "#{level.id}" +'0'%></td>
-          <td class="center"><%= "#{level.id}" +'0'%></td>
+
+
+          <td class = "sorting_1" ><b><%= level.name %></b> <br /> Street <br /> City, State, Zip<br />ID#:<%= tracking_number(level.id) %></td>
+          <td style="text-align: center; vertical-align: middle"><%= total_sub_level_count(level.id) %></td>
+          <td style="text-align: center; vertical-align: middle"><%= "#{level.id}" +',999,999.99'%></td>
+          <td style="text-align: center; vertical-align: middle"><%= "#{level.id}" +',000,000.99'%></td>
+          <td style="text-align: center; vertical-align: middle"><%= "#{level.id}" +'0%'%></td>
+          <td style="text-align: center; vertical-align: middle">$<%= "#{level.id}" +',999,999.99'%></td>
+          <td style="text-align: center; vertical-align: middle">$<%= "#{level.id}" +'000.00'%></td>
+          <td style="text-align: center; vertical-align: middle"><%= "#{level.id}" +',000,000.99'%></td>
+          <td style="text-align: center; vertical-align: middle"><%= "#{level.id}" +',999,999.99'%></td>
+          <td style="text-align: center; vertical-align: middle"><%= "#{level.id}" +'50.05%'%></td>
+          <td style="text-align: center; vertical-align: middle">$<%= "#{level.id}" +',000,000.99'%></td>
+          <td style="text-align: center; vertical-align: middle">$<%= "#{level.id}" +'000.00'%></td>
         </tr>
     <%end%>
 
 <%end%>
 
+<%= render partial: "level_model_content"%>
+
+<%= render partial: "wgu_model_content"%>
+
 
 <script>
     $(document).ready(function(){
-        $(".gradeA").click(function(){
-            var level_id = $(this).attr('value');
-            var url = "/getting_sub_levels/" + level_id ;
-            $.ajax({
-                type: "GET",
-                url: url
-            });
+        $(".gradeA").click(function(e){
+            if ($(e.target).closest('.sub_level_pop').length === 0  ) {
+                var level_id = $(this).attr('value');
+                var url = "/getting_sub_levels/" + level_id;
+                $.ajax({
+                    type: "GET",
+                    url: url
+                });
+
+            }
         });
+
+
     });
 </script>
+
+
 
 <style>
     .wt-trho:hover{
         background-color: #cccccc !important;
     }
+    .wt-trho{
+        cursor: pointer;
+    }
+    .sequence_2 {background-color: #1ab394;}
+    .sequence_3 {background-color: #1c84c6;}
+    .sequence_4 {background-color: #23c6c8;}
+    .sequence_5 {background-color: #f8ac59;}
 </style>
+
+<script>
+    $(function () {
+        $('.sub_level_pop').popover({ html : true });
+        $('.wgu-popover').popover({ html : true });
+    });
+</script>

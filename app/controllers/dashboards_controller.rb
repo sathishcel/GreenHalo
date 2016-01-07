@@ -59,4 +59,28 @@ class DashboardsController < ApplicationController
 
   end
 
+  def add_menu_level
+
+  end
+
+  def custom_level_adding
+     @level = Level.find(params[:id])
+  end
+
+  def custom_wgu_adding
+    @wgu_level = Level.find(params[:id])
+  end
+
+
+  # def add_bin_type
+  #   puts "hello"
+  #   puts params
+  #
+  # end
+
+  def add_report_type
+    @page = params[:page] if params[:page]
+    @select_level = Level.find(params[:id])
+  end
+
 end

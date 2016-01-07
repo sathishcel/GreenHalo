@@ -63,8 +63,10 @@ GEM
     execjs (2.6.0)
     font-awesome-rails (4.5.0.0)
       railties (>= 3.2, < 5.0)
+    geokit (1.10.0)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
+    gmaps4rails (2.1.2)
     hike (1.2.3)
     i18n (0.7.0)
     jbuilder (1.5.3)
@@ -170,6 +172,8 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   devise
   font-awesome-rails (= 4.5.0.0)
+  geokit
+  gmaps4rails
   jbuilder (~> 1.2)
   jquery-rails
   mysql2 (~> 0.3.13)

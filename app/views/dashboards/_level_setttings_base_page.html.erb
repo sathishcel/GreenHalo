@@ -1,25 +1,3 @@
-<script type="text/javascript">
-
-    $("#menulist").click(function()
-    {
-        $("#displaymenu").toggle();
-    });
-
-
-    function dynamic_level_settings(url) {
-
-        var current_url = url;
-        var level_id = level_id;
-        $.ajax({
-            type: "GET",
-            url: current_url,
-        }).success(function (data) {
-            $('#replace_ajax_response').html(data);
-            $("#displaymenu").toggle();
-        });
-    }
-</script>
-
 <div class="modal inmodal" id="myModal15" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog modal-lg" style = "width:95%;margin-top: 9px;">
     <div class="modal-content">
@@ -49,11 +27,23 @@
         <ul class="pop-dropdown">
           <li> <%= link_to "Settings Function", "#", onclick:"dynamic_level_settings('#{business_level_settings_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
           <li> <%= link_to "Recycle Target", "#", onclick:"dynamic_level_settings('#{recycling_target_program_settings_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
+          <li> <%= link_to "Terms and Conditions", "#", onclick:"dynamic_level_settings('#{terms_conditions_business_level_settings_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
+          <li> <%= link_to "Franchise Agreement", "#", onclick:"dynamic_level_settings('#{franchise_aggrement_business_level_settings_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
+          <li> <%= link_to "Materials", "#", onclick:"dynamic_level_settings('#{material_list_materials_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
+          <li> <%= link_to "Facility Listing", "#", onclick:"dynamic_level_settings('#{facility_list_materials_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
+          <li> <%= link_to "Classifications", "#", onclick:"dynamic_level_settings('#{project_types_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
+          <li> <%= link_to "Data Entry", "#", onclick:"dynamic_level_settings('#{data_entry_program_settings_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
+          <li> <%= link_to "Custom Fields", "#", onclick:"dynamic_level_settings('#{tips_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
+          <li> <%= link_to "Checklist", "#", onclick:"dynamic_level_settings('#{check_list_materials_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
+          <li> <%= link_to "Tips and Banners", "#", onclick:"dynamic_level_settings('#{tips_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
+          <li> <%= link_to "Vendors", "#", onclick:"dynamic_level_settings('#{vendors_path}');" %> </li>
+          <li> <%= link_to "Facilities", "#", onclick:"dynamic_level_settings('#{facilities_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
+          <li> <%= link_to "Users", "#", onclick:"dynamic_level_settings('#{users_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
         </ul>
       </div>
 
        <div id="replace_ajax_response">
-            <%= render partial:"business_level_settings/system_config"%>
+
        </div>
 
       <div class="modal-footer">
@@ -114,3 +104,16 @@
       }
 
   </style>
+
+
+<script>
+    $('#myModal15').on('show.bs.modal', function(e) {
+        var level_id = e.relatedTarget.id;
+        $.ajax({
+            type: "GET",
+            url: "/levels/get_level"
+        }).success(function(data){
+            $('#replace_ajax_response').html(data);
+        })
+    });
+</script>
