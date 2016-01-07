@@ -57,6 +57,7 @@ Myapp::Application.routes.draw do
         get :account_confirmation
         get :get_city_and_state
         get :invoice_confirm
+        get :check_user_domain
       end
     end
   end

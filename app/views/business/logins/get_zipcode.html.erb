@@ -35,7 +35,6 @@
                     <fieldset style="position: unset;">
                         <h2>Pricing Information</h2>
                         <div class="row">
-
                             <div class="col-lg-8">
                               <div class="form-group">
                                 <div class="col-sm-10">
@@ -50,13 +49,16 @@
                                 </div>
                               </div>
                                 <div class="form-group">
-                                    <img width="340" height="200" alt="Map" src="/assets/img/map.jpg" id="unloading_map" style="margin-top: 10px;">
+                                    <img width="323" height="200" alt="Map" src="/assets/img/map.jpg" id="unloading_map"
+                                         style="margin-top: 15px;margin-left: 16px;">
                                 </div>
                                   <div class="form-group">
                                     <div style="width: 340px; height: 200px; margin-left: 43px; display: none;" id="map"></div>
                                   </div>
                                 <div class="form-group">
-                                    <input id="post_location" name="userName" type="text" class="form-control required" placeholder="Local Verification" style="width: 47.3%;margin-bottom: 10px;">
+                                    <input id="post_location" name="userName" type="text" class="form-control required"
+                                           placeholder="Local Verification" style="width: 44.8%;margin-bottom: 10px;
+                                            margin-left: 16px;">
                                 </div>
                                 <div class="form-group">
                                     <button class="btn btn-w-m btn-default" type="button" style="width: 28%;margin-left: 60px;" id="reset_zipcode">No, try again</button>
@@ -74,80 +76,81 @@
                     </fieldset>
                     <h1>Profile</h1>
                     <fieldset style="position:unset;">
+                      <!--<form method="post" accept-charset="UTF-8" action="/business/logins" id="business_user_data">-->
                         <h2>Profile Information</h2>
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="form-group">
                                     <label>Email *</label>
-                                    <input id="email" name="email" type="text" class="form-control required email">
+                                    <input id="user_email" name="user[email]" type="text" class="form-control required email">
                                 </div>
                                 <div class="form-group">
                                     <label>Confirm Email *</label>
-                                    <input id="email" name="email" type="text" class="form-control">
+                                    <input id="user_confirm_email" name="user[confirm_email]" type="text" class="form-control required email">
                                 </div>
                                 <div class="form-group">
                                     <label>Password *</label>
-                                    <input id="password" name="password" type="text" class="form-control">
+                                    <input id="user_Password" name="user[password]" type="text" class="form-control required">
                                 </div>
                                 <div class="form-group">
                                     <label>Confirm Password *</label>
-                                    <input id="password" name="password" type="text" class="form-control">
+                                    <input id="user_password_confirmation" name="user[password_confirmation]" type="text" class="form-control required">
                                 </div>
 
                               <div class="form-group">
                                 <label>First Name *</label>
-                                <input id="first_name" name="first_name" type="text" class="form-control required email">
+                                <input id="user_first_name" name="user[first_name]" type="text" class="form-control required">
                               </div>
                               <div class="form-group">
                                 <label>Last Name *</label>
-                                <input id="last_name" name="last_name" type="text" class="form-control">
+                                <input id="user_last_name" name="user[last_name]" type="text" class="form-control required">
                               </div>
                               <div class="form-group">
                                 <label>Position *</label>
-                                <input id="position" name="position" type="text" class="form-control">
+                                <input id="user_detail_position" name="user_detail[position]" type="text" class="form-control required">
                               </div>
                               <div class="form-group">
                                 <label>Company Name *</label>
-                                <input id="company_name" name="company_name" type="text" class="form-control">
+                                <input id="user_detail_company_name" name="user_detail[company_name]" type="text" class="form-control required">
                               </div>
                               <div class="form-group">
                                 <label>Company Website *</label>
-                                <input id="company_website" name="company_website" type="text" class="form-control">
+                                <input id="user_detail_company_website" name="user_detail[company_website]" type="text" class="form-control required ">
                               </div>
                             </div>
 
                           <div class="col-lg-6">
                             <div class="form-group">
                               <label>Street Address *</label>
-                              <input id="street" name="street" type="text" class="form-control required">
+                              <input id="address_street" name="address[street]" type="text" class="form-control required">
                             </div>
                             <div class="form-group">
                               <label>Suite/Unit *</label>
-                              <input id="suit_unit" name="suit_unit" type="text" class="form-control required">
+                              <input id="address_suit_unit" name="address[suit_unit]" type="text" class="form-control required">
                             </div>
                             <div class="form-group">
                               <label>City *</label>
-                              <input id="city" name="city" type="text" class="form-control required" readonly>
+                              <input id="address_city" name="address[city]" type="text" class="form-control required" readonly>
                             </div>
                             <div class="form-group">
                               <label>State *</label>
-                              <input id="state" name="state" type="text" class="form-control required" readonly>
+                              <input id="address_state" name="address[state]" type="text" class="form-control required" readonly>
                             </div>
                             <div class="form-group">
                               <label>Zipcode *</label>
-                              <input id="zip" name="zip" type="text" class="form-control required" readonly>
+                              <input id="address_zip" name="address[zip]" type="text" class="form-control required" readonly>
                             </div>
                             <div class="form-group">
                               <label>Phone *</label>
-                              <input id="phone_number" name="phone_number" type="text" class="form-control required">
+                              <input id="address_phone_number" name="address[phone_number]" type="text" class="form-control required">
                             </div>
                             <div class="form-group">
                               <label>How do you heard about this? *</label>
-                              <input id="how_heard" name="how_heard" type="text" class="form-control required">
+                              <input id="user_detail_how_heard" name="user_detail[how_heard]" type="text" class="form-control required">
                             </div>
                             <div class="form-group">
                               <label>Domain Name *</label>
-                              <input id="domain_name" name="domain_name" type="text" class="form-control required error">
+                              <input id="user_domain_name" name="user[domain_name]" type="text" class="form-control required error">
                             </div>
                             <div class="form-group">
                                 <button id="check_avail" class="btn btn-primary" type="button" style="margin-top: 29px;">Check Availability</button>
@@ -158,6 +161,7 @@
                           </div>
 
                         </div>
+                      <!--</form>-->
                     </fieldset>
 
                     <h1>Calculate Pricing</h1>
@@ -413,11 +417,8 @@ $(function() {
 
             $('.actions.clearfix ul li:nth-child(2)').click(function(){
 
-                if ($('#form-p-1').attr('class') == 'body') {
+                if ($('#form-p-0').attr('class') == 'body') {
 
-                }
-
-                else {
 
                     var zipcode = $("#business_user_zipcode").val();
                     var city = $('#post_location').val().split(',')["0"].replace("Are you in ", "");
@@ -436,10 +437,46 @@ $(function() {
                             $('.first.current').next().attr('attr-selected', 'true')
                             $('.first.current').attr('aria-selected', 'false');
                             $('.first.current').attr('class', 'first done');
-                            $('#city').val(city);
-                            $('#state').val(state);
-                            $('#zip').val(zipcode);
+                            $('#address_city').val(city);
+                            $('#address_state').val(state);
+                            $('#address_zip').val(zipcode);
+                            $('#form-p-0').attr('class', 'body get_zip');
                         }
+                    });
+                }
+
+                else {
+                    var email = $('#user_email').val();
+                    var confirm_email = $('#user_confirm_email').val();
+                    var password = $('#user_Password').val();
+                    var confirm_password = $('#user_password_confirmation').val();
+                    var domain_name = $('#user_domain_name').val();
+                    var first_name = $('#user_first_name').val();
+                    var last_name = $('#user_last_name').val();
+
+                    var street = $("#address_street").val();
+                    var suit_unit = $("#address_suit_unit").val();
+                    var city = $("#address_city").val();
+                    var state = $("#address_state").val();
+                    var zip = $("#address_zip").val();
+                    var phone_number = $("#address_phone_number").val();
+
+                    var position = $("#user_detail_position").val();
+                    var company_name = $("#user_detail_company_name").val();
+                    var company_website = $("#user_detail_company_website").val();
+                    var how_heard = $("#user_detail_how_heard").val();
+
+                    var user_data={user:{email:email,confirm_email:confirm_email,password:password,password_confirmation:
+                            confirm_password,domain_name:domain_name,first_name:first_name,last_name:last_name},address:
+                    {street:street,suit_unit:suit_unit,city:city,state:state,zip:zip,phone_number:phone_number},
+                        user_detail:{position:position,company_name:company_name,company_website:company_website,
+                            how_heard:how_heard}}
+
+                    $.ajax({
+                        url: "/business/logins",
+                        type: "POST",
+                        dataType: "json",
+                        data: user_data
                     });
                 }
 
@@ -479,7 +516,6 @@ $(function() {
                             data: { domain_name: domain_val }, // This goes to Controller in params hash, i.e. params[:file_name]
 
                             success: function(data, textStatus, xhr) {
-                               alert(data);
                                 if(data[0] != null){
 
                                 }
