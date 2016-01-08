@@ -38,7 +38,8 @@ class DashboardsController < ApplicationController
   end
 
   def new_tracking
-    @user_details = UserDetail.find(current_user.id).material_display
+    @user= UserDetail.where("user_id = ?",current_user.id).first
+    @user_details = @user.material_display if !@user.blank?
       if @user_details  == 1
         @liquid = 1
       elsif @user_details == 2
@@ -127,13 +128,25 @@ class DashboardsController < ApplicationController
     end
   end
   def update_user_material_display(params)
-    @user = UserDetail.find(current_user.id)
-    if params =='liquid'
-      @user.update(:user_id => @user.id,:material_display => 1)
+    @user= UserDetail.where("user_id = ?",current_user.id).first
+    if params == 'liquid'
+      if !@user.blank?
+        @user.update(:user_id => @user.id,:material_display => 1)
+      else
+        UserDetail.create(:user_id => current_user.id,:material_display => 1)
+      end
     elsif params == 'solid'
-      @user.update(:user_id => @user.id,:material_display => 2)
+      if !@user.blank?
+       @user.update(:user_id => @user.user_id,:material_display => 2)
+      else
+       UserDetail.create(:user_id => current_user.id,:material_display => 2)
+      end
     elsif params == 'both'
-      @user.update(:user_id => @user.id,:material_display => 3)
+      if !@user.blank?
+        @user.update(:user_id => @user.user_id,:material_display => 3)
+      else
+        UserDetail.create(:user_id => current_user.id,:material_display => 3)
+    end
     end
   end
 end
