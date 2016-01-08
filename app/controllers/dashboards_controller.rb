@@ -1,9 +1,7 @@
 class DashboardsController < ApplicationController
   SUBLEVELCONSTANT = nil
   DEFAULT_LEVEL = 1
-
-
-
+  
   def dashboard_1
   end
 
@@ -38,15 +36,6 @@ class DashboardsController < ApplicationController
   end
 
   def new_tracking
-    @user= UserDetail.where("user_id = ?",current_user.id).first
-    @user_details = @user.material_display if !@user.blank?
-      if @user_details  == 1
-        @liquid = 1
-      elsif @user_details == 2
-        @liquid = 2
-      elsif @user_details == 3
-        @liquid = 3 
-      end
     @all_levels = Level.top_levels
       if request.xhr?
         @level_limit = params[:multi_level_selection].to_i
@@ -107,46 +96,5 @@ class DashboardsController < ApplicationController
       format.xls # { send_data @products.to_csv(col_sep: "\t") }
     end
   end
-  def get_liquid_only
-    update_user_material_display('liquid')
-    if request.xhr?
-       render partial: "liquid_data_only"
-    end
-  end
-
-  def get_solid_only
-    update_user_material_display('solid')
-    if request.xhr?
-       render partial: "solid_data_only"
-    end
-  end
-
-  def get_liquid_and_solid
-    update_user_material_display('both')
-    if request.xhr?
-       render partial: "liquid_and_solid_data"
-    end
-  end
-  def update_user_material_display(params)
-    @user= UserDetail.where("user_id = ?",current_user.id).first
-    if params == 'liquid'
-      if !@user.blank?
-        @user.update(:user_id => @user.id,:material_display => 1)
-      else
-        UserDetail.create(:user_id => current_user.id,:material_display => 1)
-      end
-    elsif params == 'solid'
-      if !@user.blank?
-       @user.update(:user_id => @user.user_id,:material_display => 2)
-      else
-       UserDetail.create(:user_id => current_user.id,:material_display => 2)
-      end
-    elsif params == 'both'
-      if !@user.blank?
-        @user.update(:user_id => @user.user_id,:material_display => 3)
-      else
-        UserDetail.create(:user_id => current_user.id,:material_display => 3)
-    end
-    end
-  end
+  
 end
