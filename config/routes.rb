@@ -101,8 +101,8 @@ Myapp::Application.routes.draw do
   # All routes
 
   #resources :dashboards
-  get "dashboards/index"
-  get "/get_pdf" => 'dashboards#get_pdf' ,as: :get_pdf
+  get "/Wastetracking_levels_#{Date.today}" => 'dashboards#get_csv' ,as: :get_csv
+  get "/Wastetracking_#{Date.today}_levels" => 'dashboards#get_pdf' ,as: :get_pdf
   post "dashboards/create" => 'dashboards#create'
   get 'dashboards/add_more_wgus'
   get "dashboards/dashboard_1"
@@ -116,7 +116,10 @@ Myapp::Application.routes.draw do
   get "dashboards/organize"
   get "dashboards/tools"
   get "dashboards/new_tracking"  => 'dashboards#new_tracking' ,as: 'new_tracking'
-
+  get "dashboards/get_lequid_only"
+  get "dashboards/get_solid_only"
+  get "dashboards/get_lequid_and_solid"
+  
   get "layoutsoptions/index"
   get "layoutsoptions/off_canvas"
 

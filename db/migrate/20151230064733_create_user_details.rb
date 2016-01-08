@@ -9,7 +9,8 @@ class CreateUserDetails < ActiveRecord::Migration
       t.string :pricing_option
       t.string :payment_option
       t.string :amount
-
+      t.integer :user_id
+      t.integer :material_display
     end
   end
 end
