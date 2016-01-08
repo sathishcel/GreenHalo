@@ -27,23 +27,57 @@
           <h5>Waste Generating Units</h5>
         </div>
 
-        <div class="" style="background-color:#fff;padding-bottom:0px !important;float: left;
+        <div class="ibox-content" style="background-color:#fff;padding-bottom:0px !important;float: left;
                 width: 100%;">
-          <div align="left" class="col-lg-6" style="background-color: #fff;">
+          <div align="left" class="col-lg-6" style="padding:0px;background-color: #fff;">
             <a class="btn btn-primary btn-sm" data-toggle="modal" data-target="#addwgu" >Add WGU</a>
             <a class="btn btn-primary btn-sm" data-toggle="modal" data-target="#addlevel">Add Level</a>
             <a class="btn btn-primary btn-sm" href="javascript:void(0);" onclick="">Expand All</a>
             <a class="btn btn-primary btn-sm collapse-link" >Collapse All</a>
-            <a class="btn btn-primary btn-sm" >Solid</a>
-            <a class="btn btn-primary btn-sm" >Liquid</a>
-            <a class="btn btn-primary btn-sm" >Both</a>
+            <!--<a class="btn btn-primary btn-sm" >Solid</a>-->
+            <!--<a class="btn btn-primary btn-sm" >Liquid</a>-->
+            <!--<a class="btn btn-primary btn-sm" >Both</a>-->
 
 
           </div>
-          <div class="col-lg-6" align="right" style="background-color: #fff">
+          <!--<div class="col-lg-6" align="right" style="padding:0px;background-color: #fff">-->
+
+            <!--<div class="dt-buttons btn-group">-->
+              <!--<label style="float:left;margin-right: 5px;font-weight: normal;white-space: nowrap; text-align: left;">-->
+                <!--Search:-->
+                <!--<input type="search" style="margin-left: 0.5em;display: inline-block;width: auto;" class="form-control input-sm" placeholder="" aria-controls="DataTables_Table_0">-->
+              <!--</label>-->
+              <!--<a class="btn btn-default buttons-copy buttons-html5" tabindex="0" aria-controls="DataTables_Table_0"><span>Copy</span></a>-->
+              <!--<%#= link_to "CSV",get_csv_path(:format => "csv"),:class => "btn btn-default buttons-excel buttons-html5", :'tabindex' => "0",:'aria-controls' => 'DataTables_Table_0' %>-->
+              <!--<a class="btn btn-default buttons-excel buttons-html5" tabindex="0" aria-controls="DataTables_Table_0"><span>Excel</span></a>-->
+              <%#= link_to 'PDF', get_pdf_path( :format => :pdf) ,:class => "btn btn-default buttons-excel buttons-html5" ,
+                          :'tabindex' => "0",:'aria-controls' => 'DataTables_Table_0' , target: '_blank' %>
+              <!--<a class="btn btn-default buttons-print" tabindex="0" aria-controls="DataTables_Table_0"><span>Print</span></a>-->
+            <!--</div>-->
+
+          <!--</div>-->
+        </div>
+
+
+
+        <div class="ibox-content" style="background-color:#fff;padding-bottom:0px !important;float: left;
+                width: 100%; border: none;">
+          <div align="left" class="col-lg-6" style="padding:0px;background-color: #fff;">
+            <label style="font-weight: normal; text-align: left; white-space: nowrap;">Show
+              <select style="width: 85px;display: inline-block;" name="editable_length" aria-controls="editable" class="form-control input-sm">
+                <option value="solid">Solid</option>
+                <option value="liquid">Liquid</option>
+                <option value="both" selected>Both</option>
+              </select> materials
+            </label>
+          </div>
+          <div class="col-lg-6" align="right" style="padding:0px;background-color: #fff">
 
             <div class="dt-buttons btn-group">
-              <!--<label>Search:<input type="search" class="form-control input-sm" placeholder="" aria-controls="DataTables_Table_0"></label>-->
+              <label style="float:left;margin-right: 5px;font-weight: normal;white-space: nowrap; text-align: left;">
+                Search:
+                <input type="search" style="margin-left: 0.5em;display: inline-block;width: auto;" class="form-control input-sm" placeholder="" aria-controls="DataTables_Table_0">
+              </label>
               <a class="btn btn-default buttons-copy buttons-html5" tabindex="0" aria-controls="DataTables_Table_0"><span>Copy</span></a>
               <%= link_to "CSV",get_csv_path(:format => "csv"),:class => "btn btn-default buttons-excel buttons-html5", :'tabindex' => "0",:'aria-controls' => 'DataTables_Table_0' %>
               <a class="btn btn-default buttons-excel buttons-html5" tabindex="0" aria-controls="DataTables_Table_0"><span>Excel</span></a>
@@ -51,9 +85,9 @@
                           :'tabindex' => "0",:'aria-controls' => 'DataTables_Table_0' , target: '_blank' %>
               <a class="btn btn-default buttons-print" tabindex="0" aria-controls="DataTables_Table_0"><span>Print</span></a>
             </div>
-
-          </div>
+         </div>
         </div>
+
         <div class="ibox-content" style="border-width:0 !important;">
 
 
