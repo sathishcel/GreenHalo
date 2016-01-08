@@ -9,7 +9,7 @@ class Level < ActiveRecord::Base
   has_many :wgus
   belongs_to :user
   HEADERS = ["S No","Unit Name","Units Count","Tons Disposed","Recycling Rate","Disposal Costs",
-                           "Return on Recycling","Gallons Disposed","Gallons Recycled","Recycling Rate"," Disposal Costs","Return on Recycling"]
+                           "Return on Recycling","Gallons Disposed","Gallons Recycled"," Disposal Costs"]
 
   def get_sub_levels(list=[])
     sub_unit = []
@@ -73,14 +73,26 @@ class Level < ActiveRecord::Base
   def self.to_csv(options = {})
     CSV.generate(options) do |csv|
       csv << Level::HEADERS
+      i = 1
       all.each do |level|
-        csv << level.attributes.reject! {|k, v| %w"user_id created_at updated_at".include? k }.values_at(*column_names)
-        level.try(:wgus).each do |wgu|
-          csv << wgu.attributes.reject! {|k, v| %w"created_at updated_at".include? k }.values_at(*column_names)
-        end
+        additional_attributes = {:s_no => i ,:name => level.name,:level_id => " L:#{level.sub_levels.try(:count)},W:#{level.wgus.try(:count)}" ,:tons_disposed => "1,999,999.99",:recycling_rate => "1,000,000.99" ,:disposal_costs => "10%",
+                                 :return_on_canseling => "$1,999,999.99",:gallon_disposed => "$1000.00",:gallon_recycled => "1,000,000.99" ,:recycling_rate => "1,999,999.99",
+                                 :disposal_costs => "10.05%" ,:return_on_recycling => "$1,000,000.99"}
+        values = additional_attributes.values
+        csv.add_row values
+
+         level.try(:wgus).each do |wgu|
+           wgu_attributes = {:s_no => i + 1 ,:name => wgu.name,:level_id => "" ,:tons_disposed => "1,999,999.99",:recycling_rate => "1,000,000.99" ,:disposal_costs => "10%",
+                                    :return_on_canseling => "$1,999,999.99",:gallon_disposed => "$1000.00",:gallon_recycled => "1,000,000.99" ,:recycling_rate => "1,999,999.99",
+                                    :disposal_costs => "10.05%" ,:return_on_recycling => "$1,000,000.99"}
+
+           wgu_values = wgu_attributes.values
+           csv.add_row wgu_values
+           i += 1
+         end
+         i += 1
       end
     end
-
   end
 
 
