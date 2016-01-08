@@ -107,7 +107,7 @@ class DashboardsController < ApplicationController
       format.xls # { send_data @products.to_csv(col_sep: "\t") }
     end
   end
-  def get_lequid_only
+  def get_liquid_only
     update_user_material_display('liquid')
     if request.xhr?
        render partial: "liquid_data_only"
@@ -121,7 +121,7 @@ class DashboardsController < ApplicationController
     end
   end
 
-  def get_lequid_and_solid
+  def get_liquid_and_solid
     update_user_material_display('both')
     if request.xhr?
        render partial: "liquid_and_solid_data"
