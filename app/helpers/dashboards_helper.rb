@@ -42,5 +42,9 @@ module DashboardsHelper
   def sub_level_count(level)
     level.get_sub_levels.count
   end
+
+  def level_settings_content
+    render :partial => 'dashboards/level_settings_popover'
+  end
 end
 

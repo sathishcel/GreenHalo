@@ -1,0 +1,46 @@
+<ul class="dropdown-menu-new">
+
+  <li> <%= link_to "Settings Function", "#", onclick:"dynamic_level_settings('#{business_level_settings_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
+  <li> <%= link_to "Recycle Target", "#", onclick:"dynamic_level_settings('#{recycling_target_program_settings_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
+  <li> <%= link_to "Terms and Conditions", "#", onclick:"dynamic_level_settings('#{terms_conditions_business_level_settings_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
+  <li> <%= link_to "Franchise Agreement", "#", onclick:"dynamic_level_settings('#{franchise_aggrement_business_level_settings_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
+  <li> <%= link_to "Materials", "#", onclick:"dynamic_level_settings('#{material_list_materials_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
+  <li> <%= link_to "Facility Listing", "#", onclick:"dynamic_level_settings('#{facility_list_materials_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
+  <li> <%= link_to "Classifications", "#", onclick:"dynamic_level_settings('#{project_types_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
+  <li> <%= link_to "Data Entry", "#", onclick:"dynamic_level_settings('#{data_entry_program_settings_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
+  <li> <%= link_to "Custom Fields", "#", onclick:"dynamic_level_settings('#{tips_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
+  <li> <%= link_to "Checklist", "#", onclick:"dynamic_level_settings('#{check_list_materials_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
+  <li> <%= link_to "Tips and Banners", "#", onclick:"dynamic_level_settings('#{tips_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
+  <li> <%= link_to "Vendors", "#", onclick:"dynamic_level_settings('#{vendors_path}');" %> </li>
+  <li> <%= link_to "Facilities", "#", onclick:"dynamic_level_settings('#{facilities_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
+  <li> <%= link_to "Users", "#", onclick:"dynamic_level_settings('#{users_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
+
+ </ul>
+
+
+<style>
+    .dropdown-menu-new{
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .dropdown-menu-new > li > a {
+        border-radius: 3px;
+        color: inherit;
+        line-height: 25px;
+        margin: 4px;
+        text-align: left;
+        font-weight: normal;
+        display: block;
+        padding: 3px 20px;
+        clear: both;
+    }
+    .dropdown-menu-new > li > a:hover {
+        color: #000;
+        background-color: #eeeeee;
+    }
+    .popover-content {
+        padding: 9px 2px;
+    }
+</style>

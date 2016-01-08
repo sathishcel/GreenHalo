@@ -1,6 +1,8 @@
 <div class="row modal-header" style="margin:0">
   <div class="col-lg-3" align="left">
-    <i class="fa fa-th fa-3x" id="settings_menulist"></i>
+    <%= link_to 'javascript:void(0)', :style=>"color:#676a6c;", :class => "popover-history2", :rel => "popover", :"data-placement" => "bottom", :"data-content" => "#{level_settings_content}" do %>
+      <i class="fa fa-th fa-3x" id="settings_menulist"></i>
+    <% end %>
   </div>
   <div class="col-lg-6">
     <div class="">
@@ -15,89 +17,16 @@
   </div>
 </div>
 
-<div id="display_settings_menu" class="displaylist_settings" style="position: absolute;">
-  <%= image_tag "img/pop-img.png", :class=>"pop-pointer-dd" %>
-  <ul class="pop-dropdown">
-    <li> <%= link_to "Settings Function", "#", onclick:"dynamic_level_settings('#{business_level_settings_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
-    <li> <%= link_to "Recycle Target", "#", onclick:"dynamic_level_settings('#{recycling_target_program_settings_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
-    <li> <%= link_to "Terms and Conditions", "#", onclick:"dynamic_level_settings('#{terms_conditions_business_level_settings_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
-    <li> <%= link_to "Franchise Agreement", "#", onclick:"dynamic_level_settings('#{franchise_aggrement_business_level_settings_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
-    <li> <%= link_to "Materials", "#", onclick:"dynamic_level_settings('#{material_list_materials_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
-    <li> <%= link_to "Facility Listing", "#", onclick:"dynamic_level_settings('#{facility_list_materials_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
-    <li> <%= link_to "Classifications", "#", onclick:"dynamic_level_settings('#{project_types_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
-    <li> <%= link_to "Data Entry", "#", onclick:"dynamic_level_settings('#{data_entry_program_settings_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
-    <li> <%= link_to "Custom Fields", "#", onclick:"dynamic_level_settings('#{tips_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
-    <li> <%= link_to "Checklist", "#", onclick:"dynamic_level_settings('#{check_list_materials_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
-    <li> <%= link_to "Tips and Banners", "#", onclick:"dynamic_level_settings('#{tips_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
-    <li> <%= link_to "Vendors", "#", onclick:"dynamic_level_settings('#{vendors_path}');" %> </li>
-    <li> <%= link_to "Facilities", "#", onclick:"dynamic_level_settings('#{facilities_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
-    <li> <%= link_to "Users", "#", onclick:"dynamic_level_settings('#{users_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
-  </ul>
-</div>
-
 <div class="modal-body" style="height:70vh; overflow:auto;">
-  <div class="row">
+  <div class="row" style="text-align: center;">
     This page is under development
   </div>
 </div>
 
 
 
-<style>
-  /* for level setting popup title bar*/
-  .displaylist_settings
-  {
-    background: #d3d3d3 none repeat scroll 0 0;
-    color: #000000;
-    display: none;
-    border: 1px solid #504f4f;
-    margin: 12px 0 0 1%;
-    width: 212px;
-    position: relative;
-    z-index: 11;
-  }
-
-  .pop-dropdown
-  {
-    list-style:none;
-    border-top: 4px solid #504f4f;
-    margin:0;
-    padding:0;
-  }
-  .pop-dropdown > li > a
-  {
-    text-decoration:none;
-    clear: both;
-    color: #333;
-    display: block;
-    font-weight: 400;
-    padding: 3px 14px;
-    white-space: nowrap;
-    text-align: left;
-  }
-  .pop-dropdown > li > a:focus,.pop-dropdown > li > a:hover
-  {
-    background:#BFBFBF;
-    color:#333;
-  }
-
-  .modal-body{min-height:486px;}
-
-  .pop-pointer-dd {
-    margin-left: 31px;
-    position: absolute;
-    top: -11px;
-  }
-
-</style>
-
-
-
-<script type="text/javascript">
-  $(document).ready(function(){
-    $("#settings_menulist").click(function()
-    {
-      $('#display_settings_menu').css('display','block');
-    });
+<script>
+  $(function () {
+    $('.popover-history2').popover({ html : true });
   });
 </script>

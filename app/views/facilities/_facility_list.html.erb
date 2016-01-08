@@ -1,6 +1,8 @@
 <div class="row modal-header" style="margin:0">
   <div class="col-lg-3" align="left">
-    <i class="fa fa-th fa-3x"></i>
+    <%= link_to 'javascript:void(0)', :style=>"color:#676a6c;", :class => "popover-history2", :rel => "popover", :"data-placement" => "bottom", :"data-content" => "#{level_settings_content}" do %>
+        <i class="fa fa-th fa-3x" id="settings_menulist"></i>
+    <% end %>
   </div>
   <div class="col-lg-6">
     <div class="">
@@ -45,15 +47,15 @@
             <table class="table table-bordered">
               <thead>
               <tr>
-                <th>#</th>
+                <th><i style="font-size: 16px;"></i>#</th>
                 <th><i class="fa fa-sort-desc" style="font-size: 22px;margin-right: 5px;"></i>Name </th>
                 <th><i class="fa fa-sort-desc" style="font-size: 22px;margin-right: 5px;"></i>Website </th>
                 <th><i class="fa fa-sort-desc" style="font-size: 22px;margin-right: 5px;"></i>Email</th>
                 <th><i class="fa fa-sort-desc" style="font-size: 22px;margin-right: 5px;"></i>Level</th>
                 <th><i class="fa fa-sort-desc" style="font-size: 22px;margin-right: 5px;"></i>Services</th>
                 <th><i class="fa fa-sort-desc" style="font-size: 22px;margin-right: 5px;"></i>Enable</th>
-                <th>Edit</th>
-                <th>Delete</th>
+                <th><i style="font-size: 16px;"></i>Edit</th>
+                <th><i style="font-size: 16px;"></i>Delete</th>
               </tr>
               </thead>
               <tbody>
@@ -156,65 +158,8 @@
   </div>
 </div>
 
-
-
-
-
-<style>
-  /* for level setting popup title bar*/
-  .displaylist_settings
-  {
-    background: #d3d3d3 none repeat scroll 0 0;
-    color: #000000;
-    display: none;
-    border: 1px solid #504f4f;
-    margin: 12px 0 0 1%;
-    width: 212px;
-    position: relative;
-    z-index: 11;
-  }
-
-  .pop-dropdown
-  {
-    list-style:none;
-    border-top: 4px solid #504f4f;
-    margin:0;
-    padding:0;
-  }
-  .pop-dropdown > li > a
-  {
-    text-decoration:none;
-    clear: both;
-    color: #333;
-    display: block;
-    font-weight: 400;
-    padding: 3px 14px;
-    white-space: nowrap;
-    text-align: left;
-  }
-  .pop-dropdown > li > a:focus,.pop-dropdown > li > a:hover
-  {
-    background:#BFBFBF;
-    color:#333;
-  }
-
-  .modal-body{min-height:486px;}
-
-  .pop-pointer-dd {
-    margin-left: 31px;
-    position: absolute;
-    top: -11px;
-  }
-
-</style>
-
-
-
-<script type="text/javascript">
-  $(document).ready(function(){
-    $("i#settings_menulist").click(function()
-    {
-      $('#display_settings_menu').css('display','block');
-    });
+<script>
+  $(function () {
+    $('.popover-history2').popover({ html : true });
   });
 </script>
