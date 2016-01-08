@@ -1,47 +1,38 @@
-<div class="modal-header">
-  <div>
-    <a href="#" style="color:#1ab394;">
-      <i style="float: left;font-size:26px;" id="settings_menulist" class="fa fa-list"></i>
-    </a>
-    <h4>
-      <div style="width:79%;float:left;">
-        <i class="fa fa-film modal-title" style="margin-right:4px;"></i>System Config
-      </div>
-      <button type="button" class="btn btn-primary">Export</button>
-      <button type="button" class="btn btn-primary">Print</button>
-      <button type="button" class="btn btn-primary">PDF</button>
-    </h4>
-
+<div class="row modal-header" style="margin:0">
+  <div class="col-lg-3" align="left">
+    <i class="fa fa-th fa-3x" id="settings_menulist"></i>
   </div>
-
-  <div class="row">
-    <div class="col-md-2"></div>
-    <div class="col-md-3" style="width: 54%;">
-      <small class="font-bold">
-        Create a custom checklist that will require this WGU and all Sub Level WGUs to check off before closing out this WGU.Create a custom checklist that will require this WGU and all Sub Level WGUs to check off before closing out this WGU.
-      </small>
+  <div class="col-lg-6">
+    <div class="">
+      <h4 class="modal-title"><i class="fa fa-area-chart" style="font-size:40px;"></i> System Config</h4>
+      <small class="font-bold">Create a custom checklist that will require this WGU and all Sub Level WGUs to check off before closing out this WGU.</small>
     </div>
   </div>
-
-  <div id="display_settings_menu" class="displaylist_settings" style="position: absolute;">
-    <%= image_tag "img/pop-img.png", :class=>"pop-pointer-dd" %>
-    <ul class="pop-dropdown">
-      <li> <%= link_to "Settings Function", "#", onclick:"dynamic_level_settings('#{business_level_settings_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
-      <li> <%= link_to "Recycle Target", "#", onclick:"dynamic_level_settings('#{recycling_target_program_settings_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
-      <li> <%= link_to "Terms and Conditions", "#", onclick:"dynamic_level_settings('#{terms_conditions_business_level_settings_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
-      <li> <%= link_to "Franchise Agreement", "#", onclick:"dynamic_level_settings('#{franchise_aggrement_business_level_settings_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
-      <li> <%= link_to "Materials", "#", onclick:"dynamic_level_settings('#{material_list_materials_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
-      <li> <%= link_to "Facility Listing", "#", onclick:"dynamic_level_settings('#{facility_list_materials_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
-      <li> <%= link_to "Classifications", "#", onclick:"dynamic_level_settings('#{project_types_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
-      <li> <%= link_to "Data Entry", "#", onclick:"dynamic_level_settings('#{data_entry_program_settings_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
-      <li> <%= link_to "Custom Fields", "#", onclick:"dynamic_level_settings('#{tips_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
-      <li> <%= link_to "Checklist", "#", onclick:"dynamic_level_settings('#{check_list_materials_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
-      <li> <%= link_to "Tips and Banners", "#", onclick:"dynamic_level_settings('#{tips_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
-      <li> <%= link_to "Vendors", "#", onclick:"dynamic_level_settings('#{vendors_path}');" %> </li>
-      <li> <%= link_to "Facilities", "#", onclick:"dynamic_level_settings('#{facilities_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
-      <li> <%= link_to "Users", "#", onclick:"dynamic_level_settings('#{users_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
-    </ul>
+  <div class="col-lg-3" align="right">
+    <button type="button" class="btn btn-success btn-xs" style="background-color: #1ab394;border-color: #1ab394;">Export</button>
+    <button type="button" class="btn btn-success btn-xs" style="background-color: #1ab394;border-color: #1ab394;">Print</button>
+    <button type="button" class="btn btn-success btn-xs" style="background-color: #1ab394;border-color: #1ab394;">PDF</button>
   </div>
+</div>
+
+<div id="display_settings_menu" class="displaylist_settings" style="position: absolute;">
+  <%= image_tag "img/pop-img.png", :class=>"pop-pointer-dd" %>
+  <ul class="pop-dropdown">
+    <li> <%= link_to "Settings Function", "#", onclick:"dynamic_level_settings('#{business_level_settings_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
+    <li> <%= link_to "Recycle Target", "#", onclick:"dynamic_level_settings('#{recycling_target_program_settings_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
+    <li> <%= link_to "Terms and Conditions", "#", onclick:"dynamic_level_settings('#{terms_conditions_business_level_settings_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
+    <li> <%= link_to "Franchise Agreement", "#", onclick:"dynamic_level_settings('#{franchise_aggrement_business_level_settings_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
+    <li> <%= link_to "Materials", "#", onclick:"dynamic_level_settings('#{material_list_materials_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
+    <li> <%= link_to "Facility Listing", "#", onclick:"dynamic_level_settings('#{facility_list_materials_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
+    <li> <%= link_to "Classifications", "#", onclick:"dynamic_level_settings('#{project_types_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
+    <li> <%= link_to "Data Entry", "#", onclick:"dynamic_level_settings('#{data_entry_program_settings_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
+    <li> <%= link_to "Custom Fields", "#", onclick:"dynamic_level_settings('#{tips_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
+    <li> <%= link_to "Checklist", "#", onclick:"dynamic_level_settings('#{check_list_materials_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
+    <li> <%= link_to "Tips and Banners", "#", onclick:"dynamic_level_settings('#{tips_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
+    <li> <%= link_to "Vendors", "#", onclick:"dynamic_level_settings('#{vendors_path}');" %> </li>
+    <li> <%= link_to "Facilities", "#", onclick:"dynamic_level_settings('#{facilities_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
+    <li> <%= link_to "Users", "#", onclick:"dynamic_level_settings('#{users_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
+  </ul>
 </div>
 
 <div class="modal-body" style="height:70vh; overflow:auto;">
@@ -104,7 +95,7 @@
 
 <script type="text/javascript">
   $(document).ready(function(){
-    $("i#settings_menulist").click(function()
+    $("#settings_menulist").click(function()
     {
       $('#display_settings_menu').css('display','block');
     });
