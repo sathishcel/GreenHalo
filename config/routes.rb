@@ -116,7 +116,10 @@ Myapp::Application.routes.draw do
   get "dashboards/organize"
   get "dashboards/tools"
   get "dashboards/new_tracking"  => 'dashboards#new_tracking' ,as: 'new_tracking'
-
+  get "dashboards/get_lequid_only"
+  get "dashboards/get_solid_only"
+  get "dashboards/get_lequid_and_solid"
+  
   get "layoutsoptions/index"
   get "layoutsoptions/off_canvas"
 
