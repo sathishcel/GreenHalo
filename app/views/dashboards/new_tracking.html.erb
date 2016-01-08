@@ -34,7 +34,9 @@
             <a class="btn btn-primary btn-sm" data-toggle="modal" data-target="#addlevel">Add Level</a>
             <a class="btn btn-primary btn-sm" href="javascript:void(0);" onclick="">Expand All</a>
             <a class="btn btn-primary btn-sm collapse-link" >Collapse All</a>
-
+            <a class="btn btn-primary liquid" >Liquid</a>
+            <a class="btn btn-primary solid">Solid</a>
+            <a class="btn btn-primary both">Both</a>
 
           </div>
         </div>
@@ -223,6 +225,20 @@
               <th style="padding: 8px 2px; background-color: #c2c2c2;" width="20px"></th>
               <th style="text-align: center; vertical-align: middle;background: transparent none repeat scroll 0 0;"><i class="fa fa-bars" style="font-size: 20px;" title="Menu"></i></th>
               <th style="text-align: center; vertical-align: middle;background: transparent none repeat scroll 0 0;">Waste Generating Units</th>
+               <%if @liquid ==1%>
+              <th style="text-align: center; vertical-align: middle;background: transparent none repeat scroll 0 0;"><i class="fa fa-folder" style="color:#676a6c;font-size: 20px;" title="#of Units"></i></th>
+              <th style="text-align: center; vertical-align: middle;background: transparent none repeat scroll 0 0;"><i class="fa fa-square" style="color:#676a6c;font-size: 20px;" title="Tons Disposed"></i></th>
+              <th style="text-align: center; vertical-align: middle;background: transparent none repeat scroll 0 0;"><i class="fa fa-square" style="color:#1ab394;font-size: 20px;" title="Tons Recycled"></i></th>
+              <th style="text-align: center; vertical-align: middle;background: transparent none repeat scroll 0 0;"><i class="fa fa-recycle" style="font-size: 20px;" title="Recycling Rate"></i></th>
+              <th style="text-align: center; vertical-align: middle;background: transparent none repeat scroll 0 0;"><i class="fa fa-minus-circle" style="font-size: 20px;color: #d9534f;" title="Disposal Costs"></i></th>
+              <th style="text-align: center; vertical-align: middle;background: transparent none repeat scroll 0 0;"><i class="fa fa-plus-circle" style="font-size: 20px;color: #1ab394" title="Return on Recycling"></i></th>
+               <%elsif @liquid ==2%>
+              <th style="text-align: center; vertical-align: middle;background: transparent none repeat scroll 0 0;"><i class="fa fa-tint" style="color: #676a6c; font-size: 20px;" title="Gallons Disposed"></i></th>
+              <th style="text-align: center; vertical-align: middle;background: transparent none repeat scroll 0 0;"><i class="fa fa-tint" style="color:#1ab394;font-size: 20px;" title="Gallons Recycled"></i></th>
+              <th style="text-align: center; vertical-align: middle;background: transparent none repeat scroll 0 0;"><i class="fa fa-recycle" style="font-size: 20px;"title="Recycling Rate"></i></th>
+              <th style="text-align: center; vertical-align: middle;background: transparent none repeat scroll 0 0;"><i class="fa fa-minus-circle" style="font-size: 20px; color: #d9534f" title="Disposal Costs"></i></th>
+              <th style="text-align: center; vertical-align: middle;background: transparent none repeat scroll 0 0;"><i class="fa fa-plus-circle" style="font-size: 20px;color: #1ab394" title="Return on Recycling"></i></th>
+              <%elsif @liquid ==3%>
               <th style="text-align: center; vertical-align: middle;background: transparent none repeat scroll 0 0;"><i class="fa fa-folder" style="color:#676a6c;font-size: 20px;" title="#of Units"></i></th>
               <th style="text-align: center; vertical-align: middle;background: transparent none repeat scroll 0 0;"><i class="fa fa-square" style="color:#676a6c;font-size: 20px;" title="Tons Disposed"></i></th>
               <th style="text-align: center; vertical-align: middle;background: transparent none repeat scroll 0 0;"><i class="fa fa-square" style="color:#1ab394;font-size: 20px;" title="Tons Recycled"></i></th>
@@ -234,6 +250,7 @@
               <th style="text-align: center; vertical-align: middle;background: transparent none repeat scroll 0 0;"><i class="fa fa-recycle" style="font-size: 20px;"title="Recycling Rate"></i></th>
               <th style="text-align: center; vertical-align: middle;background: transparent none repeat scroll 0 0;"><i class="fa fa-minus-circle" style="font-size: 20px; color: #d9534f" title="Disposal Costs"></i></th>
               <th style="text-align: center; vertical-align: middle;background: transparent none repeat scroll 0 0;"><i class="fa fa-plus-circle" style="font-size: 20px;color: #1ab394" title="Return on Recycling"></i></th>
+              <%end%>
             </tr>
             </thead>
 
@@ -256,6 +273,22 @@
                   </td>
 
                   <td><b><%= level.name %></b> <br /> Street <br /> City, State, Zip<br />ID#:<%= tracking_number(level.id) %></td>
+                  <%if @liquid ==1%>
+                  <td style="text-align: center;vertical-align: middle">
+                    L:<%= sub_level_count(level)%>
+                    W:<%= all_wgus_count(level) %></td>
+                  <td style="text-align: center;vertical-align: middle"><%= "#{level.id}" +',999,999.99'%></td>
+                  <td style="text-align: center;vertical-align: middle"><%= "#{level.id}" +',000,000.99'%></td>
+                  <td style="text-align: center;vertical-align: middle"><%= "#{level.id}" +'0%'%></td>
+                  <td style="text-align: center;vertical-align: middle">$<%= "#{level.id}" +',999,999.99'%></td>
+                  <td style="text-align: center;vertical-align: middle">$<%= "#{level.id}" +'000.00'%></td>
+                  <%elsif @liquid ==2%>
+                  <td style="text-align: center;vertical-align: middle"><%= "#{level.id}" +',000,000.99'%></td>
+                  <td style="text-align: center;vertical-align: middle"><%= "#{level.id}" +',999,999.99'%></td>
+                  <td style="text-align: center;vertical-align: middle"><%= "#{level.id}" +'0.05%'%></td>
+                  <td style="text-align: center;vertical-align: middle">$<%= "#{level.id}" +',000,000.99'%></td>
+                  <td style="text-align: center;vertical-align: middle">$<%= "#{level.id}" +'000.00'%></td>
+                  <%elsif @liquid ==3%>
                   <td style="text-align: center;vertical-align: middle">
                     L:<%= sub_level_count(level)%>
                     W:<%= all_wgus_count(level) %></td>
@@ -269,6 +302,7 @@
                   <td style="text-align: center;vertical-align: middle"><%= "#{level.id}" +'0.05%'%></td>
                   <td style="text-align: center;vertical-align: middle">$<%= "#{level.id}" +',000,000.99'%></td>
                   <td style="text-align: center;vertical-align: middle">$<%= "#{level.id}" +'000.00'%></td>
+                  <%end%>
                 </tr>
 
 
@@ -380,6 +414,39 @@
         $('.popover-history').popover({ html : true });
     });
 </script>
+<script>
+ $('.liquid').click(function(){
+    var url = "/dashboards/get_lequid_only"
+    $.ajax({
+          type: "GET",
+          url: url
+          
+          }).success(function (data) {
+           $('.table').html(data);
+           });
+
+ });
+$('.solid').click(function(){
+  var url = "/dashboards/get_solid_only"
+    $.ajax({
+          type: "GET",
+          url: url
+          }).success(function (data) {
+           $('.table').html(data);
+           });
+
+ });
+$('.both').click(function(){
+  var url = "/dashboards/get_lequid_and_solid"
+    $.ajax({
+          type: "GET",
+          url: url
+          }).success(function (data) {
+           $('.table').html(data);
+           });
+
+ });
+ </script>
 <style>
      #tracking_header th{
          border-bottom: 2px solid #dddddd !important;

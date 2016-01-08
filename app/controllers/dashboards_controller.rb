@@ -38,13 +38,21 @@ class DashboardsController < ApplicationController
   end
 
   def new_tracking
-   @all_levels = Level.top_levels
-   if request.xhr?
-     @level_limit = params[:multi_level_selection].to_i
-     respond_to do |format|
+    @user_details = UserDetail.find(current_user.id).material_display
+      if @user_details  == 1
+        @liquid = 1
+      elsif @user_details == 2
+        @liquid = 2
+      elsif @user_details == 3
+        @liquid = 3 
+      end
+    @all_levels = Level.top_levels
+      if request.xhr?
+        @level_limit = params[:multi_level_selection].to_i
+        respond_to do |format|
        format.js { render "/dashboards/new_tracking" }
-     end
-   else
+      end
+    else
      @wgu_limit = DEFAULT_LEVEL
      render :nothing => false, :status => 422
    end
@@ -98,5 +106,34 @@ class DashboardsController < ApplicationController
       format.xls # { send_data @products.to_csv(col_sep: "\t") }
     end
   end
+  def get_lequid_only
+    update_user_material_display('liquid')
+    if request.xhr?
+       render partial: "liquid_data_only"
+    end
+  end
 
+  def get_solid_only
+    update_user_material_display('solid')
+    if request.xhr?
+       render partial: "solid_data_only"
+    end
+  end
+
+  def get_lequid_and_solid
+    update_user_material_display('both')
+    if request.xhr?
+       render partial: "liquid_and_solid_data"
+    end
+  end
+  def update_user_material_display(params)
+    @user = UserDetail.find(current_user.id)
+    if params =='liquid'
+      @user.update(:user_id => @user.id,:material_display => 1)
+    elsif params == 'solid'
+      @user.update(:user_id => @user.id,:material_display => 2)
+    elsif params == 'both'
+      @user.update(:user_id => @user.id,:material_display => 3)
+    end
+  end
 end
