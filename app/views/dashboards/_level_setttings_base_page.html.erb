@@ -1,46 +1,6 @@
 <div class="modal inmodal" id="myModal15" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog modal-lg" style = "width:95%;margin-top: 9px;">
     <div class="modal-content">
-      <div class="modal-header" style = "background-color: #676a6c;max-height: 30px;padding-top:10px;">
-             <span>
-                <span>
-                   <i class = "fa fa-repeat" style = "color: white;float:left;margin-top:3px;"></i>
-                   <span style="top:13px;float:left;margin-left: 9px;border-left: 2px solid #19aa8d;">|</span>
-                   <span style="float:left">
-                      <a href="#" style="color:#FFFFFF">
-                        <i class="fa fa-list" id="menulist"></i>
-                      </a>
-                   </span>
-                   <span style = "color:white;font-weight:bold;float:left;margin-left:8px;">Settings - WGU 8766098095</span>
-                 </span>
-
-                 <span style="top:13px;float:right;margin-right: 5px;border-left: 2px solid #19aa8d;">|</span>
-               <i class = "fa fa-times" data-dismiss="modal" style = "float:right;color: white;cursor: pointer;
-                       margin-right: -20px;margin-top: 4px;"></i>
-             </span>
-
-
-      </div>
-
-      <div id="displaymenu" class="displaylist" style="position: absolute;">
-        <%= image_tag "img/pop-img.png", :class=>"pop-pointer-dd" %>
-        <ul class="pop-dropdown">
-          <li> <%= link_to "Settings Function", "#", onclick:"dynamic_level_settings('#{business_level_settings_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
-          <li> <%= link_to "Recycle Target", "#", onclick:"dynamic_level_settings('#{recycling_target_program_settings_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
-          <li> <%= link_to "Terms and Conditions", "#", onclick:"dynamic_level_settings('#{terms_conditions_business_level_settings_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
-          <li> <%= link_to "Franchise Agreement", "#", onclick:"dynamic_level_settings('#{franchise_aggrement_business_level_settings_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
-          <li> <%= link_to "Materials", "#", onclick:"dynamic_level_settings('#{material_list_materials_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
-          <li> <%= link_to "Facility Listing", "#", onclick:"dynamic_level_settings('#{facility_list_materials_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
-          <li> <%= link_to "Classifications", "#", onclick:"dynamic_level_settings('#{project_types_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
-          <li> <%= link_to "Data Entry", "#", onclick:"dynamic_level_settings('#{data_entry_program_settings_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
-          <li> <%= link_to "Custom Fields", "#", onclick:"dynamic_level_settings('#{tips_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
-          <li> <%= link_to "Checklist", "#", onclick:"dynamic_level_settings('#{check_list_materials_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
-          <li> <%= link_to "Tips and Banners", "#", onclick:"dynamic_level_settings('#{tips_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
-          <li> <%= link_to "Vendors", "#", onclick:"dynamic_level_settings('#{vendors_path}');" %> </li>
-          <li> <%= link_to "Facilities", "#", onclick:"dynamic_level_settings('#{facilities_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
-          <li> <%= link_to "Users", "#", onclick:"dynamic_level_settings('#{users_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
-        </ul>
-      </div>
 
        <div id="replace_ajax_response">
 
@@ -53,57 +13,6 @@
     </div>
   </div>
   </div>
-
-
-
-
-  <style>
-      /* for level setting popup title bar*/
-      .displaylist
-      {
-          background: #d3d3d3 none repeat scroll 0 0;
-          color: #000000;
-          display: none;
-          border: 1px solid #504f4f;
-          margin: 12px 0 0 1%;
-          width: 212px;
-          position: relative;
-          z-index: 11;
-      }
-
-      .pop-dropdown
-      {
-          list-style:none;
-          border-top: 4px solid #504f4f;
-          margin:0;
-          padding:0;
-      }
-      .pop-dropdown > li > a
-      {
-          text-decoration:none;
-          clear: both;
-          color: #333;
-          display: block;
-          font-weight: 400;
-          padding: 3px 14px;
-          white-space: nowrap;
-          text-align: left;
-      }
-      .pop-dropdown > li > a:focus,.pop-dropdown > li > a:hover
-      {
-          background:#BFBFBF;
-          color:#333;
-      }
-
-      .modal-body{min-height:486px;}
-
-      .pop-pointer-dd {
-          margin-left: 31px;
-          position: absolute;
-          top: -11px;
-      }
-
-  </style>
 
 
 <script>

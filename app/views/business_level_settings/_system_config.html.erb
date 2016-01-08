@@ -1,103 +1,112 @@
-<% if !params[:config] %>
-<div class="modal-body" style="font-size: 12px;">
-
-  <div class="container">
-    <!-- New Design Block Design -->
-    <div class="row" style="background-color:#fff;margin-top:10px;border-radius: 10px;position: relative;">
-      <div class="col-lg-12"><h3>System Configuration</h3></div>
-      <!-- Tab Links -->
-      <ul id="settings_list" class="nav nav-tabs main-content" style="margin:16px;">
-        <li class="">
-          <a href="#" style="color: #337ab7 !important;" onclick="system_config_tab('/bangalore/government/business_level_settings/overview')">Overview</a>
-        </li>
-        <li class="active">
-          <a href="#" style="color: #337ab7 !important;" onclick="system_config_tab('/bangalore/government/business_level_settings?config=true')">Configuration</a>
-        </li>
-        <li class="">
-          <a href="#" style="color: #337ab7 !important;" onclick="system_config_tab('/bangalore/government/business_level_settings/bin_types')">Bin Types</a>
-        </li>
-        <li class="">
-          <a href="#" style="color: #337ab7 !important;" onclick="system_config_tab('/bangalore/government/business_level_settings/bin_locations')">Bin Locations</a>
-        </li>
-        <li class="">
-          <a href="#" style="color: #337ab7 !important;" onclick="system_config_tab('/bangalore/government/business_level_settings/gallery')">Gallery</a>
-        </li>
-        <li class="">
-          <a href="#" style="color: #337ab7 !important;" onclick="system_config_tab('/bangalore/government/business_level_settings/contact')">Contact</a>
-        </li>
-      </ul>
-      <!-- Tab Links ends -->
-
-    </div>
-  </div>
-
-<% end %>
-<div id="replace_tab_content">
-
-  <form method="post" accept-charset="UTF-8" action="/bangalore/government/business_settings/52" id="edit_wgu_52" class="edit_wgu"><input type="hidden" value="✓" name="utf8"><input type="hidden" value="put" name="_method"><input type="hidden" value="g9DXYHwJ7I243s+UIg3/z0OkFH4MKlSsKOD0FWiqBk3Pt64r7v+SDtmSGAgo8JrASS9PR3EfcClvNuJqzTCXZA==" name="authenticity_token">
-    <div class="row" style="margin-top: 10px;">
-    <div class="col-sm-5 m-b-xs" style="width:12%;margin-left:22px;">
-      <img width="118" height="99" src="/assets/img/map-green.jpg" alt="">
-    </div>
-    <div class="col-sm-4 m-b-xs" style="width:20%;margin-top: 13px;">
-      <label>Greenworx<br>
-      555 Broadway Street, Suite 104 <br>
-      South San Francisco, CA 94080<br>
-      1-555-555-5555</label>
-    </div>
-</div>
-    <div class="row" style="margin-top:10px;">
-      <div class="col-lg-6" style="padding-left:38px;">
-        <div class="form-group">
-          <label>WGU Name</label>
-            <input type="text" class="form-control" id="wgu_name" name="wgu[name]" value=<%= @wgu.name %> placeholder="Wgu Name">
-        </div>
-
-        <div class="form-group">
-          <label>Address</label>
-          <input type="text" class="form-control" id="wgu_address" name="wgu[address]"placeholder="Address">
-        </div>
-
-        <div class="form-group">
-          <label>Unit or Apt#</label>
-          <input type="text" class="form-control" placeholder="Suite 221">
-        </div>
-
-        <div class="form-group">
-          <label>City</label>
-          <input type="text" class="form-control" id="wgu_city" name="wgu[city]"placeholder="City">
-        </div>
-
-        <div class="form-group">
-          <label>State or Provence</label>
-          <input type="text" class="form-control" id="wgu_state" name="wgu[state]"placeholder="State">
-        </div>
-
-        <div class="form-group">
-          <label>Zip or Postal Code</label>
-          <input type="text" class="form-control" id="wgu_zip" name="wgu[zip]"placeholder="Zip">
-        </div>
-
-
+<div class="modal-header">
+  <div>
+    <a href="#" style="color:#1ab394;">
+      <i style="float: left;font-size:26px;" id="settings_menulist" class="fa fa-list"></i>
+    </a>
+    <h4>
+      <div style="width:79%;float:left;">
+        <i class="fa fa-film modal-title" style="margin-right:4px;"></i>System Config
       </div>
-    </div>
-
-  </form>
-
-</div>
+      <button type="button" class="btn btn-primary">Export</button>
+      <button type="button" class="btn btn-primary">Print</button>
+      <button type="button" class="btn btn-primary">PDF</button>
+    </h4>
 
   </div>
+
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-3" style="width: 54%;">
+      <small class="font-bold">
+        Create a custom checklist that will require this WGU and all Sub Level WGUs to check off before closing out this WGU.Create a custom checklist that will require this WGU and all Sub Level WGUs to check off before closing out this WGU.
+      </small>
+    </div>
+  </div>
+
+  <div id="display_settings_menu" class="displaylist_settings" style="position: absolute;">
+    <%= image_tag "img/pop-img.png", :class=>"pop-pointer-dd" %>
+    <ul class="pop-dropdown">
+      <li> <%= link_to "Settings Function", "#", onclick:"dynamic_level_settings('#{business_level_settings_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
+      <li> <%= link_to "Recycle Target", "#", onclick:"dynamic_level_settings('#{recycling_target_program_settings_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
+      <li> <%= link_to "Terms and Conditions", "#", onclick:"dynamic_level_settings('#{terms_conditions_business_level_settings_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
+      <li> <%= link_to "Franchise Agreement", "#", onclick:"dynamic_level_settings('#{franchise_aggrement_business_level_settings_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
+      <li> <%= link_to "Materials", "#", onclick:"dynamic_level_settings('#{material_list_materials_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
+      <li> <%= link_to "Facility Listing", "#", onclick:"dynamic_level_settings('#{facility_list_materials_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
+      <li> <%= link_to "Classifications", "#", onclick:"dynamic_level_settings('#{project_types_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
+      <li> <%= link_to "Data Entry", "#", onclick:"dynamic_level_settings('#{data_entry_program_settings_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
+      <li> <%= link_to "Custom Fields", "#", onclick:"dynamic_level_settings('#{tips_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
+      <li> <%= link_to "Checklist", "#", onclick:"dynamic_level_settings('#{check_list_materials_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
+      <li> <%= link_to "Tips and Banners", "#", onclick:"dynamic_level_settings('#{tips_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
+      <li> <%= link_to "Vendors", "#", onclick:"dynamic_level_settings('#{vendors_path}');" %> </li>
+      <li> <%= link_to "Facilities", "#", onclick:"dynamic_level_settings('#{facilities_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
+      <li> <%= link_to "Users", "#", onclick:"dynamic_level_settings('#{users_path(current_user.domain_name, current_user.role_type.downcase)}');" %> </li>
+    </ul>
+  </div>
+</div>
+
+<div class="modal-body" style="height:70vh; overflow:auto;">
+  <div class="row">
+    This page is under development
+  </div>
+</div>
+
+
+
+<style>
+  /* for level setting popup title bar*/
+  .displaylist_settings
+  {
+    background: #d3d3d3 none repeat scroll 0 0;
+    color: #000000;
+    display: none;
+    border: 1px solid #504f4f;
+    margin: 12px 0 0 1%;
+    width: 212px;
+    position: relative;
+    z-index: 11;
+  }
+
+  .pop-dropdown
+  {
+    list-style:none;
+    border-top: 4px solid #504f4f;
+    margin:0;
+    padding:0;
+  }
+  .pop-dropdown > li > a
+  {
+    text-decoration:none;
+    clear: both;
+    color: #333;
+    display: block;
+    font-weight: 400;
+    padding: 3px 14px;
+    white-space: nowrap;
+    text-align: left;
+  }
+  .pop-dropdown > li > a:focus,.pop-dropdown > li > a:hover
+  {
+    background:#BFBFBF;
+    color:#333;
+  }
+
+  .modal-body{min-height:486px;}
+
+  .pop-pointer-dd {
+    margin-left: 31px;
+    position: absolute;
+    top: -11px;
+  }
+
+</style>
+
 
 
 <script type="text/javascript">
-  function system_config_tab(url) {
-
-    var current_url = url;
-    $.ajax({
-      type: "GET",
-      url: current_url,
-    }).success(function (data) {
-      $('#replace_tab_content').html(data);
+  $(document).ready(function(){
+    $("i#settings_menulist").click(function()
+    {
+      $('#display_settings_menu').css('display','block');
     });
-  }
+  });
 </script>
