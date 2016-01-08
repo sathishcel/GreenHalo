@@ -1,5 +1,6 @@
-class CreateUserDetails < ActiveRecord::Migration
+class CreateUserDetail < ActiveRecord::Migration
   def change
+    drop_table :user_details
     create_table :user_details do |t|
       t.string :position
       t.string :company_name
