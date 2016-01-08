@@ -27,18 +27,23 @@
           <h5>Waste Generating Units</h5>
         </div>
 
-        <div class="" style="background-color:#fff;padding-bottom:0px !important;">
+        <div class="" style="background-color:#fff;padding-bottom:0px !important;float: left;
+                width: 100%;">
           <div align="left" class="col-lg-6" style="background-color: #fff;">
-            <a class="btn btn-primary " data-toggle="modal" data-target="#addwgu" >Add WGU</a>
-            <a class="btn btn-primary " data-toggle="modal" data-target="#addlevel">Add Level</a>
-            <a class="btn btn-primary " href="javascript:void(0);" onclick="">Expand All</a>
-            <a class="btn btn-primary  collapse-link " >Collapse All</a>
+            <a class="btn btn-primary btn-sm" data-toggle="modal" data-target="#addwgu" >Add WGU</a>
+            <a class="btn btn-primary btn-sm" data-toggle="modal" data-target="#addlevel">Add Level</a>
+            <a class="btn btn-primary btn-sm" href="javascript:void(0);" onclick="">Expand All</a>
+            <a class="btn btn-primary btn-sm collapse-link" >Collapse All</a>
+            <a class="btn btn-primary btn-sm" >Solid</a>
+            <a class="btn btn-primary btn-sm" >Liquid</a>
+            <a class="btn btn-primary btn-sm" >Both</a>
 
 
           </div>
           <div class="col-lg-6" align="right" style="background-color: #fff">
 
             <div class="dt-buttons btn-group">
+              <!--<label>Search:<input type="search" class="form-control input-sm" placeholder="" aria-controls="DataTables_Table_0"></label>-->
               <a class="btn btn-default buttons-copy buttons-html5" tabindex="0" aria-controls="DataTables_Table_0"><span>Copy</span></a>
               <%= link_to "CSV",get_csv_path(:format => "csv"),:class => "btn btn-default buttons-excel buttons-html5", :'tabindex' => "0",:'aria-controls' => 'DataTables_Table_0' %>
               <a class="btn btn-default buttons-excel buttons-html5" tabindex="0" aria-controls="DataTables_Table_0"><span>Excel</span></a>

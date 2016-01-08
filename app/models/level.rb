@@ -11,7 +11,6 @@ class Level < ActiveRecord::Base
   HEADERS = ["S No","Unit Name","Units Count","Tons Disposed","Recycling Rate","Disposal Costs",
                            "Return on Recycling","Gallons Disposed","Gallons Recycled","Recycling Rate"," Disposal Costs","Return on Recycling"]
 
-
   def get_sub_levels(list=[])
     sub_unit = []
     self.sub_levels.each do |tree|
@@ -75,9 +74,9 @@ class Level < ActiveRecord::Base
     CSV.generate(options) do |csv|
       csv << Level::HEADERS
       all.each do |level|
-        csv << level.attributes.values_at(*column_names)
+        csv << level.attributes.reject! {|k, v| %w"user_id created_at updated_at".include? k }.values_at(*column_names)
         level.try(:wgus).each do |wgu|
-          csv << wgu.attributes.values_at(*column_names)
+          csv << wgu.attributes.reject! {|k, v| %w"created_at updated_at".include? k }.values_at(*column_names)
         end
       end
     end
