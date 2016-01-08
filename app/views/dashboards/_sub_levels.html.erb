@@ -1,9 +1,9 @@
 <% unless level_wgus.blank? %>
     <% level_wgus.each do |wgu| %>
 
-        <tr align="center" class="gradeX" id = "sub_wgu_<%= wgu.id %>" value = "<%= wgu.id %>">
+        <tr class="gradeX" id = "sub_wgu_<%= wgu.id %>" value = "<%= wgu.id %>">
           <td class="sequence_5" style="padding: 8px 2px;">
-            <i class="fa fa-square-o" style="font-size: 16px;margin-top: 31px;  margin-left: 2px;color: #ffffff;"></i>
+            <i class="fa fa-square-o" style="font-size: 16px;margin-top: 31px;color: #ffffff;padding-left: 1px;"></i>
           </td>
           <td style="text-align: center; vertical-align: middle">
             <div class="">
@@ -38,7 +38,7 @@
         <tr class="gradeA" id = "sub_level_<%= level.id %>" value = "<%= level.id %>" order = "not-open">
             <td class="sequence_<%= level.get_level_and_wgu(level) %>" style="padding: 8px 2px;">
               <% if level.get_sub_levels.blank? && level.wgus.blank? %>
-                <i class="fa fa-square-o" style="font-size: 17px;margin-top: 31px;margin-left: 2px;color: #ffffff;margin-left: 2px;"></i>
+                <i class="fa fa-square-o" style="font-size: 17px;margin-top: 31px;color: #ffffff;"></i>
               <% else %>
                   <i class="fa fa-caret-down" style="font-size: 24px;margin-top: 24px;color: #ffffff;"></i>
               <% end %>
